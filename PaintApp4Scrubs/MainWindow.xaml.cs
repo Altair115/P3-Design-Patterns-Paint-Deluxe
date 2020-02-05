@@ -102,7 +102,7 @@ namespace PaintApp4Scrubs
             Ellipse newEllipse = new Ellipse()
             {
                 Stroke = Brushes.Blue,
-                Fill = Brushes.Red,
+                Fill = Brushes.White,
                 StrokeThickness = 4,
                 Height = 10,
                 Width = 10
@@ -147,7 +147,7 @@ namespace PaintApp4Scrubs
             Rectangle newRectangle = new Rectangle()
             {
                 Stroke = Brushes.Blue,
-                Fill = Brushes.Red,
+                Fill = Brushes.White,
                 StrokeThickness = 4
             };
 
