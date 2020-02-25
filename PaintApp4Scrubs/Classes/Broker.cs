@@ -9,6 +9,12 @@ namespace PaintApp4Scrubs.Classes
 {
     class Broker
     {
-        List<ICommand> commands = new List<ICommand>();
+        private List<ICommand> commands = new List<ICommand>();
+        public void DoCommand(ICommand command)
+        {
+            commands.Add(command);
+            command.Execute();
+        }
+
     }
 }
