@@ -7,7 +7,7 @@ using System.Windows.Shapes;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
-    class Square : Shape
+    class Square : GodShape
     {
         protected override Geometry DefiningGeometry
         {
