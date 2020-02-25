@@ -4,19 +4,20 @@ using System.Text;
 using System.Windows.Shapes;
 using System.Windows.Controls;
 using PaintApp4Scrubs.Interfaces;
+using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs.Classes
 {
     public class Draw : ICommand
     {
-        private Shape shape;
-        public Draw(Shape _shape)
+        private GodShape shape;
+        public Draw(GodShape _shape)
         {
             shape = _shape;
         }
         public void Execute()
         {
-
+            //shape.Draw();
            // Canvas.Children.Add(shape);
         }
     }

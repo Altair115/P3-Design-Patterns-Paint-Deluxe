@@ -21,6 +21,7 @@ namespace PaintApp4Scrubs
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow AppWindow;
         private enum TheShape
         {
             Line, Ellipse, Rectangle
@@ -31,6 +32,7 @@ namespace PaintApp4Scrubs
         public MainWindow()
         {
             InitializeComponent();
+            AppWindow = this;
         }
 
         private void LineButton_OnClick(object sender, RoutedEventArgs e)
@@ -176,7 +178,11 @@ namespace PaintApp4Scrubs
                 square.SetValue(Canvas.TopProperty, endPoint.Y - 50);
                 square.Height = startPoint.Y - endPoint.Y;
             }
-            Canvas.Children.Add(square);
+            square.Draw();
+        }
+        public void PutOnScreen(GodShape shape)
+        {
+            Canvas.Children.Add(shape);
         }
     }
 }
