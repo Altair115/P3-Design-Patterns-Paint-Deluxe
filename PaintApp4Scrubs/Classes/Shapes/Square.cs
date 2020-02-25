@@ -9,19 +9,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
 {
     class Square : Shape
     {
-        private double size;
-        public static readonly DependencyProperty SizeProperty = DependencyProperty.Register("Size", typeof(Double), typeof(Square));
-
-        public Square()
-        {
-        }
-
-        public double Size
-        {
-            get { return (double)this.GetValue(SizeProperty); }
-            set { this.SetValue(SizeProperty, value); }
-        }
-
         protected override Geometry DefiningGeometry
         {
             get
