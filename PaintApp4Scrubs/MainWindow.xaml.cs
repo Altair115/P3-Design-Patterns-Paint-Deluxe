@@ -24,10 +24,9 @@ namespace PaintApp4Scrubs
     {
         private Broker broker;
         public static MainWindow AppWindow;
-        private bool canMove = false;
         private enum TheShape
         {
-            Line, Ellipse, Rectangle,Traingle, Move
+            Line, Ellipse, Rectangle, Triangle, Move
         }
 
         private TheShape currShape = TheShape.Line;
