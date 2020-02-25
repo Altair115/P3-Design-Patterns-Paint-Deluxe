@@ -24,7 +24,7 @@ namespace PaintApp4Scrubs
         public static MainWindow AppWindow;
         private enum TheShape
         {
-            Line, Ellipse, Rectangle
+            Line, Ellipse, Rectangle, Triangle
         }
 
         private TheShape currShape = TheShape.Line;
@@ -49,6 +49,10 @@ namespace PaintApp4Scrubs
         {
             currShape = TheShape.Rectangle;
         }
+        private void TriangleButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            currShape = TheShape.Triangle;
+        }
 
         private Point startPoint;
         private Point endPoint;
@@ -71,10 +75,15 @@ namespace PaintApp4Scrubs
                 case TheShape.Rectangle:
                     DrawRectangle();
                     break;
+                case TheShape.Triangle:
+                    DrawTriangle();
+                    break;
                 default:
                     return;
             }
         }
+
+        
 
         private void Canvas_OnMouseMove(object sender, MouseEventArgs e)
         {
@@ -183,6 +192,42 @@ namespace PaintApp4Scrubs
         public void PutOnScreen(GodShape shape)
         {
             Canvas.Children.Add(shape);
+        }
+
+        private void DrawTriangle()
+        {
+            Triangle triangle = new Triangle() 
+            {
+                Stroke = Brushes.Blue,
+                Fill = Brushes.White,
+                StrokeThickness = 4,
+                Height = 10,
+                Width = 10
+            };
+            if (endPoint.X >= startPoint.X)
+            {
+                // Defines the left part of the ellipse
+                triangle.SetValue(Canvas.LeftProperty, startPoint.X);
+                triangle.Width = endPoint.X - startPoint.X;
+            }
+            else
+            {
+                triangle.SetValue(Canvas.LeftProperty, endPoint.X);
+                triangle.Width = startPoint.X - endPoint.X;
+            }
+
+            if (endPoint.Y >= startPoint.Y)
+            {
+                // Defines the top part of the ellipse
+                triangle.SetValue(Canvas.TopProperty, startPoint.Y - 50);
+                triangle.Height = endPoint.Y - startPoint.Y;
+            }
+            else
+            {
+                triangle.SetValue(Canvas.TopProperty, endPoint.Y - 50);
+                triangle.Height = startPoint.Y - endPoint.Y;
+            }
+            Canvas.Children.Add(triangle);
         }
     }
 }

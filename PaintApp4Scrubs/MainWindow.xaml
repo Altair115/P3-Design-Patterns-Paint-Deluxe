@@ -12,6 +12,7 @@
             <RadioButton Name="LineButton" BorderBrush="#FF969696" Content="Line" Height="50" Width="80" GroupName="ShapeGroup" Click="LineButton_OnClick" IsChecked="True"/>
             <RadioButton Name="EllipseButton" BorderBrush="#FF969696" Content="Ellipse" Height="50" Width="80" GroupName="ShapeGroup" Click="EllipseButton_OnClick" IsChecked="False"/>
             <RadioButton Name="RectangleButton"  BorderBrush="#FF969696" Content="Rectangle" Height="50" Width="80" GroupName="ShapeGroup" Click="RectangleButton_OnClick" IsChecked="False"/>
+            <RadioButton Name="TriangleButton" BorderBrush="#FF969696" Content="Triangle" Height="50" Width="80" GroupName="ShapeGroup" Click="TriangleButton_OnClick" IsChecked="False"></RadioButton>
         </ToolBar>
         <Canvas Name="Canvas" x:FieldModifier="public" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">
         </Canvas>
