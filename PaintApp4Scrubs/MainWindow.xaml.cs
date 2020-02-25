@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs
 {
@@ -144,38 +145,38 @@ namespace PaintApp4Scrubs
         // Sets and draws rectangle after mouse is released
         private void DrawRectangle()
         {
-            Rectangle newRectangle = new Rectangle()
+            Square square = new Square()
             {
                 Stroke = Brushes.Blue,
                 Fill = Brushes.White,
-                StrokeThickness = 4
+                StrokeThickness = 4,
+                Height = 10,
+                Width = 10
             };
-
             if (endPoint.X >= startPoint.X)
             {
-                // Defines the left part of the rectangle
-                newRectangle.SetValue(Canvas.LeftProperty, startPoint.X);
-                newRectangle.Width = endPoint.X - startPoint.X;
+                // Defines the left part of the ellipse
+                square.SetValue(Canvas.LeftProperty, startPoint.X);
+                square.Width = endPoint.X - startPoint.X;
             }
             else
             {
-                newRectangle.SetValue(Canvas.LeftProperty, endPoint.X);
-                newRectangle.Width = startPoint.X - endPoint.X;
+                square.SetValue(Canvas.LeftProperty, endPoint.X);
+                square.Width = startPoint.X - endPoint.X;
             }
 
             if (endPoint.Y >= startPoint.Y)
             {
-                // Defines the top part of the rectangle
-                newRectangle.SetValue(Canvas.TopProperty, startPoint.Y - 50);
-                newRectangle.Height = endPoint.Y - startPoint.Y;
+                // Defines the top part of the ellipse
+                square.SetValue(Canvas.TopProperty, startPoint.Y - 50);
+                square.Height = endPoint.Y - startPoint.Y;
             }
             else
             {
-                newRectangle.SetValue(Canvas.TopProperty, endPoint.Y - 50);
-                newRectangle.Height = startPoint.Y - endPoint.Y;
+                square.SetValue(Canvas.TopProperty, endPoint.Y - 50);
+                square.Height = startPoint.Y - endPoint.Y;
             }
-
-            Canvas.Children.Add(newRectangle);
+            Canvas.Children.Add(square);
         }
     }
 }
