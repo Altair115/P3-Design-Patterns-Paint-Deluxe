@@ -6,13 +6,15 @@
         xmlns:local="clr-namespace:PaintApp4Scrubs"
         mc:Ignorable="d"
         Title="Paint Deluxe 9000" Height="450" Width="800">
+    
     <DockPanel>
         <ToolBar Name="ToolBar" DockPanel.Dock="Top" Height="50">
             <RadioButton Name="LineButton" BorderBrush="#FF969696" Content="Line" Height="50" Width="80" GroupName="ShapeGroup" Click="LineButton_OnClick" IsChecked="True"/>
             <RadioButton Name="EllipseButton" BorderBrush="#FF969696" Content="Ellipse" Height="50" Width="80" GroupName="ShapeGroup" Click="EllipseButton_OnClick" IsChecked="False"/>
             <RadioButton Name="RectangleButton"  BorderBrush="#FF969696" Content="Rectangle" Height="50" Width="80" GroupName="ShapeGroup" Click="RectangleButton_OnClick" IsChecked="False"/>
+            <RadioButton Name="TriangleButton" BorderBrush="#FF969696" Content="Triangle" Height="50" Width="80" GroupName="ShapeGroup" Click="TriangleButton_OnClick" IsChecked="False"></RadioButton>
         </ToolBar>
-        <Canvas Name="Canvas" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">
+        <Canvas Name="Canvas" x:FieldModifier="public" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">
         </Canvas>
     </DockPanel>
 </Window>

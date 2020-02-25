@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs
 {
@@ -20,9 +21,10 @@ namespace PaintApp4Scrubs
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow AppWindow;
         private enum TheShape
         {
-            Line, Ellipse, Rectangle
+            Line, Ellipse, Rectangle, Triangle
         }
 
         private TheShape currShape = TheShape.Line;
@@ -30,6 +32,7 @@ namespace PaintApp4Scrubs
         public MainWindow()
         {
             InitializeComponent();
+            AppWindow = this;
         }
 
         private void LineButton_OnClick(object sender, RoutedEventArgs e)
@@ -45,6 +48,10 @@ namespace PaintApp4Scrubs
         private void RectangleButton_OnClick(object sender, RoutedEventArgs e)
         {
             currShape = TheShape.Rectangle;
+        }
+        private void TriangleButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            currShape = TheShape.Triangle;
         }
 
         private Point startPoint;
@@ -68,10 +75,15 @@ namespace PaintApp4Scrubs
                 case TheShape.Rectangle:
                     DrawRectangle();
                     break;
+                case TheShape.Triangle:
+                    DrawTriangle();
+                    break;
                 default:
                     return;
             }
         }
+
+        
 
         private void Canvas_OnMouseMove(object sender, MouseEventArgs e)
         {
@@ -144,38 +156,78 @@ namespace PaintApp4Scrubs
         // Sets and draws rectangle after mouse is released
         private void DrawRectangle()
         {
-            Rectangle newRectangle = new Rectangle()
+            Square square = new Square()
             {
                 Stroke = Brushes.Blue,
                 Fill = Brushes.White,
-                StrokeThickness = 4
+                StrokeThickness = 4,
+                Height = 10,
+                Width = 10
             };
-
             if (endPoint.X >= startPoint.X)
             {
-                // Defines the left part of the rectangle
-                newRectangle.SetValue(Canvas.LeftProperty, startPoint.X);
-                newRectangle.Width = endPoint.X - startPoint.X;
+                // Defines the left part of the ellipse
+                square.SetValue(Canvas.LeftProperty, startPoint.X);
+                square.Width = endPoint.X - startPoint.X;
             }
             else
             {
-                newRectangle.SetValue(Canvas.LeftProperty, endPoint.X);
-                newRectangle.Width = startPoint.X - endPoint.X;
+                square.SetValue(Canvas.LeftProperty, endPoint.X);
+                square.Width = startPoint.X - endPoint.X;
             }
 
             if (endPoint.Y >= startPoint.Y)
             {
-                // Defines the top part of the rectangle
-                newRectangle.SetValue(Canvas.TopProperty, startPoint.Y - 50);
-                newRectangle.Height = endPoint.Y - startPoint.Y;
+                // Defines the top part of the ellipse
+                square.SetValue(Canvas.TopProperty, startPoint.Y - 50);
+                square.Height = endPoint.Y - startPoint.Y;
             }
             else
             {
-                newRectangle.SetValue(Canvas.TopProperty, endPoint.Y - 50);
-                newRectangle.Height = startPoint.Y - endPoint.Y;
+                square.SetValue(Canvas.TopProperty, endPoint.Y - 50);
+                square.Height = startPoint.Y - endPoint.Y;
+            }
+            square.Draw();
+        }
+        public void PutOnScreen(GodShape shape)
+        {
+            Canvas.Children.Add(shape);
+        }
+
+        private void DrawTriangle()
+        {
+            Triangle triangle = new Triangle() 
+            {
+                Stroke = Brushes.Blue,
+                Fill = Brushes.White,
+                StrokeThickness = 4,
+                Height = 10,
+                Width = 10
+            };
+            if (endPoint.X >= startPoint.X)
+            {
+                // Defines the left part of the ellipse
+                triangle.SetValue(Canvas.LeftProperty, startPoint.X);
+                triangle.Width = endPoint.X - startPoint.X;
+            }
+            else
+            {
+                triangle.SetValue(Canvas.LeftProperty, endPoint.X);
+                triangle.Width = startPoint.X - endPoint.X;
             }
 
-            Canvas.Children.Add(newRectangle);
+            if (endPoint.Y >= startPoint.Y)
+            {
+                // Defines the top part of the ellipse
+                triangle.SetValue(Canvas.TopProperty, startPoint.Y - 50);
+                triangle.Height = endPoint.Y - startPoint.Y;
+            }
+            else
+            {
+                triangle.SetValue(Canvas.TopProperty, endPoint.Y - 50);
+                triangle.Height = startPoint.Y - endPoint.Y;
+            }
+            Canvas.Children.Add(triangle);
         }
     }
 }
