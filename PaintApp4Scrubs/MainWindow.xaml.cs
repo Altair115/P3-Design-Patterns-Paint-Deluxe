@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PaintApp4Scrubs.Classes;
 using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs
@@ -21,10 +22,12 @@ namespace PaintApp4Scrubs
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Broker broker;
         public static MainWindow AppWindow;
+        private bool canMove = false;
         private enum TheShape
         {
-            Line, Ellipse, Rectangle
+            Line, Ellipse, Rectangle , Move
         }
 
         private TheShape currShape = TheShape.Line;
@@ -33,6 +36,7 @@ namespace PaintApp4Scrubs
         {
             InitializeComponent();
             AppWindow = this;
+            broker = new Broker();
         }
 
         private void LineButton_OnClick(object sender, RoutedEventArgs e)
@@ -55,9 +59,23 @@ namespace PaintApp4Scrubs
 
         private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
+            
             startPoint = e.GetPosition(this);
+
+                var canvas = sender as Canvas;
+                if (canvas == null)
+                    return;
+
+                HitTestResult hitTestResult = VisualTreeHelper.HitTest(canvas, e.GetPosition(canvas));
+                var element = hitTestResult.VisualHit;
+                Console.WriteLine(element.GetType().ToString());
+           
         }
 
+        private void Move_Click(object sender, RoutedEventArgs e)
+        {
+            currShape = TheShape.Move;
+        }
         private void Canvas_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
             switch (currShape)
@@ -70,6 +88,8 @@ namespace PaintApp4Scrubs
                     break;
                 case TheShape.Rectangle:
                     DrawRectangle();
+                    break;
+                case TheShape.Move:
                     break;
                 default:
                     return;
@@ -178,11 +198,14 @@ namespace PaintApp4Scrubs
                 square.SetValue(Canvas.TopProperty, endPoint.Y - 50);
                 square.Height = startPoint.Y - endPoint.Y;
             }
-            square.Draw();
+            Draw draw = new Draw(square);
+            broker.DoCommand(draw);
+
         }
         public void PutOnScreen(GodShape shape)
         {
             Canvas.Children.Add(shape);
         }
+
     }
 }

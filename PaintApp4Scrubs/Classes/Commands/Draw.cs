@@ -17,8 +17,7 @@ namespace PaintApp4Scrubs.Classes
         }
         public void Execute()
         {
-            //shape.Draw();
-           // Canvas.Children.Add(shape);
+            shape.Draw();
         }
     }
 }
