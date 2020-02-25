@@ -27,7 +27,7 @@ namespace PaintApp4Scrubs
         private bool canMove = false;
         private enum TheShape
         {
-            Line, Ellipse, Rectangle , Move
+            Line, Ellipse, Rectangle,Traingle, Move
         }
 
         private TheShape currShape = TheShape.Line;
@@ -52,6 +52,10 @@ namespace PaintApp4Scrubs
         private void RectangleButton_OnClick(object sender, RoutedEventArgs e)
         {
             currShape = TheShape.Rectangle;
+        }
+        private void TriangleButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            currShape = TheShape.Triangle;
         }
 
         private Point startPoint;
@@ -91,10 +95,15 @@ namespace PaintApp4Scrubs
                     break;
                 case TheShape.Move:
                     break;
+                case TheShape.Triangle:
+                    DrawTriangle();
+                    break;
                 default:
                     return;
             }
         }
+
+        
 
         private void Canvas_OnMouseMove(object sender, MouseEventArgs e)
         {
@@ -207,5 +216,40 @@ namespace PaintApp4Scrubs
             Canvas.Children.Add(shape);
         }
 
+        private void DrawTriangle()
+        {
+            Triangle triangle = new Triangle() 
+            {
+                Stroke = Brushes.Blue,
+                Fill = Brushes.White,
+                StrokeThickness = 4,
+                Height = 10,
+                Width = 10
+            };
+            if (endPoint.X >= startPoint.X)
+            {
+                // Defines the left part of the ellipse
+                triangle.SetValue(Canvas.LeftProperty, startPoint.X);
+                triangle.Width = endPoint.X - startPoint.X;
+            }
+            else
+            {
+                triangle.SetValue(Canvas.LeftProperty, endPoint.X);
+                triangle.Width = startPoint.X - endPoint.X;
+            }
+
+            if (endPoint.Y >= startPoint.Y)
+            {
+                // Defines the top part of the ellipse
+                triangle.SetValue(Canvas.TopProperty, startPoint.Y - 50);
+                triangle.Height = endPoint.Y - startPoint.Y;
+            }
+            else
+            {
+                triangle.SetValue(Canvas.TopProperty, endPoint.Y - 50);
+                triangle.Height = startPoint.Y - endPoint.Y;
+            }
+            Canvas.Children.Add(triangle);
+        }
     }
 }
