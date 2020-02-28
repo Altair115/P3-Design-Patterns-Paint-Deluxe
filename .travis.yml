@@ -1,3 +1,3 @@
-dist: windows
+os: windows
 language: csharp
 solution: PaintApp4Scrubs.sln
