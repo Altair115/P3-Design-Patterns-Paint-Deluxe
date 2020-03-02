@@ -56,6 +56,10 @@ namespace PaintApp4Scrubs
         {
             currShape = TheShape.Triangle;
         }
+        private void Move_Click(object sender, RoutedEventArgs e)
+        {
+            currShape = TheShape.Move;
+        }
 
         private Point startPoint;
         private Point endPoint;
@@ -65,20 +69,35 @@ namespace PaintApp4Scrubs
             
             startPoint = e.GetPosition(this);
 
+            if(currShape == TheShape.Move)
+            {
                 var canvas = sender as Canvas;
                 if (canvas == null)
                     return;
 
                 HitTestResult hitTestResult = VisualTreeHelper.HitTest(canvas, e.GetPosition(canvas));
                 var element = hitTestResult.VisualHit;
-                Console.WriteLine(element.GetType().ToString());
-           
+            }
         }
 
-        private void Move_Click(object sender, RoutedEventArgs e)
-        {
-            currShape = TheShape.Move;
-        }
+        //private void GodShape_MouseMove(object sender, MouseEventArgs e)
+        //{
+        //    var rect = (GodShape)sender;
+        //    var canvas = sender as Canvas;
+
+        //    if (!rect.IsMouseCaptured) return;
+
+        //    // get the position of the mouse relative to the Canvas
+        //    var mousePos = e.GetPosition(canvas);
+
+        //    // center the rect on the mouse
+        //    double left = mousePos.X - (rect.ActualWidth / 2);
+        //    double top = mousePos.Y - (rect.ActualHeight / 2);
+        //    Canvas.SetLeft(rect, left);
+        //    Canvas.SetTop(rect, top);
+        //}
+
+
         private void Canvas_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
             switch (currShape)
@@ -92,10 +111,10 @@ namespace PaintApp4Scrubs
                 case TheShape.Rectangle:
                     DrawRectangle();
                     break;
-                case TheShape.Move:
-                    break;
                 case TheShape.Triangle:
                     DrawTriangle();
+                    break;
+                case TheShape.Move:
                     break;
                 default:
                     return;
