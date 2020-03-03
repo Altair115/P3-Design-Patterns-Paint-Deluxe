@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PaintApp4Scrubs"
         mc:Ignorable="d"
         Title="Paint Deluxe 9000" Height="450" Width="800">
-    
+
     <DockPanel>
         <ToolBar Name="ToolBar" DockPanel.Dock="Top" Height="50">
             <RadioButton Name="LineButton" BorderBrush="#FF969696" Content="Line" Height="50" Width="80" GroupName="ShapeGroup" Click="LineButton_OnClick" IsChecked="True"/>
