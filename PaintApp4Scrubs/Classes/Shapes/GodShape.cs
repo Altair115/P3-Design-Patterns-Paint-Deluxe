@@ -6,15 +6,15 @@ using System.Windows.Shapes;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
-    public abstract class GodShape : Shape
+public abstract class GodShape : Shape
+{
+    public void Draw()
     {
-        public void Draw()
-        {
-            PaintApp4Scrubs.MainWindow.AppWindow.PutOnScreen(this);
-        }
-        public void Remove()
-        {
-            PaintApp4Scrubs.MainWindow.AppWindow.RemoveShape(this);
-        }
+        PaintApp4Scrubs.MainWindow.AppWindow.PutOnScreen(this);
     }
+    public void Remove()
+    {
+        PaintApp4Scrubs.MainWindow.AppWindow.RemoveShape(this);
+    }
+}
 }
