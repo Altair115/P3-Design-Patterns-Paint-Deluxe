@@ -4,17 +4,13 @@ using System.Text;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace PaintApp4Scrubs.Classes.Shapes
-{
-public abstract class GodShape : Shape
-{
-    public void Draw()
-    {
-        PaintApp4Scrubs.MainWindow.AppWindow.PutOnScreen(this);
+namespace PaintApp4Scrubs.Classes.Shapes {
+  public abstract class GodShape : Shape {
+    public void Draw() {
+      PaintApp4Scrubs.MainWindow.AppWindow.PutOnScreen(this);
     }
-    public void Remove()
-    {
-        PaintApp4Scrubs.MainWindow.AppWindow.RemoveShape(this);
+    public void Remove() {
+      PaintApp4Scrubs.MainWindow.AppWindow.RemoveShape(this);
     }
-}
+  }
 }
