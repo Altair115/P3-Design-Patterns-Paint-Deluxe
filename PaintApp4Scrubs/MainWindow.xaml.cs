@@ -68,15 +68,14 @@ namespace PaintApp4Scrubs
         {
             
             startPoint = e.GetPosition(this);
-
-            if(currShape == TheShape.Move)
+            HitTestResult result = VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
+            if (currShape == TheShape.Move)
             {
-                var canvas = sender as Canvas;
-                if (canvas == null)
-                    return;
+                if (result!= null)
+                {
+                    Canvas.Children.Remove(result.VisualHit as GodShape);
+                }
 
-                HitTestResult hitTestResult = VisualTreeHelper.HitTest(canvas, e.GetPosition(canvas));
-                var element = hitTestResult.VisualHit;
             }
         }
 
