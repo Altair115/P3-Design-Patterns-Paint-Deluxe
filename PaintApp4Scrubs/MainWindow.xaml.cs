@@ -25,6 +25,7 @@ namespace PaintApp4Scrubs
     {
         private Broker broker;
         public static MainWindow AppWindow;
+        private GodShape selectedShape;
         private enum TheShape
         {
             Line, Ellipse, Rectangle, Triangle, Delete , Move , Resize
@@ -78,11 +79,14 @@ namespace PaintApp4Scrubs
             
             startPoint = e.GetPosition(this);
             HitTestResult result = VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
+            selectedShape = result.VisualHit as GodShape;
             if (currShape == TheShape.Delete)
             {
                 DeleteShape(result.VisualHit as GodShape);
 
             }
+
+          
         }
 
         //private void GodShape_MouseMove(object sender, MouseEventArgs e)
@@ -105,6 +109,19 @@ namespace PaintApp4Scrubs
 
         private void Canvas_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
+            if (currShape == TheShape.Resize)
+            {
+                Vector distance = startPoint - endPoint;
+                var x = distance.Length;
+                if (selectedShape != null && selectedShape.Width  > distance.X && selectedShape.Height > distance.Y)
+                {
+                    selectedShape.Width -= distance.X;
+                    selectedShape.Height -= distance.Y;
+                }
+                
+
+            }
+            selectedShape = null;
             switch (currShape)
             {
                 case TheShape.Line :
@@ -123,6 +140,9 @@ namespace PaintApp4Scrubs
                 default:
                     return;
             }
+            
+
+            
         }
 
         
