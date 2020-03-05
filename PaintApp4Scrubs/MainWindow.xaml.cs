@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using PaintApp4Scrubs.Classes;
+using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs
@@ -26,7 +27,7 @@ namespace PaintApp4Scrubs
         public static MainWindow AppWindow;
         private enum TheShape
         {
-            Line, Ellipse, Rectangle, Triangle, Move
+            Line, Ellipse, Rectangle, Triangle, Delete , Move , Resize
         }
 
         private TheShape currShape = TheShape.Line;
@@ -56,11 +57,19 @@ namespace PaintApp4Scrubs
         {
             currShape = TheShape.Triangle;
         }
-        private void Move_Click(object sender, RoutedEventArgs e)
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            currShape = TheShape.Delete;
+        }
+        private void ResizeButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            currShape = TheShape.Resize;
+        }
+
+        private void MoveButton_OnClick(object sender, RoutedEventArgs e)
         {
             currShape = TheShape.Move;
         }
-
         private Point startPoint;
         private Point endPoint;
 
@@ -68,15 +77,11 @@ namespace PaintApp4Scrubs
         {
             
             startPoint = e.GetPosition(this);
-
-            if(currShape == TheShape.Move)
+            HitTestResult result = VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
+            if (currShape == TheShape.Delete)
             {
-                var canvas = sender as Canvas;
-                if (canvas == null)
-                    return;
+                DeleteShape(result.VisualHit as GodShape);
 
-                HitTestResult hitTestResult = VisualTreeHelper.HitTest(canvas, e.GetPosition(canvas));
-                var element = hitTestResult.VisualHit;
             }
         }
 
@@ -114,8 +119,7 @@ namespace PaintApp4Scrubs
                 case TheShape.Triangle:
                     DrawTriangle();
                     break;
-                case TheShape.Move:
-                    break;
+
                 default:
                     return;
             }
@@ -229,9 +233,22 @@ namespace PaintApp4Scrubs
             broker.DoCommand(draw);
 
         }
+        
         public void PutOnScreen(GodShape shape)
         {
             Canvas.Children.Add(shape);
+        }
+        public void DeleteShape(GodShape shape)
+        {
+            if (shape != null)
+            {
+                Delete delete = new Delete(shape);
+                broker.DoCommand(delete);
+            }
+        }
+        public void RemoveShape(GodShape shape)
+        {
+            Canvas.Children.Remove(shape);
         }
 
         private void DrawTriangle()
@@ -269,5 +286,7 @@ namespace PaintApp4Scrubs
             }
             Canvas.Children.Add(triangle);
         }
+
+       
     }
 }

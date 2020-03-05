@@ -12,5 +12,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             PaintApp4Scrubs.MainWindow.AppWindow.PutOnScreen(this);
         }
+        public void Remove()
+        {
+            PaintApp4Scrubs.MainWindow.AppWindow.RemoveShape(this);
+        }
     }
 }

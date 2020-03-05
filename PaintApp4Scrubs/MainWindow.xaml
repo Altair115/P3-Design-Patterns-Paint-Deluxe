@@ -13,7 +13,9 @@
             <RadioButton Name="EllipseButton" BorderBrush="#FF969696" Content="Ellipse" Height="50" Width="80" GroupName="ShapeGroup" Click="EllipseButton_OnClick" IsChecked="False"/>
             <RadioButton Name="RectangleButton"  BorderBrush="#FF969696" Content="Rectangle" Height="50" Width="80" GroupName="ShapeGroup" Click="RectangleButton_OnClick" IsChecked="False"/>
             <RadioButton Name="TriangleButton" BorderBrush="#FF969696" Content="Triangle" Height="50" Width="80" GroupName="ShapeGroup" Click="TriangleButton_OnClick" IsChecked="False"/>
-            <RadioButton Name="MoveButton" BorderBrush="#FF969696" Content="Move" Height="50" Width="80" GroupName="ShapeGroup" Click="Move_Click" IsChecked="False"/>
+            <RadioButton Name="DeleteButton" BorderBrush="#FF969696" Content="Delete" Height="50" Width="80" GroupName="ShapeGroup" Click="Delete_Click" IsChecked="False"/>
+            <RadioButton Name="ResizeButton" BorderBrush="#FF969696" Content="Resize" Height="50" Width="80" GroupName="ShapeGroup" Click="ResizeButton_OnClick" IsChecked="False"/>
+            <RadioButton Name="MoveButton" BorderBrush="#FF969696" Content="Move" Height="50" Width="80" GroupName="ShapeGroup" Click="MoveButton_OnClick" IsChecked="False"/>
         </ToolBar>
         <Canvas Name="Canvas" x:FieldModifier="public" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">
         </Canvas>
