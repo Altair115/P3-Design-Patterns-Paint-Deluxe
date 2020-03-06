@@ -11,11 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using PaintApp4Scrubs.Classes;
 using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Classes.Shapes;
-using Line = System.Windows.Shapes.Line;
 
 namespace PaintApp4Scrubs
 {
@@ -82,7 +80,6 @@ namespace PaintApp4Scrubs
             if (currShape == TheShape.Delete)
             {
                 DeleteShape(result.VisualHit as GodShape);
-
             }
         }
 
@@ -146,9 +143,8 @@ namespace PaintApp4Scrubs
                 X2 = endPoint.X,
                 Y2 = endPoint.Y - 50
             };
-            //Draw draw = new Draw(newLine);
-            //broker.DoCommand(draw);
-            Canvas.Children.Add(newLine);
+            Draw draw = new Draw(newLine);
+            broker.DoCommand(draw);
         }
 
         // Sets and draws ellipse after mouse is released
@@ -192,8 +188,8 @@ namespace PaintApp4Scrubs
                 newEllipse.SetValue(Canvas.TopProperty, endPoint.Y - 50);
                 newEllipse.Height = startPoint.Y - endPoint.Y;
             }
-
-            Canvas.Children.Add(newEllipse);
+            Draw draw = new Draw(newEllipse);
+            broker.DoCommand(draw);
         }
 
         // Sets and draws rectangle after mouse is released
@@ -278,11 +274,9 @@ namespace PaintApp4Scrubs
         }
         public void DeleteShape(GodShape shape)
         {
-            if (shape != null)
-            {
-                Delete delete = new Delete(shape);
-                broker.DoCommand(delete);
-            }
+            if (shape == null) return;
+            Delete delete = new Delete(shape);
+            broker.DoCommand(delete);
         }
         public void RemoveShape(GodShape shape)
         {

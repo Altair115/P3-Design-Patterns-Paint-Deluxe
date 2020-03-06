@@ -15,6 +15,5 @@ namespace PaintApp4Scrubs.Classes
             commands.Add(command);
             command.Execute();
         }
-
     }
 }

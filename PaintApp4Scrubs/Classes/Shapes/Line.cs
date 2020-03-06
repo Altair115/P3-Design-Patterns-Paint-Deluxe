@@ -6,12 +6,13 @@ namespace PaintApp4Scrubs.Classes.Shapes
 {
     public class Line : GodShape
     {
+        public double X1, X2, Y1, Y2;
         protected override Geometry DefiningGeometry
         {
             get
             {
-                Point p1 = new Point(0.0d, 0.0d);
-                Point p2 = new Point(this.Width, this.Height);
+                Point p1 = new Point(X1, Y1);
+                Point p2 = new Point(X2, Y2);
 
                 List<PathSegment> segments = new List<PathSegment>(2);
                 segments.Add(new LineSegment(p1, true));
