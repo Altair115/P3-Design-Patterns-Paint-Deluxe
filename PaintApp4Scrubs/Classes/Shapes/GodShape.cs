@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Media;
-using System.Windows.Shapes;
+﻿using System.Windows.Shapes;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
@@ -10,11 +6,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
     {
         public void Draw()
         {
-            PaintApp4Scrubs.MainWindow.AppWindow.PutOnScreen(this);
+            MainWindow.AppWindow.PutOnScreen(this);
         }
         public void Remove()
         {
-            PaintApp4Scrubs.MainWindow.AppWindow.RemoveShape(this);
+            MainWindow.AppWindow.RemoveShape(this);
         }
     }
 }
