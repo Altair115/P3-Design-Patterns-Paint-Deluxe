@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 using PaintApp4Scrubs.Classes;
 using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Classes.Shapes;
@@ -121,7 +120,6 @@ public partial class MainWindow : Window {
     case TheShape.Triangle:
       DrawTriangle();
       break;
-
     default:
       return;
     }
@@ -140,6 +138,23 @@ public partial class MainWindow : Window {
                               Y1 = startPoint.Y - 50, X2 = endPoint.X,
                               Y2 = endPoint.Y - 50};
     Canvas.Children.Add(newLine);
+  }
+
+  private void Canvas_OnMouseMove(object sender, MouseEventArgs e) {
+    // Update the X & Y as the mouse moves
+    if (e.LeftButton == MouseButtonState.Pressed) {
+      endPoint = e.GetPosition(this);
+    }
+  }
+
+#region DrawStrategies
+  // Sets and draws line after mouse is released
+  private void DrawLine() {
+    Line newLine = new Line(){Stroke = Brushes.Blue, X1 = startPoint.X,
+                              Y1 = startPoint.Y - 50, X2 = endPoint.X,
+                              Y2 = endPoint.Y - 50};
+    Draw draw = new Draw(newLine);
+    broker.DoCommand(draw);
   }
 
   // Sets and draws ellipse after mouse is released
@@ -171,8 +186,9 @@ public partial class MainWindow : Window {
       newEllipse.SetValue(Canvas.TopProperty, endPoint.Y - 50);
       newEllipse.Height = startPoint.Y - endPoint.Y;
     }
+    Draw draw = new Draw(newEllipse);
+    broker.DoCommand(draw);
 
-    Canvas.Children.Add(newEllipse);
   }
 
   // Sets and draws rectangle after mouse is released
@@ -200,15 +216,6 @@ public partial class MainWindow : Window {
     broker.DoCommand(draw);
   }
 
-  public void PutOnScreen(GodShape shape) { Canvas.Children.Add(shape); }
-  public void DeleteShape(GodShape shape) {
-    if (shape != null) {
-      Delete delete = new Delete(shape);
-      broker.DoCommand(delete);
-    }
-  }
-  public void RemoveShape(GodShape shape) { Canvas.Children.Remove(shape); }
-
   private void DrawTriangle() {
     Triangle triangle =
         new Triangle(){Stroke = Brushes.Blue, Fill = Brushes.White,
@@ -230,7 +237,18 @@ public partial class MainWindow : Window {
       triangle.SetValue(Canvas.TopProperty, endPoint.Y - 50);
       triangle.Height = startPoint.Y - endPoint.Y;
     }
-    Canvas.Children.Add(triangle);
+    Draw draw = new Draw(triangle);
+    broker.DoCommand(draw);
   }
+#endregion
+
+  public void PutOnScreen(GodShape shape) { Canvas.Children.Add(shape); }
+  public void DeleteShape(GodShape shape) {
+    if (shape == null)
+      return;
+    Delete delete = new Delete(shape);
+    broker.DoCommand(delete);
+  }
+  public void RemoveShape(GodShape shape) { Canvas.Children.Remove(shape); }
 }
 }

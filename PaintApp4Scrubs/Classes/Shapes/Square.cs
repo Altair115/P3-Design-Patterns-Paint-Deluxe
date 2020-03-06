@@ -14,9 +14,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             get
             {
-                
                 Point p1 = new Point(0.0d, 0.0d);
-                Point p2 = new Point(0,this.Height);
+                Point p2 = new Point(0, this.Height);
                 Point p3 = new Point(this.Width, this.Height);
                 Point p4 = new Point(this.Width, 0.0d);
 
@@ -35,9 +34,5 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 return g;
             }
         }
-        
-
-
     }
-
 }
