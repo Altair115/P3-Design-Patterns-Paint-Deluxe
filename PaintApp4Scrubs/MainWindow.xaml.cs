@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using PaintApp4Scrubs.Classes;
 using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Classes.Shapes;
+using Line = System.Windows.Shapes.Line;
 
 namespace PaintApp4Scrubs
 {
@@ -119,13 +120,10 @@ namespace PaintApp4Scrubs
                 case TheShape.Triangle:
                     DrawTriangle();
                     break;
-
                 default:
                     return;
             }
         }
-
-        
 
         private void Canvas_OnMouseMove(object sender, MouseEventArgs e)
         {
@@ -136,6 +134,7 @@ namespace PaintApp4Scrubs
             }
         }
 
+        #region DrawStrategies
         // Sets and draws line after mouse is released
         private void DrawLine()
         {
@@ -147,6 +146,8 @@ namespace PaintApp4Scrubs
                 X2 = endPoint.X,
                 Y2 = endPoint.Y - 50
             };
+            //Draw draw = new Draw(newLine);
+            //broker.DoCommand(draw);
             Canvas.Children.Add(newLine);
         }
 
@@ -231,29 +232,11 @@ namespace PaintApp4Scrubs
             }
             Draw draw = new Draw(square);
             broker.DoCommand(draw);
-
-        }
-        
-        public void PutOnScreen(GodShape shape)
-        {
-            Canvas.Children.Add(shape);
-        }
-        public void DeleteShape(GodShape shape)
-        {
-            if (shape != null)
-            {
-                Delete delete = new Delete(shape);
-                broker.DoCommand(delete);
-            }
-        }
-        public void RemoveShape(GodShape shape)
-        {
-            Canvas.Children.Remove(shape);
         }
 
         private void DrawTriangle()
         {
-            Triangle triangle = new Triangle() 
+            Triangle triangle = new Triangle()
             {
                 Stroke = Brushes.Blue,
                 Fill = Brushes.White,
@@ -284,9 +267,26 @@ namespace PaintApp4Scrubs
                 triangle.SetValue(Canvas.TopProperty, endPoint.Y - 50);
                 triangle.Height = startPoint.Y - endPoint.Y;
             }
-            Canvas.Children.Add(triangle);
+            Draw draw = new Draw(triangle);
+            broker.DoCommand(draw);
         }
+        #endregion
 
-       
+        public void PutOnScreen(GodShape shape)
+        {
+            Canvas.Children.Add(shape);
+        }
+        public void DeleteShape(GodShape shape)
+        {
+            if (shape != null)
+            {
+                Delete delete = new Delete(shape);
+                broker.DoCommand(delete);
+            }
+        }
+        public void RemoveShape(GodShape shape)
+        {
+            Canvas.Children.Remove(shape);
+        }
     }
 }
