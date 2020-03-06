@@ -7,13 +7,13 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
-    class Broker
+class Broker
+{
+    private List<ICommand> commands = new List<ICommand>();
+    public void DoCommand(ICommand command)
     {
-        private List<ICommand> commands = new List<ICommand>();
-        public void DoCommand(ICommand command)
-        {
-            commands.Add(command);
-            command.Execute();
-        }
+        commands.Add(command);
+        command.Execute();
     }
+}
 }
