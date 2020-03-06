@@ -22,6 +22,7 @@ namespace PaintApp4Scrubs {
 public partial class MainWindow : Window {
   private Broker broker;
   public static MainWindow AppWindow;
+  private GodShape selectedShape;
   private enum TheShape {
     Line,
     Ellipse,
@@ -72,6 +73,7 @@ public partial class MainWindow : Window {
     startPoint = e.GetPosition(this);
     HitTestResult result =
         VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
+    selectedShape = result.VisualHit as GodShape;
     if (currShape == TheShape.Delete) {
       DeleteShape(result.VisualHit as GodShape);
     }
@@ -95,6 +97,16 @@ public partial class MainWindow : Window {
   //}
 
   private void Canvas_OnMouseUp(object sender, MouseButtonEventArgs e) {
+    if (currShape == TheShape.Resize) {
+      Vector distance = startPoint - endPoint;
+      var x = distance.Length;
+      if (selectedShape != null && selectedShape.Width > distance.X &&
+          selectedShape.Height > distance.Y) {
+        selectedShape.Width -= distance.X;
+        selectedShape.Height -= distance.Y;
+      }
+    }
+    selectedShape = null;
     switch (currShape) {
     case TheShape.Line:
       DrawLine();
@@ -111,6 +123,21 @@ public partial class MainWindow : Window {
     default:
       return;
     }
+  }
+
+  private void Canvas_OnMouseMove(object sender, MouseEventArgs e) {
+    // Update the X & Y as the mouse moves
+    if (e.LeftButton == MouseButtonState.Pressed) {
+      endPoint = e.GetPosition(this);
+    }
+  }
+
+  // Sets and draws line after mouse is released
+  private void DrawLine() {
+    Line newLine = new Line(){Stroke = Brushes.Blue, X1 = startPoint.X,
+                              Y1 = startPoint.Y - 50, X2 = endPoint.X,
+                              Y2 = endPoint.Y - 50};
+    Canvas.Children.Add(newLine);
   }
 
   private void Canvas_OnMouseMove(object sender, MouseEventArgs e) {
@@ -161,6 +188,7 @@ public partial class MainWindow : Window {
     }
     Draw draw = new Draw(newEllipse);
     broker.DoCommand(draw);
+
   }
 
   // Sets and draws rectangle after mouse is released
