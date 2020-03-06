@@ -41,42 +41,34 @@ public partial class MainWindow : Window {
     broker = new Broker();
   }
 
-        #region Button Calls
-        private void LineButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            currShape = TheShape.Line;
-        }
+#region Button Calls
+  private void LineButton_OnClick(object sender, RoutedEventArgs e) {
+    currShape = TheShape.Line;
+  }
 
-        private void EllipseButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            currShape = TheShape.Ellipse;
-        }
+  private void EllipseButton_OnClick(object sender, RoutedEventArgs e) {
+    currShape = TheShape.Ellipse;
+  }
 
-        private void RectangleButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            currShape = TheShape.Rectangle;
-        }
-        private void TriangleButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            currShape = TheShape.Triangle;
-        }
-        private void Delete_Click(object sender, RoutedEventArgs e)
-        {
-            currShape = TheShape.Delete;
-        }
-        private void ResizeButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            currShape = TheShape.Resize;
-        }
+  private void RectangleButton_OnClick(object sender, RoutedEventArgs e) {
+    currShape = TheShape.Rectangle;
+  }
+  private void TriangleButton_OnClick(object sender, RoutedEventArgs e) {
+    currShape = TheShape.Triangle;
+  }
+  private void Delete_Click(object sender, RoutedEventArgs e) {
+    currShape = TheShape.Delete;
+  }
+  private void ResizeButton_OnClick(object sender, RoutedEventArgs e) {
+    currShape = TheShape.Resize;
+  }
 
-        private void MoveButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            currShape = TheShape.Move;
-        }
-        #endregion
+  private void MoveButton_OnClick(object sender, RoutedEventArgs e) {
+    currShape = TheShape.Move;
+  }
+#endregion
 
-
-    private Point _startPoint;
+  private Point _startPoint;
   private Point _endPoint;
 
   private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e) {
@@ -143,7 +135,7 @@ public partial class MainWindow : Window {
     }
   }
 
-  #region DrawStrategies
+#region DrawStrategies
   // Sets and draws line after mouse is released
   private void DrawLine() {
     Line newLine = new Line(){Stroke = Brushes.Blue, X1 = _startPoint.X,
@@ -184,7 +176,6 @@ public partial class MainWindow : Window {
     }
     Draw draw = new Draw(newEllipse);
     broker.DoCommand(draw);
-
   }
 
   // Sets and draws rectangle after mouse is released
