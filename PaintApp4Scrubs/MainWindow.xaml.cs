@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Xml;
 using PaintApp4Scrubs.Classes;
 using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Classes.Shapes;
@@ -16,7 +17,7 @@ namespace PaintApp4Scrubs
         private Broker broker;
         public static MainWindow AppWindow;
         private GodShape selectedShape;
-        private enum TheShape
+        private enum ModeSwitch
         {
             Line,
             Ellipse,
@@ -27,7 +28,7 @@ namespace PaintApp4Scrubs
             Resize
         }
 
-        private TheShape currShape = TheShape.Line;
+        private ModeSwitch _currentMode = ModeSwitch.Line;
 
         public MainWindow()
         {
@@ -39,73 +40,56 @@ namespace PaintApp4Scrubs
         #region Button Calls
         private void LineButton_OnClick(object sender, RoutedEventArgs e)
         {
-            currShape = TheShape.Line;
+            _currentMode = ModeSwitch.Line;
         }
 
         private void EllipseButton_OnClick(object sender, RoutedEventArgs e)
         {
-            currShape = TheShape.Ellipse;
+            _currentMode = ModeSwitch.Ellipse;
         }
 
         private void RectangleButton_OnClick(object sender, RoutedEventArgs e)
         {
-            currShape = TheShape.Rectangle;
+            _currentMode = ModeSwitch.Rectangle;
         }
         private void TriangleButton_OnClick(object sender, RoutedEventArgs e)
         {
-            currShape = TheShape.Triangle;
+            _currentMode = ModeSwitch.Triangle;
         }
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            currShape = TheShape.Delete;
+            _currentMode = ModeSwitch.Delete;
         }
         private void ResizeButton_OnClick(object sender, RoutedEventArgs e)
         {
-            currShape = TheShape.Resize;
+            _currentMode = ModeSwitch.Resize;
         }
 
         private void MoveButton_OnClick(object sender, RoutedEventArgs e)
         {
-            currShape = TheShape.Move;
+            _currentMode = ModeSwitch.Move;
         }
         #endregion
 
+        private Point _currentPoint;
         private Point _startPoint;
         private Point _endPoint;
 
         private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
-
             _startPoint = e.GetPosition(this);
             HitTestResult result =
                 VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
             selectedShape = result.VisualHit as GodShape;
-            if (currShape == TheShape.Delete)
+            if (_currentMode == ModeSwitch.Delete)
             {
                 DeleteShape(result.VisualHit as GodShape);
             }
         }
 
-        // private void GodShape_MouseMove(object sender, MouseEventArgs e)
-        //{
-        //    var rect = (GodShape)sender;
-        //    var canvas = sender as Canvas;
-
-        //    if (!rect.IsMouseCaptured) return;
-
-        //    // get the position of the mouse relative to the Canvas
-        //    var mousePos = e.GetPosition(canvas);
-
-        //    // center the rect on the mouse
-        //    double left = mousePos.X - (rect.ActualWidth / 2);
-        //    double top = mousePos.Y - (rect.ActualHeight / 2);
-        //    Canvas.SetLeft(rect, left);
-        //    Canvas.SetTop(rect, top);
-        //}
-
         private void Canvas_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (currShape == TheShape.Resize)
+            if (_currentMode == ModeSwitch.Resize)
             {
                 Vector distance = _startPoint - _endPoint;
                 var x = distance.Length;
@@ -117,18 +101,18 @@ namespace PaintApp4Scrubs
                 }
             }
             selectedShape = null;
-            switch (currShape)
+            switch (_currentMode)
             {
-                case TheShape.Line:
+                case ModeSwitch.Line:
                     DrawLine();
                     break;
-                case TheShape.Ellipse:
+                case ModeSwitch.Ellipse:
                     DrawEllipse();
                     break;
-                case TheShape.Rectangle:
+                case ModeSwitch.Rectangle:
                     DrawRectangle();
                     break;
-                case TheShape.Triangle:
+                case ModeSwitch.Triangle:
                     DrawTriangle();
                     break;
                 default:
@@ -138,6 +122,8 @@ namespace PaintApp4Scrubs
 
         private void Canvas_OnMouseMove(object sender, MouseEventArgs e)
         {
+            _currentPoint = e.GetPosition(Canvas);
+            LabelCoords.Content = "Current X:" + _currentPoint.X.ToString()+ System.Environment.NewLine + "Current Y:" + _currentPoint.Y.ToString();
             // Update the X & Y as the mouse moves
             if (e.LeftButton == MouseButtonState.Pressed)
             {
