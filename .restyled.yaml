@@ -1,3 +1,20 @@
 # Do anything at all?
 enabled: true
+exclude:
+  - "**/node_modules/**/*"
+  - "**/vendor/**/*"
+  - ".github/workflows/**/*" # https://github.com/restyled-io/restyler/issues/73
+auto: false
+remote_files: []
+# Open Restyle PRs?
+pull_requests: true
+# Leave comments on the original PR linking to the Restyle PR?
+comments: false
+statuses:
+  # Red status in the case of differences found
+  differences: true
+  # Green status in the case of no differences found
+  no_differences: true
+  # Red status if we encounter errors restyling
+  error: true
 restylers: whitespace,astyle
