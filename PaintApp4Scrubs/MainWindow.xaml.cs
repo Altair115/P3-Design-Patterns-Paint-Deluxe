@@ -14,6 +14,7 @@ namespace PaintApp4Scrubs
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         private Broker broker;
         public static MainWindow AppWindow;
         private GodShape selectedShape;
@@ -115,6 +116,10 @@ namespace PaintApp4Scrubs
                 case ModeSwitch.Triangle:
                     DrawTriangle();
                     break;
+                case TheShape.Resize:
+                    ResizeShape(selectedShape);
+                    selectedShape = null;
+                    break;
                 default:
                     return;
             }
@@ -127,7 +132,7 @@ namespace PaintApp4Scrubs
             // Update the X & Y as the mouse moves
             if (e.LeftButton == MouseButtonState.Pressed)
             {
-                _endPoint = e.GetPosition(this);
+                EndPoint = e.GetPosition(this);
             }
         }
 
@@ -138,10 +143,10 @@ namespace PaintApp4Scrubs
             Line newLine = new Line()
             {
                 Stroke = Brushes.Blue,
-                X1 = _startPoint.X,
-                Y1 = _startPoint.Y - 50,
-                X2 = _endPoint.X,
-                Y2 = _endPoint.Y - 50
+                X1 = StartPoint.X,
+                Y1 = StartPoint.Y - 50,
+                X2 = EndPoint.X,
+                Y2 = EndPoint.Y - 50
             };
             Draw draw = new Draw(newLine);
             broker.DoCommand(draw);
@@ -166,28 +171,28 @@ namespace PaintApp4Scrubs
             // to change Left & TopProperty and Height
             // and Width accordingly
 
-            if (_endPoint.X >= _startPoint.X)
+            if (EndPoint.X >= StartPoint.X)
             {
                 // Defines the left part of the ellipse
-                newEllipse.SetValue(Canvas.LeftProperty, _startPoint.X);
-                newEllipse.Width = _endPoint.X - _startPoint.X;
+                newEllipse.SetValue(Canvas.LeftProperty, StartPoint.X);
+                newEllipse.Width = EndPoint.X - StartPoint.X;
             }
             else
             {
-                newEllipse.SetValue(Canvas.LeftProperty, _endPoint.X);
-                newEllipse.Width = _startPoint.X - _endPoint.X;
+                newEllipse.SetValue(Canvas.LeftProperty, EndPoint.X);
+                newEllipse.Width = StartPoint.X - EndPoint.X;
             }
 
-            if (_endPoint.Y >= _startPoint.Y)
+            if (EndPoint.Y >= StartPoint.Y)
             {
                 // Defines the top part of the ellipse
-                newEllipse.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
-                newEllipse.Height = _endPoint.Y - _startPoint.Y;
+                newEllipse.SetValue(Canvas.TopProperty, StartPoint.Y - 50);
+                newEllipse.Height = EndPoint.Y - StartPoint.Y;
             }
             else
             {
-                newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
-                newEllipse.Height = _startPoint.Y - _endPoint.Y;
+                newEllipse.SetValue(Canvas.TopProperty, EndPoint.Y - 50);
+                newEllipse.Height = StartPoint.Y - EndPoint.Y;
             }
             Draw draw = new Draw(newEllipse);
             broker.DoCommand(draw);
@@ -204,28 +209,28 @@ namespace PaintApp4Scrubs
                 Height = 10,
                 Width = 10
             };
-            if (_endPoint.X >= _startPoint.X)
+            if (EndPoint.X >= StartPoint.X)
             {
                 // Defines the left part of the ellipse
-                square.SetValue(Canvas.LeftProperty, _startPoint.X);
-                square.Width = _endPoint.X - _startPoint.X;
+                square.SetValue(Canvas.LeftProperty, StartPoint.X);
+                square.Width = EndPoint.X - StartPoint.X;
             }
             else
             {
-                square.SetValue(Canvas.LeftProperty, _endPoint.X);
-                square.Width = _startPoint.X - _endPoint.X;
+                square.SetValue(Canvas.LeftProperty, EndPoint.X);
+                square.Width = StartPoint.X - EndPoint.X;
             }
 
-            if (_endPoint.Y >= _startPoint.Y)
+            if (EndPoint.Y >= StartPoint.Y)
             {
                 // Defines the top part of the ellipse
-                square.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
-                square.Height = _endPoint.Y - _startPoint.Y;
+                square.SetValue(Canvas.TopProperty, StartPoint.Y - 50);
+                square.Height = EndPoint.Y - StartPoint.Y;
             }
             else
             {
-                square.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
-                square.Height = _startPoint.Y - _endPoint.Y;
+                square.SetValue(Canvas.TopProperty, EndPoint.Y - 50);
+                square.Height = StartPoint.Y - EndPoint.Y;
             }
             Draw draw = new Draw(square);
             broker.DoCommand(draw);
@@ -242,28 +247,28 @@ namespace PaintApp4Scrubs
                     Height = 10,
                     Width = 10
                 };
-            if (_endPoint.X >= _startPoint.X)
+            if (EndPoint.X >= StartPoint.X)
             {
                 // Defines the left part of the ellipse
-                triangle.SetValue(Canvas.LeftProperty, _startPoint.X);
-                triangle.Width = _endPoint.X - _startPoint.X;
+                triangle.SetValue(Canvas.LeftProperty, StartPoint.X);
+                triangle.Width = EndPoint.X - StartPoint.X;
             }
             else
             {
-                triangle.SetValue(Canvas.LeftProperty, _endPoint.X);
-                triangle.Width = _startPoint.X - _endPoint.X;
+                triangle.SetValue(Canvas.LeftProperty, EndPoint.X);
+                triangle.Width = StartPoint.X - EndPoint.X;
             }
 
-            if (_endPoint.Y >= _startPoint.Y)
+            if (EndPoint.Y >= StartPoint.Y)
             {
                 // Defines the top part of the ellipse
-                triangle.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
-                triangle.Height = _endPoint.Y - _startPoint.Y;
+                triangle.SetValue(Canvas.TopProperty, StartPoint.Y - 50);
+                triangle.Height = EndPoint.Y - StartPoint.Y;
             }
             else
             {
-                triangle.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
-                triangle.Height = _startPoint.Y - _endPoint.Y;
+                triangle.SetValue(Canvas.TopProperty, EndPoint.Y - 50);
+                triangle.Height = StartPoint.Y - EndPoint.Y;
             }
             Draw draw = new Draw(triangle);
             broker.DoCommand(draw);
@@ -279,5 +284,16 @@ namespace PaintApp4Scrubs
             broker.DoCommand(delete);
         }
         public void RemoveShape(GodShape shape) { Canvas.Children.Remove(shape); }
+
+        public void ResizeShape(GodShape shape)
+        {
+            if (shape == null)
+            {
+                return;
+            }
+            Vector distance = StartPoint - EndPoint;
+            Resize resize = new Resize(shape,distance);
+            broker.DoCommand(resize);
+        }
     }
 }

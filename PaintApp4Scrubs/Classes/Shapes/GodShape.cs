@@ -1,4 +1,5 @@
-﻿using System.Windows.Shapes;
+﻿using System.Windows;
+using System.Windows.Shapes;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
@@ -11,6 +12,16 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public void Remove()
         {
             MainWindow.AppWindow.RemoveShape(this);
+        }
+
+        public void Rezise(Vector distance)
+        {
+            if (this.Width > distance.X &&
+                this.Height > distance.Y)
+            {
+                this.Width -= distance.X;
+                this.Height -= distance.Y;
+            }
         }
     }
 }
