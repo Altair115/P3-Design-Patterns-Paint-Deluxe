@@ -90,17 +90,6 @@ namespace PaintApp4Scrubs
 
         private void Canvas_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (_currentMode == ModeSwitch.Resize)
-            {
-                Vector distance = _startPoint - _endPoint;
-                var x = distance.Length;
-                if (selectedShape != null && selectedShape.Width > distance.X &&
-                    selectedShape.Height > distance.Y)
-                {
-                    selectedShape.Width -= distance.X;
-                    selectedShape.Height -= distance.Y;
-                }
-            }
             selectedShape = null;
             switch (_currentMode)
             {
