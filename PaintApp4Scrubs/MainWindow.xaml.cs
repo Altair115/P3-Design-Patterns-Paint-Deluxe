@@ -72,7 +72,7 @@ namespace PaintApp4Scrubs
         }
         #endregion
 
-        private Point _currentPoint;
+        private Point _currentPoint; //the current mouse
         private Point _startPoint;
         private Point _endPoint;
 
