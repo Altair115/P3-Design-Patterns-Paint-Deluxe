@@ -20,3 +20,5 @@ statuses:
 restylers: 
     - astyle:
         arguments: []
+    - whitespace:
+        arguments: []
