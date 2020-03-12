@@ -18,7 +18,5 @@ statuses:
   # Red status if we encounter errors restyling
   error: true
 restylers: 
-    - whitespace:
-        arguments: []
     - astyle:
         arguments: []
