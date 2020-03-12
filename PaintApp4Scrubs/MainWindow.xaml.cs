@@ -14,7 +14,6 @@ namespace PaintApp4Scrubs
 /// </summary>
 public partial class MainWindow : Window
 {
-
     private Broker broker;
     public static MainWindow AppWindow;
     private GodShape selectedShape;
@@ -117,7 +116,7 @@ public partial class MainWindow : Window
     private void Canvas_OnMouseMove(object sender, MouseEventArgs e)
     {
         _currentPoint = e.GetPosition(Canvas);
-        LabelCoords.Content = "Current X:" + _currentPoint.X.ToString()+ System.Environment.NewLine + "Current Y:" + _currentPoint.Y.ToString();
+        LabelCoords.Content = "Current X:" + _currentPoint.X.ToString() + System.Environment.NewLine + "Current Y:" + _currentPoint.Y.ToString();
         // Update the X & Y as the mouse moves
         if (e.LeftButton == MouseButtonState.Pressed)
         {
@@ -264,7 +263,8 @@ public partial class MainWindow : Window
     }
     #endregion
 
-    public void PutOnScreen(GodShape shape) {
+    public void PutOnScreen(GodShape shape)
+    {
         Canvas.Children.Add(shape);
     }
     public void DeleteShape(GodShape shape)
@@ -274,7 +274,8 @@ public partial class MainWindow : Window
         Delete delete = new Delete(shape);
         broker.DoCommand(delete);
     }
-    public void RemoveShape(GodShape shape) {
+    public void RemoveShape(GodShape shape)
+    {
         Canvas.Children.Remove(shape);
     }
 
@@ -285,7 +286,7 @@ public partial class MainWindow : Window
             return;
         }
         Vector distance = _startPoint - _endPoint;
-        Resize resize = new Resize(shape,distance);
+        Resize resize = new Resize(shape, distance);
         broker.DoCommand(resize);
     }
 }
