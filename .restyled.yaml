@@ -17,4 +17,6 @@ statuses:
   no_differences: true
   # Red status if we encounter errors restyling
   error: true
-restylers: whitespace,astyle
+restylers: 
+    - whitespace:
+    - astyle:
