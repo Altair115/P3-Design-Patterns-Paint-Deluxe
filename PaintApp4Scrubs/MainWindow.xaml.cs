@@ -14,7 +14,7 @@ namespace PaintApp4Scrubs
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
         private Broker broker;
         public static MainWindow AppWindow;
         private GodShape selectedShape;
