@@ -89,7 +89,6 @@ public partial class MainWindow : Window
 
     private void Canvas_OnMouseUp(object sender, MouseButtonEventArgs e)
     {
-        selectedShape = null;
         switch (_currentMode)
         {
         case ModeSwitch.Line:
@@ -107,6 +106,9 @@ public partial class MainWindow : Window
         case ModeSwitch.Resize:
             ResizeShape(selectedShape);
             selectedShape = null;
+            break;
+        case ModeSwitch.Move:
+            broker.UndoCommand();
             break;
         default:
             return;
