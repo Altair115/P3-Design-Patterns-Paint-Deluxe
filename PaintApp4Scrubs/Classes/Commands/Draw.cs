@@ -8,19 +8,20 @@ using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs.Classes
 {
-    public class Draw : ICommand
+
+public class Draw : ICommand
+{
+    private GodShape shape;
+
+    public Draw(GodShape _shape)
     {
-        private GodShape shape;
+        shape = _shape;
+    }
 
-        public Draw(GodShape _shape)
-        {
-            shape = _shape;
-        }
-
-        public void Execute()
-        {
-            shape.Draw();
-        }
+    public void Execute()
+    {
+        shape.Draw();
+    }
 
         public void UnExecute()
         {
