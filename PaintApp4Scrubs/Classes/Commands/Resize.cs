@@ -12,20 +12,23 @@ class Resize : ICommand
 {
     private GodShape shape;
     private Vector distance;
+
     public Resize(GodShape _shape, Vector _distance)
     {
         shape = _shape;
         distance = _distance;
 
     }
-     public void Execute()
-     {
-            shape.Rezise(distance);
-        }
 
-        public void UnExecute()
-        {
-            throw new NotImplementedException();
-        }
+    public void Execute()
+    {
+        shape.Rezise(distance);
+    }
 
+    public void UnExecute()
+    {
+        throw new NotImplementedException();
+    }
+
+}
 }

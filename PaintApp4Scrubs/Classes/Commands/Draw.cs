@@ -11,16 +11,20 @@ namespace PaintApp4Scrubs.Classes
 public class Draw : ICommand
 {
     private GodShape shape;
+
     public Draw(GodShape _shape)
     {
         shape = _shape;
     }
+
     public void Execute()
     {
         shape.Draw();
     }
+
     public void UnExecute()
     {
         shape.Remove();
     }
+}
 }
