@@ -15,6 +15,11 @@ namespace PaintApp4Scrubs.Classes
         {
             commands.Push(command);
             command.Execute();
+            if (undoCommands.Count != 0)
+            {
+                undoCommands.Clear();
+            }
+            
         }
         public void UndoCommand()
         {
