@@ -32,5 +32,16 @@ class Broker
             undoCommands.Push(poptcommand);
         }
 
+        public void RedoCommand()
+        {
+            if (undoCommands.Count == 0)
+            {
+                return;
+            }
+
+            var poptcommand = undoCommands.Pop();
+            poptcommand.Execute();
+            commands.Push(poptcommand);
+        }
     }
 }

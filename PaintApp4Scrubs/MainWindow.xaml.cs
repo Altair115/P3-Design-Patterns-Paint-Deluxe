@@ -40,11 +40,11 @@ namespace PaintApp4Scrubs
         #region Button Calls
         private void UndoButton_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            broker.UndoCommand();
         }
         private void RedoButton_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            broker.RedoCommand();
         }
         private void LineButton_OnClick(object sender, RoutedEventArgs e)
         {
