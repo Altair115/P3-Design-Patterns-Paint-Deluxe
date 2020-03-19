@@ -19,5 +19,10 @@ namespace PaintApp4Scrubs.Classes
         {
             shape.Draw();
         }
+
+        public void UnExecute()
+        {
+            shape.Remove();
+        }
     }
 }

@@ -22,5 +22,10 @@ namespace PaintApp4Scrubs.Classes
         {
             shape.Rezise(distance);
         }
+
+        public void UnExecute()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
