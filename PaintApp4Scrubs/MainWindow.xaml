@@ -8,12 +8,21 @@
         Title="Paint Deluxe 9000" Height="450" Width="800">
     
     <DockPanel>
+<<<<<<< Updated upstream
         <ToolBar Name="ToolBar" DockPanel.Dock="Top" Height="50" >
             <Button Name="UndoButton" BorderBrush="#FF969696" Height="50" Width="50" Click="UndoButton_OnClick">
                 <Image Source="Resources/Images/icons8-undo-64.png"></Image>
             </Button>
             <Button Name="RedoButton" BorderBrush="#FF969696" Height="50" Width="50" Click="RedoButton_OnClick">
                 <Image Source="Resources/Images/icons8-redo-64.png"></Image>
+=======
+        <ToolBar Name="ToolBar" DockPanel.Dock="Top" Height="50">
+            <Button Name="UndoButton" BorderBrush="#FF969696" Height="50" Width="50" Click="UndoButton_OnClick" >
+                <Image Source="pack://application:,,,/Resources/Images/icons8-undo-64.png"></Image>
+            </Button>
+            <Button Name="RedoButton" BorderBrush="#FF969696" Height="50" Width="50" Click="RedoButton_OnClick" >
+                <Image Source="pack://application:,,,/Resources/Images/icons8-redo-64.png"></Image>
+>>>>>>> Stashed changes
             </Button>
             <RadioButton Name="LineButton" BorderBrush="#FF969696" Content="Line" Height="50" Width="80" GroupName="ShapeGroup" Click="LineButton_OnClick" IsChecked="True"/>
             <RadioButton Name="EllipseButton" BorderBrush="#FF969696" Content="Ellipse" Height="50" Width="80" GroupName="ShapeGroup" Click="EllipseButton_OnClick" IsChecked="False"/>
