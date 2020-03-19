@@ -107,9 +107,6 @@ public partial class MainWindow : Window
             ResizeShape(selectedShape);
             selectedShape = null;
             break;
-        case ModeSwitch.Move:
-            broker.UndoCommand();
-            break;
         default:
             return;
         }

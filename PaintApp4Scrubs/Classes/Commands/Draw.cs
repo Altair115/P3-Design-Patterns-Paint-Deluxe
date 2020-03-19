@@ -8,6 +8,7 @@ using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs.Classes
 {
+
 public class Draw : ICommand
 {
     private GodShape shape;
@@ -22,9 +23,9 @@ public class Draw : ICommand
         shape.Draw();
     }
 
-    public void UnExecute()
-    {
-        shape.Remove();
+        public void UnExecute()
+        {
+            shape.Remove();
+        }
     }
-}
 }
