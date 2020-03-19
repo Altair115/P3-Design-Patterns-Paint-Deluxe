@@ -7,8 +7,8 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
-    class Broker
-    {
+class Broker
+{
         private Stack<ICommand> commands = new Stack<ICommand>();
         private Stack<ICommand> undoCommands = new Stack<ICommand>();
         public void DoCommand(ICommand command)
@@ -31,5 +31,6 @@ namespace PaintApp4Scrubs.Classes
             poptcommand.UnExecute();
             undoCommands.Push(poptcommand);
         }
+
     }
 }

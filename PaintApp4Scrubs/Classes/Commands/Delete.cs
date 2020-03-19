@@ -6,21 +6,20 @@ using System.Text;
 
 namespace PaintApp4Scrubs.Classes.Commands
 {
-    class Delete : ICommand
+class Delete : ICommand
+{
+    private GodShape shape;
+    public Delete(GodShape _shape)
     {
-        private GodShape shape;
-        public Delete(GodShape _shape)
-        {
-            shape = _shape;
-        }
-        public void Execute()
-        { 
-            shape.Remove();
-        }
+        shape = _shape;
+    }
+    public void Execute()
+    {
+        shape.Remove();
+    }
 
-        public void UnExecute()
-        {
-            shape.Draw();
-        }
+    public void UnExecute()
+    {
+        shape.Draw();
     }
 }

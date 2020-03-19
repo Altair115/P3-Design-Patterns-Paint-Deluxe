@@ -110,6 +110,9 @@ public partial class MainWindow : Window
         case ModeSwitch.Move:
             broker.UndoCommand();
             break;
+        case ModeSwitch.Move:
+            broker.UndoCommand();
+            break;
         default:
             return;
         }
