@@ -9,27 +9,28 @@ namespace PaintApp4Scrubs.Classes
 {
 class Broker
 {
-    private Stack<ICommand> commands = new Stack<ICommand>();
-    private Stack<ICommand> undoCommands = new Stack<ICommand>();
-    public void DoCommand(ICommand command)
-    {
-        commands.Push(command);
-        command.Execute();
-        if (undoCommands.Count != 0)
+        private Stack<ICommand> commands = new Stack<ICommand>();
+        private Stack<ICommand> undoCommands = new Stack<ICommand>();
+        public void DoCommand(ICommand command)
         {
-            undoCommands.Clear();
+            commands.Push(command);
+            command.Execute();
+            if (undoCommands.Count != 0)
+            {
+                undoCommands.Clear();
+            }
+            
+        }
+        public void UndoCommand()
+        {
+            if (commands.Count == 0)
+            {
+                return;
+            }
+            var poptcommand = commands.Pop();
+            poptcommand.UnExecute();
+            undoCommands.Push(poptcommand);
         }
 
     }
-    public void UndoCommand()
-    {
-        if (commands.Count == 0)
-        {
-            return;
-        }
-        var poptcommand = commands.Pop();
-        poptcommand.UnExecute();
-        undoCommands.Push(poptcommand);
-    }
-}
 }

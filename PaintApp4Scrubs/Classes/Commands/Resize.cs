@@ -18,14 +18,14 @@ class Resize : ICommand
         distance = _distance;
 
     }
-    public void Execute()
-    {
-        shape.Rezise(distance);
-    }
+     public void Execute()
+     {
+            shape.Rezise(distance);
+        }
 
-    public void UnExecute()
-    {
-        throw new NotImplementedException();
-    }
-}
+        public void UnExecute()
+        {
+            throw new NotImplementedException();
+        }
+
 }

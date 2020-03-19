@@ -19,10 +19,8 @@ public class Draw : ICommand
     {
         shape.Draw();
     }
-
     public void UnExecute()
     {
         shape.Remove();
     }
-}
 }
