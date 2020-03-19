@@ -8,18 +8,20 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
-class Resize : ICommand
-{
-    private GodShape shape;
-    private Vector distance;
-    public Resize(GodShape _shape, Vector _distance)
+    class Resize : ICommand
     {
-        shape = _shape;
-        distance = _distance;
+        private GodShape shape;
+        private Vector distance;
 
-    }
-     public void Execute()
-     {
+        public Resize(GodShape _shape, Vector _distance)
+        {
+            shape = _shape;
+            distance = _distance;
+
+        }
+
+        public void Execute()
+        {
             shape.Rezise(distance);
         }
 
@@ -28,4 +30,5 @@ class Resize : ICommand
             throw new NotImplementedException();
         }
 
+    }
 }
