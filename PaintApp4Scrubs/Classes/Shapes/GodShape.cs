@@ -14,14 +14,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
             MainWindow.AppWindow.RemoveShape(this);
         }
 
-        public void Rezise(Vector distance)
+        public virtual void Resize(Vector distance)
         {
-            if (this.Width > distance.X &&
-                this.Height > distance.Y)
-            {
-                this.Width -= distance.X;
-                this.Height -= distance.Y;
-            }
+            if (!(this.Width > distance.X) || !(this.Height > distance.Y)) return;
+            this.Width -= distance.X;
+            this.Height -= distance.Y;
         }
+
     }
 }
