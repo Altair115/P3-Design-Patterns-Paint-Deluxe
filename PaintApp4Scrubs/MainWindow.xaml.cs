@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Xml;
@@ -112,8 +113,11 @@ namespace PaintApp4Scrubs
                     DrawTriangle();
                     break;
                 case ModeSwitch.Resize:
-                    ResizeShape(selectedShape);
-                    selectedShape = null;
+                    if (selectedShape != null)
+                    {
+                        ResizeShape(selectedShape);
+                        selectedShape = null;
+                    }
                     break;
                 default:
                     return;
@@ -138,6 +142,7 @@ namespace PaintApp4Scrubs
             Line newLine = new Line()
             {
                 Stroke = Brushes.Blue,
+                StrokeThickness = 4,
                 X1 = _startPoint.X,
                 Y1 = _startPoint.Y - 50,
                 X2 = _endPoint.X,

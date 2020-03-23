@@ -21,12 +21,12 @@ namespace PaintApp4Scrubs.Classes
 
         public void Execute()
         {
-            shape.Rezise(distance);
+            shape.Resize(distance);
         }
 
         public void UnExecute()
         {
-            shape.Rezise(distance * -1);
+            shape.Resize(distance * -1);
         }
     }
 }
