@@ -161,8 +161,7 @@ namespace PaintApp4Scrubs
                     Stroke = Brushes.Blue,
                     Fill = Brushes.White,
                     StrokeThickness = 4,
-                    Height = 10,
-                    Width = 10
+                    CenterPoint = Point.Subtract(_startPoint,_endPoint).Length();
                 };
 
             // If the user the user tries to draw from
