@@ -12,8 +12,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public static readonly DependencyProperty Y1DependencyProperty = DependencyProperty.Register("Y1", typeof(Double), typeof(Line));
         public static readonly DependencyProperty Y2DependencyProperty = DependencyProperty.Register("Y2", typeof(Double), typeof(Line));
 
-        private LineGeometry line =
-            new LineGeometry();
+        private LineGeometry line = new LineGeometry();
         private Point start = new Point(0, 0);
         private Point end = new Point(0, 0);
 
@@ -37,25 +36,10 @@ namespace PaintApp4Scrubs.Classes.Shapes
             get { return (double)this.GetValue(Y2DependencyProperty); }
             set { this.SetValue(Y2DependencyProperty, value); end.Y = value; }
         }
-        public double Length;
         protected override Geometry DefiningGeometry
         {
             get
             {
-                //Point p1 = new Point(X1, Y1);
-                //Point p2 = new Point(X2, Y2);
-
-                //List<PathSegment> segments = new List<PathSegment>(2);
-                //segments.Add(new LineSegment(p1, true));
-                //segments.Add(new LineSegment(p2, true));
-
-                //List<PathFigure> figures = new List<PathFigure>(1);
-                //PathFigure pf = new PathFigure(p1, segments, true);
-                //figures.Add(pf);
-
-                //Geometry g = new PathGeometry(figures, FillRule.EvenOdd, null);
-                //Length = Point.Subtract(p2, p1).Length;
-                //return g;
                 line.StartPoint = start;
                 line.EndPoint = end;
                 return line;
