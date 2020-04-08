@@ -6,40 +6,50 @@ namespace PaintApp4Scrubs.Classes.Shapes
 {
     public class Ellipse : GodShape
     {
-        public static readonly DependencyProperty RadiusXdDependencyProperty = DependencyProperty.Register("Y2", typeof(Double), typeof(Ellipse));
-        public static readonly DependencyProperty RadiusYdDependencyProperty = DependencyProperty.Register("Y2", typeof(Double), typeof(Ellipse));
-        public static readonly DependencyProperty CenterDependencyProperty = DependencyProperty.Register("Y2", typeof(Point), typeof(Ellipse));
-        
+        public static readonly DependencyProperty XRadiusDependencyProperty = DependencyProperty.Register("Xradius", typeof(Double), typeof(Ellipse));
+        public static readonly DependencyProperty YRadiusDependencyProperty = DependencyProperty.Register("Yradius", typeof(Double), typeof(Ellipse));
+        // static readonly DependencyProperty CenterPointDependencyProperty = DependencyProperty.Register("centerPoint", typeof(Double), typeof(Ellipse));
+
         private EllipseGeometry ellipse = new EllipseGeometry();
-        private Point Center = new Point(0,0);
+        //private Point Center = new Point(0,0);
         private double xRadius = 0;
         private double yRadius = 0;
 
-        public double radiusX
+        public double Xradius
         {
-            get { return (double)this.GetValue(RadiusXdDependencyProperty); }
-            set { this.SetValue(RadiusXdDependencyProperty, value); radiusX = value; }
+            get { return (double)this.GetValue(XRadiusDependencyProperty); }
+            set { this.SetValue(XRadiusDependencyProperty, value); xRadius = value; }
         }
-        public double radiusY
+        public double Yradius
         {
-            get { return (double)this.GetValue(RadiusYdDependencyProperty); }
-            set { this.SetValue(RadiusYdDependencyProperty, value); radiusY = value; }
+            get { return (double)this.GetValue(XRadiusDependencyProperty); }
+            set { this.SetValue(XRadiusDependencyProperty, value); yRadius = value; }
         }
-        public Point CenterPoint
-        {
-            get { return (Point)this.GetValue(CenterDependencyProperty); }
-            set { this.SetValue(CenterDependencyProperty, value); Center = value; }
-        }
+        //public Point centerPoint
+        //{
+        //    get { return (Point)this.GetValue(CenterPointDependencyProperty); }
+        //    set { this.SetValue(CenterPointDependencyProperty, value); Center = value; }
+        //}
+
 
         protected override Geometry DefiningGeometry
         {
             get
             {
-                ellipse.Center = Center;
+                
                 ellipse.RadiusX = xRadius;
                 ellipse.RadiusY = yRadius;
                 return ellipse;
             }
+        }
+        public override void Resize(Vector distance)
+        {
+            if (!(this.xRadius > distance.X) || !(this.yRadius > distance.Y)) return;
+            xRadius -= distance.X;
+            yRadius -= distance.Y;
+            this.ellipse.RadiusX = xRadius;
+            this.ellipse.RadiusY = yRadius;
+
         }
     }
 }

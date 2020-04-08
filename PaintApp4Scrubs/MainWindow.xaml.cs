@@ -161,7 +161,9 @@ namespace PaintApp4Scrubs
                     Stroke = Brushes.Blue,
                     Fill = Brushes.White,
                     StrokeThickness = 4,
-                    CenterPoint = Point.Subtract(_startPoint,_endPoint).Length();
+                    Xradius = 10,
+                    Yradius = 10
+                    
                 };
 
             // If the user the user tries to draw from
@@ -174,24 +176,25 @@ namespace PaintApp4Scrubs
             {
                 // Defines the left part of the ellipse
                 newEllipse.SetValue(Canvas.LeftProperty, _startPoint.X);
-                newEllipse.Width = _endPoint.X - _startPoint.X;
+                newEllipse.Xradius = _endPoint.X - _startPoint.X;
+                
             }
             else
             {
                 newEllipse.SetValue(Canvas.LeftProperty, _endPoint.X);
-                newEllipse.Width = _startPoint.X - _endPoint.X;
+                newEllipse.Xradius = _startPoint.X - _endPoint.X;
             }
 
             if (_endPoint.Y >= _startPoint.Y)
             {
                 // Defines the top part of the ellipse
                 newEllipse.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
-                newEllipse.Height = _endPoint.Y - _startPoint.Y;
+                newEllipse.Yradius = _endPoint.Y - _startPoint.Y;
             }
             else
             {
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
-                newEllipse.Height = _startPoint.Y - _endPoint.Y;
+                newEllipse.Yradius = _startPoint.Y - _endPoint.Y;
             }
             Draw draw = new Draw(newEllipse);
             broker.DoCommand(draw);
