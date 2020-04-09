@@ -10,6 +10,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
 {
     class Square : GodShape
     {
+        private Geometry geometry;
         protected override Geometry DefiningGeometry
         {
             get
@@ -29,9 +30,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 PathFigure pf = new PathFigure(p1, segments, true);
                 figures.Add(pf);
 
-                Geometry g = new PathGeometry(figures, FillRule.EvenOdd, null);
-
-                return g;
+                geometry = new PathGeometry(figures, FillRule.EvenOdd, null);
+                
+                return geometry;
             }
         }
     }

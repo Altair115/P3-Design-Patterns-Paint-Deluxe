@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace PaintApp4Scrubs.Classes.Shapes
@@ -50,6 +51,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
             this.ellipse.RadiusX = xRadius;
             this.ellipse.RadiusY = yRadius;
 
+        }
+        public override void Move(Vector newposition)
+        {
+            Canvas.SetLeft(this,newposition.X);
+            Canvas.SetTop(this,newposition.Y);
         }
     }
 }
