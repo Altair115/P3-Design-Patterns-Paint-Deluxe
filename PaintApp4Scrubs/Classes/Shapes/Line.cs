@@ -58,8 +58,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             double nX2 = X2 - X1 + newposition.X;
             double nY2 = Y2 - Y1 + newposition.Y;
-            double nX1 = X2 + X1 - newposition.X;
-            double nY1 = Y2 - Y1 - newposition.Y;
+            double nX1  =  newposition.X;
+            double nY1  =  newposition.Y;
             X2 = nX2;
             Y2 = nY2;
             Y1 = nY1;
