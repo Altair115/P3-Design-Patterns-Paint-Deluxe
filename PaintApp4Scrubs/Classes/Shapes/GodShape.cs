@@ -1,14 +1,43 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Shapes;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
     public abstract class GodShape : Shape
     {
+        private List<GodShape> childrenOfGodShapes;
+
+        public GodShape()
+        {
+            childrenOfGodShapes = new List<GodShape>();
+        }
+
+        public void AddChild(GodShape aShape)
+        {
+            childrenOfGodShapes.Add(aShape);
+        }
+
+        public void RemoveChild(GodShape aShape)
+        {
+            childrenOfGodShapes.Remove(aShape);
+        }
+
+        public List<GodShape> GetChildrenOfGodShapes()
+        {
+            return childrenOfGodShapes;
+        }
+
+        public string Display()
+        {
+            return childrenOfGodShapes.ToString();
+        }
+
         public void Draw()
         {
             MainWindow.AppWindow.PutOnScreen(this);
         }
+
         public void Remove()
         {
             MainWindow.AppWindow.RemoveShape(this);

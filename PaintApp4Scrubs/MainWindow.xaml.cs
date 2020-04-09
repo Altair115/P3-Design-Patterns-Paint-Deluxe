@@ -1,8 +1,10 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Navigation;
 using System.Xml;
 using PaintApp4Scrubs.Classes;
 using PaintApp4Scrubs.Classes.Commands;
@@ -18,6 +20,7 @@ namespace PaintApp4Scrubs
         private Broker broker;
         public static MainWindow AppWindow;
         private GodShape selectedShape;
+        private GodShape selectedChildShape;
         private enum ModeSwitch
         {
             Line,
@@ -26,7 +29,8 @@ namespace PaintApp4Scrubs
             Triangle,
             Delete,
             Move,
-            Resize
+            Resize,
+            Group
         }
 
         private ModeSwitch _currentMode = ModeSwitch.Line;
@@ -51,12 +55,10 @@ namespace PaintApp4Scrubs
         {
             _currentMode = ModeSwitch.Line;
         }
-
         private void EllipseButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Ellipse;
         }
-
         private void RectangleButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Rectangle;
@@ -73,10 +75,13 @@ namespace PaintApp4Scrubs
         {
             _currentMode = ModeSwitch.Resize;
         }
-
         private void MoveButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Move;
+        }
+        private void GroupButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            _currentMode = ModeSwitch.Group;
         }
         #endregion
 
@@ -116,6 +121,17 @@ namespace PaintApp4Scrubs
                     if (selectedShape != null)
                     {
                         ResizeShape(selectedShape);
+                        selectedShape = null;
+                    }
+                    break;
+                case ModeSwitch.Group:
+                    if (selectedShape != null)
+                    {
+                        HitTestResult result =
+                            VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
+                        selectedChildShape = result.VisualHit as GodShape;
+                        AddChild(selectedShape, selectedChildShape);
+                        Console.WriteLine(selectedShape.Display());
                         selectedShape = null;
                     }
                     break;
@@ -302,6 +318,14 @@ namespace PaintApp4Scrubs
             Vector distance = _startPoint - _endPoint;
             Resize resize = new Resize(shape, distance);
             broker.DoCommand(resize);
+        }
+
+        public void AddChild(GodShape shape, GodShape childShape)
+        {
+            if(shape == null)
+                return;
+            AddToGroup addToGroup = new AddToGroup(shape, childShape);
+            broker.DoCommand(addToGroup);
         }
     }
 }
