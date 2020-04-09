@@ -30,7 +30,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
 
         public string Display()
         {
-            return childrenOfGodShapes.ToString();
+            return "Group:" + childrenOfGodShapes.ToString();
         }
 
         public void Draw()

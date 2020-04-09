@@ -30,7 +30,8 @@ namespace PaintApp4Scrubs
             Delete,
             Move,
             Resize,
-            Group
+            Group,
+            Display
         }
 
         private ModeSwitch _currentMode = ModeSwitch.Line;
@@ -83,6 +84,10 @@ namespace PaintApp4Scrubs
         {
             _currentMode = ModeSwitch.Group;
         }
+        private void DisplayButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            _currentMode = ModeSwitch.Display;
+        }
         #endregion
 
         private Point _currentPoint; //the current mouse
@@ -131,9 +136,11 @@ namespace PaintApp4Scrubs
                             VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
                         selectedChildShape = result.VisualHit as GodShape;
                         AddChild(selectedShape, selectedChildShape);
-                        Console.WriteLine(selectedShape.Display());
                         selectedShape = null;
                     }
+                    break;
+                case ModeSwitch.Display:
+                    LabelOut.Content = "group:" + selectedShape.Display();
                     break;
                 default:
                     return;
