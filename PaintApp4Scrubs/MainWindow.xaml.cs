@@ -119,6 +119,14 @@ namespace PaintApp4Scrubs
                         selectedShape = null;
                     }
                     break;
+                case ModeSwitch.Move:
+                    if (selectedShape != null)
+                    {
+                        MoveShape(selectedShape);
+                        selectedShape = null;
+                    }
+
+                    break;
                 default:
                     return;
             }
@@ -161,9 +169,7 @@ namespace PaintApp4Scrubs
                     Stroke = Brushes.Blue,
                     Fill = Brushes.White,
                     StrokeThickness = 4,
-                    Xradius = 10,
-                    Yradius = 10
-                    
+
                 };
 
             // If the user the user tries to draw from
@@ -249,6 +255,7 @@ namespace PaintApp4Scrubs
                     Height = 10,
                     Width = 10
                 };
+           
             if (_endPoint.X >= _startPoint.X)
             {
                 // Defines the left part of the ellipse
@@ -277,6 +284,15 @@ namespace PaintApp4Scrubs
         }
         #endregion
 
+        public void MoveShape(GodShape selecteShape)
+        {
+            int distancefixforkevinsbullshitcode = 50;
+            Vector fixedVector = (Vector) _endPoint;
+            fixedVector.Y -= distancefixforkevinsbullshitcode;
+            Move move = new Move(selecteShape,fixedVector);
+            broker.DoCommand(move);
+
+        }
         public void PutOnScreen(GodShape shape)
         {
             Canvas.Children.Add(shape);

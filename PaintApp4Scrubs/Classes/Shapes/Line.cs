@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace PaintApp4Scrubs.Classes.Shapes
@@ -39,7 +40,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
         protected override Geometry DefiningGeometry
         {
             get
-            {
+            { 
                 line.StartPoint = start;
                 line.EndPoint = end;
                 return line;
@@ -51,6 +52,22 @@ namespace PaintApp4Scrubs.Classes.Shapes
             X2 -= distance.X;
             Y2 -= distance.Y;
             this.line.EndPoint = end;
+        }
+
+        public override void Move(Vector newposition)
+        {
+            double nX2 = X2 - X1 + newposition.X;
+            double nY2 = Y2 - Y1 + newposition.Y;
+            double nX1  =  newposition.X;
+            double nY1  =  newposition.Y;
+            X2 = nX2;
+            Y2 = nY2;
+            Y1 = nY1;
+            X1 = nX1;
+            this.line.EndPoint = end;
+            this.line.StartPoint = start;
+
+
         }
     }
 }
