@@ -5,26 +5,36 @@ using System.Windows.Media;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
+
+    /// <summary>
+    /// this class creates a _ellipse 
+    /// </summary>
     public class Ellipse : GodShape
     {
-        public static readonly DependencyProperty XRadiusDependencyProperty = DependencyProperty.Register("Xradius", typeof(Double), typeof(Ellipse));
-        public static readonly DependencyProperty YRadiusDependencyProperty = DependencyProperty.Register("Yradius", typeof(Double), typeof(Ellipse));
+        public static readonly DependencyProperty XRadiusDependencyProperty = DependencyProperty.Register("XRadius", typeof(Double), typeof(Ellipse));
+        public static readonly DependencyProperty YRadiusDependencyProperty = DependencyProperty.Register("YRadius", typeof(Double), typeof(Ellipse));
         // static readonly DependencyProperty CenterPointDependencyProperty = DependencyProperty.Register("centerPoint", typeof(Double), typeof(Ellipse));
 
-        private EllipseGeometry ellipse = new EllipseGeometry();
+        private readonly EllipseGeometry _ellipse = new EllipseGeometry();
         //private Point Center = new Point(0,0);
-        private double xRadius = 0;
-        private double yRadius = 0;
+        private double _xRadius;
+        private double _yRadius;
 
-        public double Xradius
+        /// <summary>
+        /// gets en sets the x radius
+        /// </summary>
+        public double XRadius
         {
-            get { return (double)this.GetValue(XRadiusDependencyProperty); }
-            set { this.SetValue(XRadiusDependencyProperty, value); xRadius = value; }
+            get { return (double) GetValue(XRadiusDependencyProperty); }
+            set { SetValue(XRadiusDependencyProperty, value); _xRadius = value; }
         }
-        public double Yradius
+        /// <summary>
+        /// gets and sets the y radius
+        /// </summary>
+        public double YRadius
         {
-            get { return (double)this.GetValue(XRadiusDependencyProperty); }
-            set { this.SetValue(XRadiusDependencyProperty, value); yRadius = value; }
+            get { return (double) GetValue(YRadiusDependencyProperty); }
+            set { SetValue(YRadiusDependencyProperty, value); _yRadius = value; }
         }
         //public Point centerPoint
         //{
@@ -32,30 +42,39 @@ namespace PaintApp4Scrubs.Classes.Shapes
         //    set { this.SetValue(CenterPointDependencyProperty, value); Center = value; }
         //}
 
-
+        /// <summary>
+        /// gets the geometry for the ellipse
+        /// </summary>
         protected override Geometry DefiningGeometry
         {
             get
             {
-                
-                ellipse.RadiusX = xRadius;
-                ellipse.RadiusY = yRadius;
-                return ellipse;
+                _ellipse.RadiusX = _xRadius;
+                _ellipse.RadiusY = _yRadius;
+                return _ellipse;
             }
         }
+        /// <summary>
+        /// Resizes the ellipse accordingly 
+        /// </summary>
+        /// <param name="distance">the new point to be resize to </param>
         public override void Resize(Vector distance)
         {
-            if (!(this.xRadius > distance.X) || !(this.yRadius > distance.Y)) return;
-            xRadius -= distance.X;
-            yRadius -= distance.Y;
-            this.ellipse.RadiusX = xRadius;
-            this.ellipse.RadiusY = yRadius;
+            if (!(_xRadius > distance.X) || !(_yRadius > distance.Y)) return;
+            _xRadius -= distance.X;
+            _yRadius -= distance.Y;
+            _ellipse.RadiusX = _xRadius;
+            _ellipse.RadiusY = _yRadius;
 
         }
-        public override void Move(Vector newposition)
+        /// <summary>
+        /// moves the ellipse accordingly 
+        /// </summary>
+        /// <param name="newPosition">the new position to move to </param>
+        public override void Move(Vector newPosition)
         {
-            Canvas.SetLeft(this,newposition.X);
-            Canvas.SetTop(this,newposition.Y);
+            Canvas.SetLeft(this, newPosition.X);
+            Canvas.SetTop(this, newPosition.Y);
         }
     }
 }

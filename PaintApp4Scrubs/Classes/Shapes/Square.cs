@@ -8,17 +8,23 @@ using System.Windows.Shapes;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
+    /// <summary>
+    /// creates the square
+    /// </summary>
     class Square : GodShape
     {
-        private Geometry geometry;
+        private Geometry _geometry;
+        /// <summary>
+        /// defines the geometry of the square
+        /// </summary>
         protected override Geometry DefiningGeometry
         {
             get
             {
                 Point p1 = new Point(0.0d, 0.0d);
-                Point p2 = new Point(0, this.Height);
-                Point p3 = new Point(this.Width, this.Height);
-                Point p4 = new Point(this.Width, 0.0d);
+                Point p2 = new Point(0, Height);
+                Point p3 = new Point(Width, Height);
+                Point p4 = new Point(Width, 0.0d);
 
                 List<PathSegment> segments = new List<PathSegment>(3);
                 segments.Add(new LineSegment(p1, true));
@@ -30,9 +36,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 PathFigure pf = new PathFigure(p1, segments, true);
                 figures.Add(pf);
 
-                geometry = new PathGeometry(figures, FillRule.EvenOdd, null);
+                _geometry = new PathGeometry(figures, FillRule.EvenOdd, null);
                 
-                return geometry;
+                return _geometry;
             }
         }
     }

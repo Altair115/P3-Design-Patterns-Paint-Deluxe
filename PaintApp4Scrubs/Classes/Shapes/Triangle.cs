@@ -4,8 +4,14 @@ using System.Windows.Media;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
+    /// <summary>
+    /// this class creates a triangle
+    /// </summary>
     public class Triangle : GodShape
     {
+        /// <summary>
+        /// defines the geometry of the shape
+        /// </summary>
         protected override Geometry DefiningGeometry
         {
             get

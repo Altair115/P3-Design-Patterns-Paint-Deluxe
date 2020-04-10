@@ -6,26 +6,36 @@ using System.Windows.Controls;
 using PaintApp4Scrubs.Interfaces;
 using PaintApp4Scrubs.Classes.Shapes;
 
-namespace PaintApp4Scrubs.Classes
+namespace PaintApp4Scrubs.Classes.Commands
 {
-
-public class Draw : ICommand
-{
-    private GodShape shape;
-
-    public Draw(GodShape _shape)
+    /// <summary>
+    /// This class creates a command to draw an shape on the canvas
+    /// </summary>
+    public class Draw : ICommand
     {
-        shape = _shape;
-    }
+        private readonly GodShape _shape;
+        /// <summary>
+        /// the constructor of the Draw class
+        /// </summary>
+        /// <param name="shape"></param>
+        public Draw(GodShape shape)
+        {
+            _shape = shape;
+        }
 
-    public void Execute()
-    {
-        shape.Draw();
-    }
-
+        /// <summary>
+        /// execute the draw command
+        /// </summary>
+        public void Execute()
+        {
+            _shape.Draw();
+        }
+        /// <summary>
+        /// executes the undo version of the command
+        /// </summary>
         public void UnExecute()
         {
-            shape.Remove();
+            _shape.Remove();
         }
     }
 }
