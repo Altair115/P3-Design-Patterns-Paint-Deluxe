@@ -49,6 +49,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             get
             {
+                
                 _ellipse.RadiusX = _xRadius;
                 _ellipse.RadiusY = _yRadius;
                 return _ellipse;
@@ -75,6 +76,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             Canvas.SetLeft(this, newPosition.X);
             Canvas.SetTop(this, newPosition.Y);
+        }
+
+        public override Vector GetCenter()
+        {
+            var center = new Vector(Canvas.GetLeft(this), Canvas.GetTop(this));
+            return center;
         }
     }
 }

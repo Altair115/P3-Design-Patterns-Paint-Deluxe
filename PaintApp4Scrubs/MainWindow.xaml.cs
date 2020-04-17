@@ -297,9 +297,11 @@ namespace PaintApp4Scrubs
         public void MoveShape(GodShape selectedShape)
         {
             int distancefixforkevinsbullshitcode = 50;
-            Vector fixedVector = (Vector)_endPoint;
-            fixedVector.Y -= distancefixforkevinsbullshitcode;
-            Move move = new Move(selectedShape, fixedVector);
+            Vector endPoint = (Vector)_endPoint;
+            Vector startPoint = (Vector) _startPoint;
+            endPoint.Y -= distancefixforkevinsbullshitcode;
+            startPoint.Y -= distancefixforkevinsbullshitcode;
+            Move move = new Move(selectedShape, endPoint,startPoint);
             broker.DoCommand(move);
 
         }

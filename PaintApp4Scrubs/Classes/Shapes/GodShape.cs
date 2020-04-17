@@ -48,5 +48,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
             Canvas.SetTop(this,top);
             
         }
+
+        public virtual Vector GetCenter()
+        {
+            var center = new Vector((Canvas.GetLeft(this) + (this.Width / 2)), Canvas.GetTop(this) + (this.Height / 2));
+            return center;
+
+        }
     }
 }
