@@ -6,23 +6,36 @@ using System.Text;
 
 namespace PaintApp4Scrubs.Classes.Commands
 {
+    /// <summary>
+    /// This class creates a command to delete the shape from the canvas
+    /// </summary>
+    class Delete : ICommand
+    {
 
-class Delete : ICommand
-{
-      private GodShape shape;
+        private readonly GodShape _shape;
 
-     public Delete(GodShape _shape)
-      {
-        shape = _shape;
-      }
+        /// <summary>
+        /// constructor of the command
+        /// </summary>
+        /// <param name="shape">the shape to be deleted</param>
+        public Delete(GodShape shape)
+        {
+            _shape = shape;
+        }
+        /// <summary>
+        /// deletes the shape commands
+        /// </summary>
         public void Execute()
         {
-            shape.Remove();
+            _shape.Remove();
         }
-
+        /// <summary>
+        /// executes the undo version of the command
+        /// </summary>
         public void UnExecute()
         {
-            shape.Draw();
+            _shape.Draw();
         }
+
     }
 }
