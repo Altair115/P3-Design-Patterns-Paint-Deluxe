@@ -6,7 +6,7 @@ using System.Windows.Shapes;
 namespace PaintApp4Scrubs.Classes.Shapes
 {
     /// <summary>
-    /// an abstract class to add extra functunality to the Shap class
+    /// an abstract class to add extra functionality to the Shape class
     /// </summary>
     public abstract class GodShape : Shape
     {
@@ -27,14 +27,14 @@ namespace PaintApp4Scrubs.Classes.Shapes
             childrenOfGodShapes.Remove(aShape);
         }
 
-        public List<GodShape> GetChildrenOfGodShapes()
+        public List<GodShape> GetChildrenOfGodShapes(GodShape aShape)
         {
-            return childrenOfGodShapes;
+            return aShape.childrenOfGodShapes;
         }
 
-        public string Display()
+        public string Display(GodShape aShape)
         {
-            return "Group:" + childrenOfGodShapes.ToString();
+            return "Group:" + aShape.childrenOfGodShapes.ToString();
         }
 
         /// <summary>
@@ -43,14 +43,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public void Draw()
         {
             MainWindow.AppWindow.PutOnScreen(this);
-
         }
         /// <summary>
         /// removes the shape of the canvas
         /// </summary>
         public void Remove()
         {
-            
             MainWindow.AppWindow.RemoveShape(this);
         }
         /// <summary>
@@ -73,14 +71,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
             var top = newPosition.Y - (this.Height / 2);
             Canvas.SetLeft(this,left);
             Canvas.SetTop(this,top);
-            
         }
 
         public virtual Vector GetCenter()
         {
             var center = new Vector((Canvas.GetLeft(this) + (this.Width / 2)), Canvas.GetTop(this) + (this.Height / 2));
             return center;
-
         }
     }
 }

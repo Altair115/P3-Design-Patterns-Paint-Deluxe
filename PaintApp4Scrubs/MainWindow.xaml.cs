@@ -19,8 +19,8 @@ namespace PaintApp4Scrubs
     {
         private Broker broker;
         public static MainWindow AppWindow;
-        private GodShape selectedShape;
-        private GodShape selectedChildShape;
+        private GodShape _selectedShape;
+        private GodShape _selectedChildShape;
         private enum ModeSwitch
         {
             Line,
@@ -99,7 +99,7 @@ namespace PaintApp4Scrubs
             _startPoint = e.GetPosition(this);
             HitTestResult result =
                 VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
-            selectedShape = result.VisualHit as GodShape;
+            _selectedShape = result.VisualHit as GodShape;
             if (_currentMode == ModeSwitch.Delete)
             {
                 DeleteShape(result.VisualHit as GodShape);
@@ -127,32 +127,37 @@ namespace PaintApp4Scrubs
                     DrawTriangle();
                     break;
                 case ModeSwitch.Resize:
-                    if (selectedShape != null)
+                    if (_selectedShape != null)
                     {
-                        ResizeShape(selectedShape);
-                        selectedShape = null;
+                        ResizeShape(_selectedShape);
+                        _selectedShape = null;
                     }
                     break;
                 case ModeSwitch.Move:
-                    if (selectedShape != null)
+                    if (_selectedShape != null)
                     {
-                        MoveShape(selectedShape);
-                        selectedShape = null;
+                        MoveShape(_selectedShape);
+                        _selectedShape = null;
                     }
-
                     break;
                 case ModeSwitch.Group:
-                    if (selectedShape != null)
+                    if (_selectedShape != null)
                     {
                         HitTestResult result =
                             VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
-                        selectedChildShape = result.VisualHit as GodShape;
-                        AddChild(selectedShape, selectedChildShape);
-                        selectedShape = null;
+                        _selectedChildShape = result.VisualHit as GodShape;
+                        AddChild(_selectedShape, _selectedChildShape);
+                        _selectedShape = null;
                     }
                     break;
                 case ModeSwitch.Display:
-                    LabelOut.Content = "group:" + selectedShape.Display();
+                    if (_selectedShape != null)
+                    {
+                        HitTestResult result =
+                            VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
+                        _selectedChildShape = result.VisualHit as GodShape;
+                        LabelOut.Content = "group:" + _selectedShape.Display(_selectedShape);
+                    }
                     break;
                 default:
                     return;
@@ -319,14 +324,13 @@ namespace PaintApp4Scrubs
         /// <param name="selectedShape">selected shape </param>
         public void MoveShape(GodShape selectedShape)
         {
-            int distancefixforkevinsbullshitcode = 50;
+            int distanceFix = 50;
             Vector endPoint = (Vector)_endPoint;
             Vector startPoint = (Vector) _startPoint;
-            endPoint.Y -= distancefixforkevinsbullshitcode;
-            startPoint.Y -= distancefixforkevinsbullshitcode;
+            endPoint.Y -= distanceFix;
+            startPoint.Y -= distanceFix;
             Move move = new Move(selectedShape, endPoint,startPoint);
             broker.DoCommand(move);
-
         }
 
         /// <summary>
@@ -380,7 +384,13 @@ namespace PaintApp4Scrubs
             broker.DoCommand(addToGroup);
         }
 
+        public void DisplayGroup(GodShape shape)
+        {
+            if (shape == null)
+                return;
+            DisplayGroup displayGroup = new DisplayGroup(shape);
+            broker.DoCommand(displayGroup);
+        }
         #endregion
-
     }
 }
