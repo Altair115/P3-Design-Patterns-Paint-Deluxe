@@ -8,24 +8,34 @@ using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs.Classes.Commands
 {
-
+    /// <summary>
+    /// This class creates a command to draw an shape on the canvas
+    /// </summary>
     public class Draw : ICommand
     {
-        private GodShape shape;
-
-        public Draw(GodShape _shape)
+        private readonly GodShape _shape;
+        /// <summary>
+        /// the constructor of the Draw class
+        /// </summary>
+        /// <param name="shape"></param>
+        public Draw(GodShape shape)
         {
-            shape = _shape;
+            _shape = shape;
         }
 
+        /// <summary>
+        /// execute the draw command
+        /// </summary>
         public void Execute()
         {
-            shape.Draw();
+            _shape.Draw();
         }
-
+        /// <summary>
+        /// executes the undo version of the command
+        /// </summary>
         public void UnExecute()
         {
-            shape.Remove();
+            _shape.Remove();
         }
     }
 }

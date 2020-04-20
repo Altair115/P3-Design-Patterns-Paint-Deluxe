@@ -8,25 +8,36 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Commands
 {
-
+    /// <summary>
+    /// This class creates a command to resize the shape on the canvas
+    /// </summary>
     class Resize : ICommand
     {
-        private GodShape shape;
-        private Vector distance;
-        public Resize(GodShape _shape, Vector _distance)
+        private readonly GodShape _shape;
+        private readonly Vector _distance;
+        /// <summary>
+        /// the constructor of the Resize class
+        /// </summary>
+        /// <param name="shape">the shape that has to be resized</param>
+        /// <param name="distance">the distance of the old shape and the new shape</param>
+        public Resize(GodShape shape, Vector distance)
         {
-            shape = _shape;
-            distance = _distance;
+            _shape = shape;
+            _distance = distance;
         }
-
+        /// <summary>
+        /// executes the resize command
+        /// </summary>
         public void Execute()
         {
-            shape.Resize(distance);
+            _shape.Resize(_distance);
         }
-
+        /// <summary>
+        /// executes the undo version of the resize command 
+        /// </summary>
         public void UnExecute()
         {
-            shape.Resize(distance * -1);
+            _shape.Resize(_distance * -1);
         }
     }
 }

@@ -105,7 +105,11 @@ namespace PaintApp4Scrubs
                 DeleteShape(result.VisualHit as GodShape);
             }
         }
-
+        /// <summary>
+        /// this function ditermens witch method to call based on te mode witch the user has selected 
+        /// </summary>
+        /// <param name="sender">the mouse</param>
+        /// <param name="e">the date for the selected mouse events</param>
         private void Canvas_OnMouseUp(object sender, MouseButtonEventArgs e)
         {
             switch (_currentMode)
@@ -128,6 +132,14 @@ namespace PaintApp4Scrubs
                         ResizeShape(selectedShape);
                         selectedShape = null;
                     }
+                    break;
+                case ModeSwitch.Move:
+                    if (selectedShape != null)
+                    {
+                        MoveShape(selectedShape);
+                        selectedShape = null;
+                    }
+
                     break;
                 case ModeSwitch.Group:
                     if (selectedShape != null)
@@ -184,9 +196,7 @@ namespace PaintApp4Scrubs
                     Stroke = Brushes.Blue,
                     Fill = Brushes.White,
                     StrokeThickness = 4,
-                    Xradius = 10,
-                    Yradius = 10
-                    
+
                 };
 
             // If the user the user tries to draw from
@@ -199,25 +209,25 @@ namespace PaintApp4Scrubs
             {
                 // Defines the left part of the ellipse
                 newEllipse.SetValue(Canvas.LeftProperty, _startPoint.X);
-                newEllipse.Xradius = _endPoint.X - _startPoint.X;
+                newEllipse.XRadius = _endPoint.X - _startPoint.X;
                 
             }
             else
             {
                 newEllipse.SetValue(Canvas.LeftProperty, _endPoint.X);
-                newEllipse.Xradius = _startPoint.X - _endPoint.X;
+                newEllipse.XRadius = _startPoint.X - _endPoint.X;
             }
 
             if (_endPoint.Y >= _startPoint.Y)
             {
                 // Defines the top part of the ellipse
                 newEllipse.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
-                newEllipse.Yradius = _endPoint.Y - _startPoint.Y;
+                newEllipse.YRadius = _endPoint.Y - _startPoint.Y;
             }
             else
             {
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
-                newEllipse.Yradius = _startPoint.Y - _endPoint.Y;
+                newEllipse.YRadius = _startPoint.Y - _endPoint.Y;
             }
             Draw draw = new Draw(newEllipse);
             broker.DoCommand(draw);
@@ -272,6 +282,7 @@ namespace PaintApp4Scrubs
                     Height = 10,
                     Width = 10
                 };
+           
             if (_endPoint.X >= _startPoint.X)
             {
                 // Defines the left part of the ellipse
@@ -300,30 +311,64 @@ namespace PaintApp4Scrubs
         }
         #endregion
 
+        #region Command calls
+
+        /// <summary>
+        /// picks the selected shape and uses the command pattern to call the Move command 
+        /// </summary>
+        /// <param name="selectedShape">selected shape </param>
+        public void MoveShape(GodShape selectedShape)
+        {
+            int distancefixforkevinsbullshitcode = 50;
+            Vector endPoint = (Vector)_endPoint;
+            Vector startPoint = (Vector) _startPoint;
+            endPoint.Y -= distancefixforkevinsbullshitcode;
+            startPoint.Y -= distancefixforkevinsbullshitcode;
+            Move move = new Move(selectedShape, endPoint,startPoint);
+            broker.DoCommand(move);
+
+        }
+
+        /// <summary>
+        /// puts the shape on the canvas
+        /// </summary>
+        /// <param name="shape">the selected </param>
         public void PutOnScreen(GodShape shape)
         {
             Canvas.Children.Add(shape);
         }
-        public void DeleteShape(GodShape shape)
+
+        /// <summary>
+        /// creates the command to delete the selected shape
+        /// </summary>
+        /// <param name="selectedShape">The selected shape</param>
+        public void DeleteShape(GodShape selectedShape)
         {
-            if (shape == null)
+            if (selectedShape == null)
                 return;
-            Delete delete = new Delete(shape);
+            Delete delete = new Delete(selectedShape);
             broker.DoCommand(delete);
         }
+        /// <summary>
+        /// Removes the shape of the canvas given by the delete command 
+        /// </summary>
+        /// <param name="shape">the shape from the delete command </param>
         public void RemoveShape(GodShape shape)
         {
             Canvas.Children.Remove(shape);
         }
-
-        public void ResizeShape(GodShape shape)
+        /// <summary>
+        /// picks the selected and creates an resize command to resize the selected shape 
+        /// </summary>
+        /// <param name="selectedShape">The selected shape</param>
+        public void ResizeShape(GodShape selectedShape)
         {
-            if (shape == null)
+            if (selectedShape == null)
             {
                 return;
             }
             Vector distance = _startPoint - _endPoint;
-            Resize resize = new Resize(shape, distance);
+            Resize resize = new Resize(selectedShape, distance);
             broker.DoCommand(resize);
         }
 
@@ -334,5 +379,8 @@ namespace PaintApp4Scrubs
             AddToGroup addToGroup = new AddToGroup(shape, childShape);
             broker.DoCommand(addToGroup);
         }
+
+        #endregion
+
     }
 }
