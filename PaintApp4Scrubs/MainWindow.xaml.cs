@@ -20,7 +20,7 @@ namespace PaintApp4Scrubs
         private Broker broker;
         public static MainWindow AppWindow;
         private GodShape _selectedShape;
-        private GodShape _selectedChildShape;
+        private GodShape _selectedParentShape;
         private enum ModeSwitch
         {
             Line,
@@ -144,13 +144,15 @@ namespace PaintApp4Scrubs
                     }
                     break;
                 case ModeSwitch.Group:
-                    if (_selectedShape != null)
+                    if (_selectedShape != null && _selectedParentShape != null)
                     {
-                        HitTestResult result =
-                            VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
-                        _selectedChildShape = result.VisualHit as GodShape;
-                        AddChild(_selectedShape, _selectedChildShape);
+                        AddChild(_selectedParentShape, _selectedShape);
                         _selectedShape = null;
+                        _selectedParentShape = null;
+                    }
+                    else
+                    {
+                        _selectedParentShape = _selectedShape;
                     }
                     break;
                 case ModeSwitch.Display:
@@ -216,7 +218,7 @@ namespace PaintApp4Scrubs
                 // Defines the left part of the ellipse
                 newEllipse.SetValue(Canvas.LeftProperty, _startPoint.X);
                 newEllipse.XRadius = _endPoint.X - _startPoint.X;
-                
+
             }
             else
             {
@@ -288,7 +290,7 @@ namespace PaintApp4Scrubs
                     Height = 10,
                     Width = 10
                 };
-           
+
             if (_endPoint.X >= _startPoint.X)
             {
                 // Defines the left part of the ellipse
@@ -327,10 +329,10 @@ namespace PaintApp4Scrubs
         {
             int distanceFix = 50;
             Vector endPoint = (Vector)_endPoint;
-            Vector startPoint = (Vector) _startPoint;
+            Vector startPoint = (Vector)_startPoint;
             endPoint.Y -= distanceFix;
             startPoint.Y -= distanceFix;
-            Move move = new Move(selectedShape, endPoint,startPoint);
+            Move move = new Move(selectedShape, endPoint, startPoint);
             broker.DoCommand(move);
         }
 
@@ -379,7 +381,7 @@ namespace PaintApp4Scrubs
 
         public void AddChild(GodShape shape, GodShape childShape)
         {
-            if(shape == null)
+            if (shape == null)
                 return;
             AddToGroup addToGroup = new AddToGroup(shape, childShape);
             broker.DoCommand(addToGroup);
