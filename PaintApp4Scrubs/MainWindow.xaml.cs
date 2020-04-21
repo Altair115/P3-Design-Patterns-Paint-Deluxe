@@ -100,10 +100,6 @@ namespace PaintApp4Scrubs
             HitTestResult result =
                 VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
             _selectedShape = result.VisualHit as GodShape;
-            if (_currentMode == ModeSwitch.Delete)
-            {
-                DeleteShape(result.VisualHit as GodShape);
-            }
         }
         /// <summary>
         /// this function ditermens witch method to call based on te mode witch the user has selected 
@@ -137,6 +133,13 @@ namespace PaintApp4Scrubs
                     if (_selectedShape != null)
                     {
                         MoveShape(_selectedShape);
+                        _selectedShape = null;
+                    }
+                    break;
+                case ModeSwitch.Delete:
+                    if (_selectedShape != null)
+                    {
+                        DeleteShape(_selectedShape);
                         _selectedShape = null;
                     }
                     break;

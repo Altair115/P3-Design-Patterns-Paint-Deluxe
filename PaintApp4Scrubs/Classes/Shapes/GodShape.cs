@@ -63,13 +63,13 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public void PrintToFile(string text)
         {
             using System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"E:\P3-Design-Patterns-Paint-Deluxe\comptest.txt", true);
+                new System.IO.StreamWriter(@"..\..\..\..\comptest.txt", true);
             file.WriteLine(text);
         }
 
         public void ClearFile()
         {
-            System.IO.File.WriteAllText(@"E:\P3-Design-Patterns-Paint-Deluxe\comptest.txt", "");
+            System.IO.File.WriteAllText(@"..\..\..\..\comptest.txt", "");
         }
         /// <summary>
         /// draws the shape on the canvas
