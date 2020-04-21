@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 
+
 namespace PaintApp4Scrubs.Classes.Shapes
 {
     /// <summary>
@@ -10,6 +11,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// </summary>
     public abstract class GodShape : Shape
     {
+
         private List<GodShape> childrenOfGodShapes;
 
         public GodShape()
@@ -32,18 +34,43 @@ namespace PaintApp4Scrubs.Classes.Shapes
             return aShape.childrenOfGodShapes;
         }
 
-        public List<string> Display(GodShape aShape)
+        public void Display(GodShape aShape,string indent= "", bool head = true)
         {
-            List<string> lines = new List<string>();
+            if (head)
+            {
+                PrintToFile(aShape.ToString());
+                if (childrenOfGodShapes.Count > 1)
+                {
+                    PrintToFile($"Group {aShape.childrenOfGodShapes.Count}");
+                }
+            }
+            indent += "=";
             foreach (var child in childrenOfGodShapes)
             {
-                lines.Add(child.ToString());
-                lines.Add(child.Display(child).ToString());
+                if (child.childrenOfGodShapes.Count <= 0)
+                {
+                    PrintToFile($"{indent} {child}");
+                }
+                else
+                {
+                    PrintToFile($"{indent} {child}");
+                    PrintToFile($"{indent} Group {child.childrenOfGodShapes.Count}");
+                    child.Display(child,indent,false);
+                }
             }
-            System.IO.File.WriteAllLines(@"\GitHub\P3-Design-Patterns-Paint-Deluxe\Comptest.txt", lines);
-            return lines;
         }
 
+        public void PrintToFile(string text)
+        {
+            using System.IO.StreamWriter file =
+                new System.IO.StreamWriter(@"E:\P3-Design-Patterns-Paint-Deluxe\comptest.txt", true);
+            file.WriteLine(text);
+        }
+
+        public void ClearFile()
+        {
+            System.IO.File.WriteAllText(@"E:\P3-Design-Patterns-Paint-Deluxe\comptest.txt", "");
+        }
         /// <summary>
         /// draws the shape on the canvas
         /// </summary>
@@ -76,8 +103,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             var left = newPosition.X - (this.Width / 2);
             var top = newPosition.Y - (this.Height / 2);
-            Canvas.SetLeft(this,left);
-            Canvas.SetTop(this,top);
+            Canvas.SetLeft(this, left);
+            Canvas.SetTop(this, top);
         }
 
         public virtual Vector GetCenter()

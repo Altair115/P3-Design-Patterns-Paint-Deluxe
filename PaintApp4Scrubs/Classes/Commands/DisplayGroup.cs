@@ -13,6 +13,7 @@ namespace PaintApp4Scrubs.Classes.Commands
         }
         public void Execute()
         {
+            _shape.ClearFile();
             _shape.Display(_shape);
         }
 

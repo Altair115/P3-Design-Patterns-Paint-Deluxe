@@ -153,7 +153,7 @@ namespace PaintApp4Scrubs
                 case ModeSwitch.Display:
                     if (_selectedShape != null)
                     {
-                        _selectedShape.Display(_selectedShape);
+                        DisplayGroup(_selectedShape);
                         _selectedShape = null;
                     }
                     break;

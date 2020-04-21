@@ -1,2 +1,7 @@
-Rectangle 379 142 83 109
-System.Collections.Generic.List`1[System.String]
+Ellipse 151 98 119 49
+Group 2
+= Triangle 337 79 114 38
+= Group 2
+== Rectangle 513 79 86 47
+== Rectangle 534 152 112 69
+= Triangle 310 226 159 39

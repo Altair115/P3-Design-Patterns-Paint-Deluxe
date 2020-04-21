@@ -39,7 +39,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
 
         public override string ToString()
         {
-            return $"Ellipse {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.Width} {this.Height}";
+            return $"Triangle {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.Width} {this.Height}";
         }
     }
 }
