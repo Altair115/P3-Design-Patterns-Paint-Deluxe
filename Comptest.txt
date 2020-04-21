@@ -1,0 +1,2 @@
+Rectangle 379 142 83 109
+System.Collections.Generic.List`1[System.String]

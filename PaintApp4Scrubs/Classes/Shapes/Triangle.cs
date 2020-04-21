@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace PaintApp4Scrubs.Classes.Shapes
@@ -34,6 +35,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
 
                 return g;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Ellipse {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.Width} {this.Height}";
         }
     }
 }

@@ -83,5 +83,10 @@ namespace PaintApp4Scrubs.Classes.Shapes
             var center = new Vector(Canvas.GetLeft(this), Canvas.GetTop(this));
             return center;
         }
+
+        public override string ToString()
+        {
+            return $"Ellipse {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.XRadius} {this.YRadius}";
+        }
     }
 }

@@ -153,10 +153,8 @@ namespace PaintApp4Scrubs
                 case ModeSwitch.Display:
                     if (_selectedShape != null)
                     {
-                        HitTestResult result =
-                            VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
-                        _selectedChildShape = result.VisualHit as GodShape;
-                        LabelOut.Content = "group:" + _selectedShape.Display(_selectedShape);
+                        _selectedShape.Display(_selectedShape);
+                        _selectedShape = null;
                     }
                     break;
                 default:

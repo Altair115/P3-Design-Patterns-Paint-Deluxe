@@ -32,9 +32,16 @@ namespace PaintApp4Scrubs.Classes.Shapes
             return aShape.childrenOfGodShapes;
         }
 
-        public string Display(GodShape aShape)
+        public List<string> Display(GodShape aShape)
         {
-            return "Group:" + aShape.childrenOfGodShapes.ToString();
+            List<string> lines = new List<string>();
+            foreach (var child in childrenOfGodShapes)
+            {
+                lines.Add(child.ToString());
+                lines.Add(child.Display(child).ToString());
+            }
+            System.IO.File.WriteAllLines(@"\GitHub\P3-Design-Patterns-Paint-Deluxe\Comptest.txt", lines);
+            return lines;
         }
 
         /// <summary>
