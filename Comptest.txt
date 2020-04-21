@@ -1,2 +1,5 @@
-Rectangle 255 158 130 155
-= Ellipse 514 152 109 128
+Rectangle 290 169 168 186
+= Ellipse 614 183 136 128
+= Group 2
+== Triangle 896 86 74 61
+== Triangle 896 205 91 101

@@ -34,7 +34,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
             return aShape.childrenOfGodShapes;
         }
 
-        public void Display(GodShape aShape,string indent= "", bool head = true)
+        public void Display(GodShape aShape, string indent = "", bool head = true)
         {
             if (head)
             {
@@ -55,7 +55,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 {
                     PrintToFile($"{indent} {child}");
                     PrintToFile($"{indent} Group {child.childrenOfGodShapes.Count}");
-                    child.Display(child,indent,false);
+                    child.Display(child, indent, false);
                 }
             }
         }
