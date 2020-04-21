@@ -25,7 +25,6 @@
             <RadioButton Name="GroupButton" BorderBrush="#FF969696" Content="Group" Height="50" Width="80" GroupName="ShapeGroup" Click="GroupButton_OnClick" IsChecked="False"/>
             <RadioButton Name="DisplayButton" BorderBrush="#FF969696" Content="Display Group" Height="50" Width="80" GroupName="ShapeGroup" Click="DisplayButton_OnClick" IsChecked="False"/>
             <Label Name="LabelCoords" Content="X:Y"></Label>
-            <Label Name="LabelOut" Content="test"></Label>
         </ToolBar>
         <Canvas Name="Canvas" x:FieldModifier="public" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">
         </Canvas>
