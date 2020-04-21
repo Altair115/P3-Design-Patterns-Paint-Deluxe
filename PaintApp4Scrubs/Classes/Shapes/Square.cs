@@ -41,5 +41,10 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 return _geometry;
             }
         }
+
+        public override string ToString()
+        {
+            return $"Rectangle {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.Width} {this.Height}";
+        }
     }
 }
