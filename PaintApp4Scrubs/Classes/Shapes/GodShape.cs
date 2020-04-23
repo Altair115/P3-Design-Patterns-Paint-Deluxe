@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
+using PaintApp4Scrubs.Classes.VisitorCommands;
+using PaintApp4Scrubs.Interfaces;
 
 
 namespace PaintApp4Scrubs.Classes.Shapes
@@ -14,10 +16,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
 
         private List<GodShape> childrenOfGodShapes;
 
-        public GodShape()
+        protected GodShape()
         {
             childrenOfGodShapes = new List<GodShape>();
         }
+        public abstract void Accept(IVisitor visitor);
+        public abstract string ToString();
 
         public void AddChild(GodShape aShape)
         {
@@ -29,9 +33,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
             childrenOfGodShapes.Remove(aShape);
         }
 
-        public List<GodShape> GetChildrenOfGodShapes(GodShape aShape)
+        public List<GodShape> GetChildrenOfGodShapes()
         {
-            return aShape.childrenOfGodShapes;
+            return childrenOfGodShapes;
         }
 
         public void Display(GodShape aShape, string indent = "", bool head = true)
@@ -41,19 +45,19 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 PrintToFile(aShape.ToString());
                 if (childrenOfGodShapes.Count > 1)
                 {
-                    PrintToFile($"Group {aShape.childrenOfGodShapes.Count}");
+                    PrintToFile($"Group {aShape.childrenOfGodShapes.Count.ToString()}");
                 }
             }
-            indent += "=";
+            indent += " ";
             foreach (var child in childrenOfGodShapes)
             {
                 if (child.childrenOfGodShapes.Count <= 0)
                 {
-                    PrintToFile($"{indent} {child}");
+                    PrintToFile($"{indent} {child.ToString()}");
                 }
                 else
                 {
-                    PrintToFile($"{indent} {child}");
+                    PrintToFile($"{indent} {child.ToString()}");
                     PrintToFile($"{indent} Group {child.childrenOfGodShapes.Count}");
                     child.Display(child, indent, false);
                 }

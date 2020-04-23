@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using PaintApp4Scrubs.Interfaces;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -53,6 +53,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 return _line;
             }
         }
+
+        public override void Accept(IVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// resizes the line accordingly 
         /// </summary>

@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using PaintApp4Scrubs.Classes.VisitorCommands;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
@@ -55,6 +57,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 return _ellipse;
             }
         }
+
+        public override void Accept(IVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Resizes the ellipse accordingly 
         /// </summary>

@@ -21,6 +21,7 @@ namespace PaintApp4Scrubs
         public static MainWindow AppWindow;
         private GodShape _selectedShape;
         private GodShape _selectedParentShape;
+        private Boxer _box;
         private enum ModeSwitch
         {
             Line,
@@ -41,6 +42,7 @@ namespace PaintApp4Scrubs
             InitializeComponent();
             AppWindow = this;
             broker = new Broker();
+            _box = new Boxer();
         }
 
         #region Button Calls
@@ -87,6 +89,12 @@ namespace PaintApp4Scrubs
         private void DisplayButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Display;
+        }
+        private void Save_OnClick(object sender, RoutedEventArgs e)
+        {
+            SaveFile saveFile = new SaveFile(_box);
+            broker.DoCommand(saveFile);
+
         }
         #endregion
 
@@ -191,8 +199,7 @@ namespace PaintApp4Scrubs
                 X2 = _endPoint.X,
                 Y2 = _endPoint.Y - 50
             };
-            Draw draw = new Draw(newLine);
-            broker.DoCommand(draw);
+            DrawShape(newLine);
         }
 
         // Sets and draws ellipse after mouse is released
@@ -237,11 +244,11 @@ namespace PaintApp4Scrubs
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 newEllipse.YRadius = _startPoint.Y - _endPoint.Y;
             }
-            Draw draw = new Draw(newEllipse);
-            broker.DoCommand(draw);
+            DrawShape(newEllipse);
         }
 
         // Sets and draws rectangle after mouse is released
+        
         private void DrawRectangle()
         {
             Square square = new Square()
@@ -275,8 +282,7 @@ namespace PaintApp4Scrubs
                 square.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 square.Height = _startPoint.Y - _endPoint.Y;
             }
-            Draw draw = new Draw(square);
-            broker.DoCommand(draw);
+            DrawShape(square);
         }
 
         private void DrawTriangle()
@@ -314,13 +320,19 @@ namespace PaintApp4Scrubs
                 triangle.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 triangle.Height = _startPoint.Y - _endPoint.Y;
             }
-            Draw draw = new Draw(triangle);
-            broker.DoCommand(draw);
+            DrawShape(triangle);
         }
         #endregion
 
         #region Command calls
 
+        private void DrawShape(GodShape shape)
+        {
+            Draw draw = new Draw(shape);
+            broker.DoCommand(draw);
+            _box.Addchild(shape);
+            
+        }
         /// <summary>
         /// picks the selected shape and uses the command pattern to call the Move command 
         /// </summary>
@@ -355,6 +367,7 @@ namespace PaintApp4Scrubs
                 return;
             Delete delete = new Delete(selectedShape);
             broker.DoCommand(delete);
+            _box.Detach(selectedShape);
         }
         /// <summary>
         /// Removes the shape of the canvas given by the delete command 
@@ -385,6 +398,7 @@ namespace PaintApp4Scrubs
                 return;
             AddToGroup addToGroup = new AddToGroup(shape, childShape);
             broker.DoCommand(addToGroup);
+            _box.Detach(childShape);
         }
 
         public void DisplayGroup(GodShape shape)
@@ -395,5 +409,7 @@ namespace PaintApp4Scrubs
             broker.DoCommand(displayGroup);
         }
         #endregion
+
+        
     }
 }
