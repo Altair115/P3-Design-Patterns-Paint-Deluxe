@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
@@ -23,8 +24,15 @@ class Broker
         /// <param name="command">the command to be executed</param>
         public void DoCommand(ICommand command)
         {
-            _commands.Push(command);
-            command.Execute();
+            if (command is SaveFile || command is DisplayGroup)
+            {
+                command.Execute();
+            }
+            else
+            {
+                _commands.Push(command);
+                command.Execute();
+            }
             if (_undoCommands.Count != 0)
             {
                 _undoCommands.Clear();
@@ -37,7 +45,7 @@ class Broker
         public void UndoCommand()
         {
             if (_commands.Count == 0) { return; }
-                
+            
             var pop = _commands.Pop();
             pop.UnExecute();
             _undoCommands.Push(pop);

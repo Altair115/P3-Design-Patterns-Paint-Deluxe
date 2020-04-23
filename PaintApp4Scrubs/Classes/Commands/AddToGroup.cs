@@ -5,8 +5,8 @@ namespace PaintApp4Scrubs.Classes.Commands
 {
     public class AddToGroup : ICommand
     {
-        private GodShape _shape;
-        private GodShape _childShape;
+        private readonly GodShape _shape;
+        private readonly GodShape _childShape;
 
         public AddToGroup(GodShape shape, GodShape childShape)
         {

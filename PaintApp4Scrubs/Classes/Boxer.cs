@@ -34,7 +34,7 @@ namespace PaintApp4Scrubs.Classes
                 }
                 childern = childrenGodShapes;
             }
-            indent += "=";
+            indent += " ";
             foreach (var child in childern)
             {
                 if (child.GetChildrenOfGodShapes().Count <= 0)
