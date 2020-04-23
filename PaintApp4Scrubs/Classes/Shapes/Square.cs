@@ -5,13 +5,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
     /// <summary>
     /// creates the square
     /// </summary>
-    class Square : GodShape
+    public class Square : GodShape
     {
         private Geometry _geometry;
         /// <summary>
@@ -45,6 +46,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public override string ToString()
         {
             return $"Rectangle {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.Width} {this.Height}";
+        }
+
+        public override void Accept(IVisitor visitor)
+        {
+            throw new NotImplementedException();
         }
     }
 }

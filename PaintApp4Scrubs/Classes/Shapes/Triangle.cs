@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
@@ -40,6 +41,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public override string ToString()
         {
             return $"Triangle {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.Width} {this.Height}";
+        }
+
+        public override void Accept(IVisitor visitor)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

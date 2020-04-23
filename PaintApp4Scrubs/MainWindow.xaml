@@ -24,6 +24,8 @@
             <RadioButton Name="MoveButton" BorderBrush="#FF969696" Content="Move" Height="50" Width="80" GroupName="ShapeGroup" Click="MoveButton_OnClick" IsChecked="False"/>
             <RadioButton Name="GroupButton" BorderBrush="#FF969696" Content="Group" Height="50" Width="80" GroupName="ShapeGroup" Click="GroupButton_OnClick" IsChecked="False"/>
             <RadioButton Name="DisplayButton" BorderBrush="#FF969696" Content="Display Group" Height="50" Width="80" GroupName="ShapeGroup" Click="DisplayButton_OnClick" IsChecked="False"/>
+            <RadioButton Name="Save" BorderBrush="#FF969696" Content="Save File" Height="50" Width="80" GroupName="ShapeGroup" Click="Save_OnClick" IsChecked="False"/>
+
             <Label Name="LabelCoords" Content="X:Y"></Label>
         </ToolBar>
         <Canvas Name="Canvas" x:FieldModifier="public" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">
