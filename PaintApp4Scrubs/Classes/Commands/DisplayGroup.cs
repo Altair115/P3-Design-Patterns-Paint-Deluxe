@@ -5,7 +5,7 @@ namespace PaintApp4Scrubs.Classes.Commands
 {
     public class DisplayGroup : ICommand
     {
-        private GodShape _shape;
+        private readonly GodShape _shape;
 
         public DisplayGroup(GodShape shape)
         {
