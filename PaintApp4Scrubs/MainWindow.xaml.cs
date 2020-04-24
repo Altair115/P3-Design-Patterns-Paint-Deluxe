@@ -19,8 +19,8 @@ namespace PaintApp4Scrubs
     {
         private Broker broker;
         public static MainWindow AppWindow;
-        private GodShape _selectedShape;
-        private GodShape _selectedParentShape;
+        private IComponent _selectedShape;
+        private IComponent _selectedParentShape;
         private Boxer _box;
         private enum ModeSwitch
         {
@@ -42,7 +42,7 @@ namespace PaintApp4Scrubs
             InitializeComponent();
             AppWindow = this;
             broker = new Broker();
-            _box = new Boxer();
+            _box = new Boxer(true);
         }
 
         #region Button Calls
@@ -107,7 +107,7 @@ namespace PaintApp4Scrubs
             _startPoint = e.GetPosition(this);
             HitTestResult result =
                 VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
-            _selectedShape = result.VisualHit as GodShape;
+            _selectedShape = result.VisualHit as IComponent;
         }
         /// <summary>
         /// this function ditermens witch method to call based on te mode witch the user has selected 
@@ -133,21 +133,21 @@ namespace PaintApp4Scrubs
                 case ModeSwitch.Resize:
                     if (_selectedShape != null)
                     {
-                        ResizeShape(_selectedShape);
+                        ResizeShape(_selectedShape as GodShape);
                         _selectedShape = null;
                     }
                     break;
                 case ModeSwitch.Move:
                     if (_selectedShape != null)
                     {
-                        MoveShape(_selectedShape);
+                        MoveShape(_selectedShape as GodShape);
                         _selectedShape = null;
                     }
                     break;
                 case ModeSwitch.Delete:
                     if (_selectedShape != null)
                     {
-                        DeleteShape(_selectedShape);
+                        DeleteShape(_selectedShape as GodShape);
                         _selectedShape = null;
                     }
                     break;
@@ -166,7 +166,7 @@ namespace PaintApp4Scrubs
                 case ModeSwitch.Display:
                     if (_selectedShape != null)
                     {
-                        DisplayGroup(_selectedShape);
+                        DisplayGroup(_selectedShape as GodShape);
                         _selectedShape = null;
                     }
                     break;
@@ -330,7 +330,7 @@ namespace PaintApp4Scrubs
         {
             Draw draw = new Draw(shape);
             broker.DoCommand(draw);
-            _box.Addchild(shape);
+            _box.Add(shape);
             
         }
         /// <summary>
@@ -367,6 +367,11 @@ namespace PaintApp4Scrubs
                 return;
             Delete delete = new Delete(selectedShape);
             broker.DoCommand(delete);
+            var x = _box.FindBox(selectedShape);
+            if (x == null)
+            {
+                _box.Detach(x);
+            }
             _box.Detach(selectedShape);
         }
         /// <summary>
@@ -392,13 +397,24 @@ namespace PaintApp4Scrubs
             broker.DoCommand(resize);
         }
 
-        public void AddChild(GodShape shape, GodShape childShape)
+        public void AddChild(IComponent firstComponent, IComponent secondComponent)
         {
-            if (shape == null)
+           var x = _box.FindBox(firstComponent as GodShape);
+           var y =_box.FindBox(secondComponent as GodShape);
+            if (firstComponent == null || secondComponent == null)
                 return;
-            AddToGroup addToGroup = new AddToGroup(shape, childShape);
-            broker.DoCommand(addToGroup);
-            _box.Detach(childShape);
+            if (x != null)
+            {
+                firstComponent = x;
+            }
+
+            if (y != null)
+            {
+                secondComponent = y;
+            }
+            MakeGroup makeGroup = new MakeGroup(firstComponent, secondComponent,_box);
+            broker.DoCommand(makeGroup);
+            
         }
 
         public void DisplayGroup(GodShape shape)

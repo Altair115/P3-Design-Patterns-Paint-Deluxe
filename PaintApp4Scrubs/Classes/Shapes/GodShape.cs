@@ -11,10 +11,10 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// <summary>
     /// an abstract class to add extra functionality to the Shape class
     /// </summary>
-    public abstract class GodShape : Shape
+    public abstract class GodShape : Shape , IComponent
     {
 
-        private List<GodShape> childrenOfGodShapes;
+        private readonly List<GodShape> childrenOfGodShapes;
 
         protected GodShape()
         {
