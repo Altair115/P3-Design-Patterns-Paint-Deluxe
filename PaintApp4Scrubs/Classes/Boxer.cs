@@ -1,67 +1,116 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
+using System.Windows;
 using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs.Classes
 {
-    class Boxer
+    public class Boxer : IComponent
     {
-        private List<GodShape> childrenGodShapes = new List<GodShape>();
+        private readonly List<IComponent> components = new List<IComponent>();
+        private bool ishead;
 
-        public void Addchild(GodShape shape)
+        public Boxer(bool head = false)
+        {
+            ishead = head;
+        }
+        public void Add(IComponent component)
         { 
-            childrenGodShapes.Add(shape);
+            components.Add(component);
         }
 
-        public void Detach(GodShape shape)
+        public void Detach(IComponent component)
         {
-            childrenGodShapes.Remove(shape);
+            components.Remove(component);
         }
 
-        public List<GodShape> GetChildren()
+        public Boxer FindBox( GodShape shape, bool head = true)
         {
-            return childrenGodShapes;
-        }
-        public void SaveFile(List<GodShape> childern = null, string indent = "", bool head = true)
-        {
-            if (head)
+            foreach (var component in components)
             {
-                PrintToFile("Canvas");
-                if (childrenGodShapes.Count > 1)
+                if (component.Equals(shape))
                 {
-                    PrintToFile($"Group {childrenGodShapes.Count}");
-                }
-                childern = childrenGodShapes;
-            }
-            indent += " ";
-            foreach (var child in childern)
-            {
-                if (child.GetChildrenOfGodShapes().Count <= 0)
-                {
-                    PrintToFile($"{indent} {child.ToString()}");
-                }
-                else
-                {
-                    PrintToFile($"{indent} {child.ToString()}");
-                    if (child.GetChildrenOfGodShapes().Count != 1)
+                    if (!head)
                     {
-                        PrintToFile($"{indent} Group {child.GetChildrenOfGodShapes().Count}");
+                        return this;
                     }
-                    this.SaveFile(child.GetChildrenOfGodShapes(), indent, false);
+                    return null;
+                } 
+                
+                if(component is Boxer)
+                {
+                    Boxer x = (Boxer) component;
+                    var y = x.FindBox(shape, false);
+                    if (y != null)
+                    {
+                        return y;
+                    }
+                    
                 }
             }
+
+            return null;
         }
-        public void ClearFile()
+        public List<IComponent> GetChildren()
         {
-            System.IO.File.WriteAllText(@"..\..\..\..\savetest.txt", "");
+            return components;
+        }
+        //public void SaveFile(List<GodShape> childern = null, string indent = "", bool head = true) 
+        //{
+        //    if (head)
+        //    {
+        //        PrintToFile("Canvas");
+        //        if (childrenGodShapes.Count > 1)
+        //        {
+        //            PrintToFile($"Group {childrenGodShapes.Count}");
+        //        }
+        //        childern = childrenGodShapes;
+        //    }
+        //    indent += " ";
+        //    foreach (var child in childern)
+        //    {
+        //        if (child.GetChildrenOfGodShapes().Count <= 0)
+        //        {
+        //            PrintToFile($"{indent} {child.ToString()}");
+        //        }
+        //        else
+        //        {
+        //            PrintToFile($"{indent} {child.ToString()}");
+        //            if (child.GetChildrenOfGodShapes().Count != 1)
+        //            {
+        //                PrintToFile($"{indent} Group {child.GetChildrenOfGodShapes().Count}");
+        //            }
+        //            this.SaveFile(child.GetChildrenOfGodShapes(), indent, false);
+        //        }
+        //    }
+        //}
+        //public void ClearFile()
+        //{
+        //    System.IO.File.WriteAllText(@"..\..\..\..\savetest.txt", "");
+        //}
+
+        //public void PrintToFile(string text)
+        //{
+        //    using System.IO.StreamWriter file =
+        //        new System.IO.StreamWriter(@"..\..\..\..\savetest.txt", true);
+        //    file.WriteLine(text);
+        //}
+
+        public void Resize(Vector distance)
+        {
+            throw new NotImplementedException();
         }
 
-        public void PrintToFile(string text)
+        public void Move(Vector newPosition)
         {
-            using System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"..\..\..\..\savetest.txt", true);
-            file.WriteLine(text);
+            throw new NotImplementedException();
+        }
+
+        public void Remove()
+        {
+            throw new NotImplementedException();
         }
     }
 }
