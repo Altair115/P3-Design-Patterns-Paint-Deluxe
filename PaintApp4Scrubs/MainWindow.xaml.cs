@@ -367,11 +367,6 @@ namespace PaintApp4Scrubs
                 return;
             Delete delete = new Delete(selectedShape);
             broker.DoCommand(delete);
-            var x = _box.FindBox(selectedShape);
-            if (x == null)
-            {
-                _box.Detach(x);
-            }
             _box.Detach(selectedShape);
         }
         /// <summary>
