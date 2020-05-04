@@ -26,9 +26,8 @@ namespace PaintApp4Scrubs.Classes.Commands
             {
                 _newBox.Add(component);
                 _parentBox.Detach(component);
-                _parentBox.Add(_newBox);
             }
-            
+            _parentBox.Add(_newBox);
         }
 
         public void UnExecute()

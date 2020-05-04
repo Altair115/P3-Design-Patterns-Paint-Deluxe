@@ -10,11 +10,11 @@ namespace PaintApp4Scrubs.Classes
     public class Boxer : IComponent
     {
         private readonly List<IComponent> components = new List<IComponent>();
-        private bool ishead;
+        private bool _isHead;
 
         public Boxer(bool head = false)
         {
-            ishead = head;
+            _isHead = head;
         }
         public void Add(IComponent component)
         { 
