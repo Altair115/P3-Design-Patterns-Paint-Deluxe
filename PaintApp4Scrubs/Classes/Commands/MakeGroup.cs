@@ -10,11 +10,11 @@ namespace PaintApp4Scrubs.Classes.Commands
         private readonly Boxer _parrentBox;
         private readonly Boxer _newBox;
 
-        public MakeGroup(IComponent firstComponent, IComponent secondComponent , Boxer parrentBox)
+        public MakeGroup(IComponent firstComponent, IComponent secondComponent , Boxer parentBox)
         {
             _firstComponent = firstComponent;
             _secondComponent = secondComponent;
-            _parrentBox = parrentBox;
+            _parrentBox = parentBox;
             _newBox = new Boxer();
         }
         public void Execute()

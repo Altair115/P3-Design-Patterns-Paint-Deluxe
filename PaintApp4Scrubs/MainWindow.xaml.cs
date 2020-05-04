@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Ink;
@@ -21,6 +22,7 @@ namespace PaintApp4Scrubs
         public static MainWindow AppWindow;
         private IComponent _selectedShape;
         private IComponent _selectedParentShape;
+        private List<IComponent> _boxList = new List<IComponent>();
         private Boxer _box;
         private enum ModeSwitch
         {
@@ -31,6 +33,7 @@ namespace PaintApp4Scrubs
             Delete,
             Move,
             Resize,
+            Selector,
             Group,
             Display
         }
@@ -81,6 +84,10 @@ namespace PaintApp4Scrubs
         private void MoveButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Move;
+        }
+        private void SelectorButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            _currentMode = ModeSwitch.Selector;
         }
         private void GroupButton_OnClick(object sender, RoutedEventArgs e)
         {
@@ -150,6 +157,9 @@ namespace PaintApp4Scrubs
                         DeleteShape(_selectedShape as GodShape);
                         _selectedShape = null;
                     }
+                    break;
+                case ModeSwitch.Selector:
+                    AddToBoxList(_selectedShape as IComponent);
                     break;
                 case ModeSwitch.Group:
                     if (_selectedShape != null && _selectedParentShape != null)
@@ -392,6 +402,15 @@ namespace PaintApp4Scrubs
             broker.DoCommand(resize);
         }
 
+        public void AddToBoxList(IComponent selectedComponent)
+        {
+            if (selectedComponent == null)
+            {
+                return;
+            }
+            _boxList.Add(selectedComponent);
+        }
+
         public void AddChild(IComponent firstComponent, IComponent secondComponent)
         {
            var x = _box.FindBox(firstComponent as GodShape);
@@ -421,6 +440,5 @@ namespace PaintApp4Scrubs
         }
         #endregion
 
-        
     }
 }
