@@ -21,7 +21,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
             childrenOfGodShapes = new List<GodShape>();
         }
         public abstract void Accept(IVisitor visitor);
-        public abstract string ToString();
+        public abstract override string ToString();
 
         public void AddChild(GodShape aShape)
         {
