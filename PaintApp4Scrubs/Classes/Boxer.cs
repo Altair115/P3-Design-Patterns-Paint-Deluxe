@@ -25,7 +25,10 @@ namespace PaintApp4Scrubs.Classes
         {
             components.Remove(component);
         }
-
+        public bool Equals(Boxer other)
+        {
+            return this == other;
+        }
         public Boxer FindBox( GodShape shape, bool head = true)
         {
             foreach (var component in components)

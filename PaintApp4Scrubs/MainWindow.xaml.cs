@@ -396,25 +396,40 @@ namespace PaintApp4Scrubs
             {
                 return;
             }
-            _boxList.Add(selectedComponent);
+
+            IComponent x =_box.FindBox(selectedComponent as GodShape);
+            if (x == null)
+            {
+                _boxList.Add(selectedComponent);
+            }
+            else
+            {
+                if (!_boxList.Contains(x))
+                {
+                    _boxList.Add(x);
+                }
+            }
+
+            var y = 0;
         }
 
         public void AddChild(List<IComponent> components)
         {
-           //var x = _box.FindBox(firstComponent as GodShape);
-           //var y =_box.FindBox(secondComponent as GodShape);
-           // if (firstComponent == null || secondComponent == null)
-           //     return;
-           // if (x != null)
-           // {
-           //     firstComponent = x;
-           // }
+            //var x = _box.FindBox(firstComponent as GodShape);
+            //var y =_box.FindBox(secondComponent as GodShape);
+            // if (firstComponent == null || secondComponent == null)
+            //     return;
+            // if (x != null)
+            // {
+            //     firstComponent = x;
+            // }
 
-           // if (y != null)
-           // {
-           //     secondComponent = y;
-           // }
-           MakeGroup makeGroup = new MakeGroup(components,_box);
+            // if (y != null)
+            // {
+            //     secondComponent = y;
+            // }
+
+            MakeGroup makeGroup = new MakeGroup(components,_box);
            broker.DoCommand(makeGroup);
            _boxList.Clear();
         }
