@@ -82,8 +82,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
 
             _line.EndPoint = _end;
             _line.StartPoint = _start;
-
-
         }
 
         public override Vector GetCenter()

@@ -28,9 +28,6 @@ namespace PaintApp4Scrubs.Classes.Commands
             _shape = shape;
             _newPosition = newPosition;
             _oldPosition = _shape.GetCenter();
-
-
-
         }
 
         /// <summary>
