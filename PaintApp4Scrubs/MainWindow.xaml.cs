@@ -23,6 +23,7 @@ namespace PaintApp4Scrubs
         private GodShape _selectedShape;
         private readonly List<IComponent> _boxList = new List<IComponent>();
         private readonly Boxer _box;
+
         private enum ModeSwitch
         {
             Line,
@@ -47,60 +48,74 @@ namespace PaintApp4Scrubs
         }
 
         #region Button Calls
+
         private void UndoButton_OnClick(object sender, RoutedEventArgs e)
         {
             _broker.UndoCommand();
         }
+
         private void RedoButton_OnClick(object sender, RoutedEventArgs e)
         {
             _broker.RedoCommand();
         }
+
         private void LineButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Line;
         }
+
         private void EllipseButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Ellipse;
         }
+
         private void RectangleButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Rectangle;
         }
+
         private void TriangleButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Triangle;
         }
+
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Delete;
         }
+
         private void ResizeButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Resize;
         }
+
         private void MoveButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Move;
         }
+
         private void SelectorButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Selector;
         }
+
         private void GroupButton_OnClick(object sender, RoutedEventArgs e)
         {
             AddToGroup(_boxList);
         }
+
         private void DisplayButton_OnClick(object sender, RoutedEventArgs e)
         {
             _currentMode = ModeSwitch.Display;
         }
+
         private void Save_OnClick(object sender, RoutedEventArgs e)
         {
             SaveFile saveFile = new SaveFile(_box);
             _broker.DoCommand(saveFile);
 
         }
+
         #endregion
 
         private Point _currentPoint; //the current mouse
@@ -114,6 +129,7 @@ namespace PaintApp4Scrubs
                 VisualTreeHelper.HitTest(Canvas, Mouse.GetPosition(Canvas));
             _selectedShape = result.VisualHit as GodShape;
         }
+
         /// <summary>
         /// this function ditermens witch method to call based on te mode witch the user has selected 
         /// </summary>
@@ -141,6 +157,7 @@ namespace PaintApp4Scrubs
                         ResizeShape(_selectedShape);
                         _selectedShape = null;
                     }
+
                     break;
                 case ModeSwitch.Move:
                     if (_selectedShape != null)
@@ -148,6 +165,7 @@ namespace PaintApp4Scrubs
                         MoveShape(_selectedShape);
                         _selectedShape = null;
                     }
+
                     break;
                 case ModeSwitch.Delete:
                     if (_selectedShape != null)
@@ -155,6 +173,7 @@ namespace PaintApp4Scrubs
                         DeleteShape(_selectedShape);
                         _selectedShape = null;
                     }
+
                     break;
                 case ModeSwitch.Selector:
                     AddToBoxList(_selectedShape as IComponent);
@@ -165,6 +184,7 @@ namespace PaintApp4Scrubs
                         DisplayGroup(_selectedShape as GodShape);
                         _selectedShape = null;
                     }
+
                     break;
                 default:
                     return;
@@ -174,7 +194,8 @@ namespace PaintApp4Scrubs
         private void Canvas_OnMouseMove(object sender, MouseEventArgs e)
         {
             _currentPoint = e.GetPosition(Canvas);
-            LabelCoords.Content = "Current X:" + _currentPoint.X.ToString() + System.Environment.NewLine + "Current Y:" + _currentPoint.Y.ToString();
+            LabelCoords.Content = "Current X:" + _currentPoint.X.ToString() + System.Environment.NewLine +
+                                  "Current Y:" + _currentPoint.Y.ToString();
             // Update the X & Y as the mouse moves
             if (e.LeftButton == MouseButtonState.Pressed)
             {
@@ -183,6 +204,7 @@ namespace PaintApp4Scrubs
         }
 
         #region DrawStrategies
+
         // Sets and draws line after mouse is released
         private void DrawLine()
         {
@@ -240,6 +262,7 @@ namespace PaintApp4Scrubs
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 newEllipse.YRadius = _startPoint.Y - _endPoint.Y;
             }
+
             DrawShape(newEllipse);
         }
 
@@ -278,6 +301,7 @@ namespace PaintApp4Scrubs
                 square.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 square.Height = _startPoint.Y - _endPoint.Y;
             }
+
             DrawShape(square);
         }
 
@@ -316,8 +340,10 @@ namespace PaintApp4Scrubs
                 triangle.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 triangle.Height = _startPoint.Y - _endPoint.Y;
             }
+
             DrawShape(triangle);
         }
+
         #endregion
 
         #region Command calls
@@ -329,6 +355,7 @@ namespace PaintApp4Scrubs
             _box.Add(shape);
 
         }
+
         /// <summary>
         /// picks the selected shape and uses the command pattern to call the Move command 
         /// </summary>
@@ -336,11 +363,11 @@ namespace PaintApp4Scrubs
         public void MoveShape(GodShape selectedShape)
         {
             int distanceFix = 50;
-            Vector endPoint = (Vector)_endPoint;
-            Vector startPoint = (Vector)_startPoint;
+            Vector endPoint = (Vector) _endPoint;
+            Vector startPoint = (Vector) _startPoint;
             endPoint.Y -= distanceFix;
             startPoint.Y -= distanceFix;
-            Move move = new Move(selectedShape, endPoint, startPoint);
+            Move move = new Move(BoxFinder(selectedShape), endPoint, startPoint);
             _broker.DoCommand(move);
         }
 
@@ -357,15 +384,16 @@ namespace PaintApp4Scrubs
         /// creates the command to delete the selected shape
         /// </summary>
         /// <param name="selectedShape">The selected shape</param>
-        public void DeleteShape(GodShape selectedShape)
+        public void DeleteShape(IComponent selectedShape)
         {
             if (selectedShape == null)
                 return;
 
-            Delete delete = new Delete(selectedShape);
+            Delete delete = new Delete(BoxFinder(selectedShape));
             _broker.DoCommand(delete);
             _box.Detach(selectedShape);
         }
+
         /// <summary>
         /// Removes the shape of the canvas given by the delete command 
         /// </summary>
@@ -374,25 +402,34 @@ namespace PaintApp4Scrubs
         {
             Canvas.Children.Remove(shape);
         }
+
         /// <summary>
         /// picks the selected and creates an resize command to resize the selected shape 
         /// </summary>
         /// <param name="selectedShape">The selected shape</param>
-        public void ResizeShape(GodShape selectedShape)
+        public void ResizeShape(IComponent selectedShape)
         {
             if (selectedShape == null)
                 return;
-
+            
             Vector distance = _startPoint - _endPoint;
-            Resize resize = new Resize(selectedShape, distance);
+            Resize resize = new Resize(BoxFinder(selectedShape), distance);
             _broker.DoCommand(resize);
+        }
+
+        public IComponent BoxFinder(IComponent shape)
+        {
+            IComponent component = _box.FindBox(shape as GodShape);
+            if (component != null)
+                shape = component;
+            return shape;
         }
 
         public void AddToBoxList(IComponent selectedComponent)
         {
             if (selectedComponent == null)
                 return;
-            
+
             IComponent component = _box.FindBox(selectedComponent as GodShape);
             if (component == null)
             {
@@ -418,22 +455,13 @@ namespace PaintApp4Scrubs
         {
             if (shape == null)
                 return;
-            IComponent component = _box.FindBox(shape);
-            if (component == null)
-            {
-                DisplayGroup displayGroup = new DisplayGroup(shape);
-                _broker.DoCommand(displayGroup);
-            }
-            else
-            {
-                DisplayGroup displayGroup = new DisplayGroup(component);
-                _broker.DoCommand(displayGroup);
-            }
 
-            
-            
+            DisplayGroup displayGroup = new DisplayGroup(BoxFinder(shape));
+            _broker.DoCommand(displayGroup);
         }
-        #endregion
-
     }
-}
+
+    #endregion
+
+};
+

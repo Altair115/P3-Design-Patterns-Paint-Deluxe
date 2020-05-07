@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Text;
 using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
+using System.Windows;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
-    class VistorResizeShape : IVisitor
+    class VistorResize : IVisitor
     {
-        public void Visit(Boxer boxer)
+        private Vector _distance;
+        public VistorResize (Vector distance)
         {
-            throw new NotImplementedException();
+            _distance = distance;
         }
 
         public void Visit(GodShape godShape)
         {
-            throw new NotImplementedException();
+            godShape.Resize(_distance);
         }
     }
 }

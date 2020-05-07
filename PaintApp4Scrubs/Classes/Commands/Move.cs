@@ -5,29 +5,31 @@ using System.Windows;
 using System.Windows.Controls;
 using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Classes.Commands;
+using PaintApp4Scrubs.Classes.VisitorCommands;
 using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Commands
 {
     /// <summary>
-    /// This class creates a command to move the shape on the canvas
+    /// This class creates a command to move the component on the canvas
     /// </summary>
     class Move : ICommand
     {
-        private readonly GodShape _shape;
+        private readonly IComponent _component;
         private readonly Vector _newPosition;
         private readonly Vector _oldPosition;
+        private readonly VisitorMove _visitorMove;
 
         /// <summary>
         /// the constructor of the Move class 
         /// </summary>
-        /// <param name="shape">the shape that needs to be moved</param>
-        /// <param name="newPosition">the new position where the shape needs to go</param>
-        public Move(GodShape shape, Vector newPosition, Vector startPoint)
+        /// <param name="component">the component that needs to be moved</param>
+        /// <param name="newPosition">the new position where the component needs to go</param>
+        public Move(IComponent component, Vector newPosition, Vector startPoint)
         {
-            _shape = shape;
-            _newPosition = newPosition;
-            _oldPosition = _shape.GetCenter();
+            _component = component;
+            _newPosition = newPosition;            
+            _visitorMove = new VisitorMove(_newPosition);
         }
 
         /// <summary>
@@ -35,14 +37,15 @@ namespace PaintApp4Scrubs.Classes.Commands
         /// </summary>
         public void Execute()
         {
-            _shape.Move(_newPosition);
+            _component.Accept(_visitorMove);
         }
         /// <summary>
         /// executes the undo version of the command 
         /// </summary>
         public void UnExecute()
         {
-            _shape.Move(_oldPosition);
+            _visitorMove.NewPosition = _visitorMove.OldPosition;
+            _component.Accept(_visitorMove);
         }
     }
 }

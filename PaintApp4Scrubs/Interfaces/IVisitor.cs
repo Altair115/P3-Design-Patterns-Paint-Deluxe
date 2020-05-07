@@ -9,7 +9,6 @@ namespace PaintApp4Scrubs.Interfaces
 {
     public interface IVisitor
     {
-        public void Visit(Boxer boxer);
         public void Visit(GodShape godShape);
     }
 }

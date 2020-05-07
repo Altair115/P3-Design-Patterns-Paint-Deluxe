@@ -3,38 +3,39 @@ using PaintApp4Scrubs.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using PaintApp4Scrubs.Classes.VisitorCommands;
 
 namespace PaintApp4Scrubs.Classes.Commands
 {
     /// <summary>
-    /// This class creates a command to delete the shape from the canvas
+    /// This class creates a command to delete the component from the canvas
     /// </summary>
     class Delete : ICommand
     {
 
-        private readonly GodShape _shape;
+        private readonly IComponent _component;
 
         /// <summary>
         /// constructor of the command
         /// </summary>
-        /// <param name="shape">the shape to be deleted</param>
-        public Delete(GodShape shape)
+        /// <param name="component">the component to be deleted</param>
+        public Delete(IComponent component)
         {
-            _shape = shape;
+            _component = component;
         }
         /// <summary>
-        /// deletes the shape commands
+        /// deletes the component commands
         /// </summary>
         public void Execute()
         {
-            _shape.Remove();
+            _component.Accept(new VisitorDelete());
         }
         /// <summary>
         /// executes the undo version of the command
         /// </summary>
         public void UnExecute()
         {
-            _shape.Draw();
+            _component.Accept(new VisitorDraw());
         }
 
     }
