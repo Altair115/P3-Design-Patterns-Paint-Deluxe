@@ -6,16 +6,12 @@ namespace PaintApp4Scrubs.Classes.Commands
 {
     public class MakeGroup : ICommand
     {
-        //private readonly IComponent _firstComponent;
-        //private readonly IComponent _secondComponent;
         private readonly List<IComponent> _components;
         private readonly Boxer _parentBox;
         private readonly Boxer _newBox;
 
-        public MakeGroup(List<IComponent> components, Boxer parentBox)/*(IComponent firstComponent, IComponent secondComponent , Boxer parentBox)*/
+        public MakeGroup(List<IComponent> components, Boxer parentBox)
         {
-            //_firstComponent = firstComponent;
-            //_secondComponent = secondComponent;
             _components = components;
             _parentBox = parentBox;
             _newBox = new Boxer();

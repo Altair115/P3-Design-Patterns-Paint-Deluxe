@@ -15,7 +15,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
     {
         public static readonly DependencyProperty XRadiusDependencyProperty = DependencyProperty.Register("XRadius", typeof(Double), typeof(Ellipse));
         public static readonly DependencyProperty YRadiusDependencyProperty = DependencyProperty.Register("YRadius", typeof(Double), typeof(Ellipse));
-        // static readonly DependencyProperty CenterPointDependencyProperty = DependencyProperty.Register("centerPoint", typeof(Double), typeof(Ellipse));
 
         private readonly EllipseGeometry _ellipse = new EllipseGeometry();
         //private Point Center = new Point(0,0);
@@ -38,12 +37,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
             get { return (double) GetValue(YRadiusDependencyProperty); }
             set { SetValue(YRadiusDependencyProperty, value); _yRadius = value; }
         }
-        //public Point centerPoint
-        //{
-        //    get { return (Point)this.GetValue(CenterPointDependencyProperty); }
-        //    set { this.SetValue(CenterPointDependencyProperty, value); Center = value; }
-        //}
-
         /// <summary>
         /// gets the geometry for the ellipse
         /// </summary>

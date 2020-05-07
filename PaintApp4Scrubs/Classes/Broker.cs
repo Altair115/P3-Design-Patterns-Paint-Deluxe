@@ -33,11 +33,9 @@ class Broker
                 _commands.Push(command);
                 command.Execute();
             }
-            if (_undoCommands.Count != 0)
-            {
+            if (_undoCommands.Count != 0) 
                 _undoCommands.Clear();
-            }
-            
+
         }
         /// <summary>
         /// this function executes the undo version of the command 
@@ -56,10 +54,8 @@ class Broker
         public void RedoCommand()
         {
             if (_undoCommands.Count == 0)
-            {
                 return;
-            }
-
+            
             var pop = _undoCommands.Pop();
             pop.Execute();
             _commands.Push(pop);

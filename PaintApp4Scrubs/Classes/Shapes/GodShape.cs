@@ -17,7 +17,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             
         }
-        public Boxer ParrentBoxer { get; set; }
         public abstract void Accept(IVisitor visitor);
         public abstract override string ToString();
         public void Display(GodShape aShape, string indent = "", bool head = true)
