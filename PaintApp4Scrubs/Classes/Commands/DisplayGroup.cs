@@ -1,5 +1,6 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Classes.VisitorCommands;
 using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Commands
@@ -15,7 +16,9 @@ namespace PaintApp4Scrubs.Classes.Commands
         public void Execute()
         {
             _component.ClearFile();
-            _component.Display();
+            _component.Accept(new VisitorDisplay());
+            
+           // _component.Display();
         }
 
         public void UnExecute()

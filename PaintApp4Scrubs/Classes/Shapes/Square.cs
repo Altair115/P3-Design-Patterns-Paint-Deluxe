@@ -47,10 +47,5 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             return $"Rectangle {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.Width} {this.Height}";
         }
-
-        public override void Accept(IVisitor visitor)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -11,14 +11,14 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// <summary>
     /// an abstract class to add extra functionality to the Shape class
     /// </summary>
-    public abstract class GodShape : Shape , IComponent
+    public abstract class GodShape : Shape, IComponent, IAccept
     {
-        protected GodShape()
-        {
-            
-        }
-        public abstract void Accept(IVisitor visitor);
         public abstract override string ToString();
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
+
         public void Display()
         {
             PrintToFile(this.ToString());

@@ -4,6 +4,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Windows;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
@@ -84,16 +85,23 @@ namespace PaintApp4Scrubs.Classes
                 }
             }
         }
+        
         public void ClearFile()
         {
             System.IO.File.WriteAllText(@"..\..\..\..\savetest.txt", "");
         }
+
+       
 
         public void PrintToFile(string text)
         {
             using System.IO.StreamWriter file =
                 new System.IO.StreamWriter(@"..\..\..\..\savetest.txt", true);
             file.WriteLine(text);
+        }
+        public Vector GetCenter()
+        {
+            throw new NotImplementedException();
         }
 
         public void Resize(Vector distance)
@@ -109,6 +117,14 @@ namespace PaintApp4Scrubs.Classes
         public void Remove()
         {
             throw new NotImplementedException();
+        }
+
+        public void Accept(IVisitor visitor)
+        {
+            foreach (var x in _components)
+            {
+                x.Accept(visitor);
+            }
         }
     }
 }
