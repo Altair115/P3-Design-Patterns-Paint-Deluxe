@@ -157,12 +157,12 @@ namespace PaintApp4Scrubs
                     }
                     break;
                 case ModeSwitch.Selector:
-                    AddToBoxList(_selectedShape as IComponent);
+                    AddToBoxList(_selectedShape);
                     break;
                 case ModeSwitch.Display:
                     if (_selectedShape != null)
                     {
-                        DisplayGroup(_selectedShape as GodShape);
+                        DisplayGroup(_selectedShape);
                         _selectedShape = null;
                     }
                     break;
@@ -414,24 +414,17 @@ namespace PaintApp4Scrubs
             _boxList.Clear();
         }
 
-        public void DisplayGroup(GodShape shape)
+        public void DisplayGroup(IComponent shape)
         {
             if (shape == null)
                 return;
-            IComponent component = _box.FindBox(shape);
-            if (component == null)
+            IComponent component = _box.FindBox(shape as GodShape);
+            if (component != null)
             {
-                DisplayGroup displayGroup = new DisplayGroup(shape);
-                _broker.DoCommand(displayGroup);
+                shape = component;
             }
-            else
-            {
-                DisplayGroup displayGroup = new DisplayGroup(component);
-                _broker.DoCommand(displayGroup);
-            }
-
-            
-            
+            DisplayGroup displayGroup = new DisplayGroup(shape);
+            _broker.DoCommand(displayGroup);
         }
         #endregion
 
