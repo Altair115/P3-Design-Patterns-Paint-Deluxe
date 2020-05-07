@@ -36,9 +36,8 @@ namespace PaintApp4Scrubs.Classes
                 if (component.Equals(shape))
                 {
                     if (!head)
-                    {
                         return this;
-                    }
+
                     return null;
                 } 
                 
@@ -47,13 +46,9 @@ namespace PaintApp4Scrubs.Classes
                     Boxer x = (Boxer) component;
                     var y = x.FindBox(shape, false);
                     if (y != null)
-                    {
                         return y;
-                    }
-                    
                 }
             }
-
             return null;
         }
         public List<IComponent> GetChildren()
