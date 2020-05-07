@@ -14,20 +14,8 @@ namespace PaintApp4Scrubs.Classes.Commands
         }
         public void Execute()
         {
-            if (_component is GodShape)
-            {
-                var x = (GodShape) _component;
-                x.ClearFile();
-                x.Display();
-                
-            }
-            else
-            {
-                var x = (Boxer) _component;
-                x.ClearFile();
-                x.SaveFile();
-            }
-            
+            _component.ClearFile();
+            _component.Display();
         }
 
         public void UnExecute()

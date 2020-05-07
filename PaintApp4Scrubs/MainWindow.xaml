@@ -23,9 +23,9 @@
             <RadioButton Name="ResizeButton" BorderBrush="#FF969696" Content="Resize" Height="50" Width="80" GroupName="ShapeGroup" Click="ResizeButton_OnClick" IsChecked="False"/>
             <RadioButton Name="MoveButton" BorderBrush="#FF969696" Content="Move" Height="50" Width="80" GroupName="ShapeGroup" Click="MoveButton_OnClick" IsChecked="False"/>
             <RadioButton Name="SelectorButton" BorderBrush="#FF969696" Content="Selector" Height="50" Width="80" GroupName="ShapeGroup" Click="SelectorButton_OnClick" IsChecked="False"/>
-            <RadioButton Name="GroupButton" BorderBrush="#FF969696" Content="Group" Height="50" Width="80" GroupName="ShapeGroup" Click="GroupButton_OnClick" IsChecked="False"/>
             <RadioButton Name="DisplayButton" BorderBrush="#FF969696" Content="Display Group" Height="50" Width="80" GroupName="ShapeGroup" Click="DisplayButton_OnClick" IsChecked="False"/>
-            <RadioButton Name="Save" BorderBrush="#FF969696" Content="Save File" Height="50" Width="80" GroupName="ShapeGroup" Click="Save_OnClick" IsChecked="False"/>
+            <Button Name="GroupButton" BorderBrush="#FF969696" Content="Group" Height="50" Width="80" Click="GroupButton_OnClick"/>
+            <Button Name="Save" BorderBrush="#FF969696" Content="Display hierarchy" Height="50" Width="80" Click="Save_OnClick"/>
 
             <Label Name="LabelCoords" Content="X:Y"></Label>
         </ToolBar>

@@ -10,5 +10,7 @@ namespace PaintApp4Scrubs.Classes
         public  void Resize(Vector distance);
         public void Move(Vector newPosition);
         public void Remove();
+        public void Display();
+        public void ClearFile();
     }
 }

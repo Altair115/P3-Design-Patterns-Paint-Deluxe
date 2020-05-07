@@ -55,7 +55,7 @@ namespace PaintApp4Scrubs.Classes
         {
             return _components;
         }
-        public void SaveFile(List<IComponent> children = null, string indent = "", bool head = true)
+        public void Display(List<IComponent> children = null, string indent = "", bool head = true)
         {
             if (head)
             {
@@ -80,7 +80,7 @@ namespace PaintApp4Scrubs.Classes
                     {
                         PrintToFile($"{indent} Group {x.GetChildren().Count}");
                     }
-                    this.SaveFile(x.GetChildren(), indent, false);
+                    this.Display(x.GetChildren(), indent, false);
                 }
             }
         }
