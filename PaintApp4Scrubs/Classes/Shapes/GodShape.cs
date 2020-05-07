@@ -13,55 +13,37 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// </summary>
     public abstract class GodShape : Shape , IComponent
     {
-
-        private readonly List<GodShape> childrenOfGodShapes;
-
         protected GodShape()
         {
-            childrenOfGodShapes = new List<GodShape>();
+            
         }
+        public Boxer ParrentBoxer { get; set; }
         public abstract void Accept(IVisitor visitor);
-        public abstract string ToString();
-
-        public void AddChild(GodShape aShape)
-        {
-            childrenOfGodShapes.Add(aShape);
-        }
-
-        public void RemoveChild(GodShape aShape)
-        {
-            childrenOfGodShapes.Remove(aShape);
-        }
-
-        public List<GodShape> GetChildrenOfGodShapes()
-        {
-            return childrenOfGodShapes;
-        }
-
+        public abstract override string ToString();
         public void Display(GodShape aShape, string indent = "", bool head = true)
         {
-            if (head)
-            {
-                PrintToFile(aShape.ToString());
-                if (childrenOfGodShapes.Count > 1)
-                {
-                    PrintToFile($"Group {aShape.childrenOfGodShapes.Count.ToString()}");
-                }
-            }
-            indent += " ";
-            foreach (var child in childrenOfGodShapes)
-            {
-                if (child.childrenOfGodShapes.Count <= 0)
-                {
-                    PrintToFile($"{indent} {child.ToString()}");
-                }
-                else
-                {
-                    PrintToFile($"{indent} {child.ToString()}");
-                    PrintToFile($"{indent} Group {child.childrenOfGodShapes.Count}");
-                    child.Display(child, indent, false);
-                }
-            }
+            //if (head)
+            //{
+            //    PrintToFile(aShape.ToString());
+            //    if (childrenOfGodShapes.Count > 1)
+            //    {
+            //        PrintToFile($"Group {aShape.childrenOfGodShapes.Count.ToString()}");
+            //    }
+            //}
+            //indent += " ";
+            //foreach (var child in childrenOfGodShapes)
+            //{
+            //    if (child.childrenOfGodShapes.Count <= 0)
+            //    {
+            //        PrintToFile($"{indent} {child.ToString()}");
+            //    }
+            //    else
+            //    {
+            //        PrintToFile($"{indent} {child.ToString()}");
+            //        PrintToFile($"{indent} Group {child.childrenOfGodShapes.Count}");
+            //        child.Display(child, indent, false);
+            //    }
+            //}
         }
 
         public void PrintToFile(string text)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Ink;
@@ -21,6 +22,7 @@ namespace PaintApp4Scrubs
         public static MainWindow AppWindow;
         private IComponent _selectedShape;
         private IComponent _selectedParentShape;
+        private List<IComponent> _boxList = new List<IComponent>();
         private Boxer _box;
         private enum ModeSwitch
         {
@@ -31,6 +33,7 @@ namespace PaintApp4Scrubs
             Delete,
             Move,
             Resize,
+            Selector,
             Group,
             Display
         }
@@ -82,9 +85,13 @@ namespace PaintApp4Scrubs
         {
             _currentMode = ModeSwitch.Move;
         }
+        private void SelectorButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            _currentMode = ModeSwitch.Selector;
+        }
         private void GroupButton_OnClick(object sender, RoutedEventArgs e)
         {
-            _currentMode = ModeSwitch.Group;
+            AddChild(_boxList);
         }
         private void DisplayButton_OnClick(object sender, RoutedEventArgs e)
         {
@@ -151,17 +158,8 @@ namespace PaintApp4Scrubs
                         _selectedShape = null;
                     }
                     break;
-                case ModeSwitch.Group:
-                    if (_selectedShape != null && _selectedParentShape != null)
-                    {
-                        AddChild(_selectedParentShape, _selectedShape);
-                        _selectedShape = null;
-                        _selectedParentShape = null;
-                    }
-                    else
-                    {
-                        _selectedParentShape = _selectedShape;
-                    }
+                case ModeSwitch.Selector:
+                    AddToBoxList(_selectedShape as IComponent);
                     break;
                 case ModeSwitch.Display:
                     if (_selectedShape != null)
@@ -392,24 +390,48 @@ namespace PaintApp4Scrubs
             broker.DoCommand(resize);
         }
 
-        public void AddChild(IComponent firstComponent, IComponent secondComponent)
+        public void AddToBoxList(IComponent selectedComponent)
         {
-           var x = _box.FindBox(firstComponent as GodShape);
-           var y =_box.FindBox(secondComponent as GodShape);
-            if (firstComponent == null || secondComponent == null)
-                return;
-            if (x != null)
+            if (selectedComponent == null)
             {
-                firstComponent = x;
+                return;
             }
 
-            if (y != null)
+            IComponent x =_box.FindBox(selectedComponent as GodShape);
+            if (x == null)
             {
-                secondComponent = y;
+                _boxList.Add(selectedComponent);
             }
-            MakeGroup makeGroup = new MakeGroup(firstComponent, secondComponent,_box);
-            broker.DoCommand(makeGroup);
-            
+            else
+            {
+                if (!_boxList.Contains(x))
+                {
+                    _boxList.Add(x);
+                }
+            }
+
+            var y = 0;
+        }
+
+        public void AddChild(List<IComponent> components)
+        {
+            //var x = _box.FindBox(firstComponent as GodShape);
+            //var y =_box.FindBox(secondComponent as GodShape);
+            // if (firstComponent == null || secondComponent == null)
+            //     return;
+            // if (x != null)
+            // {
+            //     firstComponent = x;
+            // }
+
+            // if (y != null)
+            // {
+            //     secondComponent = y;
+            // }
+
+            MakeGroup makeGroup = new MakeGroup(components,_box);
+           broker.DoCommand(makeGroup);
+           _boxList.Clear();
         }
 
         public void DisplayGroup(GodShape shape)
@@ -421,6 +443,5 @@ namespace PaintApp4Scrubs
         }
         #endregion
 
-        
     }
 }
