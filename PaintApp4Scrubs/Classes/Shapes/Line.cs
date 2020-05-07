@@ -54,11 +54,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
             }
         }
 
-        public override void Accept(IVisitor visitor)
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// resizes the line accordingly 
         /// </summary>
@@ -89,7 +84,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
             var center = new Vector((X1 + X2) / 2, (Y1 + Y2)/2);
             return center;
         }
-
         public override string ToString()
         {
             return $"Line {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {_start} {_end}";

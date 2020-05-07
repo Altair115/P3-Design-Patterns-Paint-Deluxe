@@ -4,10 +4,11 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Windows;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
-    public class Boxer : IComponent
+    public class Boxer : IComponent, IAccept
     {
         private readonly List<IComponent> _components = new List<IComponent>();
         private bool _isHead;
@@ -84,6 +85,7 @@ namespace PaintApp4Scrubs.Classes
                 }
             }
         }
+        
         public void ClearFile()
         {
             System.IO.File.WriteAllText(@"..\..\..\..\savetest.txt", "");
@@ -109,6 +111,14 @@ namespace PaintApp4Scrubs.Classes
         public void Remove()
         {
             throw new NotImplementedException();
+        }
+
+        public void Accept(IVisitor visitor)
+        {
+            foreach (GodShape x in _components)
+            {
+                x.Accept(visitor);
+            }
         }
     }
 }

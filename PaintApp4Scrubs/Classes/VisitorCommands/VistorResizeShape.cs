@@ -8,22 +8,12 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
     class VistorResizeShape : IVisitor
     {
-        public void VisitLine(Line line)
-        {
-            throw new NotImplementedException();//resize shit
-        }
-
-        public void VisitEllipse(Ellipse ellipse)
+        public void Visit(Boxer boxer)
         {
             throw new NotImplementedException();
         }
 
-        public void VisitSquare(Square square)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void VisitTriangle(Triangle triangle)
+        public void Visit(GodShape godShape)
         {
             throw new NotImplementedException();
         }
