@@ -10,22 +10,21 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
     {
         public void VisitLine(Line line)
         {
-            line.Display(line);
+            
         }
 
         public void VisitEllipse(Ellipse ellipse)
         {
-            ellipse.Display(ellipse);
+           
         }
 
         public void VisitSquare(Square square)
         {
-            square.Display(square);
+           
         }
 
         public void VisitTriangle(Triangle triangle)
         {
-            triangle.Display(triangle);
         }
     }
 }

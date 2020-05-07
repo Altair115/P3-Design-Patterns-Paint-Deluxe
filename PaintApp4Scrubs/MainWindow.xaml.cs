@@ -418,9 +418,20 @@ namespace PaintApp4Scrubs
         {
             if (shape == null)
                 return;
+            IComponent component = _box.FindBox(shape);
+            if (component == null)
+            {
+                DisplayGroup displayGroup = new DisplayGroup(shape);
+                _broker.DoCommand(displayGroup);
+            }
+            else
+            {
+                DisplayGroup displayGroup = new DisplayGroup(component);
+                _broker.DoCommand(displayGroup);
+            }
 
-            DisplayGroup displayGroup = new DisplayGroup(shape);
-            _broker.DoCommand(displayGroup);
+            
+            
         }
         #endregion
 

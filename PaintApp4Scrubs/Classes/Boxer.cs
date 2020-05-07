@@ -9,7 +9,7 @@ namespace PaintApp4Scrubs.Classes
 {
     public class Boxer : IComponent
     {
-        private readonly List<IComponent> components = new List<IComponent>();
+        private readonly List<IComponent> _components = new List<IComponent>();
         private bool _isHead;
 
         public Boxer(bool head = false)
@@ -18,12 +18,12 @@ namespace PaintApp4Scrubs.Classes
         }
         public void Add(IComponent component)
         { 
-            components.Add(component);
+            _components.Add(component);
         }
 
         public void Detach(IComponent component)
         {
-            components.Remove(component);
+            _components.Remove(component);
         }
         public bool Equals(Boxer other)
         {
@@ -31,7 +31,7 @@ namespace PaintApp4Scrubs.Classes
         }
         public Boxer FindBox( GodShape shape, bool head = true)
         {
-            foreach (var component in components)
+            foreach (var component in _components)
             {
                 if (component.Equals(shape))
                 {
@@ -53,48 +53,48 @@ namespace PaintApp4Scrubs.Classes
         }
         public List<IComponent> GetChildren()
         {
-            return components;
+            return _components;
         }
-        //public void SaveFile(List<GodShape> childern = null, string indent = "", bool head = true) 
-        //{
-        //    if (head)
-        //    {
-        //        PrintToFile("Canvas");
-        //        if (childrenGodShapes.Count > 1)
-        //        {
-        //            PrintToFile($"Group {childrenGodShapes.Count}");
-        //        }
-        //        childern = childrenGodShapes;
-        //    }
-        //    indent += " ";
-        //    foreach (var child in childern)
-        //    {
-        //        if (child.GetChildrenOfGodShapes().Count <= 0)
-        //        {
-        //            PrintToFile($"{indent} {child.ToString()}");
-        //        }
-        //        else
-        //        {
-        //            PrintToFile($"{indent} {child.ToString()}");
-        //            if (child.GetChildrenOfGodShapes().Count != 1)
-        //            {
-        //                PrintToFile($"{indent} Group {child.GetChildrenOfGodShapes().Count}");
-        //            }
-        //            this.SaveFile(child.GetChildrenOfGodShapes(), indent, false);
-        //        }
-        //    }
-        //}
-        //public void ClearFile()
-        //{
-        //    System.IO.File.WriteAllText(@"..\..\..\..\savetest.txt", "");
-        //}
+        public void Display(List<IComponent> children = null, string indent = "", bool head = true)
+        {
+            if (head)
+            {
+                PrintToFile("Canvas");
+                if (_components.Count > 1)
+                {
+                    PrintToFile($"Group {_components.Count}");
+                }
+                children = _components;
+            }
+            indent += " ";
+            foreach (var child in children)
+            {
+                if (child is GodShape)
+                {
+                    PrintToFile($"{indent} {child.ToString()}");
+                }
+                else
+                {
+                    var x = (Boxer)child;
+                    if (x.GetChildren().Count != 1)
+                    {
+                        PrintToFile($"{indent} Group {x.GetChildren().Count}");
+                    }
+                    this.Display(x.GetChildren(), indent, false);
+                }
+            }
+        }
+        public void ClearFile()
+        {
+            System.IO.File.WriteAllText(@"..\..\..\..\savetest.txt", "");
+        }
 
-        //public void PrintToFile(string text)
-        //{
-        //    using System.IO.StreamWriter file =
-        //        new System.IO.StreamWriter(@"..\..\..\..\savetest.txt", true);
-        //    file.WriteLine(text);
-        //}
+        public void PrintToFile(string text)
+        {
+            using System.IO.StreamWriter file =
+                new System.IO.StreamWriter(@"..\..\..\..\savetest.txt", true);
+            file.WriteLine(text);
+        }
 
         public void Resize(Vector distance)
         {

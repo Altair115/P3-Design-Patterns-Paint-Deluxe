@@ -19,30 +19,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
         }
         public abstract void Accept(IVisitor visitor);
         public abstract override string ToString();
-        public void Display(GodShape aShape, string indent = "", bool head = true)
+        public void Display()
         {
-            //if (head)
-            //{
-            //    PrintToFile(aShape.ToString());
-            //    if (childrenOfGodShapes.Count > 1)
-            //    {
-            //        PrintToFile($"Group {aShape.childrenOfGodShapes.Count.ToString()}");
-            //    }
-            //}
-            //indent += " ";
-            //foreach (var child in childrenOfGodShapes)
-            //{
-            //    if (child.childrenOfGodShapes.Count <= 0)
-            //    {
-            //        PrintToFile($"{indent} {child.ToString()}");
-            //    }
-            //    else
-            //    {
-            //        PrintToFile($"{indent} {child.ToString()}");
-            //        PrintToFile($"{indent} Group {child.childrenOfGodShapes.Count}");
-            //        child.Display(child, indent, false);
-            //    }
-            //}
+            PrintToFile(this.ToString());
         }
 
         public void PrintToFile(string text)

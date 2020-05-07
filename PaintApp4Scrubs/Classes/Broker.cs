@@ -33,6 +33,7 @@ class Broker
                 _commands.Push(command);
                 command.Execute();
             }
+            
             if (_undoCommands.Count != 0) 
                 _undoCommands.Clear();
 

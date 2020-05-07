@@ -14,8 +14,8 @@ namespace PaintApp4Scrubs.Classes.Commands
         }
         public void Execute()
         {
-            //_boxer.ClearFile();
-            //_boxer.SaveFile();
+            _boxer.ClearFile();
+            _boxer.Display();
         }
 
         public void UnExecute()
