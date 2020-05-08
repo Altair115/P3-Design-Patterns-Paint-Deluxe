@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -40,7 +40,7 @@ namespace PaintApp4Scrubs
             InitializeComponent();
             AppWindow = this;
             _broker = new Broker();
-            _box = new Boxer(true);
+            _box = new Boxer("",true);
         }
 
         #region Button Calls
@@ -459,4 +459,3 @@ namespace PaintApp4Scrubs
     #endregion
 
 };
-

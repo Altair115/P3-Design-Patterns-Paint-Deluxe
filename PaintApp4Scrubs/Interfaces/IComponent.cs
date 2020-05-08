@@ -12,6 +12,7 @@ namespace PaintApp4Scrubs.Classes
         public void Display(){}
         public void Display(List<IComponent> children = null, string indent = "", bool head = true){}
         public void ClearFile();
+        public string Depth { get; set; }
         public Vector GetCenter();
     }
 }
