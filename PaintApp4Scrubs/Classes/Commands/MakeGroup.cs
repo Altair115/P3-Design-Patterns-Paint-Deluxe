@@ -14,7 +14,7 @@ namespace PaintApp4Scrubs.Classes.Commands
         {
             _components = components;
             _parentBox = parentBox;
-            _newBox = new Boxer(_parentBox.Depth);
+            _newBox = new Boxer();
         }
         public void Execute()
         {

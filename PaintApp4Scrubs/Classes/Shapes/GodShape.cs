@@ -14,20 +14,15 @@ namespace PaintApp4Scrubs.Classes.Shapes
     {
         private Vector _originPos;
         public abstract override string ToString();
-        private string _depth;
 
-        public string Depth
-        {
-            get { return _depth; }
-            set { _depth = value; }
-        }
+        public string Depth { get; set; }
 
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);
         }
 
-        public void Display(string depth)
+        public void Display()
         {
             PrintToFile($"{Depth}{this.ToString()}");
         }
@@ -42,11 +37,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public void ClearFile()
         {
             System.IO.File.WriteAllText(@"..\..\..\..\comptest.txt", "");
-        }
-
-        public string GetDepth()
-        {
-            return _depth;
         }
 
         /// <summary>

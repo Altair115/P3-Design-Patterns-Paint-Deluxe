@@ -17,8 +17,6 @@ namespace PaintApp4Scrubs.Classes.Commands
         {
             _component.ClearFile();
             _component.Accept(new VisitorDisplay());
-            
-           // _component.Display();
         }
 
         public void UnExecute()
