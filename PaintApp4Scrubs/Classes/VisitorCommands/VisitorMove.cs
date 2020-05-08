@@ -11,7 +11,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         public VisitorMove(Vector newPosition)
         {
             NewPosition = newPosition;
-
         }
 
         public void Visit(GodShape godShape)

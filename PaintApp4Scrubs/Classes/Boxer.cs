@@ -4,6 +4,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Windows;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Classes.VisitorCommands;
 using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
@@ -12,15 +13,53 @@ namespace PaintApp4Scrubs.Classes
     {
         private readonly List<IComponent> _components = new List<IComponent>();
         private bool _isHead;
-
-        public Boxer(bool head = false)
+        private string _depth;
+        public string Depth { get; set; }
+        public Boxer(string depth , bool head = false)
         {
             _isHead = head;
+            _depth = depth;
         }
         public void Add(IComponent component)
-        { 
+        {
+            component.Depth += "-";
+            if (component is Boxer)
+            {
+                var x = (Boxer) component;
+                foreach (var comp in x.GetChildren())
+                {
+                    comp.Depth += "-";
+                    if (comp is Boxer)
+                    {
+                        var y = (Boxer) comp;
+                        y.Indentation();
+                    }
+                }
+            }
             _components.Add(component);
         }
+
+        public void Indentation()
+        {
+            foreach (var comp in this.GetChildren())
+            {
+                if (comp is Boxer)
+                {
+                    var x = (Boxer)comp;
+                    x.Depth += "-";
+                    x.Indentation();
+                }
+                comp.Depth += "-";
+
+            }
+        }
+        public void Add(IComponent component , string depth)
+        {
+            component.Depth = depth;
+            _components.Add(component);
+        }
+
+
 
         public void Detach(IComponent component)
         {
@@ -88,15 +127,15 @@ namespace PaintApp4Scrubs.Classes
         
         public void ClearFile()
         {
-            System.IO.File.WriteAllText(@"..\..\..\..\savetest.txt", "");
+            System.IO.File.WriteAllText(@"..\..\..\..\Comptest.txt", "");
         }
 
-       
+        
 
         public void PrintToFile(string text)
         {
             using System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"..\..\..\..\savetest.txt", true);
+                new System.IO.StreamWriter(@"..\..\..\..\Comptest.txt", true);
             file.WriteLine(text);
         }
         public Vector GetCenter()
@@ -121,6 +160,13 @@ namespace PaintApp4Scrubs.Classes
 
         public void Accept(IVisitor visitor)
         {
+            if (visitor is VisitorDisplay)
+            {
+                if (this.GetChildren().Count != 1)
+                {
+                    PrintToFile($"{Depth}Group {this.GetChildren().Count}");
+                }
+            }
             foreach (var x in _components)
             {
                 x.Accept(visitor);

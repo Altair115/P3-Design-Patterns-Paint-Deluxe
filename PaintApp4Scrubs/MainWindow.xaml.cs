@@ -44,7 +44,7 @@ namespace PaintApp4Scrubs
             InitializeComponent();
             AppWindow = this;
             _broker = new Broker();
-            _box = new Boxer(true);
+            _box = new Boxer("",true);
         }
 
         #region Button Calls

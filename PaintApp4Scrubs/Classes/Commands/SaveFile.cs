@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PaintApp4Scrubs.Classes.VisitorCommands;
 using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Commands
@@ -15,7 +16,8 @@ namespace PaintApp4Scrubs.Classes.Commands
         public void Execute()
         {
             _boxer.ClearFile();
-            _boxer.Display();
+            _boxer.PrintToFile("Canvas");
+            _boxer.Accept(new VisitorDisplay());
         }
 
         public void UnExecute()

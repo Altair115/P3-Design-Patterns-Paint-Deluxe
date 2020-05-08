@@ -14,16 +14,17 @@ namespace PaintApp4Scrubs.Classes.Commands
         {
             _components = components;
             _parentBox = parentBox;
-            _newBox = new Boxer();
+            _newBox = new Boxer(_parentBox.Depth);
         }
         public void Execute()
         {
+            _newBox.Depth += "-";
             foreach (var component in _components)
             {
                 _newBox.Add(component);
                 _parentBox.Detach(component);
             }
-            _parentBox.Add(_newBox);
+            _parentBox.Add(_newBox,_newBox.Depth);
         }
 
         public void UnExecute()
