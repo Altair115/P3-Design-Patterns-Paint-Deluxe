@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using PaintApp4Scrubs.Classes.Shapes;
-using PaintApp4Scrubs.Classes.Commands;
+﻿using System.Windows;
 using PaintApp4Scrubs.Classes.VisitorCommands;
 using PaintApp4Scrubs.Interfaces;
 
@@ -40,14 +34,14 @@ namespace PaintApp4Scrubs.Classes.Commands
         /// </summary>
         public void Execute()
         {
-            _component.Accept(new VisitorMove(Vector.Subtract(_oldPosition, _positionResult)));
+            _component.Accept(new VisitorMove(_positionResult));
         }
         /// <summary>
         /// executes the undo version of the command 
         /// </summary>
         public void UnExecute()
         {
-            _component.Accept(new VisitorMove(Vector.Add(_newPosition, _positionResult)));
+            _component.Accept(new VisitorMove(-1 *_positionResult));
         }
     }
 }

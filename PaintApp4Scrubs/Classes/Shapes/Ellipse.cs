@@ -67,11 +67,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// moves the ellipse accordingly 
         /// </summary>
-        /// <param name="newPosition">the new position to move to </param>
-        public override void Move(Vector newPosition)
+        /// <param name="translationToNewPosition">the new position to move to </param>
+        public override void Move(Vector translationToNewPosition)
         {
-            Canvas.SetLeft(this, newPosition.X);
-            Canvas.SetTop(this, newPosition.Y);
+            Canvas.SetLeft(this, translationToNewPosition.X);
+            Canvas.SetTop(this, translationToNewPosition.Y);
         }
 
         public override Vector GetCenter()
