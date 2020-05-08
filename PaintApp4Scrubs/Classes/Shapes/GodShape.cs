@@ -62,7 +62,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// Move the shape to a new position
         /// </summary>
-        /// <param name="translationToNewPosition">the new position to move to</param>
+        /// <param name="translationToNewPosition">Contains the Translation to the new position</param>
         public virtual void Move(Vector translationToNewPosition)
         {
             _originPos = this.GetCenter();
