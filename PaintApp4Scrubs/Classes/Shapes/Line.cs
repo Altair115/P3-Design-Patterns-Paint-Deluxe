@@ -1,5 +1,4 @@
-﻿using PaintApp4Scrubs.Interfaces;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -20,7 +19,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
         private Point _start = new Point(0, 0);
         private Point _end = new Point(0, 0);
 
-       
         public double X1
         {
             get { return (double)GetValue(X1DependencyProperty); }
