@@ -1,12 +1,8 @@
-﻿using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Navigation;
-using System.Xml;
 using PaintApp4Scrubs.Classes;
 using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Classes.Shapes;
@@ -176,12 +172,12 @@ namespace PaintApp4Scrubs
 
                     break;
                 case ModeSwitch.Selector:
-                    AddToBoxList(_selectedShape as IComponent);
+                    AddToBoxList(_selectedShape);
                     break;
                 case ModeSwitch.Display:
                     if (_selectedShape != null)
                     {
-                        DisplayGroup(_selectedShape as GodShape);
+                        DisplayGroup(_selectedShape);
                         _selectedShape = null;
                     }
 
@@ -346,6 +342,14 @@ namespace PaintApp4Scrubs
 
         #endregion
 
+        public IComponent BoxFinder(IComponent shape)
+        {
+            IComponent component = _box.FindBox(shape as GodShape);
+            if (component != null)
+                shape = component;
+            return shape;
+        }
+
         #region Command calls
 
         private void DrawShape(GodShape shape)
@@ -363,8 +367,8 @@ namespace PaintApp4Scrubs
         public void MoveShape(GodShape selectedShape)
         {
             int distanceFix = 50;
-            Vector endPoint = (Vector) _endPoint;
-            Vector startPoint = (Vector) _startPoint;
+            Vector endPoint = (Vector)_endPoint;
+            Vector startPoint = (Vector)_startPoint;
             endPoint.Y -= distanceFix;
             startPoint.Y -= distanceFix;
             Move move = new Move(BoxFinder(selectedShape), endPoint, startPoint);
@@ -411,20 +415,12 @@ namespace PaintApp4Scrubs
         {
             if (selectedShape == null)
                 return;
-            
+
             Vector distance = _startPoint - _endPoint;
             Resize resize = new Resize(BoxFinder(selectedShape), distance);
             _broker.DoCommand(resize);
         }
-
-        public IComponent BoxFinder(IComponent shape)
-        {
-            IComponent component = _box.FindBox(shape as GodShape);
-            if (component != null)
-                shape = component;
-            return shape;
-        }
-
+        
         public void AddToBoxList(IComponent selectedComponent)
         {
             if (selectedComponent == null)
@@ -451,7 +447,7 @@ namespace PaintApp4Scrubs
             _boxList.Clear();
         }
 
-        public void DisplayGroup(GodShape shape)
+        public void DisplayGroup(IComponent shape)
         {
             if (shape == null)
                 return;
@@ -460,8 +456,6 @@ namespace PaintApp4Scrubs
             _broker.DoCommand(displayGroup);
         }
     }
-
     #endregion
 
 };
-

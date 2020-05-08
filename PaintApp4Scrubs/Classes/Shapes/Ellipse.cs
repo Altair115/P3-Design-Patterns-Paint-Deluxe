@@ -2,8 +2,6 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using PaintApp4Scrubs.Classes.VisitorCommands;
-using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
@@ -17,9 +15,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public static readonly DependencyProperty YRadiusDependencyProperty = DependencyProperty.Register("YRadius", typeof(Double), typeof(Ellipse));
 
         private readonly EllipseGeometry _ellipse = new EllipseGeometry();
-        //private Point Center = new Point(0,0);
         private double _xRadius;
         private double _yRadius;
+        private Vector _originPos;
 
         /// <summary>
         /// gets en sets the x radius
@@ -67,11 +65,13 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// moves the ellipse accordingly 
         /// </summary>
-        /// <param name="newPosition">the new position to move to </param>
-        public override void Move(Vector newPosition)
+        /// <param name="translationToNewPosition">Contains the Translation to the new position</param>
+        public override void Move(Vector translationToNewPosition)
         {
-            Canvas.SetLeft(this, newPosition.X);
-            Canvas.SetTop(this, newPosition.Y);
+            _originPos = this.GetCenter();
+            Vector result = Vector.Subtract(_originPos, translationToNewPosition);
+            Canvas.SetLeft(this, result.X);
+            Canvas.SetTop(this, result.Y);
         }
 
         public override Vector GetCenter()

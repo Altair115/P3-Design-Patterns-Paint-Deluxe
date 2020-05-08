@@ -148,7 +148,7 @@ namespace PaintApp4Scrubs.Classes
             throw new NotImplementedException();
         }
 
-        public void Move(Vector newPosition)
+        public void Move(Vector translationToNewPosition)
         {
             throw new NotImplementedException();
         }

@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
-using PaintApp4Scrubs.Classes.VisitorCommands;
 using PaintApp4Scrubs.Interfaces;
 
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
+    
     /// <summary>
     /// an abstract class to add extra functionality to the Shape class
     /// </summary>
     public abstract class GodShape : Shape, IComponent, IAccept
     {
+        private Vector _originPos;
         public abstract override string ToString();
         private string _depth;
 
@@ -76,11 +76,13 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// Move the shape to a new position
         /// </summary>
-        /// <param name="newPosition">the new position to move to</param>
-        public virtual void Move(Vector newPosition)
+        /// <param name="translationToNewPosition">Contains the Translation to the new position</param>
+        public virtual void Move(Vector translationToNewPosition)
         {
-            var left = newPosition.X - (this.Width / 2);
-            var top = newPosition.Y - (this.Height / 2);
+            _originPos = this.GetCenter();
+            Vector result = Vector.Subtract(_originPos, translationToNewPosition);
+            var left = result.X - (this.Width / 2);
+            var top = result.Y - (this.Height / 2);
             Canvas.SetLeft(this, left);
             Canvas.SetTop(this, top);
         }
