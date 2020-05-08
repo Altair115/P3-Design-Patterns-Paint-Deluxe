@@ -17,9 +17,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public static readonly DependencyProperty YRadiusDependencyProperty = DependencyProperty.Register("YRadius", typeof(Double), typeof(Ellipse));
 
         private readonly EllipseGeometry _ellipse = new EllipseGeometry();
-        //private Point Center = new Point(0,0);
         private double _xRadius;
         private double _yRadius;
+        private Vector _originPos;
 
         /// <summary>
         /// gets en sets the x radius
@@ -70,8 +70,10 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <param name="translationToNewPosition">the new position to move to </param>
         public override void Move(Vector translationToNewPosition)
         {
-            Canvas.SetLeft(this, translationToNewPosition.X);
-            Canvas.SetTop(this, translationToNewPosition.Y);
+            _originPos = this.GetCenter();
+            Vector result = Vector.Subtract(_originPos, translationToNewPosition);
+            Canvas.SetLeft(this, result.X);
+            Canvas.SetTop(this, result.Y);
         }
 
         public override Vector GetCenter()

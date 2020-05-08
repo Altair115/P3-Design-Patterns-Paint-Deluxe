@@ -66,9 +66,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public virtual void Move(Vector translationToNewPosition)
         {
             _originPos = this.GetCenter();
-            Vector _result = Vector.Subtract(_originPos, translationToNewPosition);
-            var left = _result.X - (this.Width / 2);
-            var top = _result.Y - (this.Height / 2);
+            Vector result = Vector.Subtract(_originPos, translationToNewPosition);
+            var left = result.X - (this.Width / 2);
+            var top = result.Y - (this.Height / 2);
             Canvas.SetLeft(this, left);
             Canvas.SetTop(this, top);
         }

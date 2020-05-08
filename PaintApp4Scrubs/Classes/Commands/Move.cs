@@ -13,7 +13,6 @@ namespace PaintApp4Scrubs.Classes.Commands
         private readonly Vector _newPosition;
         private readonly Vector _oldPosition;
         private readonly Vector _positionResult;
-        private readonly VisitorMove _visitorMove;
 
         /// <summary>
         /// the constructor of the Move class 
