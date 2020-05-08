@@ -2,8 +2,6 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using PaintApp4Scrubs.Classes.VisitorCommands;
-using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
@@ -67,7 +65,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// moves the ellipse accordingly 
         /// </summary>
-        /// <param name="translationToNewPosition">the new position to move to </param>
+        /// <param name="translationToNewPosition">Contains the Translation to the new position</param>
         public override void Move(Vector translationToNewPosition)
         {
             _originPos = this.GetCenter();

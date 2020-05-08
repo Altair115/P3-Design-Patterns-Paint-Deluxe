@@ -18,6 +18,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
         private readonly LineGeometry _line = new LineGeometry();
         private Point _start = new Point(0, 0);
         private Point _end = new Point(0, 0);
+        private Point _translation;
 
         public double X1
         {
@@ -65,18 +66,21 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// moves the line accordingly 
         /// </summary>
-        /// <param name="translationToNewPosition">the new position to move to</param>
+        /// <param name="translationToNewPosition">Contains the Translation to the new position</param>
         public override void Move(Vector translationToNewPosition)
         {
-            X2 = X2 - X1 + translationToNewPosition.X;
-            Y2 = Y2 - Y1 + translationToNewPosition.Y;
-            X1 = translationToNewPosition.X;
-            Y1 = translationToNewPosition.Y;
+            _translation = Converter.ToPoint(translationToNewPosition);
 
-            _line.EndPoint = _end;
+            _start.X = _start.X - _translation.X;
+            _start.Y = _start.Y - _translation.Y;
+
+            _end.X = _end.X - _translation.X;
+            _end.Y = _end.Y - _translation.Y;
+
             _line.StartPoint = _start;
+            _line.EndPoint = _end;
         }
-
+        
         public override Vector GetCenter()
         {
             var center = new Vector((X1 + X2) / 2, (Y1 + Y2)/2);
