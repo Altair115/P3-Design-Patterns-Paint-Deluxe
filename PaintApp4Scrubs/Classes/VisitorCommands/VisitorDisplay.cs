@@ -9,13 +9,9 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
     class VisitorDisplay : IVisitor
     {
-        public string Depth { get; set; }
-        public VisitorDisplay()
-        {
-        }
         public void Visit(GodShape godShape)
         {
-            godShape.Display(Depth);
+            godShape.Display();
         }
     }
 }

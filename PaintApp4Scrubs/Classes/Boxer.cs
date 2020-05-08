@@ -43,7 +43,6 @@ namespace PaintApp4Scrubs.Classes
                     x.Indentation();
                 }
                 comp.Depth += "-";
-
             }
         }
         public void Add(IComponent component , string depth)

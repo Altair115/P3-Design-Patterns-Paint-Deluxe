@@ -42,7 +42,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             get
             {
-                
                 _ellipse.RadiusX = _xRadius;
                 _ellipse.RadiusY = _yRadius;
                 return _ellipse;

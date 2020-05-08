@@ -7,10 +7,10 @@ using System.Windows;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
-    class VistorResize : IVisitor
+    class VisitorResize : IVisitor
     {
         private Vector _distance;
-        public VistorResize (Vector distance)
+        public VisitorResize (Vector distance)
         {
             _distance = distance;
         }
