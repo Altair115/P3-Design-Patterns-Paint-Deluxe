@@ -12,14 +12,7 @@ namespace PaintApp4Scrubs.Classes
     public class Boxer : IComponent
     {
         private readonly List<IComponent> _components = new List<IComponent>();
-        private bool _isHead;
-        private string _depth;
         public string Depth { get; set; }
-        public Boxer(string depth , bool head = false)
-        {
-            _isHead = head;
-            _depth = depth;
-        }
         public void Add(IComponent component)
         {
             component.Depth += "-";
@@ -59,15 +52,9 @@ namespace PaintApp4Scrubs.Classes
             _components.Add(component);
         }
 
-
-
         public void Detach(IComponent component)
         {
             _components.Remove(component);
-        }
-        public bool Equals(Boxer other)
-        {
-            return this == other;
         }
         public Boxer FindBox( GodShape shape, bool head = true)
         {
@@ -95,67 +82,17 @@ namespace PaintApp4Scrubs.Classes
         {
             return _components;
         }
-        public void Display(List<IComponent> children = null, string indent = "", bool head = true)
-        {
-            if (head)
-            {
-                PrintToFile("Canvas");
-                if (_components.Count > 1)
-                {
-                    PrintToFile($"Group {_components.Count}");
-                }
-                children = _components;
-            }
-            indent += " ";
-            foreach (var child in children)
-            {
-                if (child is GodShape)
-                {
-                    PrintToFile($"{indent} {child.ToString()}");
-                }
-                else
-                {
-                    var x = (Boxer)child;
-                    if (x.GetChildren().Count != 1)
-                    {
-                        PrintToFile($"{indent} Group {x.GetChildren().Count}");
-                    }
-                    this.Display(x.GetChildren(), indent, false);
-                }
-            }
-        }
-        
+
         public void ClearFile()
         {
             System.IO.File.WriteAllText(@"..\..\..\..\Comptest.txt", "");
         }
-
-        
 
         public void PrintToFile(string text)
         {
             using System.IO.StreamWriter file =
                 new System.IO.StreamWriter(@"..\..\..\..\Comptest.txt", true);
             file.WriteLine(text);
-        }
-        public Vector GetCenter()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Resize(Vector distance)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Move(Vector translationToNewPosition)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove()
-        {
-            throw new NotImplementedException();
         }
 
         public void Accept(IVisitor visitor)
