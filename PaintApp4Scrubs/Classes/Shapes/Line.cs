@@ -1,5 +1,4 @@
-﻿using PaintApp4Scrubs.Interfaces;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -20,7 +19,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
         private Point _start = new Point(0, 0);
         private Point _end = new Point(0, 0);
 
-       
         public double X1
         {
             get { return (double)GetValue(X1DependencyProperty); }
@@ -67,13 +65,13 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// moves the line accordingly 
         /// </summary>
-        /// <param name="newPosition">the new position to move to</param>
-        public override void Move(Vector newPosition)
+        /// <param name="translationToNewPosition">the new position to move to</param>
+        public override void Move(Vector translationToNewPosition)
         {
-            X2 = X2 - X1 + newPosition.X;
-            Y2 = Y2 - Y1 + newPosition.Y;
-            X1 = newPosition.X;
-            Y1 = newPosition.Y;
+            X2 = X2 - X1 + translationToNewPosition.X;
+            Y2 = Y2 - Y1 + translationToNewPosition.Y;
+            X1 = translationToNewPosition.X;
+            Y1 = translationToNewPosition.Y;
 
             _line.EndPoint = _end;
             _line.StartPoint = _start;
