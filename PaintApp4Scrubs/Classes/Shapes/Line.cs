@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
@@ -15,10 +16,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public static readonly DependencyProperty Y1DependencyProperty = DependencyProperty.Register("Y1", typeof(Double), typeof(Line));
         public static readonly DependencyProperty Y2DependencyProperty = DependencyProperty.Register("Y2", typeof(Double), typeof(Line));
 
-        private readonly LineGeometry _line = new LineGeometry();
-        private Point _start = new Point(0, 0);
-        private Point _end = new Point(0, 0);
-        private Point _translation;
+        public LineGeometry _line = new LineGeometry();
+        public Point _start = new Point(0, 0);
+        public Point _end = new Point(0, 0);
 
         public double X1
         {
@@ -52,24 +52,13 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 return _line;
             }
         }
-
-        /// <summary>
-        /// resizes the line accordingly 
-        /// </summary>
-        /// <param name="distance">the distance new size of the line</param>
-        public override void Resize(Vector distance)
-        {
-            X2 -= distance.X;
-            Y2 -= distance.Y;
-            _line.EndPoint = _end;
-        }
         /// <summary>
         /// moves the line accordingly 
         /// </summary>
         /// <param name="translationToNewPosition">Contains the Translation to the new position</param>
         public override void Move(Vector translationToNewPosition)
         {
-            _translation = Converter.ToPoint(translationToNewPosition);
+            var _translation = Converter.ToPoint(translationToNewPosition);
 
             _start.X = _start.X - _translation.X;
             _start.Y = _start.Y - _translation.Y;
@@ -89,6 +78,10 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public override string ToString()
         {
             return $"Line {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {_start} {_end}";
+        }
+        public override void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }

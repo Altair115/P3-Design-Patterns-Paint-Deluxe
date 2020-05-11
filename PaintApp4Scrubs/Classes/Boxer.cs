@@ -96,17 +96,7 @@ namespace PaintApp4Scrubs.Classes
 
         public void Accept(IVisitor visitor)
         {
-            if (visitor is VisitorDisplay)
-            {
-                if (this.GetChildren().Count != 1)
-                {
-                    PrintToFile($"{Depth}Group {this.GetChildren().Count}");
-                }
-            }
-            foreach (var x in _components)
-            {
-                x.Accept(visitor);
-            }
+            visitor.Visit(this);
         }
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Shapes;
-using System.Windows.Controls;
+﻿using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
-using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Classes.VisitorCommands;
 
 namespace PaintApp4Scrubs.Classes.Commands
 {
@@ -13,14 +9,14 @@ namespace PaintApp4Scrubs.Classes.Commands
     /// </summary>
     public class Draw : ICommand
     {
-        private readonly GodShape _shape;
+        private readonly IComponent _component;
         /// <summary>
         /// the constructor of the Draw class
         /// </summary>
-        /// <param name="shape"></param>
-        public Draw(GodShape shape)
+        /// <param name="component"></param>
+        public Draw(IComponent component)
         {
-            _shape = shape;
+            _component = component;
         }
 
         /// <summary>
@@ -28,14 +24,14 @@ namespace PaintApp4Scrubs.Classes.Commands
         /// </summary>
         public void Execute()
         {
-            _shape.Draw();
+            _component.Accept(new VisitorDraw());
         }
         /// <summary>
         /// executes the undo version of the command
         /// </summary>
         public void UnExecute()
         {
-            _shape.Remove();
+            _component.Accept(new VisitorDelete());
         }
     }
 }

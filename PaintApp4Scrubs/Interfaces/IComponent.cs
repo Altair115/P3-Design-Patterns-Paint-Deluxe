@@ -6,7 +6,6 @@ namespace PaintApp4Scrubs.Classes
 {
     public interface IComponent : IAccept
     {
-        public void ClearFile();
         public string Depth { get; set; }
     }
 }
