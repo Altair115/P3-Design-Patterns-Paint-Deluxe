@@ -9,5 +9,29 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             godShape.Remove();
         }
+        public void Visit(Boxer boxer)
+        {
+
+        }
+
+        public void Visit(Line line)
+        {
+
+        }
+
+        public void Visit(Square square)
+        {
+
+        }
+
+        public void Visit(Triangle triangle)
+        {
+
+        }
+
+        public void Visit(Ellipse ellipse)
+        {
+
+        }
     }
 }
