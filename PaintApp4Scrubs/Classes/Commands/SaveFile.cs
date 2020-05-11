@@ -15,9 +15,7 @@ namespace PaintApp4Scrubs.Classes.Commands
         }
         public void Execute()
         {
-            _boxer.ClearFile();
-            _boxer.PrintToFile("Canvas");
-            _boxer.Accept(new VisitorDisplay());
+            _boxer.Accept(new VisitorDisplay(true));
         }
 
         public void UnExecute()

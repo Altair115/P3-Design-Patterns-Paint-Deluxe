@@ -153,7 +153,6 @@ namespace PaintApp4Scrubs
                         ResizeShape(_selectedShape);
                         _selectedShape = null;
                     }
-
                     break;
                 case ModeSwitch.Move:
                     if (_selectedShape != null)
@@ -161,7 +160,6 @@ namespace PaintApp4Scrubs
                         MoveShape(_selectedShape);
                         _selectedShape = null;
                     }
-
                     break;
                 case ModeSwitch.Delete:
                     if (_selectedShape != null)
@@ -169,7 +167,6 @@ namespace PaintApp4Scrubs
                         DeleteShape(_selectedShape);
                         _selectedShape = null;
                     }
-
                     break;
                 case ModeSwitch.Selector:
                     AddToBoxList(_selectedShape);
@@ -180,7 +177,6 @@ namespace PaintApp4Scrubs
                         DisplayGroup(_selectedShape);
                         _selectedShape = null;
                     }
-
                     break;
                 default:
                     return;

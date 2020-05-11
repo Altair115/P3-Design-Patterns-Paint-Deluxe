@@ -2,22 +2,22 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
 
     /// <summary>
-    /// this class creates a _ellipse 
+    /// this class creates a EllipseGeometry 
     /// </summary>
     public class Ellipse : GodShape
     {
         public static readonly DependencyProperty XRadiusDependencyProperty = DependencyProperty.Register("XRadius", typeof(Double), typeof(Ellipse));
         public static readonly DependencyProperty YRadiusDependencyProperty = DependencyProperty.Register("YRadius", typeof(Double), typeof(Ellipse));
 
-        private readonly EllipseGeometry _ellipse = new EllipseGeometry();
-        private double _xRadius;
-        private double _yRadius;
-        private Vector _originPos;
+        public EllipseGeometry EllipseGeometry = new EllipseGeometry();
+        public double _xRadius;
+        public double _yRadius;
 
         /// <summary>
         /// gets en sets the x radius
@@ -42,24 +42,10 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             get
             {
-                _ellipse.RadiusX = _xRadius;
-                _ellipse.RadiusY = _yRadius;
-                return _ellipse;
+                EllipseGeometry.RadiusX = _xRadius;
+                EllipseGeometry.RadiusY = _yRadius;
+                return EllipseGeometry;
             }
-        }
-        
-        /// <summary>
-        /// Resizes the ellipse accordingly 
-        /// </summary>
-        /// <param name="distance">the new point to be resize to </param>
-        public override void Resize(Vector distance)
-        {
-            if (!(_xRadius > distance.X) || !(_yRadius > distance.Y)) return;
-            _xRadius -= distance.X;
-            _yRadius -= distance.Y;
-            _ellipse.RadiusX = _xRadius;
-            _ellipse.RadiusY = _yRadius;
-
         }
         /// <summary>
         /// moves the ellipse accordingly 
@@ -81,7 +67,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
 
         public override string ToString()
         {
-            return $"Ellipse {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.XRadius} {this.YRadius}";
+            return $"EllipseGeometry {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.XRadius} {this.YRadius}";
+        }
+        public override void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
         }
     }
 }
