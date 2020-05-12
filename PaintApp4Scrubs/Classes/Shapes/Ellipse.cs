@@ -47,17 +47,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 return EllipseGeometry;
             }
         }
-        /// <summary>
-        /// moves the ellipse accordingly 
-        /// </summary>
-        /// <param name="translationToNewPosition">Contains the Translation to the new position</param>
-        public override void Move(Vector translationToNewPosition)
-        {
-            _originPos = this.GetCenter();
-            Vector result = Vector.Subtract(_originPos, translationToNewPosition);
-            Canvas.SetLeft(this, result.X);
-            Canvas.SetTop(this, result.Y);
-        }
 
         public override Vector GetCenter()
         {

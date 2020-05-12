@@ -69,23 +69,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 return LineGeometry;
             }
         }
-        /// <summary>
-        /// moves the line accordingly 
-        /// </summary>
-        /// <param name="translationToNewPosition">Contains the Translation to the new position</param>
-        public override void Move(Vector translationToNewPosition)
-        {
-            var _translation = Converter.ToPoint(translationToNewPosition);
-
-            _start.X = _start.X - _translation.X;
-            _start.Y = _start.Y - _translation.Y;
-
-            _end.X = _end.X - _translation.X;
-            _end.Y = _end.Y - _translation.Y;
-
-            LineGeometry.StartPoint = _start;
-            LineGeometry.EndPoint = _end;
-        }
         
         public override Vector GetCenter()
         {

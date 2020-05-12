@@ -453,5 +453,4 @@ namespace PaintApp4Scrubs
         }
     }
     #endregion
-
 };
