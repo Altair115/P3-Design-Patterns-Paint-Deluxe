@@ -12,7 +12,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// </summary>
     public abstract class GodShape : Shape, IAccept, IComponent
     {
-        public Vector _originPos;
+        public Vector OriginPos;
         public abstract override string ToString();
 
         public virtual void Accept(IVisitor visitor)

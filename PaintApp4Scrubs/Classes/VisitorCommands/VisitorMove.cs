@@ -15,8 +15,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void Visit(GodShape godShape)
         {
-            godShape._originPos = godShape.GetCenter();
-            Vector result = Vector.Subtract(godShape._originPos, TranslationToNewPosition);
+            godShape.OriginPos = godShape.GetCenter();
+            Vector result = Vector.Subtract(godShape.OriginPos, TranslationToNewPosition);
             var left = result.X - (godShape.Width / 2);
             var top = result.Y - (godShape.Height / 2);
             Canvas.SetLeft(godShape, left);
@@ -69,8 +69,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void Visit(Square square)
         {
-            square._originPos = square.GetCenter();
-            Vector result = Vector.Subtract(square._originPos, TranslationToNewPosition);
+            square.OriginPos = square.GetCenter();
+            Vector result = Vector.Subtract(square.OriginPos, TranslationToNewPosition);
             var left = result.X - (square.Width / 2);
             var top = result.Y - (square.Height / 2);
             Canvas.SetLeft(square, left);
@@ -79,8 +79,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void Visit(Triangle triangle)
         {
-            triangle._originPos = triangle.GetCenter();
-            Vector result = Vector.Subtract(triangle._originPos, TranslationToNewPosition);
+            triangle.OriginPos = triangle.GetCenter();
+            Vector result = Vector.Subtract(triangle.OriginPos, TranslationToNewPosition);
             var left = result.X - (triangle.Width / 2);
             var top = result.Y - (triangle.Height / 2);
             Canvas.SetLeft(triangle, left);
@@ -89,8 +89,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void Visit(Ellipse ellipse)
         {
-            ellipse._originPos = ellipse.GetCenter();
-            Vector result = Vector.Subtract(ellipse._originPos, TranslationToNewPosition);
+            ellipse.OriginPos = ellipse.GetCenter();
+            Vector result = Vector.Subtract(ellipse.OriginPos, TranslationToNewPosition);
             Canvas.SetLeft(ellipse, result.X);
             Canvas.SetTop(ellipse, result.Y);
         }
