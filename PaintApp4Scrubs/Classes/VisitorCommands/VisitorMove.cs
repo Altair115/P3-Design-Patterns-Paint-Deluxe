@@ -49,16 +49,22 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void Visit(Line line)
         {
-            var _translation = Converter.ToPoint(TranslationToNewPosition);
+            var translation = Converter.ToPoint(TranslationToNewPosition);
 
-            line._start.X = line._start.X - _translation.X;
-            line._start.Y = line._start.Y - _translation.Y;
+            var lineStartPoint = line.StartPoint;
+            var lineEndPoint = line.EndPoint;
 
-            line._end.X = line._end.X - _translation.X;
-            line._end.Y = line._end.Y - _translation.Y;
+            lineStartPoint.X = lineStartPoint.X - translation.X;
+            lineStartPoint.Y = lineStartPoint.Y - translation.Y;
 
-            line._line.StartPoint = line._start;
-            line._line.EndPoint = line._end;
+            lineEndPoint.X = lineEndPoint.X - translation.X;
+            lineEndPoint.Y = lineEndPoint.Y - translation.Y;
+
+            line.StartPoint = lineStartPoint;
+            line.EndPoint = lineEndPoint;
+
+            line.LineGeometry.StartPoint = line.StartPoint;
+            line.LineGeometry.EndPoint = line.EndPoint;
         }
 
         public void Visit(Square square)
