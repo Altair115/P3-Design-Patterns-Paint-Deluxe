@@ -10,7 +10,7 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
     class VisitorDisplay : IVisitor
     {
         private bool _isHead = false;
-        private readonly ThePrinter _printer = new ThePrinter();
+        private readonly ThePrinter _printer = ThePrinter.GetInstance();
 
         public VisitorDisplay(bool isHead)
         {
