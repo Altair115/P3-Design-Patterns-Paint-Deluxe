@@ -200,7 +200,7 @@ namespace PaintApp4Scrubs
         // Sets and draws line after mouse is released
         private void DrawLine()
         {
-            Line newLine = new Line()
+            GodShape newLine = new Line()
             {
                 Stroke = Brushes.Blue,
                 StrokeThickness = 4,
@@ -262,7 +262,7 @@ namespace PaintApp4Scrubs
 
         private void DrawRectangle()
         {
-            Square square = new Square()
+            GodShape square = new Square()
             {
                 Stroke = Brushes.Blue,
                 Fill = Brushes.White,
@@ -299,7 +299,7 @@ namespace PaintApp4Scrubs
 
         private void DrawTriangle()
         {
-            Triangle triangle =
+            GodShape triangle =
                 new Triangle()
                 {
                     Stroke = Brushes.Blue,
