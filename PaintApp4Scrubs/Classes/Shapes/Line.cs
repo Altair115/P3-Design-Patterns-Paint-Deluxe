@@ -15,11 +15,28 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public static readonly DependencyProperty X2DependencyProperty = DependencyProperty.Register("X2", typeof(Double), typeof(Line));
         public static readonly DependencyProperty Y1DependencyProperty = DependencyProperty.Register("Y1", typeof(Double), typeof(Line));
         public static readonly DependencyProperty Y2DependencyProperty = DependencyProperty.Register("Y2", typeof(Double), typeof(Line));
+       
+        private Point _start = new Point(0, 0);
+        private Point _end = new Point(0, 0);
 
-        public LineGeometry _line = new LineGeometry();
-        public Point _start = new Point(0, 0);
-        public Point _end = new Point(0, 0);
+        public LineGeometry LineGeometry { get; set; }
 
+        public Point StartPoint
+        {
+            get { return _start;}
+            set { _start = value;}
+        } 
+        public Point EndPoint
+        {
+            get { return _end;}
+            set { _end = value;}
+        }
+        
+
+        public Line()
+        {
+            LineGeometry = new LineGeometry();
+        }
         public double X1
         {
             get { return (double)GetValue(X1DependencyProperty); }
@@ -47,9 +64,9 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             get
             {
-                _line.StartPoint = _start;
-                _line.EndPoint = _end;
-                return _line;
+                LineGeometry.StartPoint = _start;
+                LineGeometry.EndPoint = _end;
+                return LineGeometry;
             }
         }
         /// <summary>
@@ -66,8 +83,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
             _end.X = _end.X - _translation.X;
             _end.Y = _end.Y - _translation.Y;
 
-            _line.StartPoint = _start;
-            _line.EndPoint = _end;
+            LineGeometry.StartPoint = _start;
+            LineGeometry.EndPoint = _end;
         }
         
         public override Vector GetCenter()

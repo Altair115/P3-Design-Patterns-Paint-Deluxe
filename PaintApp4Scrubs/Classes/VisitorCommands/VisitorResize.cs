@@ -51,7 +51,7 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             line.X2 -= _distance.X;
             line.Y2 -= _distance.Y;
-            line._line.EndPoint = line._end;
+            line.LineGeometry.EndPoint = line.EndPoint;
         }
 
         public void Visit(Square square)
@@ -70,11 +70,11 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void Visit(Ellipse ellipse)
         {
-            if (!(ellipse._xRadius > _distance.X) || !(ellipse._yRadius > _distance.Y)) return;
-            ellipse._xRadius -= _distance.X;
-            ellipse._yRadius -= _distance.Y;
-            ellipse.EllipseGeometry.RadiusX = ellipse._xRadius;
-            ellipse.EllipseGeometry.RadiusY = ellipse._yRadius;
+            if (!(ellipse.XRadius > _distance.X) || !(ellipse.YRadius > _distance.Y)) return;
+            ellipse.XRadius -= _distance.X;
+            ellipse.YRadius -= _distance.Y;
+            ellipse.EllipseGeometry.RadiusX = ellipse.XRadius;
+            ellipse.EllipseGeometry.RadiusY = ellipse.YRadius;
         }
     }
 }

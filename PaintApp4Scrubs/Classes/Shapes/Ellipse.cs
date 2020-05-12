@@ -16,8 +16,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public static readonly DependencyProperty YRadiusDependencyProperty = DependencyProperty.Register("YRadius", typeof(Double), typeof(Ellipse));
 
         public EllipseGeometry EllipseGeometry = new EllipseGeometry();
-        public double _xRadius;
-        public double _yRadius;
+        private double _xRadius;
+        private double _yRadius;
 
         /// <summary>
         /// gets en sets the x radius
