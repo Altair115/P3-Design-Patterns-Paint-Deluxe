@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
+using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Classes.VisitorCommands;
 using PaintApp4Scrubs.Interfaces;
 
@@ -33,7 +35,17 @@ namespace PaintApp4Scrubs.Classes.Commands
         /// </summary>
         public void Execute()
         {
-            _component.Accept(new VisitorMove(_positionResult));
+            if(_component is BaseShape)
+            {
+                var square = _component as BaseShape;
+                square.OriginPos = square.GetCenter();
+                Vector result = Vector.Subtract(square.OriginPos, _positionResult);
+                var left = result.X - (square.Width / 2);
+                var top = result.Y - (square.Height / 2);
+                Canvas.SetLeft(square, left);
+                Canvas.SetTop(square, top);
+            }
+            //_component.Accept(new VisitorMove(_positionResult));
         }
         /// <summary>
         /// executes the undo version of the command 

@@ -31,7 +31,16 @@ namespace PaintApp4Scrubs.Classes.Commands
         /// </summary>
         public void Execute()
         {
-            _component.Accept(new VisitorResize(_distance));
+            if(_component is BaseShape)
+            {
+                BaseShape godShape = _component as BaseShape;
+                if (!(godShape.StrategyWidth > _distance.X) || !(godShape.StrategyHeight > _distance.Y)) return;
+                godShape.StrategyWidth -= _distance.X;
+                godShape.StrategyHeight -= _distance.Y;
+                godShape.Width = godShape.StrategyWidth;
+                godShape.Height = godShape.StrategyHeight;
+            }
+            ///_component.Accept(new VisitorResize(_distance));
         }
         /// <summary>
         /// executes the undo version of the resize command 
