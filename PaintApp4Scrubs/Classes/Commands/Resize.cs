@@ -37,8 +37,6 @@ namespace PaintApp4Scrubs.Classes.Commands
                 if (!(godShape.StrategyWidth > _distance.X) || !(godShape.StrategyHeight > _distance.Y)) return;
                 godShape.StrategyWidth -= _distance.X;
                 godShape.StrategyHeight -= _distance.Y;
-                godShape.Width = godShape.StrategyWidth;
-                godShape.Height = godShape.StrategyHeight;
             }
             ///_component.Accept(new VisitorResize(_distance));
         }

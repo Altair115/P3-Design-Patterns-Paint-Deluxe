@@ -6,7 +6,7 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
-    
+
     /// <summary>
     /// an abstract class to add extra functionality to the Shape class
     /// </summary>
@@ -19,11 +19,13 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             visitor.Visit(this);
         }
+
         public virtual Vector GetCenter()
         {
             var center = new Vector((Canvas.GetLeft(this) + (this.Width / 2)), Canvas.GetTop(this) + (this.Height / 2));
             return center;
         }
+
         public string Depth { get; set; }
     }
 }

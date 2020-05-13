@@ -223,8 +223,6 @@ namespace PaintApp4Scrubs
                     Stroke = Brushes.Blue,
                     Fill = Brushes.White,
                     StrokeThickness = 4,
-                    Height = 10,
-                    Width = 10
                 };
 
             // If the user the user tries to draw from
@@ -238,14 +236,11 @@ namespace PaintApp4Scrubs
                 // Defines the left part of the ellipse
                 newEllipse.SetValue(Canvas.LeftProperty, _startPoint.X);
                 newEllipse.StrategyHeight = _endPoint.X - _startPoint.X;
-                newEllipse.Height = _endPoint.X - _startPoint.X;
-
             }
             else
             {
                 newEllipse.SetValue(Canvas.LeftProperty, _endPoint.X);
                 newEllipse.StrategyHeight = _startPoint.X - _endPoint.X;
-                newEllipse.Height = _startPoint.X - _endPoint.X;
             }
 
             if (_endPoint.Y >= _startPoint.Y)
@@ -253,14 +248,12 @@ namespace PaintApp4Scrubs
                 // Defines the top part of the ellipse
                 newEllipse.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
                 newEllipse.StrategyWidth = _endPoint.Y - _startPoint.Y;
-                newEllipse.Width = _endPoint.Y - _startPoint.Y;
-                
+
             }
             else
             {
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 newEllipse.StrategyWidth = _startPoint.Y - _endPoint.Y;
-                newEllipse.Width = _startPoint.Y - _endPoint.Y;
             }
 
             DrawShape(newEllipse);

@@ -1,5 +1,6 @@
 ﻿using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Strategies
 {
@@ -21,6 +22,11 @@ namespace PaintApp4Scrubs.Classes.Strategies
             return EllipseGeometry;
         }
 
+        public void Accept(BaseShape baseShap , IVisitor visitor)
+        {
+            //maak aparte visit methode 
+            //visitor.Visit();
+        }
         public double Height { get; set; }
         public double Width { get; set; }
         public string GetString(BaseShape baseShape)
