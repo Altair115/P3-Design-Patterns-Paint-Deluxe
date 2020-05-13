@@ -1,4 +1,5 @@
-﻿using System.Windows.Media;
+﻿using System.Windows;
+using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
 
@@ -27,11 +28,25 @@ namespace PaintApp4Scrubs.Classes.Strategies
             //maak aparte visit methode 
             //visitor.Visit();
         }
-        public double Height { get; set; }
-        public double Width { get; set; }
+        public double Height
+        {
+            get { return _yRadius;}
+            set { EllipseGeometry.RadiusY = value;
+                _yRadius = value;
+            }
+        }
+        public double Width
+        {
+            get { return _xRadius;}
+            set { EllipseGeometry.RadiusX = value; _xRadius = value;
+            }
+        }
         public string GetString(BaseShape baseShape)
         {
             throw new System.NotImplementedException();
         }
+
+        public Point StartPoint { get; set; }
+        public Point EndPoint { get; set; }
     }
 }

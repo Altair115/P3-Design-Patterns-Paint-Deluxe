@@ -44,5 +44,8 @@ namespace PaintApp4Scrubs.Classes.Stratagies
         {
             return $"Rectangle {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {this.Width} {this.Height}";
         }
+
+        public Point StartPoint { get; set; }
+        public Point EndPoint { get; set; }
     }
 }

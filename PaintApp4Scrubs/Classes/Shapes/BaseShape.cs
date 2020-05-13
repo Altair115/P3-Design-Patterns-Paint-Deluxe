@@ -18,6 +18,17 @@ namespace PaintApp4Scrubs.Classes.Shapes
             get { return _strategy.Height; }
             set { _strategy.Height = value; }
         }
+
+        public Point StartPoint
+        {
+            get { return _strategy.StartPoint;}
+            set { _strategy.StartPoint = value;}
+        }
+        public Point EndPoint
+        {
+            get { return _strategy.EndPoint; }
+            set { _strategy.EndPoint = value; }
+        }
         public BaseShape(IStrategy s)
         {
             _strategy = s;

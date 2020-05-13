@@ -1,4 +1,5 @@
-﻿using System.Windows.Media;
+﻿using System.Windows;
+using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs.Classes.Strategies
@@ -9,6 +10,9 @@ namespace PaintApp4Scrubs.Classes.Strategies
         public double Height { get; set; }
         public double Width { get; set; }
         public string GetString(BaseShape baseShape);
+        
+        public Point StartPoint { get; set; }
+        public Point EndPoint { get; set; }
 
     }
 }

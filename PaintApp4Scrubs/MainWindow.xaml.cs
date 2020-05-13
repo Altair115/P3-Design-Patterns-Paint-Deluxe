@@ -202,14 +202,10 @@ namespace PaintApp4Scrubs
         // Sets and draws line after mouse is released
         private void DrawLine()
         {
-            GodShape newLine = new Line()
+            BaseShape newLine = new BaseShape(new LineStrategies(_startPoint,_endPoint))
             {
                 Stroke = Brushes.Blue,
-                StrokeThickness = 4,
-                X1 = _startPoint.X,
-                Y1 = _startPoint.Y - 50,
-                X2 = _endPoint.X,
-                Y2 = _endPoint.Y - 50
+                StrokeThickness = 4
             };
             DrawShape(newLine);
         }
