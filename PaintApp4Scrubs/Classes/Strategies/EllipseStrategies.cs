@@ -22,12 +22,6 @@ namespace PaintApp4Scrubs.Classes.Strategies
             EllipseGeometry.RadiusY = Height;
             return EllipseGeometry;
         }
-
-        public void Accept(BaseShape baseShap , IVisitor visitor)
-        {
-            //maak aparte visit methode 
-            //visitor.Visit();
-        }
         public double Height
         {
             get { return _yRadius;}
@@ -44,6 +38,10 @@ namespace PaintApp4Scrubs.Classes.Strategies
         public string GetString(BaseShape baseShape)
         {
             throw new System.NotImplementedException();
+        }
+        public void Accept( IVisitor visitor, BaseShape baseShape)
+        {
+            visitor.VisitEllipse(baseShape);
         }
 
         public Point StartPoint { get; set; }

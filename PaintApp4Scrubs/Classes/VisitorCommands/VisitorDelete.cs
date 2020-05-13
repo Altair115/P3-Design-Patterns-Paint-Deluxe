@@ -40,5 +40,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             MainWindow.AppWindow.RemoveShape(ellipse);
         }
+
+        public void VisitEllipse(BaseShape ellipseBaseShape)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

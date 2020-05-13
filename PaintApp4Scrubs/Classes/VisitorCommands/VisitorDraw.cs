@@ -40,5 +40,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             MainWindow.AppWindow.PutOnScreen(ellipse);
         }
+
+        public void VisitEllipse(BaseShape ellipseBaseShape)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

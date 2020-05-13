@@ -10,7 +10,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// <summary>
     /// an abstract class to add extra functionality to the Shape class
     /// </summary>
-    public abstract class GodShape : Shape, IAccept, IComponent
+    public abstract class GodShape : Shape, IComponent
     {
         public Vector OriginPos;
         public abstract override string ToString();
@@ -25,7 +25,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
             var center = new Vector((Canvas.GetLeft(this) + (this.Width / 2)), Canvas.GetTop(this) + (this.Height / 2));
             return center;
         }
-
         public string Depth { get; set; }
     }
 }

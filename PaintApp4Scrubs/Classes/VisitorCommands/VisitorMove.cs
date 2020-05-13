@@ -94,5 +94,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             Canvas.SetLeft(ellipse, result.X);
             Canvas.SetTop(ellipse, result.Y);
         }
+
+        public void VisitEllipse(BaseShape ellipseBaseShape)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

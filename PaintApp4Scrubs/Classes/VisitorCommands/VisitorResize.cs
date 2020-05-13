@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using PaintApp4Scrubs.Classes.Shapes;
+﻿using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
 using System.Windows;
-using System.Windows.Media;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
@@ -75,6 +71,13 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             ellipse.YRadius -= _distance.Y;
             ellipse.EllipseGeometry.RadiusX = ellipse.XRadius;
             ellipse.EllipseGeometry.RadiusY = ellipse.YRadius;
+        }
+
+        public void VisitEllipse(BaseShape ellipseBaseShape)
+        {
+            if (!(ellipseBaseShape.StrategyWidth > _distance.X) || !(ellipseBaseShape.StrategyHeight > _distance.Y)) return;
+            ellipseBaseShape.StrategyWidth -= _distance.X;
+            ellipseBaseShape.StrategyHeight -= _distance.Y;
         }
     }
 }
