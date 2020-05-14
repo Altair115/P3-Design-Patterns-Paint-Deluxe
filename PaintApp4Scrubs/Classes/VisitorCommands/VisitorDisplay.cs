@@ -58,29 +58,44 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             }
         }
 
-        public void Visit(Line line)
+        public void VisitLine(BaseShape line)
         {
             _printer.PrintToFile($"{line.Depth}{line.ToString()}");
         }
 
-        public void Visit(Square square)
+        public void VisitSquare(BaseShape square)
         {
             _printer.PrintToFile($"{square.Depth}{square.ToString()}");
         }
 
-        public void Visit(Triangle triangle)
+        public void VisitTriangle(BaseShape triangle)
         {
             _printer.PrintToFile($"{triangle.Depth}{triangle.ToString()}");
         }
 
-        public void Visit(Ellipse ellipse)
-        {
-            _printer.PrintToFile($"{ellipse.Depth}{ellipse.ToString()}");
-        }
+        //public void Visit(Line line)
+        //{
+        //    _printer.PrintToFile($"{line.Depth}{line.ToString()}");
+        //}
+
+        //public void Visit(Square square)
+        //{
+        //    _printer.PrintToFile($"{square.Depth}{square.ToString()}");
+        //}
+
+        //public void Visit(Triangle triangle)
+        //{
+        //    _printer.PrintToFile($"{triangle.Depth}{triangle.ToString()}");
+        //}
+
+        //public void Visit(Ellipse ellipse)
+        //{
+        //    _printer.PrintToFile($"{ellipse.Depth}{ellipse.ToString()}");
+        //}
 
         public void VisitEllipse(BaseShape ellipseBaseShape)
         {
-            throw new NotImplementedException();
+            _printer.PrintToFile($"{ellipseBaseShape.Depth}{ellipseBaseShape.ToString()}");
         }
     }
 }

@@ -10,15 +10,10 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// <summary>
     /// an abstract class to add extra functionality to the Shape class
     /// </summary>
-    public abstract class GodShape : Shape, IComponent
+    public abstract class GodShape : Shape, IComponent 
     {
         public Vector OriginPos;
         public abstract override string ToString();
-
-        public virtual void Accept(IVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
 
         public virtual Vector GetCenter()
         {

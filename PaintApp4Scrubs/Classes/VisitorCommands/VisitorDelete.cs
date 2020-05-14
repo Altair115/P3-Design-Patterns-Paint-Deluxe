@@ -21,29 +21,44 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             }
         }
 
-        public void Visit(Line line)
+        public void VisitLine(BaseShape line)
         {
             MainWindow.AppWindow.RemoveShape(line);
         }
 
-        public void Visit(Square square)
+        public void VisitSquare(BaseShape square)
         {
             MainWindow.AppWindow.RemoveShape(square);
         }
 
-        public void Visit(Triangle triangle)
+        public void VisitTriangle(BaseShape triangle)
         {
             MainWindow.AppWindow.RemoveShape(triangle);
         }
 
-        public void Visit(Ellipse ellipse)
-        {
-            MainWindow.AppWindow.RemoveShape(ellipse);
-        }
+        //public void Visit(Line line)
+        //{
+        //    MainWindow.AppWindow.RemoveShape(line);
+        //}
+
+        //public void Visit(Square square)
+        //{
+        //    MainWindow.AppWindow.RemoveShape(square);
+        //}
+
+        //public void Visit(Triangle triangle)
+        //{
+        //    MainWindow.AppWindow.RemoveShape(triangle);
+        //}
+
+        //public void Visit(Ellipse ellipse)
+        //{
+        //    MainWindow.AppWindow.RemoveShape(ellipse);
+        //}
 
         public void VisitEllipse(BaseShape ellipseBaseShape)
         {
-            throw new System.NotImplementedException();
+            MainWindow.AppWindow.RemoveShape(ellipseBaseShape);
         }
     }
 }

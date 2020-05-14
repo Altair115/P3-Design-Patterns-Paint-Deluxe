@@ -58,9 +58,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             return $"EllipseGeometry {Canvas.GetLeft(this)} {Canvas.GetTop(this)} {this.XRadius} {this.YRadius}";
         }
-        public override void Accept(IVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
+       
     }
 }

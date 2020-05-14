@@ -39,7 +39,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         {
             throw new System.NotImplementedException();
         }
-        public void Accept( IVisitor visitor, BaseShape baseShape)
+        public void Accept(IVisitor visitor, BaseShape baseShape)
         {
             visitor.VisitEllipse(baseShape);
         }

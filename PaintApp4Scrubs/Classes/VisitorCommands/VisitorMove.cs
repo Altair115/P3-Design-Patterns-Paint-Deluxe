@@ -47,7 +47,7 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             }
         }
 
-        public void Visit(Line line)
+        public void VisitLine(BaseShape line)
         {
             var translation = Converter.ToPoint(TranslationToNewPosition);
 
@@ -62,12 +62,9 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
             line.StartPoint = lineStartPoint;
             line.EndPoint = lineEndPoint;
-
-            line.LineGeometry.StartPoint = line.StartPoint;
-            line.LineGeometry.EndPoint = line.EndPoint;
         }
 
-        public void Visit(Square square)
+        public void VisitSquare(BaseShape square)
         {
             square.OriginPos = square.GetCenter();
             Vector result = Vector.Subtract(square.OriginPos, TranslationToNewPosition);
@@ -77,7 +74,7 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             Canvas.SetTop(square, top);
         }
 
-        public void Visit(Triangle triangle)
+        public void VisitTriangle(BaseShape triangle)
         {
             triangle.OriginPos = triangle.GetCenter();
             Vector result = Vector.Subtract(triangle.OriginPos, TranslationToNewPosition);
@@ -87,17 +84,60 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             Canvas.SetTop(triangle, top);
         }
 
-        public void Visit(Ellipse ellipse)
-        {
-            ellipse.OriginPos = ellipse.GetCenter();
-            Vector result = Vector.Subtract(ellipse.OriginPos, TranslationToNewPosition);
-            Canvas.SetLeft(ellipse, result.X);
-            Canvas.SetTop(ellipse, result.Y);
-        }
+        //public void Visit(Line line)
+        //{
+        //    var translation = Converter.ToPoint(TranslationToNewPosition);
+
+        //    var lineStartPoint = line.StartPoint;
+        //    var lineEndPoint = line.EndPoint;
+
+        //    lineStartPoint.X = lineStartPoint.X - translation.X;
+        //    lineStartPoint.Y = lineStartPoint.Y - translation.Y;
+
+        //    lineEndPoint.X = lineEndPoint.X - translation.X;
+        //    lineEndPoint.Y = lineEndPoint.Y - translation.Y;
+
+        //    line.StartPoint = lineStartPoint;
+        //    line.EndPoint = lineEndPoint;
+
+        //    line.LineGeometry.StartPoint = line.StartPoint;
+        //    line.LineGeometry.EndPoint = line.EndPoint;
+        //}
+
+        //public void Visit(Square square)
+        //{
+        //    square.OriginPos = square.GetCenter();
+        //    Vector result = Vector.Subtract(square.OriginPos, TranslationToNewPosition);
+        //    var left = result.X - (square.Width / 2);
+        //    var top = result.Y - (square.Height / 2);
+        //    Canvas.SetLeft(square, left);
+        //    Canvas.SetTop(square, top);
+        //}
+
+        //public void Visit(Triangle triangle)
+        //{
+        //    //triangle.OriginPos = triangle.GetCenter();
+        //    //Vector result = Vector.Subtract(triangle.OriginPos, TranslationToNewPosition);
+        //    //var left = result.X - (triangle.Width / 2);
+        //    //var top = result.Y - (triangle.Height / 2);
+        //    //Canvas.SetLeft(triangle, left);
+        //    //Canvas.SetTop(triangle, top);
+        //}
+
+        //public void Visit(Ellipse ellipse)
+        //{
+        //    ellipse.OriginPos = ellipse.GetCenter();
+        //    Vector result = Vector.Subtract(ellipse.OriginPos, TranslationToNewPosition);
+        //    Canvas.SetLeft(ellipse, result.X);
+        //    Canvas.SetTop(ellipse, result.Y);
+        //}
 
         public void VisitEllipse(BaseShape ellipseBaseShape)
         {
-            throw new System.NotImplementedException();
+            ellipseBaseShape.OriginPos = ellipseBaseShape.GetCenter();
+            Vector result = Vector.Subtract(ellipseBaseShape.OriginPos, TranslationToNewPosition);
+            Canvas.SetLeft(ellipseBaseShape, result.X);
+            Canvas.SetTop(ellipseBaseShape, result.Y);
         }
     }
 }

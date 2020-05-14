@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Strategies
 {
@@ -16,6 +17,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
             StartPoint = startPoint;
             EndPoint = endPoint;
         }
+
         public Point StartPoint
         {
             get { return _start; }
@@ -38,6 +40,10 @@ namespace PaintApp4Scrubs.Classes.Strategies
         public string GetString(BaseShape baseShape)
         {
             throw new System.NotImplementedException();
+        }
+        public void Accept(IVisitor visitor, BaseShape baseShape)
+        {
+            visitor.VisitLine(baseShape);
         }
     }
 }

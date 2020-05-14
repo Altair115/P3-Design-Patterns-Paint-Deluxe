@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Classes.Strategies;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Stratagies
 {
@@ -43,6 +44,11 @@ namespace PaintApp4Scrubs.Classes.Stratagies
         public string GetString(BaseShape baseShape)
         {
             return $"Rectangle {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {this.Width} {this.Height}";
+        }
+
+        public void Accept(IVisitor visitor, BaseShape baseShape)
+        {
+            visitor.VisitSquare(baseShape);
         }
 
         public Point StartPoint { get; set; }

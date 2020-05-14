@@ -1,6 +1,7 @@
 ﻿using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
 using System.Windows;
+using PaintApp4Scrubs.Classes.Strategies;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
@@ -41,6 +42,27 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
                         break;
                 }
             }
+        }
+
+        public void VisitLine(BaseShape line)
+        {
+           
+            line.EndPoint -= _distance;
+            //line.LineGeometry.EndPoint = line.EndPoint;
+        }
+
+        public void VisitSquare(BaseShape square)
+        {
+            if (!(square.Width > _distance.X) || !(square.Height > _distance.Y)) return;
+            square.Width -= _distance.X;
+            square.Height -= _distance.Y;
+        }
+
+        public void VisitTriangle(BaseShape triangle)
+        {
+            if (!(triangle.Width > _distance.X) || !(triangle.Height > _distance.Y)) return;
+            triangle.Width -= _distance.X;
+            triangle.Height -= _distance.Y;
         }
 
         public void Visit(Line line)

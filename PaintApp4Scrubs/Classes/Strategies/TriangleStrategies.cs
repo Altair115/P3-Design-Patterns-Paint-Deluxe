@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Strategies
 {
@@ -38,6 +39,11 @@ namespace PaintApp4Scrubs.Classes.Strategies
         public string GetString(BaseShape baseShape)
         {
             return $"Triangle {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {Width} {Height}";
+        }
+
+        public void Accept(IVisitor visitor, BaseShape baseShape)
+        {
+            visitor.VisitTriangle(baseShape);
         }
 
         public Point StartPoint { get; set; }

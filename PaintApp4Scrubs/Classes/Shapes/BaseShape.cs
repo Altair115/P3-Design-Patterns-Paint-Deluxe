@@ -1,46 +1,51 @@
 ﻿using System.Windows;
 using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Strategies;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Shapes
 {
-    public class BaseShape : GodShape
+    public class BaseShape : GodShape, IAccept
     {
-        private IStrategy _strategy;
+        public IStrategy strategy;
         public double StrategyWidth
         {
-            get { return _strategy.Width;}
-            set { _strategy.Width = value;}
+            get { return strategy.Width;}
+            set { strategy.Width = value;}
         }
 
         public double StrategyHeight
         {
-            get { return _strategy.Height; }
-            set { _strategy.Height = value; }
+            get { return strategy.Height; }
+            set { strategy.Height = value; }
         }
 
         public Point StartPoint
         {
-            get { return _strategy.StartPoint;}
-            set { _strategy.StartPoint = value;}
+            get { return strategy.StartPoint;}
+            set { strategy.StartPoint = value;}
         }
         public Point EndPoint
         {
-            get { return _strategy.EndPoint; }
-            set { _strategy.EndPoint = value; }
+            get { return strategy.EndPoint; }
+            set { strategy.EndPoint = value; }
         }
         public BaseShape(IStrategy s)
         {
-            _strategy = s;
+            strategy = s;
+        }
+        public virtual void Accept(IVisitor visitor)
+        {
+            strategy.Accept(visitor,this);
         }
         protected override Geometry DefiningGeometry
         {
-            get { return _strategy.GetGeometry(); }
+            get { return strategy.GetGeometry(); }
 
         }
         public override string ToString()
         {
-            return _strategy.GetString(this);
+            return strategy.GetString(this);
         }
     }
 }
