@@ -42,18 +42,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
                         }
                         Visit(x as Boxer);
                         break;
-                    case Line l:
-                        Visit(x as Line);
-                        break;
-                    case Square s:
-                        Visit(x as Square);
-                        break;
-                    case Triangle t:
-                        Visit(x as Triangle);
-                        break;
-                    case Ellipse e:
-                        Visit(x as Ellipse);
-                        break;
                 }
             }
         }
