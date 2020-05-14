@@ -20,17 +20,9 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         }
         public void Visit(Boxer boxer)
         {
-            foreach (var x in boxer.GetChildren())
+            foreach (var component in boxer.GetChildren())
             {
-                switch (x)
-                {
-                    case Boxer b:
-                        Visit(b);
-                        break;
-                    case GodShape g:
-                        Visit(g);
-                        break;
-                }
+                component.Accept(this);
             }
         }
 

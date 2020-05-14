@@ -54,8 +54,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
 
         public string GetString(BaseShape baseShape)
         {
-            var x = GetCenter(baseShape);
-            return $"Line {x.ToString()} {StartPoint} {EndPoint}";
+            return $"Line {GetCenter(baseShape)} {StartPoint} {EndPoint}";
         }
 
         public void Accept(IVisitor visitor, BaseShape baseShape)
