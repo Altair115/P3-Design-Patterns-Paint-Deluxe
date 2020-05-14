@@ -38,7 +38,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         }
         public string GetString(BaseShape baseShape)
         {
-            throw new System.NotImplementedException();
+            return $"Ellipse {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {_xRadius} {_yRadius}";
         }
         public void Accept(IVisitor visitor, BaseShape baseShape)
         {

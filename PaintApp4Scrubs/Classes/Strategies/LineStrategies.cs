@@ -43,7 +43,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
 
         public Vector GetCenter(BaseShape baseShape)
         {
-            var center = new Vector((Canvas.GetLeft(baseShape) + (this.Width / 2)), Canvas.GetTop(baseShape) + (this.Height / 2));
+            var center = new Vector((StartPoint.X + EndPoint.X) / 2, (StartPoint.Y + EndPoint.Y) / 2);
             return center;
         }
 
@@ -54,7 +54,8 @@ namespace PaintApp4Scrubs.Classes.Strategies
 
         public string GetString(BaseShape baseShape)
         {
-            throw new System.NotImplementedException();
+            var x = GetCenter(baseShape);
+            return $"Line {x.ToString()} {StartPoint} {EndPoint}";
         }
 
         public void Accept(IVisitor visitor, BaseShape baseShape)

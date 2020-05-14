@@ -15,9 +15,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void Visit(GodShape godShape)
         {
-            if (!(godShape.Width > _distance.X) || !(godShape.Height > _distance.Y)) return;
-            godShape.Width -= _distance.X;
-            godShape.Height -= _distance.Y;
+            var x = godShape as BaseShape;
+            x.Accept(this);
         }
         public void Visit(Boxer boxer)
         {
@@ -28,7 +27,9 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
                     case Boxer b:
                         Visit(b);
                         break;
-                    
+                    case GodShape g:
+                        Visit(g);
+                        break;
                 }
             }
         }

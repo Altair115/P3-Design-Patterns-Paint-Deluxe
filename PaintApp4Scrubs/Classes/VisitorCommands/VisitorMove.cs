@@ -27,6 +27,9 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
                     case Boxer b:
                         Visit(b);
                         break;
+                    case GodShape g:
+                        Visit(g);
+                        break;
                 }
             }
         }

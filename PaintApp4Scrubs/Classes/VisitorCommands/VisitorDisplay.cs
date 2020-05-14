@@ -40,7 +40,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
                         {
                             _printer.PrintToFile($"{b.Depth}Group {b.GetChildren().Count}");
                         }
-                        Visit(x as Boxer);
+                        Visit(b);
+                        break;
+                    case GodShape g:
+                        Visit(g);
                         break;
                 }
             }

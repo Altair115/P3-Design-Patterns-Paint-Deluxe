@@ -42,7 +42,7 @@ namespace PaintApp4Scrubs.Classes.Stratagies
 
         public string GetString(BaseShape baseShape)
         {
-            return $"Rectangle {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {this.Width} {this.Height}";
+            return $"Rectangle {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {Width} {Height}";
         }
 
         public void Accept(IVisitor visitor, BaseShape baseShape)
