@@ -15,39 +15,18 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void Visit(GodShape godShape)
         {
-            godShape.OriginPos = godShape.GetCenter();
-            Vector result = Vector.Subtract(godShape.OriginPos, TranslationToNewPosition);
-            var left = result.X - (godShape.Width / 2);
-            var top = result.Y - (godShape.Height / 2);
-            Canvas.SetLeft(godShape, left);
-            Canvas.SetTop(godShape, top);
+          var x = godShape as BaseShape;
+          x.Accept(this);
         }
         public void Visit(Boxer boxer)
         {
-            foreach (var x in boxer.GetChildren())
+            foreach (var component in boxer.GetChildren())
             {
-                switch (x)
-                {
-                    case Boxer b:
-                        Visit(x as Boxer);
-                        break;
-                    case Line l:
-                        Visit(x as Line);
-                        break;
-                    case Square s:
-                        Visit(x as Square);
-                        break;
-                    case Triangle t:
-                        Visit(x as Triangle);
-                        break;
-                    case Ellipse e:
-                        Visit(x as Ellipse);
-                        break;
-                }
+                component.Accept(this);
             }
         }
 
-        public void Visit(Line line)
+        public void VisitLine(BaseShape line)
         {
             var translation = Converter.ToPoint(TranslationToNewPosition);
 
@@ -62,12 +41,9 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
             line.StartPoint = lineStartPoint;
             line.EndPoint = lineEndPoint;
-
-            line.LineGeometry.StartPoint = line.StartPoint;
-            line.LineGeometry.EndPoint = line.EndPoint;
         }
 
-        public void Visit(Square square)
+        public void VisitSquare(BaseShape square)
         {
             square.OriginPos = square.GetCenter();
             Vector result = Vector.Subtract(square.OriginPos, TranslationToNewPosition);
@@ -77,7 +53,7 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             Canvas.SetTop(square, top);
         }
 
-        public void Visit(Triangle triangle)
+        public void VisitTriangle(BaseShape triangle)
         {
             triangle.OriginPos = triangle.GetCenter();
             Vector result = Vector.Subtract(triangle.OriginPos, TranslationToNewPosition);
@@ -87,12 +63,12 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             Canvas.SetTop(triangle, top);
         }
 
-        public void Visit(Ellipse ellipse)
+        public void VisitEllipse(BaseShape ellipseBaseShape)
         {
-            ellipse.OriginPos = ellipse.GetCenter();
-            Vector result = Vector.Subtract(ellipse.OriginPos, TranslationToNewPosition);
-            Canvas.SetLeft(ellipse, result.X);
-            Canvas.SetTop(ellipse, result.Y);
+            ellipseBaseShape.OriginPos = ellipseBaseShape.GetCenter();
+            Vector result = Vector.Subtract(ellipseBaseShape.OriginPos, TranslationToNewPosition);
+            Canvas.SetLeft(ellipseBaseShape, result.X);
+            Canvas.SetTop(ellipseBaseShape, result.Y);
         }
     }
 }

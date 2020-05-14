@@ -11,9 +11,13 @@ namespace PaintApp4Scrubs.Interfaces
     {
         public void Visit(GodShape godShape);
         public void Visit(Boxer boxer);
-        public void Visit(Line line);
-        public void Visit(Square square);
-        public void Visit(Triangle triangle);
-        public void Visit(Ellipse ellipse);
+        //public void Visit(Line line);
+        //public void Visit(Square square);
+        //public void Visit(Triangle triangle);
+        //public void Visit(Ellipse ellipse);
+        public void VisitSquare(BaseShape square);
+        public void VisitLine(BaseShape line);
+        public void VisitTriangle(BaseShape triangle);
+        public void VisitEllipse(BaseShape ellipseBaseShape);
     }
 }

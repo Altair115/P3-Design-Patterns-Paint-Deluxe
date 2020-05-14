@@ -82,18 +82,6 @@ namespace PaintApp4Scrubs.Classes
             return _components;
         }
 
-        public void ClearFile()
-        {
-            System.IO.File.WriteAllText(@"..\..\..\..\Comptest.txt", "");
-        }
-
-        public void PrintToFile(string text)
-        {
-            using System.IO.StreamWriter file =
-                new System.IO.StreamWriter(@"..\..\..\..\Comptest.txt", true);
-            file.WriteLine(text);
-        }
-
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);

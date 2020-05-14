@@ -1,4 +1,6 @@
-﻿namespace PaintApp4Scrubs.Interfaces
+﻿using PaintApp4Scrubs.Classes.Shapes;
+
+namespace PaintApp4Scrubs.Interfaces
 {
     public interface IAccept
     {

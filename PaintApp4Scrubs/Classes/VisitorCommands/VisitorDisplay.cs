@@ -40,42 +40,32 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
                         {
                             _printer.PrintToFile($"{b.Depth}Group {b.GetChildren().Count}");
                         }
-                        Visit(x as Boxer);
+                        Visit(b);
                         break;
-                    case Line l:
-                        Visit(x as Line);
-                        break;
-                    case Square s:
-                        Visit(x as Square);
-                        break;
-                    case Triangle t:
-                        Visit(x as Triangle);
-                        break;
-                    case Ellipse e:
-                        Visit(x as Ellipse);
+                    case GodShape g:
+                        Visit(g);
                         break;
                 }
             }
         }
 
-        public void Visit(Line line)
+        public void VisitLine(BaseShape line)
         {
             _printer.PrintToFile($"{line.Depth}{line.ToString()}");
         }
 
-        public void Visit(Square square)
+        public void VisitSquare(BaseShape square)
         {
             _printer.PrintToFile($"{square.Depth}{square.ToString()}");
         }
 
-        public void Visit(Triangle triangle)
+        public void VisitTriangle(BaseShape triangle)
         {
             _printer.PrintToFile($"{triangle.Depth}{triangle.ToString()}");
         }
-
-        public void Visit(Ellipse ellipse)
+        public void VisitEllipse(BaseShape ellipseBaseShape)
         {
-            _printer.PrintToFile($"{ellipse.Depth}{ellipse.ToString()}");
+            _printer.PrintToFile($"{ellipseBaseShape.Depth}{ellipseBaseShape.ToString()}");
         }
     }
 }

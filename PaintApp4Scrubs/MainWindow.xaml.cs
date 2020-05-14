@@ -6,6 +6,8 @@ using System.Windows.Media;
 using PaintApp4Scrubs.Classes;
 using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Classes.Stratagies;
+using PaintApp4Scrubs.Classes.Strategies;
 
 namespace PaintApp4Scrubs
 {
@@ -200,14 +202,10 @@ namespace PaintApp4Scrubs
         // Sets and draws line after mouse is released
         private void DrawLine()
         {
-            GodShape newLine = new Line()
+            BaseShape newLine = new BaseShape(new LineStrategies(_startPoint,_endPoint))
             {
                 Stroke = Brushes.Blue,
-                StrokeThickness = 4,
-                X1 = _startPoint.X,
-                Y1 = _startPoint.Y - 50,
-                X2 = _endPoint.X,
-                Y2 = _endPoint.Y - 50
+                StrokeThickness = 4
             };
             DrawShape(newLine);
         }
@@ -215,13 +213,12 @@ namespace PaintApp4Scrubs
         // Sets and draws ellipse after mouse is released
         private void DrawEllipse()
         {
-            Ellipse newEllipse =
-                new Ellipse()
+            BaseShape newEllipse =
+                new BaseShape(new EllipseStrategies(10,10))
                 {
                     Stroke = Brushes.Blue,
                     Fill = Brushes.White,
                     StrokeThickness = 4,
-
                 };
 
             // If the user the user tries to draw from
@@ -234,25 +231,25 @@ namespace PaintApp4Scrubs
             {
                 // Defines the left part of the ellipse
                 newEllipse.SetValue(Canvas.LeftProperty, _startPoint.X);
-                newEllipse.XRadius = _endPoint.X - _startPoint.X;
-
+                newEllipse.StrategyHeight = _endPoint.X - _startPoint.X;
             }
             else
             {
                 newEllipse.SetValue(Canvas.LeftProperty, _endPoint.X);
-                newEllipse.XRadius = _startPoint.X - _endPoint.X;
+                newEllipse.StrategyHeight = _startPoint.X - _endPoint.X;
             }
 
             if (_endPoint.Y >= _startPoint.Y)
             {
                 // Defines the top part of the ellipse
                 newEllipse.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
-                newEllipse.YRadius = _endPoint.Y - _startPoint.Y;
+                newEllipse.StrategyWidth = _endPoint.Y - _startPoint.Y;
+
             }
             else
             {
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
-                newEllipse.YRadius = _startPoint.Y - _endPoint.Y;
+                newEllipse.StrategyWidth = _startPoint.Y - _endPoint.Y;
             }
 
             DrawShape(newEllipse);
@@ -262,23 +259,27 @@ namespace PaintApp4Scrubs
 
         private void DrawRectangle()
         {
-            GodShape square = new Square()
+            BaseShape square = new BaseShape(new SquareStrategies(10 , 10))
             {
                 Stroke = Brushes.Blue,
                 Fill = Brushes.White,
                 StrokeThickness = 4,
-                Height = 10,
-                Width = 10
+                StrategyHeight = 10,
+                StrategyWidth = 10,
+                Width = 10,
+                Height = 10
             };
             if (_endPoint.X >= _startPoint.X)
             {
                 // Defines the left part of the ellipse
                 square.SetValue(Canvas.LeftProperty, _startPoint.X);
+                square.StrategyWidth = _endPoint.X - _startPoint.X;
                 square.Width = _endPoint.X - _startPoint.X;
             }
             else
             {
                 square.SetValue(Canvas.LeftProperty, _endPoint.X);
+                square.StrategyWidth = _startPoint.X - _endPoint.X;
                 square.Width = _startPoint.X - _endPoint.X;
             }
 
@@ -286,11 +287,13 @@ namespace PaintApp4Scrubs
             {
                 // Defines the top part of the ellipse
                 square.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
+                square.StrategyHeight = _endPoint.Y - _startPoint.Y;
                 square.Height = _endPoint.Y - _startPoint.Y;
             }
             else
             {
                 square.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
+                square.StrategyHeight = _startPoint.Y - _endPoint.Y;
                 square.Height = _startPoint.Y - _endPoint.Y;
             }
 
@@ -299,12 +302,14 @@ namespace PaintApp4Scrubs
 
         private void DrawTriangle()
         {
-            GodShape triangle =
-                new Triangle()
+            BaseShape triangle =
+                new BaseShape(new TriangleStrategies(10, 10))
                 {
                     Stroke = Brushes.Blue,
                     Fill = Brushes.White,
                     StrokeThickness = 4,
+                    StrategyHeight = 10,
+                    StrategyWidth = 10,
                     Height = 10,
                     Width = 10
                 };
@@ -313,11 +318,13 @@ namespace PaintApp4Scrubs
             {
                 // Defines the left part of the ellipse
                 triangle.SetValue(Canvas.LeftProperty, _startPoint.X);
+                triangle.StrategyWidth = _endPoint.X - _startPoint.X;
                 triangle.Width = _endPoint.X - _startPoint.X;
             }
             else
             {
                 triangle.SetValue(Canvas.LeftProperty, _endPoint.X);
+                triangle.StrategyWidth = _startPoint.X - _endPoint.X;
                 triangle.Width = _startPoint.X - _endPoint.X;
             }
 
@@ -325,11 +332,13 @@ namespace PaintApp4Scrubs
             {
                 // Defines the top part of the ellipse
                 triangle.SetValue(Canvas.TopProperty, _startPoint.Y - 50);
+                triangle.StrategyHeight = _endPoint.Y - _startPoint.Y;
                 triangle.Height = _endPoint.Y - _startPoint.Y;
             }
             else
             {
                 triangle.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
+                triangle.StrategyHeight = _startPoint.Y - _endPoint.Y;
                 triangle.Height = _startPoint.Y - _endPoint.Y;
             }
 

@@ -11,34 +11,30 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         }
         public void Visit(Boxer boxer)
         {
-            foreach (var x in boxer.GetChildren())
+            foreach (var component in boxer.GetChildren())
             {
-                if (x is Boxer)
-                {
-                    Visit(x as Boxer);
-                }
-                MainWindow.AppWindow.PutOnScreen(x as GodShape);
+                component.Accept(this);
             }
         }
 
-        public void Visit(Line line)
+        public void VisitLine(BaseShape line)
         {
             MainWindow.AppWindow.PutOnScreen(line);
         }
 
-        public void Visit(Square square)
+        public void VisitSquare(BaseShape square)
         {
             MainWindow.AppWindow.PutOnScreen(square);
         }
 
-        public void Visit(Triangle triangle)
+        public void VisitTriangle(BaseShape triangle)
         {
             MainWindow.AppWindow.PutOnScreen(triangle);
         }
 
-        public void Visit(Ellipse ellipse)
+        public void VisitEllipse(BaseShape ellipseBaseShape)
         {
-            MainWindow.AppWindow.PutOnScreen(ellipse);
+            MainWindow.AppWindow.PutOnScreen(ellipseBaseShape);
         }
     }
 }
