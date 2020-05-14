@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
@@ -46,5 +47,10 @@ namespace PaintApp4Scrubs.Classes.Strategies
 
         public Point StartPoint { get; set; }
         public Point EndPoint { get; set; }
+        public Vector GetCenter(BaseShape baseShape)
+        {
+            var center = new Vector(Canvas.GetLeft(baseShape), Canvas.GetTop(baseShape));
+            return center;
+        }
     }
 }

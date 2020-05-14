@@ -12,6 +12,8 @@ namespace PaintApp4Scrubs.Classes.Stratagies
     {
         public double Height { get; set; }
         public double Width { get; set; }
+        public Point StartPoint { get; set; }
+        public Point EndPoint { get; set; }
         public SquareStrategies(double width,double height)
         {
             Height = height;
@@ -19,26 +21,23 @@ namespace PaintApp4Scrubs.Classes.Stratagies
         }
         public Geometry GetGeometry()
         {
-          
-                Point p1 = new Point(0.0d, 0.0d);
-                Point p2 = new Point(0, Height);
-                Point p3 = new Point(Width, Height);
-                Point p4 = new Point(Width, 0.0d);
+            Point p1 = new Point(0.0d, 0.0d);
+            Point p2 = new Point(0, Height);
+            Point p3 = new Point(Width, Height);
+            Point p4 = new Point(Width, 0.0d);
 
-                List<PathSegment> segments = new List<PathSegment>(3);
-                segments.Add(new LineSegment(p1, true));
-                segments.Add(new LineSegment(p2, true));
-                segments.Add(new LineSegment(p3, true));
-                segments.Add(new LineSegment(p4, true));
+            List<PathSegment> segments = new List<PathSegment>(3);
+            segments.Add(new LineSegment(p1, true));
+            segments.Add(new LineSegment(p2, true));
+            segments.Add(new LineSegment(p3, true));
+            segments.Add(new LineSegment(p4, true));
 
-                List<PathFigure> figures = new List<PathFigure>(1);
-                PathFigure pf = new PathFigure(p1, segments, true);
-                figures.Add(pf);
+            List<PathFigure> figures = new List<PathFigure>(1);
+            PathFigure pf = new PathFigure(p1, segments, true);
+            figures.Add(pf);
 
-                Geometry geometry = new PathGeometry(figures, FillRule.EvenOdd, null);
-
-                return geometry;
-            
+            Geometry geometry = new PathGeometry(figures, FillRule.EvenOdd, null);
+            return geometry;
         }
 
         public string GetString(BaseShape baseShape)
@@ -51,7 +50,10 @@ namespace PaintApp4Scrubs.Classes.Stratagies
             visitor.VisitSquare(baseShape);
         }
 
-        public Point StartPoint { get; set; }
-        public Point EndPoint { get; set; }
+        public Vector GetCenter(BaseShape baseShape)
+        {
+            var center = new Vector((Canvas.GetLeft(baseShape) + (this.Width / 2)), Canvas.GetTop(baseShape) + (this.Height / 2));
+            return center;
+        }
     }
 }

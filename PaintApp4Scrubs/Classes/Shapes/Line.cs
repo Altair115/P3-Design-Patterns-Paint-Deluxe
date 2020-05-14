@@ -69,12 +69,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
                 return LineGeometry;
             }
         }
-        
-        public override Vector GetCenter()
-        {
-            var center = new Vector((X1 + X2) / 2, (Y1 + Y2)/2);
-            return center;
-        }
 
         public override string ToString()
         {

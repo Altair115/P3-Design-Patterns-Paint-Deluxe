@@ -7,45 +7,48 @@ namespace PaintApp4Scrubs.Classes.Shapes
 {
     public class BaseShape : GodShape, IAccept
     {
-        public IStrategy strategy;
+        public IStrategy Strategy;
         public double StrategyWidth
         {
-            get { return strategy.Width;}
-            set { strategy.Width = value;}
+            get { return Strategy.Width;}
+            set { Strategy.Width = value;}
         }
-
         public double StrategyHeight
         {
-            get { return strategy.Height; }
-            set { strategy.Height = value; }
+            get { return Strategy.Height; }
+            set { Strategy.Height = value; }
         }
-
         public Point StartPoint
         {
-            get { return strategy.StartPoint;}
-            set { strategy.StartPoint = value;}
+            get { return Strategy.StartPoint;}
+            set { Strategy.StartPoint = value;}
         }
         public Point EndPoint
         {
-            get { return strategy.EndPoint; }
-            set { strategy.EndPoint = value; }
+            get { return Strategy.EndPoint; }
+            set { Strategy.EndPoint = value; }
         }
         public BaseShape(IStrategy s)
         {
-            strategy = s;
+            Strategy = s;
         }
         public virtual void Accept(IVisitor visitor)
         {
-            strategy.Accept(visitor,this);
+            Strategy.Accept(visitor,this);
         }
         protected override Geometry DefiningGeometry
         {
-            get { return strategy.GetGeometry(); }
+            get { return Strategy.GetGeometry(); }
 
         }
         public override string ToString()
         {
-            return strategy.GetString(this);
+            return Strategy.GetString(this);
+        }
+
+        public Vector GetCenter()
+        {
+            return Strategy.GetCenter(this);
         }
     }
 }

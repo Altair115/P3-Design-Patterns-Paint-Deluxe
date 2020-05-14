@@ -36,26 +36,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             MainWindow.AppWindow.PutOnScreen(triangle);
         }
 
-        //public void Visit(Line line)
-        //{
-        //    MainWindow.AppWindow.PutOnScreen(line);
-        //}
-
-        //public void Visit(Square square)
-        //{
-        //    MainWindow.AppWindow.PutOnScreen(square);
-        //}
-
-        //public void Visit(Triangle triangle)
-        //{
-        //    MainWindow.AppWindow.PutOnScreen(triangle);
-        //}
-
-        //public void Visit(Ellipse ellipse)
-        //{
-        //    MainWindow.AppWindow.PutOnScreen(ellipse);
-        //}
-
         public void VisitEllipse(BaseShape ellipseBaseShape)
         {
             MainWindow.AppWindow.PutOnScreen(ellipseBaseShape);

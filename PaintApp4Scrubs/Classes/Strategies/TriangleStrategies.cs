@@ -11,6 +11,8 @@ namespace PaintApp4Scrubs.Classes.Strategies
     {
         public double Height { get; set; }
         public double Width { get; set; }
+        public Point StartPoint { get; set; }
+        public Point EndPoint { get; set; }
         public TriangleStrategies(double width, double height)
         {
             Height = height;
@@ -46,7 +48,10 @@ namespace PaintApp4Scrubs.Classes.Strategies
             visitor.VisitTriangle(baseShape);
         }
 
-        public Point StartPoint { get; set; }
-        public Point EndPoint { get; set; }
+        public Vector GetCenter(BaseShape baseShape)
+        {
+            var center = new Vector((Canvas.GetLeft(baseShape) + (this.Width / 2)), Canvas.GetTop(baseShape) + (this.Height / 2));
+            return center;
+        }
     }
 }

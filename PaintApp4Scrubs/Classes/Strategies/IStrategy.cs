@@ -12,9 +12,8 @@ namespace PaintApp4Scrubs.Classes.Strategies
         public double Width { get; set; }
         public string GetString(BaseShape baseShape);
         public void Accept(IVisitor visitor, BaseShape baseShape);
-
         public Point StartPoint { get; set; }
         public Point EndPoint { get; set; }
-
+        public Vector GetCenter(BaseShape baseShape);
     }
 }

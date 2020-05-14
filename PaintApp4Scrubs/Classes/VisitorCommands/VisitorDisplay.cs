@@ -72,27 +72,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             _printer.PrintToFile($"{triangle.Depth}{triangle.ToString()}");
         }
-
-        //public void Visit(Line line)
-        //{
-        //    _printer.PrintToFile($"{line.Depth}{line.ToString()}");
-        //}
-
-        //public void Visit(Square square)
-        //{
-        //    _printer.PrintToFile($"{square.Depth}{square.ToString()}");
-        //}
-
-        //public void Visit(Triangle triangle)
-        //{
-        //    _printer.PrintToFile($"{triangle.Depth}{triangle.ToString()}");
-        //}
-
-        //public void Visit(Ellipse ellipse)
-        //{
-        //    _printer.PrintToFile($"{ellipse.Depth}{ellipse.ToString()}");
-        //}
-
         public void VisitEllipse(BaseShape ellipseBaseShape)
         {
             _printer.PrintToFile($"{ellipseBaseShape.Depth}{ellipseBaseShape.ToString()}");

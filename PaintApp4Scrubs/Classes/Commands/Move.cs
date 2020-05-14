@@ -35,17 +35,7 @@ namespace PaintApp4Scrubs.Classes.Commands
         /// </summary>
         public void Execute()
         {
-            if(_component is BaseShape)
-            {
-                var square = _component as BaseShape;
-                square.OriginPos = square.GetCenter();
-                Vector result = Vector.Subtract(square.OriginPos, _positionResult);
-                var left = result.X - (square.Width / 2);
-                var top = result.Y - (square.Height / 2);
-                Canvas.SetLeft(square, left);
-                Canvas.SetTop(square, top);
-            }
-            //_component.Accept(new VisitorMove(_positionResult));
+            _component.Accept(new VisitorMove(_positionResult));
         }
         /// <summary>
         /// executes the undo version of the command 

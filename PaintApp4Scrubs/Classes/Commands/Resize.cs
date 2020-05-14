@@ -31,13 +31,6 @@ namespace PaintApp4Scrubs.Classes.Commands
         /// </summary>
         public void Execute()
         {
-            //if(_component is BaseShape)
-            //{
-            //    BaseShape godShape = _component as BaseShape;
-            //    if (!(godShape.StrategyWidth > _distance.X) || !(godShape.StrategyHeight > _distance.Y)) return;
-            //    godShape.StrategyWidth -= _distance.X;
-            //    godShape.StrategyHeight -= _distance.Y;
-            //}
             _component.Accept(new VisitorResize(_distance));
         }
         /// <summary>

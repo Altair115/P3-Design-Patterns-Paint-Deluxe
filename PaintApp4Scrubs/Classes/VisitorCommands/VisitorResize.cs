@@ -26,19 +26,19 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
                 switch (x)
                 {
                     case Boxer b:
-                        Visit(x as Boxer);
+                        Visit(b);
                         break;
                     case Line l:
-                        Visit(x as Line);
+                        Visit(l);
                         break;
                     case Square s:
-                        Visit(x as Square);
+                        Visit(s);
                         break;
                     case Triangle t:
-                        Visit(x as Triangle);
+                        Visit(t);
                         break;
                     case Ellipse e:
-                        Visit(x as Ellipse);
+                        Visit(e);
                         break;
                 }
             }
@@ -46,53 +46,25 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void VisitLine(BaseShape line)
         {
-           
             line.EndPoint -= _distance;
-            //line.LineGeometry.EndPoint = line.EndPoint;
         }
 
         public void VisitSquare(BaseShape square)
         {
-            if (!(square.Width > _distance.X) || !(square.Height > _distance.Y)) return;
+            if (!(square.StrategyWidth > _distance.X) || !(square.StrategyHeight > _distance.Y)) return;
+            square.StrategyWidth -= _distance.X;
+            square.StrategyHeight -= _distance.Y;
             square.Width -= _distance.X;
             square.Height -= _distance.Y;
         }
 
         public void VisitTriangle(BaseShape triangle)
         {
-            if (!(triangle.Width > _distance.X) || !(triangle.Height > _distance.Y)) return;
+            if (!(triangle.StrategyWidth > _distance.X) || !(triangle.StrategyHeight > _distance.Y)) return;
+            triangle.StrategyWidth -= _distance.X;
+            triangle.StrategyHeight -= _distance.Y;
             triangle.Width -= _distance.X;
             triangle.Height -= _distance.Y;
-        }
-
-        public void Visit(Line line)
-        {
-            line.X2 -= _distance.X;
-            line.Y2 -= _distance.Y;
-            line.LineGeometry.EndPoint = line.EndPoint;
-        }
-
-        public void Visit(Square square)
-        {
-            if (!(square.Width > _distance.X) || !(square.Height > _distance.Y)) return;
-            square.Width -= _distance.X;
-            square.Height -= _distance.Y;
-        }
-
-        public void Visit(Triangle triangle)
-        {
-            if (!(triangle.Width > _distance.X) || !(triangle.Height > _distance.Y)) return;
-            triangle.Width -= _distance.X;
-            triangle.Height -= _distance.Y;
-        }
-
-        public void Visit(Ellipse ellipse)
-        {
-            if (!(ellipse.XRadius > _distance.X) || !(ellipse.YRadius > _distance.Y)) return;
-            ellipse.XRadius -= _distance.X;
-            ellipse.YRadius -= _distance.Y;
-            ellipse.EllipseGeometry.RadiusX = ellipse.XRadius;
-            ellipse.EllipseGeometry.RadiusY = ellipse.YRadius;
         }
 
         public void VisitEllipse(BaseShape ellipseBaseShape)

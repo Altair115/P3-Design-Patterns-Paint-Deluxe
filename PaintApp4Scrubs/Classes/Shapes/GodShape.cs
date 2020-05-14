@@ -14,12 +14,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
     {
         public Vector OriginPos;
         public abstract override string ToString();
-
-        public virtual Vector GetCenter()
+        public void Accept(IVisitor visitor)
         {
-            var center = new Vector((Canvas.GetLeft(this) + (this.Width / 2)), Canvas.GetTop(this) + (this.Height / 2));
-            return center;
+            visitor.Visit(this);
         }
+
         public string Depth { get; set; }
     }
 }
