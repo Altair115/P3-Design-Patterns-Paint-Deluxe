@@ -8,6 +8,7 @@ using PaintApp4Scrubs.Classes.Commands;
 using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Classes.Stratagies;
 using PaintApp4Scrubs.Classes.Strategies;
+using Decorator = PaintApp4Scrubs.Classes.Decorator;
 
 namespace PaintApp4Scrubs
 {
@@ -387,6 +388,10 @@ namespace PaintApp4Scrubs
         public void PutOnScreen(GodShape shape)
         {
             Canvas.Children.Add(shape);
+        }
+        public void PutOnScreen(TextBlock decorator)
+        {
+            Canvas.Children.Add(decorator);
         }
 
         /// <summary>

@@ -32,6 +32,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             Strategy = s;
         }
+
+        public override void Decorate()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public virtual void Accept(IVisitor visitor)
         {
             Strategy.Accept(visitor,this);
