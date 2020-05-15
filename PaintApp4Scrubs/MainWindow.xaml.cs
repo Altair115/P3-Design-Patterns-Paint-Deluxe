@@ -23,6 +23,8 @@ namespace PaintApp4Scrubs
         private readonly List<IComponent> _boxList = new List<IComponent>();
         private readonly Boxer _box;
 
+        Ornament ornament = new Ornament();
+
         private enum ModeSwitch
         {
             Line,
@@ -299,6 +301,8 @@ namespace PaintApp4Scrubs
             }
 
             DrawShape(square);
+            ornament.SetComponent(square);
+            ornament.Decorate();
         }
 
         private void DrawTriangle()

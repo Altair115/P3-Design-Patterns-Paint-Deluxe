@@ -35,7 +35,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
 
         public override void Decorate()
         {
-            throw new System.NotImplementedException();
+            //Imagine that this just works
+            //else just ask W. Brinksma
         }
 
         public virtual void Accept(IVisitor visitor)
