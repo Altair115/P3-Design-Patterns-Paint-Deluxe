@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="savetest_8txt" kind="file" language="C++">
+    <compoundname>savetest.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Canvas</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">Group<sp/>4</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/>Rectangle<sp/>801<sp/>111<sp/>145<sp/>129</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>Rectangle<sp/>821<sp/>277<sp/>156<sp/>82</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/>Rectangle<sp/>1063<sp/>174<sp/>77<sp/>130</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/>Group<sp/>4</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/>Rectangle<sp/>207<sp/>118<sp/>141<sp/>119</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/>Rectangle<sp/>450<sp/>110<sp/>113<sp/>151</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/>Rectangle<sp/>208<sp/>319<sp/>161<sp/>114</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/>Rectangle<sp/>484<sp/>306<sp/>139<sp/>145</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/savetest.txt"/>
+  </compounddef>
+</doxygen>

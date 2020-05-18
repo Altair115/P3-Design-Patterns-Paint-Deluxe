@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete" kind="class" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Classes::Commands::Delete</compoundname>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.ICommand</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1aa13be088807e93e4988eb392935f04d4" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+        <definition>readonly IComponent PaintApp4Scrubs.Classes.Commands.Delete._component</definition>
+        <argsstring></argsstring>
+        <name>_component</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" line="16" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1a7074c018abd19daf5e1403e3be6cba94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PaintApp4Scrubs.Classes.Commands.Delete.Delete</definition>
+        <argsstring>(IComponent component)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>constructor of the command </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the component to be deleted</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" line="22" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1a45a87f2755a0c83f4f3baf4b0c1fff8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.Commands.Delete.Execute</definition>
+        <argsstring>()</argsstring>
+        <name>Execute</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a068677c28a0f3d0525bc3815c5d0f2c9">Execute</reimplements>
+        <briefdescription>
+<para>deletes the component commands </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" line="29" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1ab8854f14dc8109979e50f56a4f96509a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.Commands.Delete.UnExecute</definition>
+        <argsstring>()</argsstring>
+        <name>UnExecute</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a9d1284a24e06a39beaa21cad8d10ea08">UnExecute</reimplements>
+        <briefdescription>
+<para>executes the undo version of the command </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" line="36" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class creates a command to delete the component from the canvas </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ICommand</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command"/>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.Commands.Delete</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ICommand</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command"/>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.Commands.Delete</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" line="13" column="5" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs" bodystart="14" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1aa13be088807e93e4988eb392935f04d4" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Delete</scope><name>_component</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1a7074c018abd19daf5e1403e3be6cba94" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Delete</scope><name>Delete</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1a45a87f2755a0c83f4f3baf4b0c1fff8d" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Delete</scope><name>Execute</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1ab8854f14dc8109979e50f56a4f96509a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Delete</scope><name>UnExecute</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

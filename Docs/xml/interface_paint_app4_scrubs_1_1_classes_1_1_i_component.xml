@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kind="interface" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Classes::IComponent</compoundname>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.IAccept</basecompoundref>
+    <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Boxer</derivedcompoundref>
+    <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Shapes.GodShape</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_paint_app4_scrubs_1_1_classes_1_1_i_component_1aea2be41357af9652ef6b8e5cac3c377c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string PaintApp4Scrubs.Classes.IComponent.Depth</definition>
+        <argsstring></argsstring>
+        <name>Depth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IComponent.cs" line="9" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IComponent.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IAccept</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
+      </node>
+      <node id="5">
+        <label>PaintApp4Scrubs.Classes.Decorator</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.IComponent</label>
+        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PaintApp4Scrubs.Classes.Shapes.GodShape</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PaintApp4Scrubs.Classes.Boxer</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PaintApp4Scrubs.Classes.Ornament</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PaintApp4Scrubs.Classes.Shapes.BaseShape</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IAccept</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.IComponent</label>
+        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IComponent.cs" line="7" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IComponent.cs" bodystart="8" bodyend="10"/>
+    <listofallmembers>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept_1ac80a5a798a95cc4ac75f720736cf8c57" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::IComponent</scope><name>Accept</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component_1aea2be41357af9652ef6b8e5cac3c377c" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::IComponent</scope><name>Depth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

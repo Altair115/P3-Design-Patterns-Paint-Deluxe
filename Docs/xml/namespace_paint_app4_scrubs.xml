@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="namespace_paint_app4_scrubs" kind="namespace" language="C#">
+    <compoundname>PaintApp4Scrubs</compoundname>
+    <innerclass refid="class_paint_app4_scrubs_1_1_app" prot="public">PaintApp4Scrubs::App</innerclass>
+    <innerclass refid="class_paint_app4_scrubs_1_1_main_window" prot="public">PaintApp4Scrubs::MainWindow</innerclass>
+    <innernamespace refid="namespace_paint_app4_scrubs_1_1_classes">PaintApp4Scrubs::Classes</innernamespace>
+    <innernamespace refid="namespace_paint_app4_scrubs_1_1_interfaces">PaintApp4Scrubs::Interfaces</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/App.xaml.cs" line="9" column="1"/>
+  </compounddef>
+</doxygen>

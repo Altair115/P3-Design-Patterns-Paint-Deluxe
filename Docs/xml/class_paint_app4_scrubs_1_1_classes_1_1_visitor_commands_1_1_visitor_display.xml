@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display" kind="class" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</compoundname>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.IVisitor</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a1ecb2c3e4e90e9a3228e3b9dd16d837f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay._isHead</definition>
+        <argsstring></argsstring>
+        <name>_isHead</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="12" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1ae446f4dee1ff36e9cdca688e6339d486" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer" kindref="compound">ThePrinter</ref></type>
+        <definition>readonly ThePrinter PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay._printer</definition>
+        <argsstring></argsstring>
+        <name>_printer</name>
+        <initializer>= ThePrinter.GetInstance()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="13" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a0a2bbcc4e7bda01e3be1af64de2e5e11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay.VisitorDisplay</definition>
+        <argsstring>(bool isHead)</argsstring>
+        <name>VisitorDisplay</name>
+        <param>
+          <type>bool</type>
+          <declname>isHead</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="15" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a8f8a1090a65a1d4706cf3ff011d11390" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay.Visit</definition>
+        <argsstring>(GodShape godShape)</argsstring>
+        <name>Visit</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a98cb19fc821c47e3c54053085a3bb53b">Visit</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+          <declname>godShape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="21" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a3819ae8b96ddf1218344310abe894bd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay.Visit</definition>
+        <argsstring>(Boxer boxer)</argsstring>
+        <name>Visit</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a003561f3f8e98802014fcb471e5f34a8">Visit</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer" kindref="compound">Boxer</ref></type>
+          <declname>boxer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="25" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="25" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a24edfd7a004b1b7abb9a851bbf1eb96a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay.VisitLine</definition>
+        <argsstring>(BaseShape line)</argsstring>
+        <name>VisitLine</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1addea923062df9ec56aab71ea5f9eade6">VisitLine</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="52" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a59afcb29ac5bbc5eb29e43168b6a93f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay.VisitSquare</definition>
+        <argsstring>(BaseShape square)</argsstring>
+        <name>VisitSquare</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a5c70711fbc87116f772d51869051b558">VisitSquare</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>square</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="57" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1af0b7a7cc7773a738adaa15c9c3561e26" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay.VisitTriangle</definition>
+        <argsstring>(BaseShape triangle)</argsstring>
+        <name>VisitTriangle</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a2da5671a6211c2fc907bd32c023de8a8">VisitTriangle</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>triangle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="62" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a82a4a7a46efb3369f34f3068555f754b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay.VisitEllipse</definition>
+        <argsstring>(BaseShape ellipseBaseShape)</argsstring>
+        <name>VisitEllipse</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1ab9c2a0c9281920608e197af27352c720">VisitEllipse</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>ellipseBaseShape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="66" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="66" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IVisitor</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.VisitorCommands.VisitorDisplay</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IVisitor</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" line="10" column="5" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDisplay.cs" bodystart="11" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a1ecb2c3e4e90e9a3228e3b9dd16d837f" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>_isHead</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1ae446f4dee1ff36e9cdca688e6339d486" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>_printer</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a8f8a1090a65a1d4706cf3ff011d11390" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>Visit</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a3819ae8b96ddf1218344310abe894bd8" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>Visit</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a82a4a7a46efb3369f34f3068555f754b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>VisitEllipse</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a24edfd7a004b1b7abb9a851bbf1eb96a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>VisitLine</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a0a2bbcc4e7bda01e3be1af64de2e5e11" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>VisitorDisplay</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a59afcb29ac5bbc5eb29e43168b6a93f9" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>VisitSquare</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1af0b7a7cc7773a738adaa15c9c3561e26" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</scope><name>VisitTriangle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
