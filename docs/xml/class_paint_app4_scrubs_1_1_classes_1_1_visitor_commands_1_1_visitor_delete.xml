@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete" kind="class" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDelete</compoundname>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.IVisitor</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a67803b43d41c7f90dec6fc4c2b664f2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDelete.Visit</definition>
+        <argsstring>(GodShape godShape)</argsstring>
+        <name>Visit</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a98cb19fc821c47e3c54053085a3bb53b">Visit</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+          <declname>godShape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" line="8" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1ab5288976f59dbe78ef1cf1d9629457f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDelete.Visit</definition>
+        <argsstring>(Boxer boxer)</argsstring>
+        <name>Visit</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a003561f3f8e98802014fcb471e5f34a8">Visit</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer" kindref="compound">Boxer</ref></type>
+          <declname>boxer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" line="12" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a74659922f1e3ee86b1a4d53330ccdeb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDelete.VisitLine</definition>
+        <argsstring>(BaseShape line)</argsstring>
+        <name>VisitLine</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1addea923062df9ec56aab71ea5f9eade6">VisitLine</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" line="20" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a4db99fd00ec1a2e64e10762aff1c8aa3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDelete.VisitSquare</definition>
+        <argsstring>(BaseShape square)</argsstring>
+        <name>VisitSquare</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a5c70711fbc87116f772d51869051b558">VisitSquare</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>square</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" line="25" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a803618a19eaf55e6151ffd7c01e60f74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDelete.VisitTriangle</definition>
+        <argsstring>(BaseShape triangle)</argsstring>
+        <name>VisitTriangle</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a2da5671a6211c2fc907bd32c023de8a8">VisitTriangle</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>triangle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" line="30" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1aa8c115b3bb44d27f4de3998c6ee1b10d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorDelete.VisitEllipse</definition>
+        <argsstring>(BaseShape ellipseBaseShape)</argsstring>
+        <name>VisitEllipse</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1ab9c2a0c9281920608e197af27352c720">VisitEllipse</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>ellipseBaseShape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" line="35" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IVisitor</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor"/>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.VisitorCommands.VisitorDelete</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IVisitor</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor"/>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.VisitorCommands.VisitorDelete</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" line="6" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDelete.cs" bodystart="7" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a67803b43d41c7f90dec6fc4c2b664f2f" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDelete</scope><name>Visit</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1ab5288976f59dbe78ef1cf1d9629457f9" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDelete</scope><name>Visit</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1aa8c115b3bb44d27f4de3998c6ee1b10d" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDelete</scope><name>VisitEllipse</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a74659922f1e3ee86b1a4d53330ccdeb3" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDelete</scope><name>VisitLine</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a4db99fd00ec1a2e64e10762aff1c8aa3" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDelete</scope><name>VisitSquare</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a803618a19eaf55e6151ffd7c01e60f74" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDelete</scope><name>VisitTriangle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

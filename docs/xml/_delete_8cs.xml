@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_delete_8cs" kind="file" language="C#">
+    <compoundname>Delete.cs</compoundname>
+    <innerclass refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete" prot="public">PaintApp4Scrubs::Classes::Commands::Delete</innerclass>
+    <innernamespace refid="namespace_paint_app4_scrubs">PaintApp4Scrubs</innernamespace>
+    <innernamespace refid="namespace_paint_app4_scrubs_1_1_classes">PaintApp4Scrubs::Classes</innernamespace>
+    <innernamespace refid="namespace_paint_app4_scrubs_1_1_classes_1_1_commands">PaintApp4Scrubs::Classes::Commands</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_paint_app4_scrubs" kindref="compound">PaintApp4Scrubs</ref>.<ref refid="namespace_paint_app4_scrubs_1_1_classes" kindref="compound">Classes</ref>.<ref refid="namespace_paint_app4_scrubs_1_1_classes_1_1_shapes" kindref="compound">Shapes</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_paint_app4_scrubs" kindref="compound">PaintApp4Scrubs</ref>.<ref refid="namespace_paint_app4_scrubs_1_1_interfaces" kindref="compound">Interfaces</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Collections.Generic;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Text;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespace_paint_app4_scrubs" kindref="compound">PaintApp4Scrubs</ref>.<ref refid="namespace_paint_app4_scrubs_1_1_classes" kindref="compound">Classes</ref>.<ref refid="namespace_paint_app4_scrubs_1_1_classes_1_1_visitor_commands" kindref="compound">VisitorCommands</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="namespace_paint_app4_scrubs_1_1_classes_1_1_commands" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_paint_app4_scrubs_1_1_classes_1_1_commands" kindref="compound">PaintApp4Scrubs.Classes.Commands</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete" kindref="compound">Delete</ref><sp/>:<sp/><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" kindref="compound">ICommand</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>readonly<sp/><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref><sp/>_component;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1a7074c018abd19daf5e1403e3be6cba94" kindref="member">Delete</ref>(<ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref><sp/>component)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component<sp/>=<sp/>component;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1a45a87f2755a0c83f4f3baf4b0c1fff8d" kindref="member">Execute</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component.Accept(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete" kindref="compound">VisitorDelete</ref>());</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1ab8854f14dc8109979e50f56a4f96509a" kindref="member">UnExecute</ref>()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component.Accept(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw" kindref="compound">VisitorDraw</ref>());</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Delete.cs"/>
+  </compounddef>
+</doxygen>

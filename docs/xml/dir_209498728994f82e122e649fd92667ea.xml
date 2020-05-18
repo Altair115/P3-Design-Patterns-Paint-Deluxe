@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_209498728994f82e122e649fd92667ea" kind="dir">
+    <compoundname>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj</compoundname>
+    <innerdir refid="dir_319d22902f36f5a49cce7b422e014e76">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug</innerdir>
+    <innerdir refid="dir_12accfe30c02de3ae92b5f9dba5dc049">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/"/>
+  </compounddef>
+</doxygen>
