@@ -1,0 +1,525 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.18">
+  <compound refid="class_paint_app4_scrubs_1_1_app" kind="class"><name>PaintApp4Scrubs::App</name>
+    <member refid="class_paint_app4_scrubs_1_1_app_1a65d062ed07b85e3567a18f19409dd626" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_app_1a65d062ed07b85e3567a18f19409dd626" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_app_1a65d062ed07b85e3567a18f19409dd626" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_app_1a65d062ed07b85e3567a18f19409dd626" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_app_1a0c853f24de7686bce48b0f3e02ff598d" kind="function"><name>Main</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_app_1a0c853f24de7686bce48b0f3e02ff598d" kind="function"><name>Main</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_app_1a0c853f24de7686bce48b0f3e02ff598d" kind="function"><name>Main</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_app_1a0c853f24de7686bce48b0f3e02ff598d" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kind="class"><name>PaintApp4Scrubs::Classes::Shapes::BaseShape</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a3c18abc9efcfe3f7f40993bb7b708857" kind="variable"><name>Strategy</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a295848ed4173de693257809f5ed5f8a6" kind="property"><name>StrategyWidth</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1add7d9ca15f423aa45ffc8285286904b1" kind="property"><name>StrategyHeight</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a43f6d2a5f4d9fb85358d30d663546661" kind="property"><name>StartPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1adc6919b53d5609189e621e2345cc90b0" kind="property"><name>EndPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a072fcc0db5eb6e8a2f26c69cfd0255f5" kind="property"><name>DefiningGeometry</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1aa93fa262535d2f0c905c7c686586acff" kind="function"><name>BaseShape</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a42ca5dd574f6606a55db6893acb704a0" kind="function"><name>Decorate</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1af24a166857bde24c7326b2250b676ad5" kind="function"><name>Accept</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a4c95803fc7b484ca83b7079a88752556" kind="function"><name>ToString</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a5e4e946357555fc00d68fb34028236e5" kind="function"><name>GetCenter</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer" kind="class"><name>PaintApp4Scrubs::Classes::Boxer</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a45a2c9485256af85814aee7322855760" kind="variable"><name>_components</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a9d1954fd11641f840011c1b925954339" kind="property"><name>Depth</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a2ee50a5cc46f330f5dd8e5d81094fac0" kind="function"><name>Add</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1af4bd95c13fee623d6d388fe014ee77d3" kind="function"><name>Indentation</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1abc9c28e408af47720c09cf1add4b56d5" kind="function"><name>Add</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a78ddafb8bf02226e0e28ae490e65ac7b" kind="function"><name>Detach</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1af2bdd25590c19f6dff094e021abdf883" kind="function"><name>FindBox</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a54f16fc06389e22cf2ddd5937ddc7f76" kind="function"><name>GetChildren</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a74217e9364d23595b6efed9e95175e55" kind="function"><name>Accept</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_broker" kind="class"><name>PaintApp4Scrubs::Classes::Broker</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_broker_1a88254dfaad39384904d9cec5ede46e63" kind="variable"><name>_commands</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_broker_1a13e1dde7b8bc4fff157ad549df2cf1ee" kind="variable"><name>_undoCommands</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_broker_1ab8a63c4c1753681a682f94359302ade3" kind="function"><name>DoCommand</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_broker_1a6273ca788a5718d80d241beb2aecc5d3" kind="function"><name>UndoCommand</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_broker_1a4b1e35b593415ff7cdc34a80599ec3b1" kind="function"><name>RedoCommand</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_converter" kind="class"><name>PaintApp4Scrubs::Classes::Converter</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_converter_1a0589ea3a6f759eae1f1462e284642781" kind="function"><name>ToVector</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_converter_1a15759705cb5eb3822a6edbd5bad363d4" kind="function"><name>ToPoint</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator" kind="class"><name>PaintApp4Scrubs::Classes::Decorator</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1a1515098a2af8fd8c51a77ac48205e35f" kind="variable"><name>component</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1a7a0fdeabc6911c6906c2b5f00f77ef8d" kind="function"><name>SetComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1ab73595c2ab30efa54a06ce380911bdf7" kind="function"><name>Decorate</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete" kind="class"><name>PaintApp4Scrubs::Classes::Commands::Delete</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1aa13be088807e93e4988eb392935f04d4" kind="variable"><name>_component</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1a7074c018abd19daf5e1403e3be6cba94" kind="function"><name>Delete</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1a45a87f2755a0c83f4f3baf4b0c1fff8d" kind="function"><name>Execute</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete_1ab8854f14dc8109979e50f56a4f96509a" kind="function"><name>UnExecute</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_display_group" kind="class"><name>PaintApp4Scrubs::Classes::Commands::DisplayGroup</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_display_group_1a9f89a60e535c961e45a34a67d750c8c4" kind="variable"><name>_component</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_display_group_1a48dabeb99098696e7affd5c1bbfc2b26" kind="function"><name>DisplayGroup</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_display_group_1a4d66ffbff293c02fac5d79b047c30eda" kind="function"><name>Execute</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_display_group_1abdb43be957d8a65124a4677deee09e69" kind="function"><name>UnExecute</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw" kind="class"><name>PaintApp4Scrubs::Classes::Commands::Draw</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a45fdb69f3fec57886c55a2abe39b31dd" kind="variable"><name>_component</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a5775be7f25df9d61f1eeddf7558fb829" kind="function"><name>Draw</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a5e495f4ae223bfaa54692e1b501a222f" kind="function"><name>Execute</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a38aaae53ea0086f9ff317f2c55270c9f" kind="function"><name>UnExecute</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies" kind="class"><name>PaintApp4Scrubs::Classes::Strategies::EllipseStrategies</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1ad6746bb9d5dabd526d197b6559411372" kind="variable"><name>EllipseGeometry</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a13ec90daa30fbbb772e96d95612109fc" kind="variable"><name>_xRadius</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a71054feba552ab48ec1f8e7fd8b52311" kind="variable"><name>_yRadius</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1adc52be9640b8b94d5a667cc498c4dfb4" kind="property"><name>Height</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1ac86edb8da4031224829297d37a5295c5" kind="property"><name>Width</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a277970f910f9bdc9b09d8f961ca7b09e" kind="property"><name>StartPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a720f74f31db446c4844cb90a93b88564" kind="property"><name>EndPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a3c6a2bbe0558b6c9118abe5be53b4094" kind="function"><name>EllipseStrategies</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1acdd2c8afa223434b2982ab770b033307" kind="function"><name>GetGeometry</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a765e2219c38a7fc242384353cf6d56cb" kind="function"><name>GetString</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a1cea0412291a206ce95b673ec2063ef8" kind="function"><name>Accept</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a4a05e3b4ba5fbc2d341ee600bfa533e7" kind="function"><name>GetCenter</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kind="class"><name>PaintApp4Scrubs::Classes::Shapes::GodShape</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a7738dcb9d428d2f033cf79730dea4695" kind="variable"><name>OriginPos</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a84d06da39cc4ef99bf9d0979e4a7c994" kind="property"><name>Depth</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1abcf5212e58b5f7660bbaaa59ec8abf1d" kind="function"><name>Decorate</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a96bd81ff40ec7c5a5704dfcd93545d46" kind="function"><name>Accept</name></member>
+  </compound>
+  <compound refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept" kind="interface"><name>PaintApp4Scrubs::Interfaces::IAccept</name>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept_1ac80a5a798a95cc4ac75f720736cf8c57" kind="function"><name>Accept</name></member>
+  </compound>
+  <compound refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" kind="interface"><name>PaintApp4Scrubs::Interfaces::ICommand</name>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a068677c28a0f3d0525bc3815c5d0f2c9" kind="function"><name>Execute</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a9d1284a24e06a39beaa21cad8d10ea08" kind="function"><name>UnExecute</name></member>
+  </compound>
+  <compound refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kind="interface"><name>PaintApp4Scrubs::Classes::IComponent</name>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component_1aea2be41357af9652ef6b8e5cac3c377c" kind="property"><name>Depth</name></member>
+  </compound>
+  <compound refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy" kind="interface"><name>PaintApp4Scrubs::Classes::Strategies::IStrategy</name>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1aa6e3d6807bd30fb7c8c16bd511104280" kind="property"><name>Height</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1ae9f2483a18f8a948c0541e3c3d0d382e" kind="property"><name>Width</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1ac5fe245a38698ea300cd7665e420eb5f" kind="property"><name>StartPoint</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a8acb502c57abbae78eada43389319cb3" kind="property"><name>EndPoint</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a087f15dc085efb17a47a2a2e29402f75" kind="function"><name>GetGeometry</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a13f552368f4f72803da46dc972009e0e" kind="function"><name>GetString</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a898a539e45d903c6925123b83d1a58d5" kind="function"><name>Accept</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a40b366886c7d1daaf414ccf18a21dfe8" kind="function"><name>GetCenter</name></member>
+  </compound>
+  <compound refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" kind="interface"><name>PaintApp4Scrubs::Interfaces::IVisitor</name>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a98cb19fc821c47e3c54053085a3bb53b" kind="function"><name>Visit</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a003561f3f8e98802014fcb471e5f34a8" kind="function"><name>Visit</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a5c70711fbc87116f772d51869051b558" kind="function"><name>VisitSquare</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1addea923062df9ec56aab71ea5f9eade6" kind="function"><name>VisitLine</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a2da5671a6211c2fc907bd32c023de8a8" kind="function"><name>VisitTriangle</name></member>
+    <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1ab9c2a0c9281920608e197af27352c720" kind="function"><name>VisitEllipse</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies" kind="class"><name>PaintApp4Scrubs::Classes::Strategies::LineStrategies</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1a470ae79c36db109548a3264798230dd3" kind="variable"><name>_lineGeometry</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ab4e0b7118b836accd5bb235227b8d24b" kind="variable"><name>_start</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ada7df00c2610de173ad8de784a02418f" kind="variable"><name>_end</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ac8ee1311245b5d0bf59a48647e5dcaff" kind="property"><name>Height</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1aab9f2834d051f162ad359df11bd90f7e" kind="property"><name>Width</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ab2dc844dea895b19230129652746f037" kind="property"><name>StartPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ac4d10607a8872c13895d78e89180bb95" kind="property"><name>EndPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ac9ef46cfd6dccbf69396fbc22bb64826" kind="function"><name>LineStrategies</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1aab853fc54ace303c7215cc1860716666" kind="function"><name>GetCenter</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1a69df1767e804fd569b8989bac852dec6" kind="function"><name>GetGeometry</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ae333c8327ae50c5144f0e5851363aa43" kind="function"><name>GetString</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ab76286a40d75460ebc108d7ef54b03c9" kind="function"><name>Accept</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_main_window" kind="class"><name>PaintApp4Scrubs::MainWindow</name>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25" kind="enum"><name>ModeSwitch</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a4803e6b9e63dabf04de980788d6a13c4" kind="enumvalue"><name>Line</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a119518c2134c46108179369f0ce81fa2" kind="enumvalue"><name>Ellipse</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25ace9291906a4c3b042650b70d7f3b152e" kind="enumvalue"><name>Rectangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a5e5500cb2b82eb72d550de644bd1b64b" kind="enumvalue"><name>Triangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25af2a6c498fb90ee345d997f888fce3b18" kind="enumvalue"><name>Delete</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a6bc362dbf494c61ea117fe3c71ca48a5" kind="enumvalue"><name>Move</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a9d723d04c40bfd81835c0766a698cf63" kind="enumvalue"><name>Resize</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a0c3cd33e7bf626da4897316a7158a7a4" kind="enumvalue"><name>Selector</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25ab9987a246a537f4fe86f1f2e3d10dbdb" kind="enumvalue"><name>Display</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a0437efc73a1a2060e1db11fa799ea6a5" kind="variable"><name>_broker</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ad93ba4ca0a70e7fd42874d6b0d138947" kind="variable"><name>_selectedShape</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a0900f12e26721deb6b400c3ddf3b3d1d" kind="variable"><name>_boxList</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a2a7f0bf368f45d0d9755b4e3e3d3bc74" kind="variable"><name>_box</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a7d3c351261d14a83dd51d05d0cf2d072" kind="variable"><name>ornament</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1af78220066fbe16ca04fd5d3c442fbcb7" kind="variable"><name>_currentMode</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a07e577074e8b48a09b15390aaa5e0835" kind="variable"><name>_currentPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a8ddc8af4782326950ac7b4f6641f4171" kind="variable"><name>_startPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a6232e1b77a5c25651c5a45fdccf940c2" kind="variable"><name>_endPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a7a0a4d3af00c0f3954d2061b9ade78dd" kind="variable"><name>_contentLoaded</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a5d22098e76f1e2fc1f42ab4479cd888f" kind="variable"><name>AppWindow</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a9b664613f1348751f8f504884d011af8" kind="variable"><name>ToolBar</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a1449b76029813d393de80c211831a448" kind="variable"><name>UndoButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ab4ae421cea0bf1cd7f89baca10a9fca2" kind="variable"><name>RedoButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ade806610b05f41aac18d7cd538a88799" kind="variable"><name>LineButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a341c4cb6aeccec2d2e7c3cab7e64e1b7" kind="variable"><name>EllipseButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a1db032b3a20f7a40f80c678c5b7f4bd6" kind="variable"><name>RectangleButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ab25164a544e19600528039931698c6a2" kind="variable"><name>TriangleButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a73b2e55ecc9086a2ff5ffeffe7149915" kind="variable"><name>DeleteButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a1e9d011c97c691de908ec55c48a46f3d" kind="variable"><name>ResizeButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a278bf403cdac4821568181eaf05c6f86" kind="variable"><name>MoveButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a9ca76185d11b9f1daf67306142f82fdb" kind="variable"><name>SelectorButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a7137ab7026e466c3c76832c63d8e6020" kind="variable"><name>DisplayButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a782c7ee6eda34e86d715d65533263832" kind="variable"><name>GroupButton</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a50bd0e1eb27ab0adb87537a8f4016481" kind="variable"><name>Save</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1aac384831a661f66bb99f155b255fce26" kind="variable"><name>LabelCoords</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a036fba7bcf9602003f257da56051f4cf" kind="variable"><name>Canvas</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a3010a69b843f6ae0d3f90f232bad1ea8" kind="function"><name>MainWindow</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ad08f8833cfce6670773453e5891a48a7" kind="function"><name>BoxFinder</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1adf9cb5a7fbeae64d55a6ba7a03f7ca15" kind="function"><name>MoveShape</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a26f3df0af923c19c2e9413a39f0320aa" kind="function"><name>PutOnScreen</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a816741bd40d3d811cd5e201f30c092b1" kind="function"><name>PutOnScreen</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a13ab0f02566d8e3d4bc198489c9c0760" kind="function"><name>DeleteShape</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1aef4a595cc2bf613a8badd3d79d9ef4d1" kind="function"><name>RemoveShape</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a88a3d3d8a4b5e31177e8479904396649" kind="function"><name>ResizeShape</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a5cf3f4f51302915c6cb6cddac25df248" kind="function"><name>AddToBoxList</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a1094456dc2f923d5c418459d9c9c659e" kind="function"><name>AddToGroup</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a3c750654f2556dae0a99fdad52036582" kind="function"><name>DisplayGroup</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1af19356750fe0dbc4b49c268c1a4b8eb8" kind="function"><name>UndoButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ac285b17899e00bba6526e9b90b9fb6f8" kind="function"><name>RedoButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1af821f9bdb9949f3336e493e8372d9cfc" kind="function"><name>LineButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ae019a6cc2578d30863be334842c3f3cc" kind="function"><name>EllipseButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a4f0e201b719c5e57d8983065a0949652" kind="function"><name>RectangleButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a6c70631591993bd70d5a5b32a97f6ed6" kind="function"><name>TriangleButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a56e3f7cbb4983c9ba51dec035b8167e5" kind="function"><name>Delete_Click</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ae3938320bbb8d2df6527a9e908944560" kind="function"><name>ResizeButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a26cbfb90ce65c45ef8b0c1558a2253c8" kind="function"><name>MoveButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a64358a0151b0b627b66682ea84e4716c" kind="function"><name>SelectorButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1af351b2e5c702c4bae0b73ee68d9490b0" kind="function"><name>GroupButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a115d5802d6a0aab57e7b6720bb287a5e" kind="function"><name>DisplayButton_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1aaec499b6c4c6e18919b97ed078b28a8e" kind="function"><name>Save_OnClick</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a5c65d607979486bbbb8f67ec15b856fe" kind="function"><name>Canvas_OnMouseDown</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1af8d4b06035c4ebfb38e178264d7b6e68" kind="function"><name>Canvas_OnMouseUp</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1aae06655e51b9d1d82d411578e4db37ba" kind="function"><name>Canvas_OnMouseMove</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ade4f5efb5f46c5cae27da80117c952c8" kind="function"><name>DrawLine</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a1fbe23d709085ec7e2f9c145bfb852cc" kind="function"><name>DrawEllipse</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1af1225fe2a819602ab6321d3df83e8124" kind="function"><name>DrawRectangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a95f62291f5974521dbb19834cdb166ca" kind="function"><name>DrawTriangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1a84725682a8a34c8250ee406d1b87149f" kind="function"><name>DrawShape</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" kind="function"><name>Connect</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" kind="function"><name>Connect</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" kind="function"><name>Connect</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" kind="function"><name>Connect</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_make_group" kind="class"><name>PaintApp4Scrubs::Classes::Commands::MakeGroup</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_make_group_1a54af197a23e925034b803b6059ec1b0c" kind="variable"><name>_components</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_make_group_1a4fa997fa9a0b477439fde75a8a4a730c" kind="variable"><name>_parentBox</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_make_group_1afc57fecc2a7e0b4a8f9fdbd3c2b0dab9" kind="variable"><name>_newBox</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_make_group_1aaba4ce4d41a306d18661fe737056671e" kind="function"><name>MakeGroup</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_make_group_1a297de6904d56fc90c649d17c726ee467" kind="function"><name>Execute</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_make_group_1add4d9f61363be2ddbee93fdfaf8589e1" kind="function"><name>UnExecute</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move" kind="class"><name>PaintApp4Scrubs::Classes::Commands::Move</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1af577aba0c4ec36505c789083e37a6f91" kind="variable"><name>_component</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1ab8a472cf6896e6373655f3b75b1b779d" kind="variable"><name>_newPosition</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1af6d97916ce1290ddb5edb878e3246e25" kind="variable"><name>_oldPosition</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a4a6b0309a21fca8b3c87a3005d78fc30" kind="variable"><name>_positionResult</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1aedbd17c26c02aebb51b34e34b7d11b24" kind="function"><name>Move</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a7eac86b11773a5af2d7ea3cfbc96cfbe" kind="function"><name>Execute</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a36ab6f2faef31dff32196fb47c9aa237" kind="function"><name>UnExecute</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament" kind="class"><name>PaintApp4Scrubs::Classes::Ornament</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a1b62fdfc62e2ec6836528fc4d7e7662d" kind="variable"><name>Name</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a3dd8cdd86edaada867f1b0bde3a4bde2" kind="variable"><name>OrnamentPos</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a562359c953504366976b4cc6bb151549" kind="property"><name>DefiningGeometry</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a2c20d28308f6299534817de4f031cdfd" kind="function"><name>Decorate</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize" kind="class"><name>PaintApp4Scrubs::Classes::Commands::Resize</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8268744fa412499796c9febc0122b9b7" kind="variable"><name>_component</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1aa6c709964c8db9bd54b3a90dacf17a2c" kind="variable"><name>_distance</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8a0572db2920fbc69c5674fa17277079" kind="function"><name>Resize</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a4e2e56e627f7b15d53abbfe20c3ced3a" kind="function"><name>Execute</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a989a9659b7b9fb4965c75297722a2026" kind="function"><name>UnExecute</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file" kind="class"><name>PaintApp4Scrubs::Classes::Commands::SaveFile</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file_1a64b8e7ff58d5f4407c80ad88d34033c4" kind="variable"><name>_boxer</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file_1ac1580b5ec681da2c6e146f5c8fc5fd8d" kind="function"><name>SaveFile</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file_1a2760399b222b931021994afcf74a7556" kind="function"><name>Execute</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file_1a3b9f8f0ebed4c4623948980c67785c0b" kind="function"><name>UnExecute</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies" kind="class"><name>PaintApp4Scrubs::Classes::Stratagies::SquareStrategies</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1a7133304d5560d44dcb5fa13641239f6d" kind="property"><name>Height</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1abf588a68cd65926431e61509678bc26a" kind="property"><name>Width</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1a44501b1b98f91fca55cbbcc6c5ff5444" kind="property"><name>StartPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1a7f94c9254abce2b76791099ae414a86b" kind="property"><name>EndPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1a2cdeb937a175a70c220fdd27b3b2ace1" kind="function"><name>SquareStrategies</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1ae3a0e3ff3e15400eaeecc8f637f55884" kind="function"><name>GetGeometry</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1a659978ab2dd798031173dd6ea86730f5" kind="function"><name>GetString</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1a2b658589d9e9d440469a26e667b29193" kind="function"><name>Accept</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_stratagies_1_1_square_strategies_1ac6daf43db3e764ceaf4b2c04aee81fc8" kind="function"><name>GetCenter</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer" kind="class"><name>PaintApp4Scrubs::Classes::ThePrinter</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer_1ab1ddaf136e9316a9eaeaaaab5af43e88" kind="variable"><name>InstancePrinter</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer_1af1117f9571ff6d56576f0963d8538921" kind="function"><name>ThePrinter</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer_1ab2593400943b12db3ea3291b5fa002ef" kind="function"><name>GetInstance</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer_1ae6e9d2f4bf0f5bdca7d3bdbd5ba8216a" kind="function"><name>PrintToFile</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer_1a6828d9868e885c08169d7e05638ef135" kind="function"><name>ClearFile</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies" kind="class"><name>PaintApp4Scrubs::Classes::Strategies::TriangleStrategies</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a5bc7aedc359a164fd10a8e9beb23a906" kind="property"><name>Height</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a62847faaecf2cafa6005734edf52e31d" kind="property"><name>Width</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1aa6078482704f7155a78a13296c8b920b" kind="property"><name>StartPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a6da895cc3703ee1d50e418f358f89f06" kind="property"><name>EndPoint</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a8b7add5e07b4a0c4d03c1b3e083f9cc4" kind="function"><name>TriangleStrategies</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a31bc50c66b8111bbdbeddf522784041d" kind="function"><name>GetGeometry</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a8644c03e4f8aac7c8517ccb6afe0637f" kind="function"><name>GetString</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a53ec3a24eb2b6bd3ee87038c3cebf70b" kind="function"><name>Accept</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1ad997c7545c162f6445ce324c43d6dd9b" kind="function"><name>GetCenter</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete" kind="class"><name>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDelete</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a67803b43d41c7f90dec6fc4c2b664f2f" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1ab5288976f59dbe78ef1cf1d9629457f9" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a74659922f1e3ee86b1a4d53330ccdeb3" kind="function"><name>VisitLine</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a4db99fd00ec1a2e64e10762aff1c8aa3" kind="function"><name>VisitSquare</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a803618a19eaf55e6151ffd7c01e60f74" kind="function"><name>VisitTriangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1aa8c115b3bb44d27f4de3998c6ee1b10d" kind="function"><name>VisitEllipse</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display" kind="class"><name>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDisplay</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a1ecb2c3e4e90e9a3228e3b9dd16d837f" kind="variable"><name>_isHead</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1ae446f4dee1ff36e9cdca688e6339d486" kind="variable"><name>_printer</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a0a2bbcc4e7bda01e3be1af64de2e5e11" kind="function"><name>VisitorDisplay</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a8f8a1090a65a1d4706cf3ff011d11390" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a3819ae8b96ddf1218344310abe894bd8" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a24edfd7a004b1b7abb9a851bbf1eb96a" kind="function"><name>VisitLine</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a59afcb29ac5bbc5eb29e43168b6a93f9" kind="function"><name>VisitSquare</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1af0b7a7cc7773a738adaa15c9c3561e26" kind="function"><name>VisitTriangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a82a4a7a46efb3369f34f3068555f754b" kind="function"><name>VisitEllipse</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw" kind="class"><name>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDraw</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a5a30e18dbd73d4a692d25ceeb199d508" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a5c40c9441e6bc5e063643a3bb16c58bc" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a3fc75e9c07836998178731a0b3211c5f" kind="function"><name>VisitLine</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a46a06a2351089052106cb0817f3e6993" kind="function"><name>VisitSquare</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1af70b3fee9471447f3ed63d54e1ee26e8" kind="function"><name>VisitTriangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a8f0cfc11ac36d3d98166f4edad449e13" kind="function"><name>VisitEllipse</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move" kind="class"><name>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a89bc725ad2297ffbcce6aa02a1337534" kind="property"><name>TranslationToNewPosition</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a184c2aac8b78cf6bd9ed8d35d3dc0ae5" kind="function"><name>VisitorMove</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a94347807e8b28bf1e642e9136a33f819" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a39f448b5ab0eb778bc28ba318b6daedf" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1ae5eb107e115f85a1dafd803aff94e6cf" kind="function"><name>VisitLine</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a7f19f2bbc4a13b70b8f3090e67839b9b" kind="function"><name>VisitSquare</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1add340b3bb653526403a37182e6e534c0" kind="function"><name>VisitTriangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a2f1cf928ab643aaf319a34f549d4fb2a" kind="function"><name>VisitEllipse</name></member>
+  </compound>
+  <compound refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize" kind="class"><name>PaintApp4Scrubs::Classes::VisitorCommands::VisitorResize</name>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a8b962f5c0ef6aac6c9f27c3ee4157a02" kind="variable"><name>_distance</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1ae0900c0d320a56ef0957964e14106e8a" kind="function"><name>VisitorResize</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1ab3674a36ae0d5f5cf97c6d27ef933dbb" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a086656b2033a11bd351fd718f90da692" kind="function"><name>Visit</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a5110fb10e9b8e5cc82ce8393ba75aa12" kind="function"><name>VisitLine</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1aaec9022de940300de8af151142eef659" kind="function"><name>VisitSquare</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a91ea27ef4415b896011b2b56a8104f3a" kind="function"><name>VisitTriangle</name></member>
+    <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a7ed36af64b2c2fe869e1ee2bf4e1031c" kind="function"><name>VisitEllipse</name></member>
+  </compound>
+  <compound refid="namespace_decorator" kind="namespace"><name>Decorator</name>
+  </compound>
+  <compound refid="namespace_paint_app4_scrubs" kind="namespace"><name>PaintApp4Scrubs</name>
+  </compound>
+  <compound refid="namespace_paint_app4_scrubs_1_1_classes" kind="namespace"><name>PaintApp4Scrubs::Classes</name>
+  </compound>
+  <compound refid="namespace_paint_app4_scrubs_1_1_classes_1_1_commands" kind="namespace"><name>PaintApp4Scrubs::Classes::Commands</name>
+  </compound>
+  <compound refid="namespace_paint_app4_scrubs_1_1_classes_1_1_shapes" kind="namespace"><name>PaintApp4Scrubs::Classes::Shapes</name>
+  </compound>
+  <compound refid="namespace_paint_app4_scrubs_1_1_classes_1_1_stratagies" kind="namespace"><name>PaintApp4Scrubs::Classes::Stratagies</name>
+  </compound>
+  <compound refid="namespace_paint_app4_scrubs_1_1_classes_1_1_strategies" kind="namespace"><name>PaintApp4Scrubs::Classes::Strategies</name>
+  </compound>
+  <compound refid="namespace_paint_app4_scrubs_1_1_classes_1_1_visitor_commands" kind="namespace"><name>PaintApp4Scrubs::Classes::VisitorCommands</name>
+  </compound>
+  <compound refid="namespace_paint_app4_scrubs_1_1_interfaces" kind="namespace"><name>PaintApp4Scrubs::Interfaces</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_configuration" kind="namespace"><name>System::Configuration</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data" kind="namespace"><name>System::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services_1_1_windows_runtime" kind="namespace"><name>System::Runtime::InteropServices::WindowsRuntime</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography_1_1_x509_certificates" kind="namespace"><name>System::Security::Cryptography::X509Certificates</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows" kind="namespace"><name>System::Windows</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_automation" kind="namespace"><name>System::Windows::Automation</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_controls" kind="namespace"><name>System::Windows::Controls</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_controls_1_1_primitives" kind="namespace"><name>System::Windows::Controls::Primitives</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_controls_1_1_ribbon" kind="namespace"><name>System::Windows::Controls::Ribbon</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_data" kind="namespace"><name>System::Windows::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_documents" kind="namespace"><name>System::Windows::Documents</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_ink" kind="namespace"><name>System::Windows::Ink</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_input" kind="namespace"><name>System::Windows::Input</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_markup" kind="namespace"><name>System::Windows::Markup</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media" kind="namespace"><name>System::Windows::Media</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media_1_1_animation" kind="namespace"><name>System::Windows::Media::Animation</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media_1_1_effects" kind="namespace"><name>System::Windows::Media::Effects</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media_1_1_imaging" kind="namespace"><name>System::Windows::Media::Imaging</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media_1_1_media3_d" kind="namespace"><name>System::Windows::Media::Media3D</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_media_1_1_text_formatting" kind="namespace"><name>System::Windows::Media::TextFormatting</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_navigation" kind="namespace"><name>System::Windows::Navigation</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_shapes" kind="namespace"><name>System::Windows::Shapes</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_shell" kind="namespace"><name>System::Windows::Shell</name>
+  </compound>
+  <compound refid="comptest_8txt" kind="file"><name>comptest.txt</name>
+  </compound>
+  <compound refid="_app_8xaml_8cs" kind="file"><name>App.xaml.cs</name>
+  </compound>
+  <compound refid="_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_boxer_8cs" kind="file"><name>Boxer.cs</name>
+  </compound>
+  <compound refid="_broker_8cs" kind="file"><name>Broker.cs</name>
+  </compound>
+  <compound refid="_delete_8cs" kind="file"><name>Delete.cs</name>
+  </compound>
+  <compound refid="_display_group_8cs" kind="file"><name>DisplayGroup.cs</name>
+  </compound>
+  <compound refid="_draw_8cs" kind="file"><name>Draw.cs</name>
+  </compound>
+  <compound refid="_make_group_8cs" kind="file"><name>MakeGroup.cs</name>
+  </compound>
+  <compound refid="_move_8cs" kind="file"><name>Move.cs</name>
+  </compound>
+  <compound refid="_resize_8cs" kind="file"><name>Resize.cs</name>
+  </compound>
+  <compound refid="_save_file_8cs" kind="file"><name>SaveFile.cs</name>
+  </compound>
+  <compound refid="_converter_8cs" kind="file"><name>Converter.cs</name>
+  </compound>
+  <compound refid="_decorator_8cs" kind="file"><name>Decorator.cs</name>
+  </compound>
+  <compound refid="_ornament_8cs" kind="file"><name>Ornament.cs</name>
+  </compound>
+  <compound refid="_base_shape_8cs" kind="file"><name>BaseShape.cs</name>
+  </compound>
+  <compound refid="_god_shape_8cs" kind="file"><name>GodShape.cs</name>
+  </compound>
+  <compound refid="_ellipse_strategies_8cs" kind="file"><name>EllipseStrategies.cs</name>
+  </compound>
+  <compound refid="_i_strategy_8cs" kind="file"><name>IStrategy.cs</name>
+  </compound>
+  <compound refid="_line_strategies_8cs" kind="file"><name>LineStrategies.cs</name>
+  </compound>
+  <compound refid="_square_strategies_8cs" kind="file"><name>SquareStrategies.cs</name>
+  </compound>
+  <compound refid="_triangle_strategies_8cs" kind="file"><name>TriangleStrategies.cs</name>
+  </compound>
+  <compound refid="_the_printer_8cs" kind="file"><name>ThePrinter.cs</name>
+  </compound>
+  <compound refid="_visitor_delete_8cs" kind="file"><name>VisitorDelete.cs</name>
+  </compound>
+  <compound refid="_visitor_display_8cs" kind="file"><name>VisitorDisplay.cs</name>
+  </compound>
+  <compound refid="_visitor_draw_8cs" kind="file"><name>VisitorDraw.cs</name>
+  </compound>
+  <compound refid="_visitor_move_8cs" kind="file"><name>VisitorMove.cs</name>
+  </compound>
+  <compound refid="_visitor_resize_8cs" kind="file"><name>VisitorResize.cs</name>
+  </compound>
+  <compound refid="_i_accept_8cs" kind="file"><name>IAccept.cs</name>
+  </compound>
+  <compound refid="_i_command_8cs" kind="file"><name>ICommand.cs</name>
+  </compound>
+  <compound refid="_i_component_8cs" kind="file"><name>IComponent.cs</name>
+  </compound>
+  <compound refid="_i_visitor_8cs" kind="file"><name>IVisitor.cs</name>
+  </compound>
+  <compound refid="_main_window_8xaml_8cs" kind="file"><name>MainWindow.xaml.cs</name>
+    <member refid="_main_window_8xaml_8cs_1a56e14c17b44cfdd11f8021c9b67804eb" kind="typedef"><name>Decorator</name></member>
+  </compound>
+  <compound refid="_debug_2netcoreapp3_81_2_app_8g_8cs" kind="file"><name>App.g.cs</name>
+  </compound>
+  <compound refid="_release_2netcoreapp3_81_2_app_8g_8cs" kind="file"><name>App.g.cs</name>
+  </compound>
+  <compound refid="_debug_2netcoreapp3_81_2_app_8g_8i_8cs" kind="file"><name>App.g.i.cs</name>
+  </compound>
+  <compound refid="_release_2netcoreapp3_81_2_app_8g_8i_8cs" kind="file"><name>App.g.i.cs</name>
+  </compound>
+  <compound refid="_debug_2netcoreapp3_81_2_main_window_8g_8cs" kind="file"><name>MainWindow.g.cs</name>
+  </compound>
+  <compound refid="_release_2netcoreapp3_81_2_main_window_8g_8cs" kind="file"><name>MainWindow.g.cs</name>
+  </compound>
+  <compound refid="_debug_2netcoreapp3_81_2_main_window_8g_8i_8cs" kind="file"><name>MainWindow.g.i.cs</name>
+  </compound>
+  <compound refid="_release_2netcoreapp3_81_2_main_window_8g_8i_8cs" kind="file"><name>MainWindow.g.i.cs</name>
+  </compound>
+  <compound refid="_debug_2netcoreapp3_81_2_paint_app4_scrubs_8_assembly_info_8cs" kind="file"><name>PaintApp4Scrubs.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_release_2netcoreapp3_81_2_paint_app4_scrubs_8_assembly_info_8cs" kind="file"><name>PaintApp4Scrubs.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_paint_app4_scrubs_8csproj_8_file_list_absolute_8txt" kind="file"><name>PaintApp4Scrubs.csproj.FileListAbsolute.txt</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="savetest_8txt" kind="file"><name>savetest.txt</name>
+  </compound>
+  <compound refid="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e" kind="page"><name>md_D:_GitHub_P3-Design-Patterns-Paint-Deluxe_README</name>
+  </compound>
+  <compound refid="dir_e7a027eaa42dbdd37365ca4d1dfc068d" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes</name>
+  </compound>
+  <compound refid="dir_c8d0c4902dd407af0acc31e3a3fed626" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands</name>
+  </compound>
+  <compound refid="dir_319d22902f36f5a49cce7b422e014e76" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug</name>
+  </compound>
+  <compound refid="dir_e5fbe6d2783ccd4c93c7856d92d7be6e" kind="dir"><name>D:/GitHub</name>
+  </compound>
+  <compound refid="dir_ef9d93a2d6fe5797282341322ec4badc" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces</name>
+  </compound>
+  <compound refid="dir_eca68112bca18ef1701b74a71615578d" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1</name>
+  </compound>
+  <compound refid="dir_9f2e7af447d660bac3906729888570aa" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1</name>
+  </compound>
+  <compound refid="dir_209498728994f82e122e649fd92667ea" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj</name>
+  </compound>
+  <compound refid="dir_170126d27869b1d7afb002f0682a9651" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe</name>
+  </compound>
+  <compound refid="dir_b86dbe68d35ad638af095b5b7a32f33f" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs</name>
+  </compound>
+  <compound refid="dir_12accfe30c02de3ae92b5f9dba5dc049" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release</name>
+  </compound>
+  <compound refid="dir_1850e3f9036472d64b7ff0c8d5a13037" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes</name>
+  </compound>
+  <compound refid="dir_1f8de7a75ea8a9a9b38f7fd10273a3ba" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies</name>
+  </compound>
+  <compound refid="dir_62b09fc93c07e3d670bf8b1e19c4a092" kind="dir"><name>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands</name>
+  </compound>
+</doxygenindex>

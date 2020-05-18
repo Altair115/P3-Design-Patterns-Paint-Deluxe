@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_ornament" kind="class" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Classes::Ornament</compoundname>
+    <basecompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Decorator</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a1b62fdfc62e2ec6836528fc4d7e7662d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string PaintApp4Scrubs.Classes.Ornament.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="9" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a3dd8cdd86edaada867f1b0bde3a4bde2" prot="public" static="no" mutable="no">
+        <type>Vector</type>
+        <definition>Vector PaintApp4Scrubs.Classes.Ornament.OrnamentPos</definition>
+        <argsstring></argsstring>
+        <name>OrnamentPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="10" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a562359c953504366976b4cc6bb151549" prot="protected" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Geometry</type>
+        <definition>override Geometry PaintApp4Scrubs.Classes.Ornament.DefiningGeometry</definition>
+        <argsstring></argsstring>
+        <name>DefiningGeometry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="12" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a2c20d28308f6299534817de4f031cdfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void PaintApp4Scrubs.Classes.Ornament.Decorate</definition>
+        <argsstring>()</argsstring>
+        <name>Decorate</name>
+        <reimplements refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1ab73595c2ab30efa54a06ce380911bdf7">Decorate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="14" column="30" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="14" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>IAccept</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
+      </node>
+      <node id="3">
+        <label>GodShape</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.Ornament</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Shape</label>
+      </node>
+      <node id="2">
+        <label>Decorator</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>IComponent</label>
+        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>IAccept</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
+      </node>
+      <node id="3">
+        <label>GodShape</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PaintApp4Scrubs.Classes.Shapes.GodShape</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.Ornament</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Shape</label>
+      </node>
+      <node id="2">
+        <label>Decorator</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>component</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>IComponent</label>
+        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="7" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="8" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a96bd81ff40ec7c5a5704dfcd93545d46" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>Accept</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1a1515098a2af8fd8c51a77ac48205e35f" prot="protected" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>component</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a2c20d28308f6299534817de4f031cdfd" prot="public" virt="virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>Decorate</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a562359c953504366976b4cc6bb151549" prot="protected" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>DefiningGeometry</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a84d06da39cc4ef99bf9d0979e4a7c994" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>Depth</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a1b62fdfc62e2ec6836528fc4d7e7662d" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>Name</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a7738dcb9d428d2f033cf79730dea4695" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>OriginPos</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a3dd8cdd86edaada867f1b0bde3a4bde2" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>OrnamentPos</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1a7a0fdeabc6911c6906c2b5f00f77ef8d" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>SetComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
