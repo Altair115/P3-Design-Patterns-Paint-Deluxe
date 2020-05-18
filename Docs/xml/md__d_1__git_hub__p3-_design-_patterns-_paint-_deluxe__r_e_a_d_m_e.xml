@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e" kind="page">
+    <compoundname>md_D:_GitHub_P3-Design-Patterns-Paint-Deluxe_README</compoundname>
+    <title>P3-Design-Patterns-Paint-Deluxe</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>P3 Design patterns Project</para>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md1">
+<title>Grafische editor</title>
+<para>Met een grafische editor kunnen ellipsen en rechthoeken getekend worden. De figuren moeten met de muis getekend kunnen worden en met de muis geselecteerd kunnen worden. Een of meer geselecteerde figuren moeten tot een groep gemaakt kunnen worden. Groepen gedragen zich verder als basisfiguren. Wat inhoudt dat binnen groepen weer groepen kunnen zitten, waarbinnen weer groepen zitten etc.. (zonder beperking aan de nesting). Verder moeten figuren (en dus ook groepen) verplaatst kunnen worden en van grootte veranderd kunnen worden. Plaatjes moeten ook op schijf kunnen worden opgeslagen en weer kunnen worden teruggelezen. In deze opgave moet een grafische editor gemaakt worden met gebruikmaking van design patterns. Dit moet in verschillende stappen gebeuren, waarbij de al gemaakte code vaak van structuur veranderd moet worden (refactoring).</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md2">
+<title>Stap 1: eenvoudig tekenprogramma</title>
+<para><itemizedlist>
+<listitem><para>Maak een eerste versie van de grafische editor die ellipsen en rechthoeken kan tekenen, selecteren, verplaatsen en van grootte veranderen.</para>
+</listitem><listitem><para>Groepen, bijschriften en file operaties hoeven nu nog niet.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md3">
+<title>Stap 2: command pattern</title>
+<para><itemizedlist>
+<listitem><para>Voeg file IO toe (volgens de grammatica die verderop uitgelegd wordt).</para>
+</listitem><listitem><para>Zorg ervoor dat alle acties die een gebruiker kan uitvoeren, via command-objecten worden gedaan.</para>
+</listitem><listitem><para>Voeg de mogelijkheid toe om acties ongedaan te maken (onbeperkte undo en redo).</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md4">
+<title>Stap 3: composite pattern</title>
+<para><itemizedlist>
+<listitem><para>Voeg groepen toe volgens het composite pattern.</para>
+</listitem><listitem><para>Pas ook de file IO aan.</para>
+</listitem><listitem><para>Bijschriften hoeven nu nog niet.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md5">
+<title>Stap 4: visitor pattern</title>
+<para><itemizedlist>
+<listitem><para>Implementeer een visitor klasse voor de figuren.</para>
+</listitem><listitem><para>Verplaatsen, resizen en schrijven naar file moeten door subklassen van deze visitor uitgevoerd worden.</para>
+</listitem><listitem><para>Refactor het programma.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md6">
+<title>Stap 5: strategy pattern en singleton pattern</title>
+<para><itemizedlist>
+<listitem><para>Het verschil tussen een ellips en een rechthoek is eigenlijk alleen de manier van tekenen en hun naam.</para>
+</listitem><listitem><para>We kunnen ze dus wel samennemen tot een klasse &quot;basisfiguur&quot;.</para>
+</listitem><listitem><para>Een basisfiguur bevat coordinaten en een pointer naar een strategy object (zijn delegate).</para>
+</listitem><listitem><para>De delegate kan tekenen en heeft een toString methode.</para>
+</listitem><listitem><para>Er zijn maar 2 delegates nodig: voor een ellips en voor een rechthoek. Dit kunnen singleton objecten zijn.</para>
+</listitem><listitem><para>Refactor het programma</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md7">
+<title>Stap 6: decorator pattern</title>
+<para><itemizedlist>
+<listitem><para>Nu moeten er bijschriften bij de figuren geplaatst kunnen worden (soms ernaast, soms erboven, soms eronder).</para>
+</listitem><listitem><para>Er kunnen meerdere bijschriften bij een figuur staan en ook groepen kunnen bijschriften hebben.</para>
+</listitem><listitem><para>Het decorator pattern is hiervoor zeer geschikt.</para>
+</listitem><listitem><para>Pas ook de file IO aan.</para>
+</listitem><listitem><para>Refactor het programma.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md8">
+<title>Beoordeling:</title>
+<para>de opgave wordt beoordeeld aan de hand van de volgende criteria:<itemizedlist>
+<listitem><para>elke stap moet worden gedemonstreerd en besproken met de begeleidende docent</para>
+</listitem><listitem><para>bij elke stap moet de broncode en een ontwerpdocument worden ingeleverd</para>
+</listitem><listitem><para>broncode is voorzien van voldoende commentaar</para>
+</listitem><listitem><para>een ontwerpdocument bevat een UML-beschrijving in de vorm van begeleidende tekst, klassendiagrammen, toestandsdiagrammen en tijdsvolgordediagrammen (voor zover van toepassing)</para>
+</listitem></itemizedlist>
+</para>
+<para>NB: De ontwerpdocumenten vormen tezamen het rapport bij de eindopdracht.</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md9">
+<title>Grammatica:</title>
+<para><programlisting><codeline><highlight class="normal">file<sp/>=<sp/>group</highlight></codeline>
+<codeline><highlight class="normal">group<sp/>=<sp/>&quot;group&quot;<sp/>count<sp/>{figure}</highlight></codeline>
+<codeline><highlight class="normal">figure<sp/>=<sp/>group<sp/>|<sp/>rectangle<sp/>|<sp/>ellipse<sp/>|<sp/>ornament</highlight></codeline>
+<codeline><highlight class="normal">rectangle<sp/>=<sp/>&quot;rectangle&quot;<sp/>left<sp/>top<sp/>width<sp/>height</highlight></codeline>
+<codeline><highlight class="normal">ellipse<sp/>=<sp/>&quot;ellipse&quot;<sp/>left<sp/>top<sp/>width<sp/>height</highlight></codeline>
+<codeline><highlight class="normal">ornament<sp/>=<sp/>&quot;ornament&quot;<sp/>position<sp/>string<sp/>figure</highlight></codeline>
+<codeline><highlight class="normal">position<sp/>=<sp/>&quot;top&quot;<sp/>|<sp/>&quot;bottom&quot;<sp/>|<sp/>&quot;left&quot;<sp/>|<sp/>&quot;right&quot;</highlight></codeline>
+<codeline><highlight class="normal">count,<sp/>left,<sp/>top,<sp/>width,<sp/>height<sp/>=<sp/>int</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>Hierbij betekent { } dat iets 0 of meer keer kan voorkomen.</para>
+</listitem><listitem><para>En [ ] dat iets 0 of 1 keer kan voorkomen.</para>
+</listitem><listitem><para>En &quot; &quot; betekent dat de tekst binnen de quotes letterlijk voorkomt.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__d_1__git_hub__p3-_design-_patterns-_paint-_deluxe__r_e_a_d_m_e_1autotoc_md10">
+<title>Voorbeeld:</title>
+<para><programlisting><codeline><highlight class="normal">group<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/>ornament<sp/>top<sp/>&quot;rondje&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>ellipse<sp/>100<sp/>100<sp/>20<sp/>50</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>group<sp/>3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>rectangle<sp/>10<sp/>20<sp/>100<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>ornament<sp/>top<sp/>&quot;group&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>ornament<sp/>bottom<sp/>&quot;ellipses&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>group<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>ellipse<sp/>50<sp/>150<sp/>20<sp/>50</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>ellipse<sp/>70<sp/>150<sp/>20<sp/>50</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>rectangle<sp/>100<sp/>100<sp/>10<sp/>10</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>Dit geeft een file aan die bestaat uit een groep van 2 figuren.</para>
+</listitem><listitem><para>De eerste figuur is een ellips met left=100, top=100, width=20, height=50 met een bijschrift &quot;rondje&quot; erboven.</para>
+</listitem><listitem><para>De tweede figuur is een groep van 3 figuren: een rechthoek, een groep van 2 ellipsen en weer een rechthoek.</para>
+</listitem><listitem><para>De groep van 2 ellipsen heeft zowel een bijschrift aan de bovenkant als een bijschrift aan de onderkant.</para>
+</listitem></itemizedlist>
+</para>
+<para>Een ornament hoort altijd bij de eerstvolgende figuur en er kunnen meerdere ornamenten bij een figuur horen. De volgorde van figuren binnen een groep is in principe vrij.</para>
+<para>Het inspringen is verplicht en gebeurt alleen bij groepen, dus niet bij een ornament. Verder moet tussen woorden op een regel 1 spatie staan. De verschillende elementen group, rectangle, ellipse en ornament moeten elk op een afzonderlijke regel staan. </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

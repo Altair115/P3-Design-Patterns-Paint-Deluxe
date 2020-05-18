@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_paint_app4_scrubs_8csproj_8_file_list_absolute_8txt" kind="file" language="C++">
+    <compoundname>PaintApp4Scrubs.csproj.FileListAbsolute.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\bin\Debug\netcoreapp3.1\PaintApp4Scrubs.exe</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\bin\Debug\netcoreapp3.1\PaintApp4Scrubs.deps.json</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\bin\Debug\netcoreapp3.1\PaintApp4Scrubs.runtimeconfig.json</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\bin\Debug\netcoreapp3.1\PaintApp4Scrubs.runtimeconfig.dev.json</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\bin\Debug\netcoreapp3.1\PaintApp4Scrubs.dll</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\bin\Debug\netcoreapp3.1\PaintApp4Scrubs.pdb</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\MainWindow.g.cs</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\App.g.cs</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs_MarkupCompile.cache</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs_MarkupCompile.lref</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\MainWindow.baml</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs.g.resources</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs.AssemblyInfoInputs.cache</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs.AssemblyInfo.cs</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs.dll</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs.pdb</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs.csprojAssemblyReference.cache</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs.csproj.CoreCompileInputs.cache</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">D:\GitHub\P3-Design-Patterns-Paint-Deluxe\PaintApp4Scrubs\obj\Debug\netcoreapp3.1\PaintApp4Scrubs.genruntimeconfig.cache</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/PaintApp4Scrubs.csproj.FileListAbsolute.txt"/>
+  </compounddef>
+</doxygen>

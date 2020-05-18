@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="namespace_paint_app4_scrubs_1_1_interfaces" kind="namespace" language="C#">
+    <compoundname>PaintApp4Scrubs::Interfaces</compoundname>
+    <innerclass refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept" prot="public">PaintApp4Scrubs::Interfaces::IAccept</innerclass>
+    <innerclass refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" prot="public">PaintApp4Scrubs::Interfaces::ICommand</innerclass>
+    <innerclass refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" prot="public">PaintApp4Scrubs::Interfaces::IVisitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IAccept.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>
