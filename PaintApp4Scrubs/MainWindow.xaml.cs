@@ -329,22 +329,24 @@ namespace PaintApp4Scrubs
             }
 
             DrawShape(square);
-            Ornament or1 = new Ornament(square);
-            Ornament or2 = new Ornament(or1);
-            Ornament or3 = new Ornament(or2);
-            Ornament or4 = new Ornament(or3);
-
-            or1.PositionPlace = comboBoxLinkers[0].PositionString;
-            or2.PositionPlace = comboBoxLinkers[1].PositionString;
-            or3.PositionPlace = comboBoxLinkers[2].PositionString;
-            or4.PositionPlace = comboBoxLinkers[3].PositionString;
-
-            or1.Name = comboBoxLinkers[0].TextBoxName;
-            or2.Name = comboBoxLinkers[1].TextBoxName;
-            or3.Name = comboBoxLinkers[2].TextBoxName;
-            or4.Name = comboBoxLinkers[3].TextBoxName;
-
-            or4.Decorate();
+            List<Ornament> ornaments = new List<Ornament>();
+            for (int i = 0; i < comboBoxLinkers.Count; i++)
+            {
+                if (i == 0)
+                {
+                    Ornament ornament = new Ornament(square);
+                    ornaments.Add(ornament);
+                }
+                else
+                {
+                    var x =ornaments[i - 1];
+                    Ornament ornament = new Ornament(x);
+                    ornaments.Add(ornament);
+                }
+                ornaments[i].PositionPlace = comboBoxLinkers[i].PositionString;
+                ornaments[i].Name = comboBoxLinkers[i].TextBoxName;
+            }
+            ornaments[^1].Decorate();
         }
 
         private void DrawTriangle()
