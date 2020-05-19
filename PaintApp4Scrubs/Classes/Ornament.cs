@@ -34,13 +34,13 @@ namespace PaintApp4Scrubs.Classes
             switch (position)
             {
                 case "left":
-                    return new Vector(center.X + 50,center.Y);
+                    return new Vector(center.X - 50,center.Y);
                 case "right":
-                    return new Vector(center.X - 50, center.Y);
+                    return new Vector(center.X + 50, center.Y);
                 case "top":
-                    return new Vector(center.X , center.Y + 50);
+                    return new Vector(center.X , center.Y - 50);
                 case "bottom":
-                    return new Vector(center.X, center.Y - 50);
+                    return new Vector(center.X, center.Y + 50);
                 default:
                     return new Vector(0,0);
             }

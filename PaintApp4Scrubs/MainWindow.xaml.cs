@@ -23,7 +23,7 @@ namespace PaintApp4Scrubs
         private GodShape _selectedShape;
         private readonly List<IComponent> _boxList = new List<IComponent>();
         private readonly Boxer _box;
-        private  List<ComboBoxLinker> comboBoxLinkers = new List<ComboBoxLinker>();
+        private List<ComboBoxLinker> comboBoxLinkers = new List<ComboBoxLinker>();
 
 
         private enum ModeSwitch
@@ -126,7 +126,7 @@ namespace PaintApp4Scrubs
 
         private void OrnamentBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           
+
             if (ornamentBox != null && OrnementName != null)
             {
                 ComboBoxLinker comboBoxLinker = new ComboBoxLinker();
@@ -148,7 +148,7 @@ namespace PaintApp4Scrubs
                 }
                 comboBoxLinkers.Add(comboBoxLinker);
             }
-        
+
 
         }
         private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e)
@@ -228,12 +228,40 @@ namespace PaintApp4Scrubs
             }
         }
 
+        private void makeOrnaments(BaseShape shape)
+        {
+            List<Ornament> ornaments = new List<Ornament>();
+            if (comboBoxLinkers.Count != 0)
+            {
+                for (int i = 0; i < comboBoxLinkers.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        Ornament ornament = new Ornament(shape);
+                        ornaments.Add(ornament);
+                    }
+                    else
+                    {
+                        var x = ornaments[i - 1];
+                        Ornament ornament = new Ornament(x);
+                        ornaments.Add(ornament);
+                    }
+                    ornaments[i].PositionPlace = comboBoxLinkers[i].PositionString;
+                    ornaments[i].Name = comboBoxLinkers[i].TextBoxName;
+                }
+                ornaments[^1].Decorate();
+                comboBoxLinkers.Clear();
+            }
+
+
+        }
+
         #region DrawStrategies
 
         // Sets and draws line after mouse is released
         private void DrawLine()
         {
-            BaseShape newLine = new BaseShape(new LineStrategies(_startPoint,_endPoint))
+            BaseShape newLine = new BaseShape(new LineStrategies(_startPoint, _endPoint))
             {
                 Stroke = Brushes.Blue,
                 StrokeThickness = 4
@@ -245,7 +273,7 @@ namespace PaintApp4Scrubs
         private void DrawEllipse()
         {
             BaseShape newEllipse =
-                new BaseShape(new EllipseStrategies(10,10))
+                new BaseShape(new EllipseStrategies(10, 10))
                 {
                     Stroke = Brushes.Blue,
                     Fill = Brushes.White,
@@ -290,7 +318,7 @@ namespace PaintApp4Scrubs
 
         private void DrawRectangle()
         {
-            BaseShape square = new BaseShape(new SquareStrategies(10 , 10))
+            BaseShape square = new BaseShape(new SquareStrategies(10, 10))
             {
                 Stroke = Brushes.Blue,
                 Fill = Brushes.White,
@@ -329,24 +357,7 @@ namespace PaintApp4Scrubs
             }
 
             DrawShape(square);
-            List<Ornament> ornaments = new List<Ornament>();
-            for (int i = 0; i < comboBoxLinkers.Count; i++)
-            {
-                if (i == 0)
-                {
-                    Ornament ornament = new Ornament(square);
-                    ornaments.Add(ornament);
-                }
-                else
-                {
-                    var x =ornaments[i - 1];
-                    Ornament ornament = new Ornament(x);
-                    ornaments.Add(ornament);
-                }
-                ornaments[i].PositionPlace = comboBoxLinkers[i].PositionString;
-                ornaments[i].Name = comboBoxLinkers[i].TextBoxName;
-            }
-            ornaments[^1].Decorate();
+            makeOrnaments(square);
         }
 
         private void DrawTriangle()
@@ -478,7 +489,7 @@ namespace PaintApp4Scrubs
             Resize resize = new Resize(BoxFinder(selectedShape), distance);
             _broker.DoCommand(resize);
         }
-        
+
         public void AddToBoxList(IComponent selectedComponent)
         {
             if (selectedComponent == null)
@@ -514,7 +525,7 @@ namespace PaintApp4Scrubs
             _broker.DoCommand(displayGroup);
         }
 
-        
+
     }
     #endregion
 };
