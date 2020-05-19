@@ -267,6 +267,7 @@ namespace PaintApp4Scrubs
                 StrokeThickness = 4
             };
             DrawShape(newLine);
+            makeOrnaments(newLine);
         }
 
         // Sets and draws ellipse after mouse is released
@@ -312,6 +313,7 @@ namespace PaintApp4Scrubs
             }
 
             DrawShape(newEllipse);
+            makeOrnaments(newEllipse);
         }
 
         // Sets and draws rectangle after mouse is released
@@ -403,6 +405,7 @@ namespace PaintApp4Scrubs
             }
 
             DrawShape(triangle);
+            makeOrnaments(triangle);
         }
 
         #endregion
