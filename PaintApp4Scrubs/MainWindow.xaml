@@ -25,8 +25,14 @@
             <RadioButton Name="SelectorButton" BorderBrush="#FF969696" Content="Selector" Height="50" Width="80" GroupName="ShapeGroup" Click="SelectorButton_OnClick" IsChecked="False"/>
             <RadioButton Name="DisplayButton" BorderBrush="#FF969696" Content="Display Group" Height="50" Width="80" GroupName="ShapeGroup" Click="DisplayButton_OnClick" IsChecked="False"/>
             <Button Name="GroupButton" BorderBrush="#FF969696" Content="Group" Height="50" Width="80" Click="GroupButton_OnClick"/>
-            <Button Name="Save" BorderBrush="#FF969696" Content="Display hierarchy" Height="50" Width="80" Click="Save_OnClick"/>
-
+            <Button Name="Save" BorderBrush="#FF969696" Content="Display hierarchy" Height="50" Width="120" Click="Save_OnClick"/>
+            <ComboBox SelectionChanged="OrnamentBox_OnSelectionChanged" Name="ornamentBox" Height="50" Width="80">
+                <ComboBoxItem IsSelected="True">top</ComboBoxItem>
+                <ComboBoxItem>left</ComboBoxItem>
+                <ComboBoxItem>right</ComboBoxItem>
+                <ComboBoxItem>bottom</ComboBoxItem>
+            </ComboBox>
+            <TextBox Name="OrnementName" Width="100" MaxLength="50" MaxWidth="100">vul hier je text in</TextBox>
             <Label Name="LabelCoords" Content="X:Y"></Label>
         </ToolBar>
         <Canvas Name="Canvas" x:FieldModifier="public" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">

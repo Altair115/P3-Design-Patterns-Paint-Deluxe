@@ -1,23 +1,32 @@
-﻿using PaintApp4Scrubs.Classes.Shapes;
+﻿using System.Windows;
+using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs.Classes
 {
     public abstract class Decorator : GodShape
     {
-        protected GodShape component;
+        protected GodShape _component;
 
+        public Decorator(GodShape p)
+        {
+            _component = p;
+        }
         public void SetComponent(GodShape component)
         {
-            this.component = component;
+            _component = component;
         }
 
         public override void Decorate()
         {
-            if (component != null)
+            if (_component != null)
             {
-                component.Decorate();
+                _component.Decorate();
             }
         }
 
+        public override Vector GetCenter()
+        { 
+            return _component.GetCenter();
+        }
     }
 }

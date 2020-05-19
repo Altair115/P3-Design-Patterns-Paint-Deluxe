@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Printing;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -22,8 +23,8 @@ namespace PaintApp4Scrubs
         private GodShape _selectedShape;
         private readonly List<IComponent> _boxList = new List<IComponent>();
         private readonly Boxer _box;
+        private  List<ComboBoxLinker> comboBoxLinkers = new List<ComboBoxLinker>();
 
-        Ornament ornament = new Ornament();
 
         private enum ModeSwitch
         {
@@ -123,6 +124,33 @@ namespace PaintApp4Scrubs
         private Point _startPoint;
         private Point _endPoint;
 
+        private void OrnamentBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+            if (ornamentBox != null && OrnementName != null)
+            {
+                ComboBoxLinker comboBoxLinker = new ComboBoxLinker();
+                comboBoxLinker.TextBoxName = OrnementName.Text;
+                comboBoxLinker.PositionString = ornamentBox.SelectionBoxItem.ToString();
+                foreach (var item in comboBoxLinkers)
+                {
+                    if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName != comboBoxLinker.TextBoxName)
+                    {
+                        comboBoxLinkers.Remove(item);
+                        comboBoxLinkers.Add(comboBoxLinker);
+                        return;
+                    }
+
+                    if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName == comboBoxLinker.TextBoxName)
+                    {
+                        return;
+                    }
+                }
+                comboBoxLinkers.Add(comboBoxLinker);
+            }
+        
+
+        }
         private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             _startPoint = e.GetPosition(this);
@@ -301,8 +329,22 @@ namespace PaintApp4Scrubs
             }
 
             DrawShape(square);
-            ornament.SetComponent(square);
-            ornament.Decorate();
+            Ornament or1 = new Ornament(square);
+            Ornament or2 = new Ornament(or1);
+            Ornament or3 = new Ornament(or2);
+            Ornament or4 = new Ornament(or3);
+
+            or1.PositionPlace = comboBoxLinkers[0].PositionString;
+            or2.PositionPlace = comboBoxLinkers[1].PositionString;
+            or3.PositionPlace = comboBoxLinkers[2].PositionString;
+            or4.PositionPlace = comboBoxLinkers[3].PositionString;
+
+            or1.Name = comboBoxLinkers[0].TextBoxName;
+            or2.Name = comboBoxLinkers[1].TextBoxName;
+            or3.Name = comboBoxLinkers[2].TextBoxName;
+            or4.Name = comboBoxLinkers[3].TextBoxName;
+
+            or4.Decorate();
         }
 
         private void DrawTriangle()
@@ -469,6 +511,8 @@ namespace PaintApp4Scrubs
             DisplayGroup displayGroup = new DisplayGroup(BoxFinder(shape));
             _broker.DoCommand(displayGroup);
         }
+
+        
     }
     #endregion
 };

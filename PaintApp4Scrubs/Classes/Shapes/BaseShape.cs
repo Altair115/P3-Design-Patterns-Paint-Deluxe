@@ -53,7 +53,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
             return Strategy.GetString(this);
         }
 
-        public Vector GetCenter()
+        public override Vector GetCenter()
         {
             return Strategy.GetCenter(this);
         }
