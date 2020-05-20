@@ -36,8 +36,5 @@ namespace PaintApp4Scrubs.Classes
         { 
             return _component.GetCenter();
         }
-
-       
-
     }
 }

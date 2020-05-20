@@ -41,14 +41,13 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         public void VisitOrnament(Ornament ornament)
         {
             TextBlock textBlock = new TextBlock();
-            //do stuff
-            //textBlock.Text = ornament.Name.ToString();
+            textBlock.Text = ornament.Name.ToString();
             //sizeofTexBlock = MeasureString(Name);
             //Vector x = GetVector(PositionPlace);
             //Canvas.SetTop(textBlock, x.Y);
             //Canvas.SetLeft(textBlock, x.X);
             //MainWindow.AppWindow.PutOnScreen(textBlock);
-            //ornament.getcomponent().accept(this);
+            ornament.GetComponent().Accept(this);
         }
     }
 }
