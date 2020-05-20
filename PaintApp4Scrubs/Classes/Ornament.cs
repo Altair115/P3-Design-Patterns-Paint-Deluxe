@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
@@ -22,14 +23,14 @@ namespace PaintApp4Scrubs.Classes
 
         public override void Decorate()
         {
-            base.Decorate();
-            //do stuff
-            textBlock.Text = Name.ToString();
-            sizeofTexBlock = MeasureString(Name);
-            Vector x = GetVector(PositionPlace);
-            Canvas.SetTop(textBlock, x.Y);
-            Canvas.SetLeft(textBlock, x.X);
-            MainWindow.AppWindow.PutOnScreen(textBlock);
+            //base.Decorate();
+            ////do stuff
+            //textBlock.Text = Name.ToString();
+            //sizeofTexBlock = MeasureString(Name);
+            //Vector x = GetVector(PositionPlace);
+            //Canvas.SetTop(textBlock, x.Y);
+            //Canvas.SetLeft(textBlock, x.X);
+            MainWindow.AppWindow.PutOnScreen(this);
 
         }
         
@@ -69,6 +70,10 @@ namespace PaintApp4Scrubs.Classes
         public override Vector GetCenter()
         {
             return base.GetCenter();
+        }
+        public void Accept(IVisitor visitor)
+        {
+            visitor.VisitOrnament(this);
         }
     }
 }

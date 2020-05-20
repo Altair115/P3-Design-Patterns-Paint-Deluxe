@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using PaintApp4Scrubs.Classes.Shapes;
+using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
@@ -19,6 +20,10 @@ namespace PaintApp4Scrubs.Classes
             height = component.Height;
         }
 
+        public GodShape GetComponent()
+        {
+            return _component;
+        }
         public override void Decorate()
         {
             if (_component != null)
@@ -31,5 +36,8 @@ namespace PaintApp4Scrubs.Classes
         { 
             return _component.GetCenter();
         }
+
+       
+
     }
 }

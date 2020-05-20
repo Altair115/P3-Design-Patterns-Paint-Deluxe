@@ -55,5 +55,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             ellipseBaseShape.StrategyWidth -= _distance.X;
             ellipseBaseShape.StrategyHeight -= _distance.Y;
         }
+
+        public void VisitOrnament(Ornament ornament)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

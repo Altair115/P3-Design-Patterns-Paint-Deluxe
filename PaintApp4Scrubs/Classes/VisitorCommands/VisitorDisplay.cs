@@ -67,5 +67,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             _printer.PrintToFile($"{ellipseBaseShape.Depth}{ellipseBaseShape.ToString()}");
         }
+
+        public void VisitOrnament(Ornament ornament)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,6 +1,7 @@
-﻿using PaintApp4Scrubs.Classes.Shapes;
+﻿using System.Windows.Controls;
+using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
-
+using System.Windows;
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
     public class VisitorDraw : IVisitor
@@ -35,6 +36,19 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         public void VisitEllipse(BaseShape ellipseBaseShape)
         {
             MainWindow.AppWindow.PutOnScreen(ellipseBaseShape);
+        }
+
+        public void VisitOrnament(Ornament ornament)
+        {
+            TextBlock textBlock = new TextBlock();
+            //do stuff
+            //textBlock.Text = ornament.Name.ToString();
+            //sizeofTexBlock = MeasureString(Name);
+            //Vector x = GetVector(PositionPlace);
+            //Canvas.SetTop(textBlock, x.Y);
+            //Canvas.SetLeft(textBlock, x.X);
+            //MainWindow.AppWindow.PutOnScreen(textBlock);
+            //ornament.getcomponent().accept(this);
         }
     }
 }

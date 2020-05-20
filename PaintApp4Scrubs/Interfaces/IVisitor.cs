@@ -19,5 +19,6 @@ namespace PaintApp4Scrubs.Interfaces
         public void VisitLine(BaseShape line);
         public void VisitTriangle(BaseShape triangle);
         public void VisitEllipse(BaseShape ellipseBaseShape);
+        public void VisitOrnament(Ornament ornament);
     }
 }

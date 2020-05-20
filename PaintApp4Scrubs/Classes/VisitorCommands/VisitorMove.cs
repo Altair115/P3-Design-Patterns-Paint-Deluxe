@@ -70,5 +70,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             Canvas.SetLeft(ellipseBaseShape, result.X);
             Canvas.SetTop(ellipseBaseShape, result.Y);
         }
+
+        public void VisitOrnament(Ornament ornament)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
