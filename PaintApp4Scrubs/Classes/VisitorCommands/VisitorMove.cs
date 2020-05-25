@@ -8,16 +8,29 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
     public class VisitorMove : IVisitor
     {
         public Vector TranslationToNewPosition { get; set; }
+
+        /// <summary>
+        /// VisitorMove Constructor
+        /// </summary>
+        /// <param name="translationToNewPosition">The translation vector to the new position</param>
         public VisitorMove(Vector translationToNewPosition)
         {
             TranslationToNewPosition = translationToNewPosition;
         }
 
+        /// <summary>
+        /// Visitor Function for godShape
+        /// </summary>
+        /// <param name="godShape">Selected Shape</param>
         public void Visit(GodShape godShape)
         {
           var x = godShape as BaseShape;
           x.Accept(this);
         }
+        /// <summary>
+        /// Visitor Function for boxer
+        /// </summary>
+        /// <param name="boxer">Selected Box</param>
         public void Visit(Boxer boxer)
         {
             foreach (var component in boxer.GetChildren())
@@ -26,6 +39,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             }
         }
 
+        /// <summary>
+        /// Visitor Function for line
+        /// </summary>
+        /// <param name="line">Selected Shape</param>
         public void VisitLine(BaseShape line)
         {
             var translation = Converter.ToPoint(TranslationToNewPosition);
@@ -43,6 +60,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             line.EndPoint = lineEndPoint;
         }
 
+        /// <summary>
+        /// Visitor Function for square
+        /// </summary>
+        /// <param name="square">Selected Shape</param>
         public void VisitSquare(BaseShape square)
         {
             square.OriginPos = square.GetCenter();
@@ -53,6 +74,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             Canvas.SetTop(square, top);
         }
 
+        /// <summary>
+        /// Visitor Function for triangle
+        /// </summary>
+        /// <param name="triangle">Selected Shape</param>
         public void VisitTriangle(BaseShape triangle)
         {
             triangle.OriginPos = triangle.GetCenter();
@@ -63,12 +88,16 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             Canvas.SetTop(triangle, top);
         }
 
-        public void VisitEllipse(BaseShape ellipseBaseShape)
+        /// <summary>
+        /// Visitor Function for ellipse
+        /// </summary>
+        /// <param name="ellipse">Selected Shape</param>
+        public void VisitEllipse(BaseShape ellipse)
         {
-            ellipseBaseShape.OriginPos = ellipseBaseShape.GetCenter();
-            Vector result = Vector.Subtract(ellipseBaseShape.OriginPos, TranslationToNewPosition);
-            Canvas.SetLeft(ellipseBaseShape, result.X);
-            Canvas.SetTop(ellipseBaseShape, result.Y);
+            ellipse.OriginPos = ellipse.GetCenter();
+            Vector result = Vector.Subtract(ellipse.OriginPos, TranslationToNewPosition);
+            Canvas.SetLeft(ellipse, result.X);
+            Canvas.SetTop(ellipse, result.Y);
         }
     }
 }

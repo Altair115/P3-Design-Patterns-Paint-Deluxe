@@ -12,7 +12,15 @@ namespace PaintApp4Scrubs.Classes
     public class Boxer : IComponent
     {
         private readonly List<IComponent> _components = new List<IComponent>();
+
+        /// <summary>
+        /// Gets & Sets the depth needed for printing
+        /// </summary>
         public string Depth { get; set; }
+        /// <summary>
+        /// Adds the component to a box
+        /// </summary>
+        /// <param name="component">the component to be added</param>
         public void Add(IComponent component)
         {
             component.Depth += "-";
@@ -32,6 +40,9 @@ namespace PaintApp4Scrubs.Classes
             _components.Add(component);
         }
 
+        /// <summary>
+        /// the indentation needed for printing of the hierarchy
+        /// </summary>
         public void Indentation()
         {
             foreach (var comp in this.GetChildren())
@@ -45,12 +56,20 @@ namespace PaintApp4Scrubs.Classes
                 comp.Depth += "-";
             }
         }
+        /// <summary>
+        /// Adds the component to a box
+        /// </summary>
+        /// <param name="component">the component to be added</param>
+        /// <param name="depth">the depth if nested deeper in the hierarchy</param>
         public void Add(IComponent component , string depth)
         {
             component.Depth = depth;
             _components.Add(component);
         }
-
+        /// <summary>
+        /// detaches the component from its box
+        /// </summary>
+        /// <param name="component">the component to be detached</param>
         public void Detach(IComponent component)
         {
             _components.Remove(component);
@@ -77,11 +96,19 @@ namespace PaintApp4Scrubs.Classes
             }
             return null;
         }
+        /// <summary>
+        /// Gets the children of the box
+        /// </summary>
+        /// <returns>A list of children</returns>
         public List<IComponent> GetChildren()
         {
             return _components;
         }
 
+        /// <summary>
+        /// Accept a visitor
+        /// </summary>
+        /// <param name="visitor">the visitor in question</param>
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);

@@ -8,16 +8,30 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
     class VisitorResize : IVisitor
     {
         private Vector _distance;
+
+        /// <summary>
+        /// VisitorResize Constructor
+        /// </summary>
+        /// <param name="distance"></param>
         public VisitorResize (Vector distance)
         {
             _distance = distance;
         }
 
+        /// <summary>
+        /// Visitor Function for godShape
+        /// </summary>
+        /// <param name="godShape">Selected Shape</param>
         public void Visit(GodShape godShape)
         {
             var x = godShape as BaseShape;
             x.Accept(this);
         }
+
+        /// <summary>
+        /// Visitor Function for boxer
+        /// </summary>
+        /// <param name="boxer">Selected Box</param>
         public void Visit(Boxer boxer)
         {
             foreach (var component in boxer.GetChildren())
@@ -26,11 +40,19 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             }
         }
 
+        /// <summary>
+        /// Visitor Function for line
+        /// </summary>
+        /// <param name="line">Selected Shape</param>
         public void VisitLine(BaseShape line)
         {
             line.EndPoint -= _distance;
         }
 
+        /// <summary>
+        /// Visitor Function for square
+        /// </summary>
+        /// <param name="square">Selected Shape</param>
         public void VisitSquare(BaseShape square)
         {
             if (!(square.StrategyWidth > _distance.X) || !(square.StrategyHeight > _distance.Y)) return;
@@ -40,6 +62,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             square.Height -= _distance.Y;
         }
 
+        /// <summary>
+        /// Visitor Function for triangle
+        /// </summary>
+        /// <param name="triangle">Selected Shape</param>
         public void VisitTriangle(BaseShape triangle)
         {
             if (!(triangle.StrategyWidth > _distance.X) || !(triangle.StrategyHeight > _distance.Y)) return;
@@ -49,11 +75,15 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             triangle.Height -= _distance.Y;
         }
 
-        public void VisitEllipse(BaseShape ellipseBaseShape)
+        /// <summary>
+        /// Visitor Function for ellipse
+        /// </summary>
+        /// <param name="ellipse">Selected Shape</param>
+        public void VisitEllipse(BaseShape ellipse)
         {
-            if (!(ellipseBaseShape.StrategyWidth > _distance.X) || !(ellipseBaseShape.StrategyHeight > _distance.Y)) return;
-            ellipseBaseShape.StrategyWidth -= _distance.X;
-            ellipseBaseShape.StrategyHeight -= _distance.Y;
+            if (!(ellipse.StrategyWidth > _distance.X) || !(ellipse.StrategyHeight > _distance.Y)) return;
+            ellipse.StrategyWidth -= _distance.X;
+            ellipse.StrategyHeight -= _distance.Y;
         }
     }
 }

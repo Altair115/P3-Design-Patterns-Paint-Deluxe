@@ -9,15 +9,35 @@ namespace PaintApp4Scrubs.Interfaces
 {
     public interface IVisitor
     {
+        /// <summary>
+        /// Visitor Function for godShape
+        /// </summary>
+        /// <param name="godShape">Selected Shape</param>
         public void Visit(GodShape godShape);
+        /// <summary>
+        /// Visitor Function for boxer
+        /// </summary>
+        /// <param name="boxer">Selected Box</param>
         public void Visit(Boxer boxer);
-        //public void Visit(Line line);
-        //public void Visit(Square square);
-        //public void Visit(Triangle triangle);
-        //public void Visit(Ellipse ellipse);
+        /// <summary>
+        /// Visitor Function for square
+        /// </summary>
+        /// <param name="square">Selected Shape</param>
         public void VisitSquare(BaseShape square);
+        /// <summary>
+        /// Visitor Function for line
+        /// </summary>
+        /// <param name="line">Selected Shape</param>
         public void VisitLine(BaseShape line);
+        /// <summary>
+        /// Visitor Function for triangle
+        /// </summary>
+        /// <param name="triangle">Selected Shape</param>
         public void VisitTriangle(BaseShape triangle);
-        public void VisitEllipse(BaseShape ellipseBaseShape);
+        /// <summary>
+        /// Visitor Function for ellipse
+        /// </summary>
+        /// <param name="ellipse">Selected Shape</param>
+        public void VisitEllipse(BaseShape ellipse);
     }
 }
