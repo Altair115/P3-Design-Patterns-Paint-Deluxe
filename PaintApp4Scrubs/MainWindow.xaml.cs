@@ -25,7 +25,6 @@ namespace PaintApp4Scrubs
         private readonly Boxer _box;
         private List<ComboBoxLinker> comboBoxLinkers = new List<ComboBoxLinker>();
 
-
         private enum ModeSwitch
         {
             Line,
@@ -228,7 +227,7 @@ namespace PaintApp4Scrubs
             }
         }
 
-        private Decorator makeOrnaments(BaseShape shape)
+        private Decorator MakeOrnaments(BaseShape shape)
         {
             List<Ornament> ornaments = new List<Ornament>();
             if (comboBoxLinkers.Count != 0)
@@ -249,13 +248,10 @@ namespace PaintApp4Scrubs
                     ornaments[i].Position = comboBoxLinkers[i].PositionString;
                     ornaments[i].Name = comboBoxLinkers[i].TextBoxName;
                 }
-               
                 comboBoxLinkers.Clear();
                 return ornaments[^1];
             }
-
             return null;
-
         }
 
         #region DrawStrategies
@@ -268,8 +264,14 @@ namespace PaintApp4Scrubs
                 Stroke = Brushes.Blue,
                 StrokeThickness = 4
             };
-            DrawShape(makeOrnaments(newLine));
-
+            if (comboBoxLinkers.Count <= 0)
+            {
+                DrawShape(newLine);
+            }
+            else
+            {
+                DrawShape(MakeOrnaments(newLine));
+            }
         }
 
         // Sets and draws ellipse after mouse is released
@@ -314,12 +316,17 @@ namespace PaintApp4Scrubs
                 newEllipse.StrategyWidth = _startPoint.Y - _endPoint.Y;
             }
 
-            DrawShape(makeOrnaments(newEllipse));
-
+            if (comboBoxLinkers.Count <= 0)
+            {
+                DrawShape(newEllipse);
+            }
+            else
+            {
+                DrawShape(MakeOrnaments(newEllipse));
+            }
         }
 
         // Sets and draws rectangle after mouse is released
-
         private void DrawRectangle()
         {
             BaseShape square = new BaseShape(new SquareStrategies(10, 10))
@@ -360,8 +367,14 @@ namespace PaintApp4Scrubs
                 square.Height = _startPoint.Y - _endPoint.Y;
             }
 
-            DrawShape(makeOrnaments(square));
-
+            if (comboBoxLinkers.Count <= 0)
+            {
+                DrawShape(square);
+            }
+            else
+            {
+                DrawShape(MakeOrnaments(square));
+            }
         }
 
         private void DrawTriangle()
@@ -406,8 +419,14 @@ namespace PaintApp4Scrubs
                 triangle.Height = _startPoint.Y - _endPoint.Y;
             }
 
-            DrawShape(makeOrnaments(triangle));
-
+            if (comboBoxLinkers.Count <= 0)
+            {
+                DrawShape(triangle);
+            }
+            else
+            {
+                DrawShape(MakeOrnaments(triangle));
+            }
         }
 
         #endregion
@@ -427,7 +446,12 @@ namespace PaintApp4Scrubs
             Draw draw = new Draw(shape);
             _broker.DoCommand(draw);
             _box.Add(shape);
-
+        }
+        private void DrawShape(BaseShape shape)
+        {
+            Draw draw = new Draw(shape);
+            _broker.DoCommand(draw);
+            _box.Add(shape);
         }
 
         /// <summary>
@@ -529,8 +553,6 @@ namespace PaintApp4Scrubs
             DisplayGroup displayGroup = new DisplayGroup(BoxFinder(shape));
             _broker.DoCommand(displayGroup);
         }
-
-
     }
     #endregion
 };
