@@ -30,7 +30,7 @@ namespace PaintApp4Scrubs.Classes
             //Vector x = GetVector(PositionPlace);
             //Canvas.SetTop(textBlock, x.Y);
             //Canvas.SetLeft(textBlock, x.X);
-            MainWindow.AppWindow.PutOnScreen(this);
+            MainWindow.AppWindow.PutOnScreen(textBlock);
 
         }
         
@@ -71,7 +71,7 @@ namespace PaintApp4Scrubs.Classes
         {
             return base.GetCenter();
         }
-        public void Accept(IVisitor visitor)
+        public override void Accept(IVisitor visitor)
         {
             visitor.VisitOrnament(this);
         }

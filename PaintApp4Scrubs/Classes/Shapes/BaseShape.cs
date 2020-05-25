@@ -39,7 +39,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
             //else just ask W. Brinksma
         }
 
-        public virtual void Accept(IVisitor visitor)
+        public override void Accept(IVisitor visitor)
         {
             Strategy.Accept(visitor,this);
         }

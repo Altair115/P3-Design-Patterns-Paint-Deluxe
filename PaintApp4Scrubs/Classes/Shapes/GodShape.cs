@@ -15,10 +15,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public Vector OriginPos;
         public abstract void Decorate();
         public abstract Vector GetCenter();
-        public void Accept(IVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
+        public abstract void Accept(IVisitor visitor);
 
         public string Depth { get; set; }
     }
