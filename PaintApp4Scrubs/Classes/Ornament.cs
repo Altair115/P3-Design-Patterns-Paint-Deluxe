@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -16,10 +17,35 @@ namespace PaintApp4Scrubs.Classes
         private double height = 0;
         private double offset = 50;
         private Size sizeofTexBlock;
-        private TextBlock textBlock = new TextBlock();
-        protected override Geometry DefiningGeometry { get; }
+        public TextBlock textBlock = new TextBlock();
 
-        public Ornament(GodShape godShape) : base(godShape) { }
+        protected override Geometry DefiningGeometry
+        {
+            get
+            {
+                Point p1 = new Point(0.0d, 0.0d);
+                Point p2 = new Point(0, 10);
+                Point p3 = new Point(10, 10);
+                Point p4 = new Point(10, 0.0d);
+
+                List<PathSegment> segments = new List<PathSegment>(3);
+                segments.Add(new LineSegment(p1, true));
+                segments.Add(new LineSegment(p2, true));
+                segments.Add(new LineSegment(p3, true));
+                segments.Add(new LineSegment(p4, true));
+
+                List<PathFigure> figures = new List<PathFigure>(1);
+                PathFigure pf = new PathFigure(p1, segments, true);
+                figures.Add(pf);
+
+                Geometry geometry = new PathGeometry(figures, FillRule.EvenOdd, null);
+                return geometry;
+            }
+        }
+
+        public Ornament(GodShape godShape) : base(godShape)
+        {
+        }
 
         public override void Decorate()
         {
@@ -33,7 +59,7 @@ namespace PaintApp4Scrubs.Classes
             MainWindow.AppWindow.PutOnScreen(this);
 
         }
-        
+
 
         public Vector GetVector(string position)
         {
@@ -42,24 +68,28 @@ namespace PaintApp4Scrubs.Classes
             {
                 case "left":
                     //textBlock.FlowDirection = FlowDirection.RightToLeft;
-                    return new Vector(center.X - offset - (width/2) - sizeofTexBlock.Width, center.Y - (sizeofTexBlock.Height / 2));
+                    return new Vector(center.X - StrategyWidth - (width / 2) - sizeofTexBlock.Width,
+                        center.Y - (sizeofTexBlock.Height / 2));
                 case "right":
-                    return new Vector(center.X + offset + (width/2) + (sizeofTexBlock.Width / 2), center.Y - (sizeofTexBlock.Height / 2));
+                    return new Vector(center.X + StrategyWidth + (width / 2) + (sizeofTexBlock.Width / 2),
+                        center.Y - (sizeofTexBlock.Height / 2));
                 case "top":
-                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y - offset - (height));
+                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y - StrategyHeight - (height));
                 case "bottom":
-                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y + offset + (height/2));
+                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y + StrategyHeight + (height / 2));
                 default:
-                    return new Vector(0,0);
+                    return new Vector(0, 0);
             }
         }
+
         private Size MeasureString(string candidate)
         {
             var formattedText = new FormattedText(
                 candidate,
                 CultureInfo.CurrentCulture,
                 FlowDirection.LeftToRight,
-                new Typeface(this.textBlock.FontFamily, this.textBlock.FontStyle, this.textBlock.FontWeight, this.textBlock.FontStretch),
+                new Typeface(this.textBlock.FontFamily, this.textBlock.FontStyle, this.textBlock.FontWeight,
+                    this.textBlock.FontStretch),
                 this.textBlock.FontSize,
                 Brushes.Black,
                 new NumberSubstitution(),
@@ -67,13 +97,32 @@ namespace PaintApp4Scrubs.Classes
 
             return new Size(formattedText.Width, formattedText.Height);
         }
+
         public override Vector GetCenter()
         {
             return base.GetCenter();
         }
-        public void Accept(IVisitor visitor)
+
+        public override void Accept(IVisitor visitor)
         {
             visitor.VisitOrnament(this);
+        }
+
+        public GodShape GetComponent()
+        {
+            return base.GetComponent();
+        }
+
+        public override double StrategyHeight
+        {
+            get { return base.StrategyHeight; }
+            set { }
+        }
+
+        public override double StrategyWidth
+        {
+            get { return base.StrategyWidth; }
+            set { }
         }
     }
 }

@@ -228,7 +228,7 @@ namespace PaintApp4Scrubs
             }
         }
 
-        private void makeOrnaments(BaseShape shape)
+        private Decorator makeOrnaments(BaseShape shape)
         {
             List<Ornament> ornaments = new List<Ornament>();
             if (comboBoxLinkers.Count != 0)
@@ -249,10 +249,12 @@ namespace PaintApp4Scrubs
                     ornaments[i].PositionPlace = comboBoxLinkers[i].PositionString;
                     ornaments[i].Name = comboBoxLinkers[i].TextBoxName;
                 }
-                ornaments[^1].Decorate();
+               
                 comboBoxLinkers.Clear();
+                return ornaments[^1];
             }
 
+            return null;
 
         }
 
@@ -266,8 +268,8 @@ namespace PaintApp4Scrubs
                 Stroke = Brushes.Blue,
                 StrokeThickness = 4
             };
-            DrawShape(newLine);
-            makeOrnaments(newLine);
+            DrawShape(makeOrnaments(newLine));
+
         }
 
         // Sets and draws ellipse after mouse is released
@@ -312,8 +314,8 @@ namespace PaintApp4Scrubs
                 newEllipse.StrategyWidth = _startPoint.Y - _endPoint.Y;
             }
 
-            DrawShape(newEllipse);
-            makeOrnaments(newEllipse);
+            DrawShape(makeOrnaments(newEllipse));
+
         }
 
         // Sets and draws rectangle after mouse is released
@@ -358,8 +360,8 @@ namespace PaintApp4Scrubs
                 square.Height = _startPoint.Y - _endPoint.Y;
             }
 
-            DrawShape(square);
-            makeOrnaments(square);
+            DrawShape(makeOrnaments(square));
+
         }
 
         private void DrawTriangle()
@@ -404,8 +406,8 @@ namespace PaintApp4Scrubs
                 triangle.Height = _startPoint.Y - _endPoint.Y;
             }
 
-            DrawShape(triangle);
-            makeOrnaments(triangle);
+            DrawShape(makeOrnaments(triangle));
+
         }
 
         #endregion
@@ -420,7 +422,7 @@ namespace PaintApp4Scrubs
 
         #region Command calls
 
-        private void DrawShape(GodShape shape)
+        private void DrawShape(Decorator shape)
         {
             Draw draw = new Draw(shape);
             _broker.DoCommand(draw);

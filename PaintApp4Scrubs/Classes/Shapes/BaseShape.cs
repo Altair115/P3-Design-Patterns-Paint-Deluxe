@@ -8,12 +8,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
     public class BaseShape : GodShape, IAccept
     {
         public IStrategy Strategy;
-        public double StrategyWidth
+        public override double StrategyWidth
         {
             get { return Strategy.Width;}
             set { Strategy.Width = value;}
         }
-        public double StrategyHeight
+        public override double StrategyHeight
         {
             get { return Strategy.Height; }
             set { Strategy.Height = value; }
@@ -39,7 +39,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
             //else just ask W. Brinksma
         }
 
-        public virtual void Accept(IVisitor visitor)
+        public override void Accept(IVisitor visitor)
         {
             Strategy.Accept(visitor,this);
         }
