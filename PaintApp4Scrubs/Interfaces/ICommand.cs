@@ -7,9 +7,15 @@ namespace PaintApp4Scrubs.Interfaces
     /// <summary>
     /// the command interface
     /// </summary>
-    public interface ICommand 
+    public interface ICommand
     {
-       public void Execute();
-       public void UnExecute();
+        /// <summary>
+        /// Execute Command
+        /// </summary>
+        public void Execute();
+        /// <summary>
+        /// Undo the command or do the opposite
+        /// </summary>
+        public void UnExecute();
     }
 }

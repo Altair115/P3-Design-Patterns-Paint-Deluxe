@@ -27,14 +27,14 @@ namespace PaintApp4Scrubs.Classes.Commands
             _distance = distance;
         }
         /// <summary>
-        /// executes the resize command
+        /// executes the resize Visitor
         /// </summary>
         public void Execute()
         {
             _component.Accept(new VisitorResize(_distance));
         }
         /// <summary>
-        /// executes the undo version of the resize command 
+        /// executes the undo variant of the resize Visitor 
         /// </summary>
         public void UnExecute()
         {

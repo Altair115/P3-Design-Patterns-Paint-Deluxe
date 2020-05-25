@@ -20,7 +20,9 @@ namespace PaintApp4Scrubs.Classes.Strategies
             StartPoint = startPoint;
             EndPoint = endPoint;
         }
-
+        /// <summary>
+        /// gets and sets the StartPoint of the line and the LineGeometry
+        /// </summary>
         public Point StartPoint
         {
             get { return _start; }
@@ -30,7 +32,9 @@ namespace PaintApp4Scrubs.Classes.Strategies
                 _lineGeometry.StartPoint = value;
             }
         }
-        
+        /// <summary>
+        /// gets and sets the EndPoint of the line and the lineGeometry
+        /// </summary>
         public Point EndPoint
         {
             get { return _end; }
@@ -41,17 +45,29 @@ namespace PaintApp4Scrubs.Classes.Strategies
             }
         }
 
+        /// <summary>
+        /// Gets the Center of the line
+        /// </summary>
+        /// <param name="baseShape">the base shape</param>
+        /// <returns>the center vector </returns>
         public Vector GetCenter(BaseShape baseShape)
         {
             var center = new Vector((StartPoint.X + EndPoint.X) / 2, (StartPoint.Y + EndPoint.Y) / 2);
             return center;
         }
-
+        /// <summary>
+        /// gets the lineGeometry
+        /// </summary>
+        /// <returns>line geometry </returns>
         public Geometry GetGeometry()
         {
             return _lineGeometry;
         }
-
+        /// <summary>
+        /// gets the string of the Line
+        /// </summary>
+        /// <param name="baseShape"></param>
+        /// <returns>the line his string</returns>
         public string GetString(BaseShape baseShape)
         {
             return $"Line {GetCenter(baseShape)} {StartPoint} {EndPoint}";

@@ -12,16 +12,28 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         private bool _isHead = false;
         private readonly ThePrinter _printer = ThePrinter.GetInstance();
 
+        /// <summary>
+        /// VisitorDisplay Constructor
+        /// </summary>
+        /// <param name="isHead">Check if this is the Head Component</param>
         public VisitorDisplay(bool isHead)
         {
             _isHead = isHead;
             _printer.ClearFile();
         }
 
+        /// <summary>
+        /// Visitor Function for godShape
+        /// </summary>
+        /// <param name="godShape">Selected Shape</param>
         public void Visit(GodShape godShape)
         {
             _printer.PrintToFile($"{godShape.Depth}{godShape.ToString()}");
         }
+        /// <summary>
+        /// Visitor Function for boxer
+        /// </summary>
+        /// <param name="boxer">Selected Box</param>
         public void Visit(Boxer boxer)
         {
             if (_isHead)
@@ -49,23 +61,39 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             }
         }
 
+        /// <summary>
+        /// Visitor Function for line
+        /// </summary>
+        /// <param name="line">Selected Shape</param>
         public void VisitLine(BaseShape line)
         {
             _printer.PrintToFile($"{line.Depth}{line.ToString()}");
         }
 
+        /// <summary>
+        /// Visitor Function for square
+        /// </summary>
+        /// <param name="square">Selected Shape</param>
         public void VisitSquare(BaseShape square)
         {
             _printer.PrintToFile($"{square.Depth}{square.ToString()}");
         }
 
+        /// <summary>
+        /// Visitor Function for triangle
+        /// </summary>
+        /// <param name="triangle">Selected Shape</param>
         public void VisitTriangle(BaseShape triangle)
         {
             _printer.PrintToFile($"{triangle.Depth}{triangle.ToString()}");
         }
-        public void VisitEllipse(BaseShape ellipseBaseShape)
+        /// <summary>
+        /// Visitor Function for ellipse
+        /// </summary>
+        /// <param name="ellipse">Selected Shape</param>
+        public void VisitEllipse(BaseShape ellipse)
         {
-            _printer.PrintToFile($"{ellipseBaseShape.Depth}{ellipseBaseShape.ToString()}");
+            _printer.PrintToFile($"{ellipse.Depth}{ellipse.ToString()}");
         }
     }
 }
