@@ -22,6 +22,9 @@ namespace PaintApp4Scrubs
         private readonly List<IComponent> _boxList = new List<IComponent>();
         private readonly Boxer _box;
 
+        /// <summary>
+        /// Enums for modes 
+        /// </summary>
         private enum ModeSwitch
         {
             Line,
@@ -36,7 +39,9 @@ namespace PaintApp4Scrubs
         }
 
         private ModeSwitch _currentMode = ModeSwitch.Line;
-
+        /// <summary>
+        /// constructor for the main window
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -117,8 +122,8 @@ namespace PaintApp4Scrubs
         #endregion
 
         private Point _currentPoint; //the current mouse
-        private Point _startPoint;
-        private Point _endPoint;
+        private Point _startPoint; //the start point of the mouse
+        private Point _endPoint;  //the end point of the mouse
 
         private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -199,7 +204,9 @@ namespace PaintApp4Scrubs
 
         #region DrawStrategies
 
-        // Sets and draws line after mouse is released
+        /// <summary>
+        ///  Sets and draws line after mouse is released
+        /// </summary>
         private void DrawLine()
         {
             BaseShape newLine = new BaseShape(new LineStrategies(_startPoint,_endPoint))
@@ -209,8 +216,9 @@ namespace PaintApp4Scrubs
             };
             DrawShape(newLine);
         }
-
-        // Sets and draws ellipse after mouse is released
+        /// <summary>
+        /// Sets and draws ellipse after mouse is released
+        /// </summary>
         private void DrawEllipse()
         {
             BaseShape newEllipse =
@@ -255,8 +263,9 @@ namespace PaintApp4Scrubs
             DrawShape(newEllipse);
         }
 
-        // Sets and draws rectangle after mouse is released
-
+        /// <summary>
+        ///  Sets and draws rectangle after mouse is released
+        /// </summary>
         private void DrawRectangle()
         {
             BaseShape square = new BaseShape(new SquareStrategies(10 , 10))
@@ -299,7 +308,9 @@ namespace PaintApp4Scrubs
 
             DrawShape(square);
         }
-
+        /// <summary>
+        /// Sets and draws Triangle after mouse is released
+        /// </summary>
         private void DrawTriangle()
         {
             BaseShape triangle =
@@ -346,7 +357,11 @@ namespace PaintApp4Scrubs
         }
 
         #endregion
-
+        /// <summary>
+        /// find the parent box of shape
+        /// </summary>
+        /// <param name="shape">the selected shape</param>
+        /// <returns>box or a shape</returns>
         public IComponent BoxFinder(IComponent shape)
         {
             IComponent component = _box.FindBox(shape as GodShape);
@@ -356,13 +371,15 @@ namespace PaintApp4Scrubs
         }
 
         #region Command calls
-
+        /// <summary>
+        /// makes a command call to draw a shape
+        /// </summary>
+        /// <param name="shape">the shape to be drawn</param>
         private void DrawShape(GodShape shape)
         {
             Draw draw = new Draw(shape);
             _broker.DoCommand(draw);
             _box.Add(shape);
-
         }
 
         /// <summary>
@@ -425,7 +442,10 @@ namespace PaintApp4Scrubs
             Resize resize = new Resize(BoxFinder(selectedShape), distance);
             _broker.DoCommand(resize);
         }
-        
+        /// <summary>
+        /// adds a box or a shape to the main list(box) of the canvas
+        /// </summary>
+        /// <param name="selectedComponent">the selected shape or box</param>
         public void AddToBoxList(IComponent selectedComponent)
         {
             if (selectedComponent == null)
@@ -444,14 +464,20 @@ namespace PaintApp4Scrubs
                 }
             }
         }
-
+        /// <summary>
+        /// makes a command call to make a group of objects
+        /// </summary>
+        /// <param name="components">a list of boxes or shapes </param>
         public void AddToGroup(List<IComponent> components)
         {
             MakeGroup makeGroup = new MakeGroup(components, _box);
             _broker.DoCommand(makeGroup);
             _boxList.Clear();
         }
-
+        /// <summary>
+        /// makes a command call to print the hierarchy on the selected shape
+        /// </summary>
+        /// <param name="shape">the selected shape</param>
         public void DisplayGroup(IComponent shape)
         {
             if (shape == null)

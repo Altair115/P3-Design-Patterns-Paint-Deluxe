@@ -14,11 +14,18 @@ namespace PaintApp4Scrubs.Classes.Shapes
     {
         public Vector OriginPos;
         public abstract override string ToString();
+
+        /// <summary>
+        /// accept method for the visitor
+        /// </summary>
+        /// <param name="visitor">a visitor</param>
         public void Accept(IVisitor visitor)
         {
             visitor.Visit(this);
         }
-
+        /// <summary>
+        /// gets and sets the depth of the shape in the hierarchy 
+        /// </summary>
         public string Depth { get; set; }
     }
 }

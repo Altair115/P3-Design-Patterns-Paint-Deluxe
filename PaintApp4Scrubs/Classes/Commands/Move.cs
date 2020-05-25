@@ -31,14 +31,14 @@ namespace PaintApp4Scrubs.Classes.Commands
         }
 
         /// <summary>
-        /// executes the move command 
+        /// executes the move Visitor 
         /// </summary>
         public void Execute()
         {
             _component.Accept(new VisitorMove(_positionResult));
         }
         /// <summary>
-        /// executes the undo version of the command 
+        /// executes the undo variant of the Visitor 
         /// </summary>
         public void UnExecute()
         {
