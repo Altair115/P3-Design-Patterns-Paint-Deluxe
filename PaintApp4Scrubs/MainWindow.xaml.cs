@@ -227,7 +227,7 @@ namespace PaintApp4Scrubs
             }
         }
 
-        private Decorator MakeOrnaments(BaseShape shape)
+        private GodShape MakeOrnaments(BaseShape shape)
         {
             List<Ornament> ornaments = new List<Ornament>();
             if (comboBoxLinkers.Count != 0)
@@ -251,7 +251,7 @@ namespace PaintApp4Scrubs
                 comboBoxLinkers.Clear();
                 return ornaments[^1];
             }
-            return null;
+            return shape;
         }
 
         #region DrawStrategies
@@ -264,15 +264,8 @@ namespace PaintApp4Scrubs
                 Stroke = Brushes.Blue,
                 StrokeThickness = 4
             };
-            if (comboBoxLinkers.Count <= 0)
-            {
-                DrawShape(newLine);
+            DrawShape(MakeOrnaments(newLine));
             }
-            else
-            {
-                DrawShape(MakeOrnaments(newLine));
-            }
-        }
 
         // Sets and draws ellipse after mouse is released
         private void DrawEllipse()
@@ -315,15 +308,8 @@ namespace PaintApp4Scrubs
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 newEllipse.StrategyWidth = _startPoint.Y - _endPoint.Y;
             }
-
-            if (comboBoxLinkers.Count <= 0)
-            {
-                DrawShape(newEllipse);
-            }
-            else
-            {
-                DrawShape(MakeOrnaments(newEllipse));
-            }
+            
+            DrawShape(MakeOrnaments(newEllipse));
         }
 
         // Sets and draws rectangle after mouse is released
@@ -367,14 +353,7 @@ namespace PaintApp4Scrubs
                 square.Height = _startPoint.Y - _endPoint.Y;
             }
 
-            if (comboBoxLinkers.Count <= 0)
-            {
-                DrawShape(square);
-            }
-            else
-            {
-                DrawShape(MakeOrnaments(square));
-            }
+            DrawShape(MakeOrnaments(square));
         }
 
         private void DrawTriangle()
@@ -419,15 +398,8 @@ namespace PaintApp4Scrubs
                 triangle.Height = _startPoint.Y - _endPoint.Y;
             }
 
-            if (comboBoxLinkers.Count <= 0)
-            {
-                DrawShape(triangle);
+            DrawShape(MakeOrnaments(triangle));
             }
-            else
-            {
-                DrawShape(MakeOrnaments(triangle));
-            }
-        }
 
         #endregion
 
@@ -441,13 +413,7 @@ namespace PaintApp4Scrubs
 
         #region Command calls
 
-        private void DrawShape(Decorator shape)
-        {
-            Draw draw = new Draw(shape);
-            _broker.DoCommand(draw);
-            _box.Add(shape);
-        }
-        private void DrawShape(BaseShape shape)
+        private void DrawShape(GodShape shape)
         {
             Draw draw = new Draw(shape);
             _broker.DoCommand(draw);
