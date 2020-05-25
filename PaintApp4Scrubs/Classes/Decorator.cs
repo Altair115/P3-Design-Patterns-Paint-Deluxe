@@ -33,7 +33,7 @@ namespace PaintApp4Scrubs.Classes
         }
 
         public override Vector GetCenter()
-        { 
+        {
             return _component.GetCenter();
         }
         public override double StrategyWidth
@@ -42,11 +42,7 @@ namespace PaintApp4Scrubs.Classes
         }
         public override double StrategyHeight
         {
-            get
-            {
-               return _component.StrategyHeight;
-            }
+            get { return _component.StrategyHeight; }
         }
-
     }
 }

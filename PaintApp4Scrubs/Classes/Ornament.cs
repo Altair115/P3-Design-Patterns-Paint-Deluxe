@@ -11,11 +11,7 @@ namespace PaintApp4Scrubs.Classes
     public class Ornament : Decorator
     {
         public string Name = "";
-        public string PositionPlace = "";
-        public Vector OrnamentPos;
-        private double width = 0;
-        private double height = 0;
-        private double offset = 50;
+        public string Position = "";
         private Size sizeofTexBlock;
         public TextBlock textBlock = new TextBlock();
 
@@ -24,9 +20,9 @@ namespace PaintApp4Scrubs.Classes
             get
             {
                 Point p1 = new Point(0.0d, 0.0d);
-                Point p2 = new Point(0, 10);
-                Point p3 = new Point(10, 10);
-                Point p4 = new Point(10, 0.0d);
+                Point p2 = new Point(0, 0);
+                Point p3 = new Point(0, 0);
+                Point p4 = new Point(0, 0.0d);
 
                 List<PathSegment> segments = new List<PathSegment>(3);
                 segments.Add(new LineSegment(p1, true));
@@ -47,36 +43,23 @@ namespace PaintApp4Scrubs.Classes
         {
         }
 
-        public override void Decorate()
-        {
-            //base.Decorate();
-            ////do stuff
-            //textBlock.Text = Name.ToString();
-            //sizeofTexBlock = MeasureString(Name);
-            //Vector x = GetVector(PositionPlace);
-            //Canvas.SetTop(textBlock, x.Y);
-            //Canvas.SetLeft(textBlock, x.X);
-            MainWindow.AppWindow.PutOnScreen(this);
-
-        }
-
-
         public Vector GetVector(string position)
         {
             Vector center = GetCenter();
+            sizeofTexBlock = MeasureString(Name);
             switch (position)
             {
                 case "left":
                     //textBlock.FlowDirection = FlowDirection.RightToLeft;
-                    return new Vector(center.X - StrategyWidth - (width / 2) - sizeofTexBlock.Width,
+                    return new Vector(center.X - (StrategyWidth / 2) - (width / 2) - sizeofTexBlock.Width,
                         center.Y - (sizeofTexBlock.Height / 2));
                 case "right":
-                    return new Vector(center.X + StrategyWidth + (width / 2) + (sizeofTexBlock.Width / 2),
+                    return new Vector(center.X + (StrategyWidth / 2) + (width / 2) + (sizeofTexBlock.Width / 2),
                         center.Y - (sizeofTexBlock.Height / 2));
                 case "top":
-                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y - StrategyHeight - (height));
+                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y - (StrategyHeight / 2) - (height));
                 case "bottom":
-                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y + StrategyHeight + (height / 2));
+                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y + (StrategyHeight / 2) + (height / 2));
                 default:
                     return new Vector(0, 0);
             }
@@ -98,21 +81,11 @@ namespace PaintApp4Scrubs.Classes
             return new Size(formattedText.Width, formattedText.Height);
         }
 
-        public override Vector GetCenter()
-        {
-            return base.GetCenter();
-        }
-
         public override void Accept(IVisitor visitor)
         {
             visitor.VisitOrnament(this);
         }
-
-        public GodShape GetComponent()
-        {
-            return base.GetComponent();
-        }
-
+        
         public override double StrategyHeight
         {
             get { return base.StrategyHeight; }

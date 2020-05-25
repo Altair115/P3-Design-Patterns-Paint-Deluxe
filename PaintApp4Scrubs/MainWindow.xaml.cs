@@ -246,7 +246,7 @@ namespace PaintApp4Scrubs
                         Ornament ornament = new Ornament(x);
                         ornaments.Add(ornament);
                     }
-                    ornaments[i].PositionPlace = comboBoxLinkers[i].PositionString;
+                    ornaments[i].Position = comboBoxLinkers[i].PositionString;
                     ornaments[i].Name = comboBoxLinkers[i].TextBoxName;
                 }
                
