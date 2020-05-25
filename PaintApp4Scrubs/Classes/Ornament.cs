@@ -51,15 +51,13 @@ namespace PaintApp4Scrubs.Classes
             {
                 case "left":
                     //textBlock.FlowDirection = FlowDirection.RightToLeft;
-                    return new Vector(center.X - (StrategyWidth / 2) - (width / 2) - sizeofTexBlock.Width,
-                        center.Y - (sizeofTexBlock.Height / 2));
+                    return new Vector(center.X - (StrategyWidth / 2) - sizeofTexBlock.Width - 20, center.Y - (sizeofTexBlock.Height / 2));
                 case "right":
-                    return new Vector(center.X + (StrategyWidth / 2) + (width / 2) + (sizeofTexBlock.Width / 2),
-                        center.Y - (sizeofTexBlock.Height / 2));
+                    return new Vector(center.X + (StrategyWidth / 2) + 20, center.Y - (sizeofTexBlock.Height / 2));
                 case "top":
-                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y - (StrategyHeight / 2) - (height));
+                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y - (StrategyHeight / 2) - (sizeofTexBlock.Height * 2));
                 case "bottom":
-                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y + (StrategyHeight / 2) + (height / 2));
+                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y + (StrategyHeight / 2) + (sizeofTexBlock.Height / 2));
                 default:
                     return new Vector(0, 0);
             }
