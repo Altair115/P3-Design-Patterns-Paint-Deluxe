@@ -24,14 +24,14 @@ namespace PaintApp4Scrubs.Classes.Commands
             _component = component;
         }
         /// <summary>
-        /// deletes the component commands
+        /// calls the visitor on the component
         /// </summary>
         public void Execute()
         {
             _component.Accept(new VisitorDelete());
         }
         /// <summary>
-        /// executes the undo version of the command
+        /// calls the undo variant of the visitor
         /// </summary>
         public void UnExecute()
         {

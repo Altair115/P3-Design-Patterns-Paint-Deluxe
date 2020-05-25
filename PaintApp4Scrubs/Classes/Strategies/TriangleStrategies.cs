@@ -9,15 +9,36 @@ namespace PaintApp4Scrubs.Classes.Strategies
 {
     public class TriangleStrategies : IStrategy
     {
+        /// <summary>
+        /// gets and sets the height of the Triangle
+        /// </summary>
         public double Height { get; set; }
+        /// <summary>
+        /// gets and sets the Width of the Triangle
+        /// </summary>
         public double Width { get; set; }
+        /// <summary>
+        /// gets and sets the StartPoint of the Triangle
+        /// </summary>
         public Point StartPoint { get; set; }
+        /// <summary>
+        /// gets and sets the EndPoint of the Triangle
+        /// </summary>
         public Point EndPoint { get; set; }
+        /// <summary>
+        /// Triangle Strategies constructor
+        /// </summary>
+        /// <param name="width">width</param>
+        /// <param name="height">height</param>
         public TriangleStrategies(double width, double height)
         {
             Height = height;
             Width = width;
         }
+        /// <summary>
+        /// gets the Geometry of a triangle 
+        /// </summary>
+        /// <returns>geometry </returns>
         public Geometry GetGeometry()
         {
             Point p1 = new Point(0.0d, 0.0d);
@@ -38,16 +59,29 @@ namespace PaintApp4Scrubs.Classes.Strategies
 
             return geometry;
         }
+        /// <summary>
+        /// returns the string of Triangle
+        /// </summary>
+        /// <param name="baseShape">the base shape</param>
+        /// <returns></returns>
         public string GetString(BaseShape baseShape)
         {
             return $"Triangle {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {Width} {Height}";
         }
-
+        /// <summary>
+        /// the visitor method for Triangle 
+        /// </summary>
+        /// <param name="visitor">the past visitor</param>
+        /// <param name="baseShape">base shape</param>
         public void Accept(IVisitor visitor, BaseShape baseShape)
         {
             visitor.VisitTriangle(baseShape);
         }
-
+        /// <summary>
+        /// gets the center of triangle
+        /// </summary>
+        /// <param name="baseShape">the base shape</param>
+        /// <returns>the center vector </returns>
         public Vector GetCenter(BaseShape baseShape)
         {
             var center = new Vector((Canvas.GetLeft(baseShape) + (this.Width / 2)), Canvas.GetTop(baseShape) + (this.Height / 2));

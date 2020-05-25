@@ -20,14 +20,14 @@ namespace PaintApp4Scrubs.Classes.Commands
         }
 
         /// <summary>
-        /// execute the draw command
+        /// execute the Visitor with the VistorDraw();
         /// </summary>
         public void Execute()
         {
             _component.Accept(new VisitorDraw());
         }
         /// <summary>
-        /// executes the undo version of the command
+        /// executes the undo variant of visitor
         /// </summary>
         public void UnExecute()
         {
