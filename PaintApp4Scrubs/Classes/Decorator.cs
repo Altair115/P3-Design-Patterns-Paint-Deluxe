@@ -36,5 +36,17 @@ namespace PaintApp4Scrubs.Classes
         { 
             return _component.GetCenter();
         }
+        public override double StrategyWidth
+        {
+            get { return _component.StrategyWidth; }
+        }
+        public override double StrategyHeight
+        {
+            get
+            {
+               return _component.StrategyHeight;
+            }
+        }
+
     }
 }

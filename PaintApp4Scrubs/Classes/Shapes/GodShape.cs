@@ -16,7 +16,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public abstract void Decorate();
         public abstract Vector GetCenter();
         public abstract void Accept(IVisitor visitor);
-
+        public abstract double StrategyWidth { get; set; }
+        public abstract double StrategyHeight { get; set; }
         public string Depth { get; set; }
     }
 }
