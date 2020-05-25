@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -17,7 +18,23 @@ namespace PaintApp4Scrubs.Classes
         private double offset = 50;
         private Size sizeofTexBlock;
         private TextBlock textBlock = new TextBlock();
-        protected override Geometry DefiningGeometry { get; }
+
+        protected override Geometry DefiningGeometry
+        {
+            get
+            {
+                Point p1 = new Point(0.0d, 0.0d);
+                List<PathSegment> segments = new List<PathSegment>(3);
+                segments.Add(new LineSegment(p1, true));
+              
+                List<PathFigure> figures = new List<PathFigure>(1);
+                PathFigure pf = new PathFigure(p1, segments, true);
+                figures.Add(pf);
+
+                Geometry geometry = new PathGeometry(figures, FillRule.EvenOdd, null);
+                return geometry;
+            }
+        }
 
         public Ornament(GodShape godShape) : base(godShape) { }
 
@@ -30,7 +47,7 @@ namespace PaintApp4Scrubs.Classes
             //Vector x = GetVector(PositionPlace);
             //Canvas.SetTop(textBlock, x.Y);
             //Canvas.SetLeft(textBlock, x.X);
-            MainWindow.AppWindow.PutOnScreen(textBlock);
+            MainWindow.AppWindow.PutOnScreen(this);
 
         }
         
