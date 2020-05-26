@@ -13,13 +13,13 @@ namespace PaintApp4Scrubs.Classes.Commands
     class Delete : ICommand
     {
 
-        private readonly IComponent _component;
+        private readonly GodShape _component;
 
         /// <summary>
         /// constructor of the command
         /// </summary>
         /// <param name="component">the component to be deleted</param>
-        public Delete(IComponent component)
+        public Delete(GodShape component)
         {
             _component = component;
         }

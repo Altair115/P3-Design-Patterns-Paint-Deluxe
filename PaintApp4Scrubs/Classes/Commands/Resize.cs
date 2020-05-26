@@ -14,14 +14,14 @@ namespace PaintApp4Scrubs.Classes.Commands
     /// </summary>
     class Resize : ICommand
     {
-        private readonly IComponent _component;
+        private readonly GodShape _component;
         private readonly Vector _distance;
         /// <summary>
         /// the constructor of the Resize class
         /// </summary>
         /// <param name="component">the component that has to be resized</param>
         /// <param name="distance">the distance of the old component and the new component</param>
-        public Resize(IComponent component, Vector distance)
+        public Resize(GodShape component, Vector distance)
         {
             _component = component;
             _distance = distance;

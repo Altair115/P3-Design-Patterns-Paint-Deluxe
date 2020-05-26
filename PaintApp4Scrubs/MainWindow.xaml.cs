@@ -21,7 +21,7 @@ namespace PaintApp4Scrubs
         private readonly Broker _broker;
         public static MainWindow AppWindow;
         private GodShape _selectedShape;
-        private readonly List<IComponent> _boxList = new List<IComponent>();
+        private readonly List<GodShape> _boxList = new List<GodShape>();
         private readonly Boxer _box;
         private List<ComboBoxLinker> comboBoxLinkers = new List<ComboBoxLinker>();
 
@@ -114,12 +114,11 @@ namespace PaintApp4Scrubs
         {
             SaveFile saveFile = new SaveFile(_box);
             _broker.DoCommand(saveFile);
-
         }
 
         #endregion
 
-        private Point _currentPoint; //the current mouse
+        private Point _currentPoint; //the current mouse position
         private Point _startPoint;
         private Point _endPoint;
 
@@ -147,8 +146,6 @@ namespace PaintApp4Scrubs
                 }
                 comboBoxLinkers.Add(comboBoxLinker);
             }
-
-
         }
         private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -159,7 +156,7 @@ namespace PaintApp4Scrubs
         }
 
         /// <summary>
-        /// this function ditermens witch method to call based on te mode witch the user has selected 
+        /// this function determines witch method has to be called based on te mode which the user has selected 
         /// </summary>
         /// <param name="sender">the mouse</param>
         /// <param name="e">the date for the selected mouse events</param>
@@ -254,7 +251,7 @@ namespace PaintApp4Scrubs
             return shape;
         }
 
-        #region DrawStrategies
+        #region Draw Calls
 
         // Sets and draws line after mouse is released
         private void DrawLine()
@@ -265,7 +262,7 @@ namespace PaintApp4Scrubs
                 StrokeThickness = 4
             };
             DrawShape(MakeOrnaments(newLine));
-            }
+        }
 
         // Sets and draws ellipse after mouse is released
         private void DrawEllipse()
@@ -399,13 +396,13 @@ namespace PaintApp4Scrubs
             }
 
             DrawShape(MakeOrnaments(triangle));
-            }
+        }
 
         #endregion
 
-        public IComponent BoxFinder(IComponent shape)
+        public GodShape BoxFinder(GodShape shape)
         {
-            IComponent component = _box.FindBox(shape as GodShape);
+            GodShape component = _box.FindBox(shape as GodShape);
             if (component != null)
                 shape = component;
             return shape;
@@ -501,12 +498,12 @@ namespace PaintApp4Scrubs
             _broker.DoCommand(resize);
         }
 
-        public void AddToBoxList(IComponent selectedComponent)
+        public void AddToBoxList(GodShape selectedComponent)
         {
             if (selectedComponent == null)
                 return;
 
-            IComponent component = _box.FindBox(selectedComponent as GodShape);
+            GodShape component = _box.FindBox(selectedComponent as GodShape);
             if (component == null)
             {
                 _boxList.Add(selectedComponent);
@@ -520,14 +517,14 @@ namespace PaintApp4Scrubs
             }
         }
 
-        public void AddToGroup(List<IComponent> components)
+        public void AddToGroup(List<GodShape> components)
         {
             MakeGroup makeGroup = new MakeGroup(components, _box);
             _broker.DoCommand(makeGroup);
             _boxList.Clear();
         }
 
-        public void DisplayGroup(IComponent shape)
+        public void DisplayGroup(GodShape shape)
         {
             if (shape == null)
                 return;

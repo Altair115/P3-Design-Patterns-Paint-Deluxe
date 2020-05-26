@@ -24,13 +24,6 @@ namespace PaintApp4Scrubs.Classes
         {
             return _component;
         }
-        public override void Decorate()
-        {
-            if (_component != null)
-            {
-                _component.Decorate();
-            }
-        }
 
         public override GodShape GetBaseShape()
         {

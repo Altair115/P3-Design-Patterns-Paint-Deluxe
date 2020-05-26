@@ -10,33 +10,27 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public IStrategy Strategy;
         public override double StrategyWidth
         {
-            get { return Strategy.Width;}
-            set { Strategy.Width = value;}
+            get => Strategy.Width;
+            set => Strategy.Width = value;
         }
         public override double StrategyHeight
         {
-            get { return Strategy.Height; }
-            set { Strategy.Height = value; }
+            get => Strategy.Height;
+            set => Strategy.Height = value;
         }
         public Point StartPoint
         {
-            get { return Strategy.StartPoint;}
-            set { Strategy.StartPoint = value;}
+            get => Strategy.StartPoint;
+            set => Strategy.StartPoint = value;
         }
         public Point EndPoint
         {
-            get { return Strategy.EndPoint; }
-            set { Strategy.EndPoint = value; }
+            get => Strategy.EndPoint;
+            set => Strategy.EndPoint = value;
         }
         public BaseShape(IStrategy s)
         {
             Strategy = s;
-        }
-
-        public override void Decorate()
-        {
-            //Imagine that this just works
-            //else just ask W. Brinksma
         }
 
         public override GodShape GetBaseShape()

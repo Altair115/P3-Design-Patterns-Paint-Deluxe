@@ -9,12 +9,12 @@ namespace PaintApp4Scrubs.Classes.Commands
     /// </summary>
     public class Draw : ICommand
     {
-        private readonly IComponent _component;
+        private readonly GodShape _component;
         /// <summary>
         /// the constructor of the Draw class
         /// </summary>
         /// <param name="component"></param>
-        public Draw(IComponent component)
+        public Draw(GodShape component)
         {
             _component = component;
         }

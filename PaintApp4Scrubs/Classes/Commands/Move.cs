@@ -11,7 +11,7 @@ namespace PaintApp4Scrubs.Classes.Commands
     /// </summary>
     class Move : ICommand
     {
-        private readonly IComponent _component;
+        private readonly GodShape _component;
         private readonly Vector _newPosition;
         private readonly Vector _oldPosition;
         private readonly Vector _positionResult;
@@ -22,7 +22,7 @@ namespace PaintApp4Scrubs.Classes.Commands
         /// <param name="component">the component that needs to be moved</param>
         /// <param name="newPosition">the new position where the component needs to go</param>
         /// <param name="oldPosition">the old position of the component</param>
-        public Move(IComponent component, Vector newPosition, Vector oldPosition)
+        public Move(GodShape component, Vector newPosition, Vector oldPosition)
         {
             _component = component;
             _newPosition = newPosition;

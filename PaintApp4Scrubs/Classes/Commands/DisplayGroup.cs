@@ -7,9 +7,9 @@ namespace PaintApp4Scrubs.Classes.Commands
 {
     public class DisplayGroup : ICommand
     {
-        private readonly IComponent _component;
+        private readonly GodShape _component;
 
-        public DisplayGroup(IComponent component)
+        public DisplayGroup(GodShape component)
         {
             _component = component;
         }
