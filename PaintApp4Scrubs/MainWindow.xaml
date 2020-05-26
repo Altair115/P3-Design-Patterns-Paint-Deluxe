@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PaintApp4Scrubs"
         mc:Ignorable="d"
-        Title="Paint Deluxe 9000" Height="720" Width="1280">
+        Title="Paint Deluxe 9000" Height="1080" Width="1920">
 
     <DockPanel>
         <ToolBar Name="ToolBar" DockPanel.Dock="Top" Height="50">
@@ -26,14 +26,14 @@
             <RadioButton Name="DisplayButton" BorderBrush="#FF969696" Content="Display Group" Height="50" Width="80" GroupName="ShapeGroup" Click="DisplayButton_OnClick" IsChecked="False"/>
             <Button Name="GroupButton" BorderBrush="#FF969696" Content="Group" Height="50" Width="80" Click="GroupButton_OnClick"/>
             <Button Name="Save" BorderBrush="#FF969696" Content="Display hierarchy" Height="50" Width="120" Click="Save_OnClick"/>
-            <ComboBox SelectionChanged="OrnamentBox_OnSelectionChanged" Name="ornamentBox" Height="50" Width="80">
+            <ComboBox SelectionChanged="OrnamentBox_OnSelectionChanged" Name="OrnamentBox" Height="50" Width="80">
                 <ComboBoxItem IsSelected="True">top</ComboBoxItem>
                 <ComboBoxItem>left</ComboBoxItem>
                 <ComboBoxItem>right</ComboBoxItem>
                 <ComboBoxItem>bottom</ComboBoxItem>
             </ComboBox>
-            <TextBox Name="OrnementName" Width="100" MaxLength="50" MaxWidth="100">vul hier je text in</TextBox>
-            <Button Name="SetNames" BorderBrush="#FF969696" Content="Group" Height="50" Width="80" Click="SetNames_OnClick"/>
+            <TextBox Name="OrnamentName" Width="100" MaxLength="50" MaxWidth="100">NAME ME Mortal</TextBox>
+            <Button Name="SetNames" BorderBrush="#FF969696" Content="Deco" Height="50" Width="80" Click="SetNames_OnClick"/>
             <Label Name="LabelCoords" Content="X:Y"></Label>
         </ToolBar>
         <Canvas Name="Canvas" x:FieldModifier="public" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">
