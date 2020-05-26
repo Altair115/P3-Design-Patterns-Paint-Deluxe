@@ -12,6 +12,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
     public class BaseShape : GodShape, IAccept
     {
         private string _depth;
+        public bool hasDeco = false;
         public IStrategy Strategy;
         /// <summary>
         /// set and gets the Strategy related Width
@@ -92,7 +93,13 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public override string Depth
         {
             get => _depth;
-            set => _depth = value + " ";
+            set
+            {
+                if (hasDeco)
+                    _depth = value + "-";
+                else 
+                    _depth = value;
+            } 
         }
     }
 }

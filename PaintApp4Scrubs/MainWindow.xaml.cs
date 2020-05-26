@@ -257,6 +257,7 @@ namespace PaintApp4Scrubs
                 {
                     if (i == 0)
                     {
+                        shape.hasDeco = true;
                         Ornament ornament = new Ornament(shape);
                         ornaments.Add(ornament);
                     }
