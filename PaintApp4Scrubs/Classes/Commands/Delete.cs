@@ -12,7 +12,6 @@ namespace PaintApp4Scrubs.Classes.Commands
     /// </summary>
     class Delete : ICommand
     {
-
         private readonly GodShape _component;
 
         /// <summary>

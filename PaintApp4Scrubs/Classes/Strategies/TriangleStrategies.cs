@@ -38,7 +38,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         /// <summary>
         /// gets the Geometry of a triangle 
         /// </summary>
-        /// <returns>geometry </returns>
+        /// <returns>geometry</returns>
         public Geometry GetGeometry()
         {
             Point p1 = new Point(0.0d, 0.0d);
@@ -63,7 +63,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         /// returns the string of Triangle
         /// </summary>
         /// <param name="baseShape">the base shape</param>
-        /// <returns></returns>
+        /// <returns>Returns the Triangle string Format</returns>
         public string GetString(BaseShape baseShape)
         {
             return $"Triangle {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {Width} {Height}";

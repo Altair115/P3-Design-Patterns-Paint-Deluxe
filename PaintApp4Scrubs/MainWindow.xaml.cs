@@ -258,9 +258,9 @@ namespace PaintApp4Scrubs
 
         #region Draw Calls
 
-        /// </summary>
-        ///  Sets and draws line after mouse is released
         /// <summary>
+        ///  Sets and draws line after mouse is released
+        /// </summary>
         private void DrawLine()
         {
             BaseShape newLine = new BaseShape(new LineStrategies(_startPoint, _endPoint))
@@ -317,9 +317,9 @@ namespace PaintApp4Scrubs
             DrawShape(MakeOrnaments(newEllipse));
         }
 
-        /// </summary>
-        ///  Sets and draws rectangle after mouse is released
         /// <summary>
+        ///  Sets and draws rectangle after mouse is released
+        /// </summary>
         private void DrawRectangle()
         {
             BaseShape square = new BaseShape(new SquareStrategies(10, 10))
@@ -411,11 +411,11 @@ namespace PaintApp4Scrubs
         }
 
         #endregion
-        /// <returns>box or a shape</returns>
-        /// <param name="shape">the selected shape</param>
-        /// </summary>
-        /// find the parent box of shape
         /// <summary>
+        /// find the parent box of shape
+        /// </summary>
+        /// <param name="shape">the selected shape</param>
+        /// <returns>box or a shape</returns>
         public GodShape BoxFinder(GodShape shape)
         {
             GodShape component = _box.FindBox(shape);

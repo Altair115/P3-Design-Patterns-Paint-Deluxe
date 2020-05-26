@@ -11,17 +11,17 @@ namespace PaintApp4Scrubs.Classes.Shapes
     public class BaseShape : GodShape, IAccept
     {
         public IStrategy Strategy;
-        /// </summary>
-        /// set and gets the Strategy related Width
         /// <summary>
+        /// set and gets the Strategy related Width
+        /// </summary>
         public override double StrategyWidth
         {
             get => Strategy.Width;
             set => Strategy.Width = value;
         }
-        /// </summary>
-        /// set and gets the Strategy related Height
         /// <summary>
+        /// set and gets the Strategy related Height
+        /// </summary>
         public override double StrategyHeight
         {
             get => Strategy.Height;
@@ -53,15 +53,16 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             Strategy = s;
         }
-        /// <param name="visitor">the selected visitor</param>
-        /// </summary>
-        /// The Visitor Accept Method for the selected strategy
-        /// <summary>
+        
         public override GodShape GetBaseShape()
         {
             return this;
         }
 
+        /// <summary>
+        /// The Visitor Accept Method for the selected strategy
+        /// </summary>
+        /// <param name="visitor">the selected visitor</param>
         public override void Accept(IVisitor visitor)
         {
             Strategy.Accept(visitor,this);
@@ -78,7 +79,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// the string of the strategy 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The String Format</returns>
         public override string ToString()
         {
             return Strategy.GetString(this);
