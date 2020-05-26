@@ -23,7 +23,14 @@ namespace PaintApp4Scrubs
         private GodShape _selectedShape;
         private readonly List<GodShape> _boxList = new List<GodShape>();
         private readonly Boxer _box;
-        private readonly List<ComboBoxLinker> _comboBoxLinkers = new List<ComboBoxLinker>();
+        private readonly List<ComboBoxLinker> _comboBoxLinkers = new List<ComboBoxLinker>() {
+            new ComboBoxLinker() { PositionString = "top" ,TextBoxName = ""},
+            new ComboBoxLinker() { PositionString = "left" ,TextBoxName = ""},
+            new ComboBoxLinker() { PositionString = "right" ,TextBoxName = ""},
+            new ComboBoxLinker() { PositionString = "bottom" ,TextBoxName = ""}
+        };
+
+        private int _comboBoxIndex = 0;
 
         /// <summary>
         /// Enums for modes 
@@ -121,6 +128,14 @@ namespace PaintApp4Scrubs
             _broker.DoCommand(saveFile);
         }
 
+        private void SetNames_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (ornamentBox != null && OrnementName != null)
+            {
+                _comboBoxLinkers[ornamentBox.SelectedIndex].TextBoxName = OrnementName.Text;
+            }
+        }
+
         #endregion
 
         private Point _currentPoint; //the current mouse position
@@ -132,25 +147,16 @@ namespace PaintApp4Scrubs
 
             if (ornamentBox != null && OrnementName != null)
             {
-                ComboBoxLinker comboBoxLinker = new ComboBoxLinker();
-                comboBoxLinker.TextBoxName = OrnementName.Text;
-                comboBoxLinker.PositionString = ornamentBox.SelectionBoxItem.ToString();
-                foreach (var item in _comboBoxLinkers)
-                {
-                    if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName != comboBoxLinker.TextBoxName)
-                    {
-                        _comboBoxLinkers.Remove(item);
-                        _comboBoxLinkers.Add(comboBoxLinker);
-                        return;
-                    }
-
-                    if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName == comboBoxLinker.TextBoxName)
-                    {
-                        return;
-                    }
-                }
-                _comboBoxLinkers.Add(comboBoxLinker);
+                
+                _comboBoxLinkers[_comboBoxIndex].TextBoxName = OrnementName.Text;
+                _comboBoxLinkers[_comboBoxIndex].PositionString = ornamentBox.SelectionBoxItem.ToString();
+                //checkexist(comboBoxLinker[i]);
+                OrnementName.Text = _comboBoxLinkers[ornamentBox.SelectedIndex].TextBoxName;
+                
             }
+            _comboBoxIndex = ornamentBox.SelectedIndex;
+
+
         }
         private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -250,7 +256,6 @@ namespace PaintApp4Scrubs
                     ornaments[i].Position = _comboBoxLinkers[i].PositionString;
                     ornaments[i].Name = _comboBoxLinkers[i].TextBoxName;
                 }
-                _comboBoxLinkers.Clear();
                 return ornaments[^1];
             }
             return shape;
@@ -477,7 +482,7 @@ namespace PaintApp4Scrubs
             _broker.DoCommand(delete);
             _box.Detach(selectedShape);
         }
-        private GodShape FindDecorator(GodShape selectedShape, Boxer boxer = null )
+        private GodShape FindDecorator(GodShape selectedShape, Boxer boxer = null)
         {
             if (boxer == null)
                 boxer = _box;
@@ -569,6 +574,8 @@ namespace PaintApp4Scrubs
             DisplayGroup displayGroup = new DisplayGroup(BoxFinder(shape));
             _broker.DoCommand(displayGroup);
         }
+
+
     }
     #endregion
 };

@@ -33,6 +33,7 @@
                 <ComboBoxItem>bottom</ComboBoxItem>
             </ComboBox>
             <TextBox Name="OrnementName" Width="100" MaxLength="50" MaxWidth="100">vul hier je text in</TextBox>
+            <Button Name="SetNames" BorderBrush="#FF969696" Content="Group" Height="50" Width="80" Click="SetNames_OnClick"/>
             <Label Name="LabelCoords" Content="X:Y"></Label>
         </ToolBar>
         <Canvas Name="Canvas" x:FieldModifier="public" Background="AntiqueWhite" MouseDown="Canvas_OnMouseDown" MouseUp="Canvas_OnMouseUp" MouseMove="Canvas_OnMouseMove">
