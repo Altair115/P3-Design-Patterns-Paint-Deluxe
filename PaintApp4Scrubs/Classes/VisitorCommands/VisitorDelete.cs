@@ -7,14 +7,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
     public class VisitorDelete : IVisitor
     {
-        /// <summary>
-        /// Visitor Function for godShape
-        /// </summary>
-        /// <param name="godShape">Selected Shape</param>
-        public void Visit(GodShape godShape)
-        {
-            MainWindow.AppWindow.RemoveShape(godShape);
-        }
 
         /// <summary>
         /// Visitor Function for Boxer
@@ -67,7 +59,7 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         public void VisitOrnament(Ornament ornament)
         {
             ornament.GetComponent().Accept(this);
-            MainWindow.AppWindow.RemoveShape(ornament.textBlock);
+            MainWindow.AppWindow.RemoveShape(ornament.TextBlock);
         }
     }
 }

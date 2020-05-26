@@ -20,16 +20,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         }
 
         /// <summary>
-        /// Visitor Function for godShape
-        /// </summary>
-        /// <param name="godShape">Selected Shape</param>
-        public void Visit(GodShape godShape)
-        {
-            var x = godShape as BaseShape;
-            x.Accept(this);
-        }
-
-        /// <summary>
         /// Visitor Function for boxer
         /// </summary>
         /// <param name="boxer">Selected Box</param>
@@ -91,8 +81,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             ornament.GetComponent().Accept(this);
             Vector x = ornament.GetVector(ornament.Position);
-            Canvas.SetTop(ornament.textBlock, x.Y);
-            Canvas.SetLeft(ornament.textBlock, x.X);
+            Canvas.SetTop(ornament.TextBlock, x.Y);
+            Canvas.SetLeft(ornament.TextBlock, x.X);
         }
     }
 }

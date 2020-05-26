@@ -18,6 +18,6 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public abstract void Accept(IVisitor visitor);
         public abstract GodShape GetBaseShape();
         public abstract Vector GetCenter();
-        public string Depth { get; set; }
+        public abstract string Depth { get; set; }
     }
 }

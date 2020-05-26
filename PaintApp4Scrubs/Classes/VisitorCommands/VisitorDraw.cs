@@ -7,14 +7,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
     public class VisitorDraw : IVisitor
     {
         /// <summary>
-        /// Visitor Function for godShape
-        /// </summary>
-        /// <param name="godShape">Selected Shape</param>
-        public void Visit(GodShape godShape)
-        {
-            MainWindow.AppWindow.PutOnScreen(godShape);
-        }
-        /// <summary>
         /// Visitor Function for boxer
         /// </summary>
         /// <param name="boxer">Selected Box</param>
@@ -64,12 +56,12 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void VisitOrnament(Ornament ornament)
         {
-            ornament.textBlock.Text = ornament.Name.ToString();
+            ornament.TextBlock.Text = ornament.Name.ToString();
             Vector x = ornament.GetVector(ornament.Position);
-            Canvas.SetTop(ornament.textBlock,x.Y);
-            Canvas.SetLeft(ornament.textBlock,x.X);
+            Canvas.SetTop(ornament.TextBlock,x.Y);
+            Canvas.SetLeft(ornament.TextBlock,x.X);
             ornament.GetComponent().Accept(this);
-            MainWindow.AppWindow.PutOnScreen(ornament.textBlock);
+            MainWindow.AppWindow.PutOnScreen(ornament.TextBlock);
         }
     }
 }

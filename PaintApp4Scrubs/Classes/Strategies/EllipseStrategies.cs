@@ -58,7 +58,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         /// gets the string of the Ellipse
         /// </summary>
         /// <param name="baseShape">the baseShape</param>
-        /// <returns></returns>
+        /// <returns>String format for Ellipse</returns>
         public string GetString(BaseShape baseShape)
         {
             return $"Ellipse {Canvas.GetLeft(baseShape)} {Canvas.GetTop(baseShape)} {_xRadius} {_yRadius}";

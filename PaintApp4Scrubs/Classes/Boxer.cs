@@ -12,16 +12,14 @@ namespace PaintApp4Scrubs.Classes
 {
     public class Boxer : GodShape
     {
-        /// </summary>
-        /// Gets & Sets the depth needed for printing
-        /// <summary>
         public override double StrategyHeight { get; set; }
         private readonly List<GodShape> _components = new List<GodShape>();
-        public string Depth { get; set; }
-        /// <param name="component">the component to be added</param>
-        /// </summary>
-        /// Adds the component to a box
+
         /// <summary>
+        /// Gets & Sets the depth needed for printing
+        /// </summary>
+        public override string Depth { get; set; }
+        
         /// <summary>
         /// Adds the component to a box
         /// </summary>
@@ -52,29 +50,30 @@ namespace PaintApp4Scrubs.Classes
         {
             foreach (var comp in this.GetChildren())
             {
-                if (comp is Boxer)
+                if (comp is Boxer x1)
                 {
-                    var x = (Boxer)comp;
-                    x.Depth += "-";
-                    x.Indentation();
+                    x1.Depth += "-";
+                    x1.Indentation();
                 }
                 comp.Depth += "-";
             }
         }
-        /// <param name="depth">the depth if nested deeper in the hierarchy</param>
-        /// <param name="component">the component to be added</param>
-        /// </summary>
-        /// Adds the component to a box
+
         /// <summary>
+        /// Adds the component to a box
+        /// </summary>
+        /// <param name="component">the component to be added</param>
+        /// <param name="depth">the depth if nested deeper in the hierarchy</param>
         public void Add(GodShape component , string depth)
         {
             component.Depth = depth;
             _components.Add(component);
         }
-        /// <param name="component">the component to be detached</param>
-        /// </summary>
-        /// detaches the component from its box
+
         /// <summary>
+        /// detaches the component from its box
+        /// </summary>
+        /// <param name="component">the component to be detached</param>
         public void Detach(GodShape component)
         {
             _components.Remove(component);
@@ -101,10 +100,11 @@ namespace PaintApp4Scrubs.Classes
             }
             return null;
         }
-        /// <returns>A list of children</returns>
-        /// </summary>
-        /// Gets the children of the box
+
         /// <summary>
+        /// Gets the children of the box
+        /// </summary>
+        /// <returns>A list of children</returns>
         public List<GodShape> GetChildren()
         {
             return _components;
@@ -115,15 +115,14 @@ namespace PaintApp4Scrubs.Classes
             throw new NotImplementedException();
         }
 
-        /// <param name="visitor">the visitor in question</param>
-        /// </summary>
-        /// Accept a visitor
-        /// <summary>
         public override GodShape GetBaseShape()
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Accept a visitor
+        /// </summary>
+        /// <param name="visitor">the visitor in question</param>
         public override void Accept(IVisitor visitor)
         {
             visitor.Visit(this);

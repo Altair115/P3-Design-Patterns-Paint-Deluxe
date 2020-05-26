@@ -23,7 +23,9 @@ namespace PaintApp4Scrubs
         private GodShape _selectedShape;
         private readonly List<GodShape> _boxList = new List<GodShape>();
         private readonly Boxer _box;
-        private List<ComboBoxLinker> comboBoxLinkers = new List<ComboBoxLinker>();
+        private readonly List<ComboBoxLinker> _comboBoxLinkers = new List<ComboBoxLinker>();
+
+        private int _comboBoxIndex = 0;
 
         /// <summary>
         /// Enums for modes 
@@ -121,6 +123,14 @@ namespace PaintApp4Scrubs
             _broker.DoCommand(saveFile);
         }
 
+        private void SetNames_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (OrnamentBox != null && OrnamentName != null)
+            {
+                AddToExists();
+            }
+        }
+
         #endregion
 
         private Point _currentPoint; //the current mouse position
@@ -129,29 +139,38 @@ namespace PaintApp4Scrubs
 
         private void OrnamentBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
-            if (ornamentBox != null && OrnementName != null)
+            if (OrnamentBox != null && OrnamentName != null)
             {
-                ComboBoxLinker comboBoxLinker = new ComboBoxLinker();
-                comboBoxLinker.TextBoxName = OrnementName.Text;
-                comboBoxLinker.PositionString = ornamentBox.SelectionBoxItem.ToString();
-                foreach (var item in comboBoxLinkers)
+                AddToExists();
+                foreach (var itemBoxLinker in _comboBoxLinkers)
                 {
-                    if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName != comboBoxLinker.TextBoxName)
+                    if (OrnamentBox.Items[OrnamentBox.SelectedIndex].ToString().Split(" ")[1] == itemBoxLinker.PositionString)
                     {
-                        comboBoxLinkers.Remove(item);
-                        comboBoxLinkers.Add(comboBoxLinker);
-                        return;
-                    }
-
-                    if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName == comboBoxLinker.TextBoxName)
-                    {
-                        return;
+                        OrnamentName.Text = itemBoxLinker.TextBoxName;
                     }
                 }
-                comboBoxLinkers.Add(comboBoxLinker);
+                _comboBoxIndex = OrnamentBox.SelectedIndex;
             }
         }
+
+        private void AddToExists()
+        {
+            ComboBoxLinker comboBoxLinker = new ComboBoxLinker {TextBoxName = OrnamentName.Text, PositionString = OrnamentBox.SelectionBoxItem.ToString() };
+            foreach (var item in _comboBoxLinkers)
+            {
+                if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName != comboBoxLinker.TextBoxName)
+                {
+                    _comboBoxLinkers.Remove(item);
+                    _comboBoxLinkers.Add(comboBoxLinker);
+                    return;
+                }
+
+                if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName == comboBoxLinker.TextBoxName)
+                    return;
+            }
+            _comboBoxLinkers.Add(comboBoxLinker);
+        }
+
         private void Canvas_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             _startPoint = e.GetPosition(this);
@@ -232,12 +251,13 @@ namespace PaintApp4Scrubs
         private GodShape MakeOrnaments(BaseShape shape)
         {
             List<Ornament> ornaments = new List<Ornament>();
-            if (comboBoxLinkers.Count != 0)
+            if (_comboBoxLinkers.Count != 0)
             {
-                for (int i = 0; i < comboBoxLinkers.Count; i++)
+                for (int i = 0; i < _comboBoxLinkers.Count; i++)
                 {
                     if (i == 0)
                     {
+                        shape.hasDeco = true;
                         Ornament ornament = new Ornament(shape);
                         ornaments.Add(ornament);
                     }
@@ -247,10 +267,10 @@ namespace PaintApp4Scrubs
                         Ornament ornament = new Ornament(x);
                         ornaments.Add(ornament);
                     }
-                    ornaments[i].Position = comboBoxLinkers[i].PositionString;
-                    ornaments[i].Name = comboBoxLinkers[i].TextBoxName;
+                    ornaments[i].Position = _comboBoxLinkers[i].PositionString;
+                    ornaments[i].Name = _comboBoxLinkers[i].TextBoxName;
                 }
-                comboBoxLinkers.Clear();
+                _comboBoxLinkers.Clear();
                 return ornaments[^1];
             }
             return shape;
@@ -258,9 +278,9 @@ namespace PaintApp4Scrubs
 
         #region Draw Calls
 
-        /// </summary>
-        ///  Sets and draws line after mouse is released
         /// <summary>
+        ///  Sets and draws line after mouse is released
+        /// </summary>
         private void DrawLine()
         {
             BaseShape newLine = new BaseShape(new LineStrategies(_startPoint, _endPoint))
@@ -313,13 +333,13 @@ namespace PaintApp4Scrubs
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 newEllipse.StrategyWidth = _startPoint.Y - _endPoint.Y;
             }
-            
+
             DrawShape(MakeOrnaments(newEllipse));
         }
 
-        /// </summary>
-        ///  Sets and draws rectangle after mouse is released
         /// <summary>
+        ///  Sets and draws rectangle after mouse is released
+        /// </summary>
         private void DrawRectangle()
         {
             BaseShape square = new BaseShape(new SquareStrategies(10, 10))
@@ -411,14 +431,14 @@ namespace PaintApp4Scrubs
         }
 
         #endregion
-        /// <returns>box or a shape</returns>
-        /// <param name="shape">the selected shape</param>
-        /// </summary>
-        /// find the parent box of shape
         /// <summary>
-        public GodShape BoxFinder(GodShape shape)
+        /// find the parent box of shape
+        /// </summary>
+        /// <param name="shape">the selected shape</param>
+        /// <returns>box or a shape</returns>
+        private GodShape BoxFinder(GodShape shape)
         {
-            GodShape component = _box.FindBox(shape as GodShape);
+            GodShape component = _box.FindBox(shape);
             if (component != null)
                 shape = component;
             return shape;
@@ -440,14 +460,14 @@ namespace PaintApp4Scrubs
         /// picks the selected shape and uses the command pattern to call the Move command 
         /// </summary>
         /// <param name="selectedShape">selected shape </param>
-        public void MoveShape(GodShape selectedShape)
+        private void MoveShape(GodShape selectedShape)
         {
             int distanceFix = 50;
             Vector endPoint = (Vector)_endPoint;
             Vector startPoint = (Vector)_startPoint;
             endPoint.Y -= distanceFix;
             startPoint.Y -= distanceFix;
-            
+
             Move move = new Move(BoxFinder(FindDecorator(selectedShape)), endPoint, startPoint);
             _broker.DoCommand(move);
         }
@@ -469,7 +489,7 @@ namespace PaintApp4Scrubs
         /// creates the command to delete the selected shape
         /// </summary>
         /// <param name="selectedShape">The selected shape</param>
-        public void DeleteShape(GodShape selectedShape)
+        private void DeleteShape(GodShape selectedShape)
         {
             if (selectedShape == null)
                 return;
@@ -477,14 +497,21 @@ namespace PaintApp4Scrubs
             _broker.DoCommand(delete);
             _box.Detach(selectedShape);
         }
-
-        public GodShape FindDecorator(GodShape selectedShape)
+        private GodShape FindDecorator(GodShape selectedShape, Boxer boxer = null)
         {
-            foreach (var decorator in _box.GetChildren())
+            if (boxer == null)
+                boxer = _box;
+
+            foreach (var decorator in boxer.GetChildren())
             {
                 if (decorator is Decorator deco && selectedShape == deco.GetBaseShape())
                 {
                     return deco;
+                }
+
+                if (decorator is Boxer box)
+                {
+                    selectedShape = FindDecorator(selectedShape, box);
                 }
             }
             return selectedShape;
@@ -507,7 +534,7 @@ namespace PaintApp4Scrubs
         /// picks the selected and creates an resize command to resize the selected shape 
         /// </summary>
         /// <param name="selectedShape">The selected shape</param>
-        public void ResizeShape(GodShape selectedShape)
+        private void ResizeShape(GodShape selectedShape)
         {
             if (selectedShape == null)
                 return;
@@ -516,19 +543,20 @@ namespace PaintApp4Scrubs
             Resize resize = new Resize(BoxFinder(FindDecorator(selectedShape)), distance);
             _broker.DoCommand(resize);
         }
-        /// <param name="selectedComponent">the selected shape or box</param>
-        /// </summary>
-        /// adds a box or a shape to the main list(box) of the canvas
+
         /// <summary>
-        public void AddToBoxList(GodShape selectedComponent)
+        /// adds a box or a shape to the main list(box) of the canvas
+        /// </summary>
+        /// <param name="selectedComponent">the selected shape or box</param>
+        private void AddToBoxList(GodShape selectedComponent)
         {
             if (selectedComponent == null)
                 return;
-
-            GodShape component = _box.FindBox(selectedComponent as GodShape);
+            var x = FindDecorator(selectedComponent);
+            GodShape component = _box.FindBox(x);
             if (component == null)
             {
-                _boxList.Add(selectedComponent);
+                _boxList.Add(x);
             }
             else
             {
@@ -538,21 +566,22 @@ namespace PaintApp4Scrubs
                 }
             }
         }
-        /// <param name="components">a list of boxes or shapes </param>
-        /// </summary>
-        /// makes a command call to make a group of objects
+
         /// <summary>
-        public void AddToGroup(List<GodShape> components)
+        /// makes a command call to make a group of objects
+        /// </summary>
+        /// <param name="components">a list of boxes or shapes </param>
+        private void AddToGroup(List<GodShape> components)
         {
             MakeGroup makeGroup = new MakeGroup(components, _box);
             _broker.DoCommand(makeGroup);
             _boxList.Clear();
         }
-        /// <param name="shape">the selected shape</param>
+        /// <summary>
         /// makes a command call to print the hierarchy on the selected shape
         /// </summary>
-        /// <summary>
-        public void DisplayGroup(GodShape shape)
+        /// <param name="shape">the selected shape</param>
+        private void DisplayGroup(GodShape shape)
         {
             if (shape == null)
                 return;
@@ -560,6 +589,8 @@ namespace PaintApp4Scrubs
             DisplayGroup displayGroup = new DisplayGroup(BoxFinder(shape));
             _broker.DoCommand(displayGroup);
         }
+
+
     }
     #endregion
 };

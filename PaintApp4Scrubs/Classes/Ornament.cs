@@ -12,8 +12,9 @@ namespace PaintApp4Scrubs.Classes
     {
         public string Name = "";
         public string Position = "";
-        private Size sizeofTexBlock;
-        public TextBlock textBlock = new TextBlock();
+        private Size _sizeofTexBlock;
+        public TextBlock TextBlock = new TextBlock();
+        private string _depth;
 
         protected override Geometry DefiningGeometry
         {
@@ -46,18 +47,18 @@ namespace PaintApp4Scrubs.Classes
         public Vector GetVector(string position)
         {
             Vector center = GetCenter();
-            sizeofTexBlock = MeasureString(Name);
+            _sizeofTexBlock = MeasureString(Name);
             switch (position)
             {
                 case "left":
-                    //textBlock.FlowDirection = FlowDirection.RightToLeft;
-                    return new Vector(center.X - (StrategyWidth / 2) - sizeofTexBlock.Width - 20, center.Y - (sizeofTexBlock.Height / 2));
+                    //TextBlock.FlowDirection = FlowDirection.RightToLeft;
+                    return new Vector(center.X - (StrategyWidth / 2) - _sizeofTexBlock.Width - 20, center.Y - (_sizeofTexBlock.Height / 2));
                 case "right":
-                    return new Vector(center.X + (StrategyWidth / 2) + 20, center.Y - (sizeofTexBlock.Height / 2));
+                    return new Vector(center.X + (StrategyWidth / 2) + 20, center.Y - (_sizeofTexBlock.Height / 2));
                 case "top":
-                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y - (StrategyHeight / 2) - (sizeofTexBlock.Height * 2));
+                    return new Vector(center.X - (_sizeofTexBlock.Width / 2), center.Y - (StrategyHeight / 2) - (_sizeofTexBlock.Height * 2));
                 case "bottom":
-                    return new Vector(center.X - (sizeofTexBlock.Width / 2), center.Y + (StrategyHeight / 2) + (sizeofTexBlock.Height / 2));
+                    return new Vector(center.X - (_sizeofTexBlock.Width / 2), center.Y + (StrategyHeight / 2) + (_sizeofTexBlock.Height / 2));
                 default:
                     return new Vector(0, 0);
             }
@@ -69,9 +70,9 @@ namespace PaintApp4Scrubs.Classes
                 candidate,
                 CultureInfo.CurrentCulture,
                 FlowDirection.LeftToRight,
-                new Typeface(this.textBlock.FontFamily, this.textBlock.FontStyle, this.textBlock.FontWeight,
-                    this.textBlock.FontStretch),
-                this.textBlock.FontSize,
+                new Typeface(this.TextBlock.FontFamily, this.TextBlock.FontStyle, this.TextBlock.FontWeight,
+                    this.TextBlock.FontStretch),
+                this.TextBlock.FontSize,
                 Brushes.Black,
                 new NumberSubstitution(),
                 1);
@@ -83,17 +84,32 @@ namespace PaintApp4Scrubs.Classes
         {
             visitor.VisitOrnament(this);
         }
-        
+
+        public override string Depth
+        {
+            get => _depth;
+            set
+            {
+                _depth = value;
+                base.Depth = value;
+            }
+        }
+
         public override double StrategyHeight
         {
-            get { return base.StrategyHeight; }
+            get => base.StrategyHeight;
             set { }
         }
 
         public override double StrategyWidth
         {
-            get { return base.StrategyWidth; }
+            get => base.StrategyWidth;
             set { }
+        }
+
+        public override string ToString()
+        {
+            return $"ornament {Position} {Name}";
         }
     }
 }

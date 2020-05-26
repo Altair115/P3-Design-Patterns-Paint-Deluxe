@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Media;
+using Microsoft.VisualBasic.CompilerServices;
 using PaintApp4Scrubs.Classes.Strategies;
 using PaintApp4Scrubs.Interfaces;
 
@@ -10,18 +11,20 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// </summary>
     public class BaseShape : GodShape, IAccept
     {
+        private string _depth;
+        public bool hasDeco = false;
         public IStrategy Strategy;
-        /// </summary>
-        /// set and gets the Strategy related Width
         /// <summary>
+        /// set and gets the Strategy related Width
+        /// </summary>
         public override double StrategyWidth
         {
             get => Strategy.Width;
             set => Strategy.Width = value;
         }
-        /// </summary>
-        /// set and gets the Strategy related Height
         /// <summary>
+        /// set and gets the Strategy related Height
+        /// </summary>
         public override double StrategyHeight
         {
             get => Strategy.Height;
@@ -53,15 +56,16 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             Strategy = s;
         }
-        /// <param name="visitor">the selected visitor</param>
-        /// </summary>
-        /// The Visitor Accept Method for the selected strategy
-        /// <summary>
+        
         public override GodShape GetBaseShape()
         {
             return this;
         }
 
+        /// <summary>
+        /// The Visitor Accept Method for the selected strategy
+        /// </summary>
+        /// <param name="visitor">the selected visitor</param>
         public override void Accept(IVisitor visitor)
         {
             Strategy.Accept(visitor,this);
@@ -70,15 +74,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// defines the geometry of the shape with the strategy 
         /// </summary>
-        protected override Geometry DefiningGeometry
-        {
-            get { return Strategy.GetGeometry(); }
+        protected override Geometry DefiningGeometry => Strategy.GetGeometry();
 
-        }
         /// <summary>
         /// the string of the strategy 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The String Format</returns>
         public override string ToString()
         {
             return Strategy.GetString(this);
@@ -87,6 +88,18 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public override Vector GetCenter()
         {
             return Strategy.GetCenter(this);
+        }
+
+        public override string Depth
+        {
+            get => _depth;
+            set
+            {
+                if (hasDeco)
+                    _depth = value + "-";
+                else 
+                    _depth = value;
+            } 
         }
     }
 }
