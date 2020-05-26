@@ -22,6 +22,10 @@ namespace PaintApp4Scrubs.Classes
         /// </summary>
         /// Adds the component to a box
         /// <summary>
+        /// <summary>
+        /// Adds the component to a box
+        /// </summary>
+        /// <param name="component">the component to be added</param>
         public void Add(GodShape component)
         {
             component.Depth += "-";

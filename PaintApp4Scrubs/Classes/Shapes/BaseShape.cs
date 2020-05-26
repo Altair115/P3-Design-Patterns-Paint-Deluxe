@@ -11,18 +11,18 @@ namespace PaintApp4Scrubs.Classes.Shapes
     public class BaseShape : GodShape, IAccept
     {
         public IStrategy Strategy;
-        public override double StrategyWidth
         /// </summary>
         /// set and gets the Strategy related Width
         /// <summary>
+        public override double StrategyWidth
         {
             get => Strategy.Width;
             set => Strategy.Width = value;
         }
-        public override double StrategyHeight
         /// </summary>
         /// set and gets the Strategy related Height
         /// <summary>
+        public override double StrategyHeight
         {
             get => Strategy.Height;
             set => Strategy.Height = value;
@@ -53,12 +53,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
         {
             Strategy = s;
         }
-
-        public override GodShape GetBaseShape()
         /// <param name="visitor">the selected visitor</param>
         /// </summary>
         /// The Visitor Accept Method for the selected strategy
         /// <summary>
+        public override GodShape GetBaseShape()
         {
             return this;
         }
