@@ -5,19 +5,31 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Commands
 {
+    /// <summary>
+    /// Displays the hierarchy of the selected component 
+    /// </summary>
     public class DisplayGroup : ICommand
     {
         private readonly GodShape _component;
 
+        /// <param name="component">the selected component</param>
+        /// </summary>
+        /// the constructor of DisplayGroup
+        /// <summary>
         public DisplayGroup(GodShape component)
         {
             _component = component;
         }
+        /// <summary>
+        /// Executes the visitor on the component 
+        /// </summary>
         public void Execute()
         {
             _component.Accept(new VisitorDisplay(false));
         }
-
+        /// <summary>
+        /// you can Unexecute this
+        /// </summary>
         public void UnExecute()
         {
             throw new System.NotImplementedException();

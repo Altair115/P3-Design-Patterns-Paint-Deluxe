@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>P3-Design-Patterns-Paint-Deluxe</highlight></codeline>
+<codeline><highlight class="normal">P3<sp/>Design<sp/>patterns<sp/>Project</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Grafische<sp/>editor</highlight></codeline>
+<codeline><highlight class="normal">Met<sp/>een<sp/>grafische<sp/>editor<sp/>kunnen<sp/>ellipsen<sp/>en<sp/>rechthoeken<sp/>getekend<sp/>worden.<sp/>De<sp/>figuren<sp/>moeten<sp/>met<sp/>de<sp/>muis<sp/>getekend</highlight></codeline>
+<codeline><highlight class="normal">kunnen<sp/>worden<sp/>en<sp/>met<sp/>de<sp/>muis<sp/>geselecteerd<sp/>kunnen<sp/>worden.<sp/>Een<sp/>of<sp/>meer<sp/>geselecteerde<sp/>figuren<sp/>moeten<sp/>tot<sp/>een<sp/>groep</highlight></codeline>
+<codeline><highlight class="normal">gemaakt<sp/>kunnen<sp/>worden.<sp/>Groepen<sp/>gedragen<sp/>zich<sp/>verder<sp/>als<sp/>basisfiguren.<sp/>Wat<sp/>inhoudt<sp/>dat<sp/>binnen<sp/>groepen<sp/>weer<sp/>groepen</highlight></codeline>
+<codeline><highlight class="normal">kunnen<sp/>zitten,<sp/>waarbinnen<sp/>weer<sp/>groepen<sp/>zitten<sp/>etc..<sp/>(zonder<sp/>beperking<sp/>aan<sp/>de<sp/>nesting).<sp/>Verder<sp/>moeten<sp/>figuren<sp/>(en<sp/>dus</highlight></codeline>
+<codeline><highlight class="normal">ook<sp/>groepen)<sp/>verplaatst<sp/>kunnen<sp/>worden<sp/>en<sp/>van<sp/>grootte<sp/>veranderd<sp/>kunnen<sp/>worden.<sp/>Plaatjes<sp/>moeten<sp/>ook<sp/>op<sp/>schijf<sp/>kunnen</highlight></codeline>
+<codeline><highlight class="normal">worden<sp/>opgeslagen<sp/>en<sp/>weer<sp/>kunnen<sp/>worden<sp/>teruggelezen.</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>deze<sp/>opgave<sp/>moet<sp/>een<sp/>grafische<sp/>editor<sp/>gemaakt<sp/>worden<sp/>met<sp/>gebruikmaking<sp/>van<sp/>design<sp/>patterns.<sp/>Dit<sp/>moet<sp/>in</highlight></codeline>
+<codeline><highlight class="normal">verschillende<sp/>stappen<sp/>gebeuren,<sp/>waarbij<sp/>de<sp/>al<sp/>gemaakte<sp/>code<sp/>vaak<sp/>van<sp/>structuur<sp/>veranderd<sp/>moet<sp/>worden<sp/>(refactoring).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Stap<sp/>1:<sp/>eenvoudig<sp/>tekenprogramma</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Maak<sp/>een<sp/>eerste<sp/>versie<sp/>van<sp/>de<sp/>grafische<sp/>editor<sp/>die<sp/>ellipsen<sp/>en<sp/>rechthoeken<sp/>kan<sp/>tekenen,<sp/>selecteren,<sp/>verplaatsen<sp/>en<sp/>van<sp/>grootte<sp/>veranderen.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Groepen,<sp/>bijschriften<sp/>en<sp/>file<sp/>operaties<sp/>hoeven<sp/>nu<sp/>nog<sp/>niet.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Stap<sp/>2:<sp/>command<sp/>pattern</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Voeg<sp/>file<sp/>IO<sp/>toe<sp/>(volgens<sp/>de<sp/>grammatica<sp/>die<sp/>verderop<sp/>uitgelegd<sp/>wordt).</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Zorg<sp/>ervoor<sp/>dat<sp/>alle<sp/>acties<sp/>die<sp/>een<sp/>gebruiker<sp/>kan<sp/>uitvoeren,<sp/>via<sp/>command-objecten<sp/>worden<sp/>gedaan.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Voeg<sp/>de<sp/>mogelijkheid<sp/>toe<sp/>om<sp/>acties<sp/>ongedaan<sp/>te<sp/>maken<sp/>(onbeperkte<sp/>undo<sp/>en<sp/>redo).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Stap<sp/>3:<sp/>composite<sp/>pattern</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Voeg<sp/>groepen<sp/>toe<sp/>volgens<sp/>het<sp/>composite<sp/>pattern.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Pas<sp/>ook<sp/>de<sp/>file<sp/>IO<sp/>aan.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Bijschriften<sp/>hoeven<sp/>nu<sp/>nog<sp/>niet.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Stap<sp/>4:<sp/>visitor<sp/>pattern</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Implementeer<sp/>een<sp/>visitor<sp/>klasse<sp/>voor<sp/>de<sp/>figuren.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Verplaatsen,<sp/>resizen<sp/>en<sp/>schrijven<sp/>naar<sp/>file<sp/>moeten<sp/>door<sp/>subklassen<sp/>van<sp/>deze<sp/>visitor<sp/>uitgevoerd<sp/>worden.<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Refactor<sp/>het<sp/>programma.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Stap<sp/>5:<sp/>strategy<sp/>pattern<sp/>en<sp/>singleton<sp/>pattern</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Het<sp/>verschil<sp/>tussen<sp/>een<sp/>ellips<sp/>en<sp/>een<sp/>rechthoek<sp/>is<sp/>eigenlijk<sp/>alleen<sp/>de<sp/>manier<sp/>van<sp/>tekenen<sp/>en<sp/>hun<sp/>naam.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>We<sp/>kunnen<sp/>ze<sp/>dus<sp/>wel<sp/>samennemen<sp/>tot<sp/>een<sp/>klasse<sp/>&quot;basisfiguur&quot;.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Een<sp/>basisfiguur<sp/>bevat<sp/>coordinaten<sp/>en<sp/>een<sp/>pointer<sp/>naar<sp/>een<sp/>strategy<sp/>object<sp/>(zijn<sp/>delegate).</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>De<sp/>delegate<sp/>kan<sp/>tekenen<sp/>en<sp/>heeft<sp/>een<sp/>toString<sp/>methode.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Er<sp/>zijn<sp/>maar<sp/>2<sp/>delegates<sp/>nodig:<sp/>voor<sp/>een<sp/>ellips<sp/>en<sp/>voor<sp/>een<sp/>rechthoek.<sp/>Dit<sp/>kunnen<sp/>singleton<sp/>objecten<sp/>zijn.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Refactor<sp/>het<sp/>programma</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Stap<sp/>6:<sp/>decorator<sp/>pattern</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Nu<sp/>moeten<sp/>er<sp/>bijschriften<sp/>bij<sp/>de<sp/>figuren<sp/>geplaatst<sp/>kunnen<sp/>worden<sp/>(soms<sp/>ernaast,<sp/>soms<sp/>erboven,<sp/>soms<sp/>eronder).</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Er<sp/>kunnen<sp/>meerdere<sp/>bijschriften<sp/>bij<sp/>een<sp/>figuur<sp/>staan<sp/>en<sp/>ook<sp/>groepen<sp/>kunnen<sp/>bijschriften<sp/>hebben.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Het<sp/>decorator<sp/>pattern<sp/>is<sp/>hiervoor<sp/>zeer<sp/>geschikt.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Pas<sp/>ook<sp/>de<sp/>file<sp/>IO<sp/>aan.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Refactor<sp/>het<sp/>programma.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Beoordeling:</highlight></codeline>
+<codeline><highlight class="normal">de<sp/>opgave<sp/>wordt<sp/>beoordeeld<sp/>aan<sp/>de<sp/>hand<sp/>van<sp/>de<sp/>volgende<sp/>criteria:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>elke<sp/>stap<sp/>moet<sp/>worden<sp/>gedemonstreerd<sp/>en<sp/>besproken<sp/>met<sp/>de<sp/>begeleidende<sp/>docent</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>bij<sp/>elke<sp/>stap<sp/>moet<sp/>de<sp/>broncode<sp/>en<sp/>een<sp/>ontwerpdocument<sp/>worden<sp/>ingeleverd</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>broncode<sp/>is<sp/>voorzien<sp/>van<sp/>voldoende<sp/>commentaar</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>een<sp/>ontwerpdocument<sp/>bevat<sp/>een<sp/>UML-beschrijving<sp/>in<sp/>de<sp/>vorm<sp/>van<sp/>begeleidende<sp/>tekst,<sp/>klassendiagrammen,<sp/>toestandsdiagrammen<sp/>en<sp/>tijdsvolgordediagrammen<sp/>(voor<sp/>zover<sp/>van<sp/>toepassing)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">NB:<sp/>De<sp/>ontwerpdocumenten<sp/>vormen<sp/>tezamen<sp/>het<sp/>rapport<sp/>bij<sp/>de<sp/>eindopdracht.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Grammatica:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">file<sp/>=<sp/>group</highlight></codeline>
+<codeline><highlight class="normal">group<sp/>=<sp/>&quot;group&quot;<sp/>count<sp/>{figure}</highlight></codeline>
+<codeline><highlight class="normal">figure<sp/>=<sp/>group<sp/>|<sp/>rectangle<sp/>|<sp/>ellipse<sp/>|<sp/>ornament</highlight></codeline>
+<codeline><highlight class="normal">rectangle<sp/>=<sp/>&quot;rectangle&quot;<sp/>left<sp/>top<sp/>width<sp/>height</highlight></codeline>
+<codeline><highlight class="normal">ellipse<sp/>=<sp/>&quot;ellipse&quot;<sp/>left<sp/>top<sp/>width<sp/>height</highlight></codeline>
+<codeline><highlight class="normal">ornament<sp/>=<sp/>&quot;ornament&quot;<sp/>position<sp/>string<sp/>figure</highlight></codeline>
+<codeline><highlight class="normal">position<sp/>=<sp/>&quot;top&quot;<sp/>|<sp/>&quot;bottom&quot;<sp/>|<sp/>&quot;left&quot;<sp/>|<sp/>&quot;right&quot;</highlight></codeline>
+<codeline><highlight class="normal">count,<sp/>left,<sp/>top,<sp/>width,<sp/>height<sp/>=<sp/>int</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Hierbij<sp/>betekent<sp/>{<sp/>}<sp/>dat<sp/>iets<sp/>0<sp/>of<sp/>meer<sp/>keer<sp/>kan<sp/>voorkomen.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>En<sp/>[<sp/>]<sp/>dat<sp/>iets<sp/>0<sp/>of<sp/>1<sp/>keer<sp/>kan<sp/>voorkomen.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>En<sp/>&quot;<sp/>&quot;<sp/>betekent<sp/>dat<sp/>de<sp/>tekst<sp/>binnen<sp/>de<sp/>quotes<sp/>letterlijk<sp/>voorkomt.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Voorbeeld:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/>group<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>ornament<sp/>top<sp/>&quot;rondje&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>ellipse<sp/>100<sp/>100<sp/>20<sp/>50</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>group<sp/>3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>rectangle<sp/>10<sp/>20<sp/>100<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ornament<sp/>top<sp/>&quot;group&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ornament<sp/>bottom<sp/>&quot;ellipses&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>group<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ellipse<sp/>50<sp/>150<sp/>20<sp/>50</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ellipse<sp/>70<sp/>150<sp/>20<sp/>50</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>rectangle<sp/>100<sp/>100<sp/>10<sp/>10</highlight></codeline>
+<codeline><highlight class="normal">```<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Dit<sp/>geeft<sp/>een<sp/>file<sp/>aan<sp/>die<sp/>bestaat<sp/>uit<sp/>een<sp/>groep<sp/>van<sp/>2<sp/>figuren.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>De<sp/>eerste<sp/>figuur<sp/>is<sp/>een<sp/>ellips<sp/>met<sp/>left=100,<sp/>top=100,<sp/>width=20,<sp/>height=50<sp/>met<sp/>een<sp/>bijschrift<sp/>&quot;rondje&quot;<sp/>erboven.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>De<sp/>tweede<sp/>figuur<sp/>is<sp/>een<sp/>groep<sp/>van<sp/>3<sp/>figuren:<sp/>een<sp/>rechthoek,<sp/>een<sp/>groep<sp/>van<sp/>2<sp/>ellipsen<sp/>en<sp/>weer<sp/>een<sp/>rechthoek.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>De<sp/>groep<sp/>van<sp/>2<sp/>ellipsen<sp/>heeft<sp/>zowel<sp/>een<sp/>bijschrift<sp/>aan<sp/>de<sp/>bovenkant<sp/>als<sp/>een<sp/>bijschrift<sp/>aan<sp/>de<sp/>onderkant.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Een<sp/>ornament<sp/>hoort<sp/>altijd<sp/>bij<sp/>de<sp/>eerstvolgende<sp/>figuur<sp/>en<sp/>er<sp/>kunnen<sp/>meerdere<sp/>ornamenten<sp/>bij<sp/>een<sp/>figuur<sp/>horen.</highlight></codeline>
+<codeline><highlight class="normal">De<sp/>volgorde<sp/>van<sp/>figuren<sp/>binnen<sp/>een<sp/>groep<sp/>is<sp/>in<sp/>principe<sp/>vrij.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Het<sp/>inspringen<sp/>is<sp/>verplicht<sp/>en<sp/>gebeurt<sp/>alleen<sp/>bij<sp/>groepen,<sp/>dus<sp/>niet<sp/>bij<sp/>een<sp/>ornament.</highlight></codeline>
+<codeline><highlight class="normal">Verder<sp/>moet<sp/>tussen<sp/>woorden<sp/>op<sp/>een<sp/>regel<sp/>1<sp/>spatie<sp/>staan.</highlight></codeline>
+<codeline><highlight class="normal">De<sp/>verschillende<sp/>elementen<sp/>group,<sp/>rectangle,<sp/>ellipse<sp/>en<sp/>ornament<sp/>moeten<sp/>elk<sp/>op<sp/>een<sp/>afzonderlijke<sp/>regel<sp/>staan.<sp/></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/README.md"/>
+  </compounddef>
+</doxygen>

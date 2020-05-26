@@ -25,6 +25,9 @@ namespace PaintApp4Scrubs
         private readonly Boxer _box;
         private List<ComboBoxLinker> comboBoxLinkers = new List<ComboBoxLinker>();
 
+        /// <summary>
+        /// Enums for modes 
+        /// </summary>
         private enum ModeSwitch
         {
             Line,
@@ -39,7 +42,9 @@ namespace PaintApp4Scrubs
         }
 
         private ModeSwitch _currentMode = ModeSwitch.Line;
-
+        /// <summary>
+        /// constructor for the main window
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -253,7 +258,9 @@ namespace PaintApp4Scrubs
 
         #region Draw Calls
 
-        // Sets and draws line after mouse is released
+        /// </summary>
+        ///  Sets and draws line after mouse is released
+        /// <summary>
         private void DrawLine()
         {
             BaseShape newLine = new BaseShape(new LineStrategies(_startPoint, _endPoint))
@@ -263,8 +270,9 @@ namespace PaintApp4Scrubs
             };
             DrawShape(MakeOrnaments(newLine));
         }
-
-        // Sets and draws ellipse after mouse is released
+        /// <summary>
+        /// Sets and draws ellipse after mouse is released
+        /// </summary>
         private void DrawEllipse()
         {
             BaseShape newEllipse =
@@ -309,7 +317,9 @@ namespace PaintApp4Scrubs
             DrawShape(MakeOrnaments(newEllipse));
         }
 
-        // Sets and draws rectangle after mouse is released
+        /// </summary>
+        ///  Sets and draws rectangle after mouse is released
+        /// <summary>
         private void DrawRectangle()
         {
             BaseShape square = new BaseShape(new SquareStrategies(10, 10))
@@ -352,7 +362,9 @@ namespace PaintApp4Scrubs
 
             DrawShape(MakeOrnaments(square));
         }
-
+        /// <summary>
+        /// Sets and draws Triangle after mouse is released
+        /// </summary>
         private void DrawTriangle()
         {
             BaseShape triangle =
@@ -399,7 +411,11 @@ namespace PaintApp4Scrubs
         }
 
         #endregion
-
+        /// <returns>box or a shape</returns>
+        /// <param name="shape">the selected shape</param>
+        /// </summary>
+        /// find the parent box of shape
+        /// <summary>
         public GodShape BoxFinder(GodShape shape)
         {
             GodShape component = _box.FindBox(shape as GodShape);
@@ -409,7 +425,10 @@ namespace PaintApp4Scrubs
         }
 
         #region Command calls
-
+        /// <summary>
+        /// makes a command call to draw a shape
+        /// </summary>
+        /// <param name="shape">the shape to be drawn</param>
         private void DrawShape(GodShape shape)
         {
             Draw draw = new Draw(shape);
@@ -497,7 +516,10 @@ namespace PaintApp4Scrubs
             Resize resize = new Resize(BoxFinder(FindDecorator(selectedShape)), distance);
             _broker.DoCommand(resize);
         }
-
+        /// <param name="selectedComponent">the selected shape or box</param>
+        /// </summary>
+        /// adds a box or a shape to the main list(box) of the canvas
+        /// <summary>
         public void AddToBoxList(GodShape selectedComponent)
         {
             if (selectedComponent == null)
@@ -516,14 +538,20 @@ namespace PaintApp4Scrubs
                 }
             }
         }
-
+        /// <param name="components">a list of boxes or shapes </param>
+        /// </summary>
+        /// makes a command call to make a group of objects
+        /// <summary>
         public void AddToGroup(List<GodShape> components)
         {
             MakeGroup makeGroup = new MakeGroup(components, _box);
             _broker.DoCommand(makeGroup);
             _boxList.Clear();
         }
-
+        /// <param name="shape">the selected shape</param>
+        /// makes a command call to print the hierarchy on the selected shape
+        /// </summary>
+        /// <summary>
         public void DisplayGroup(GodShape shape)
         {
             if (shape == null)

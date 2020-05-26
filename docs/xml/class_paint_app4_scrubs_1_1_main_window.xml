@@ -1,0 +1,1370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_paint_app4_scrubs_1_1_main_window" kind="class" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::MainWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>ModeSwitch</name>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a4803e6b9e63dabf04de980788d6a13c4" prot="private">
+          <name>Line</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a119518c2134c46108179369f0ce81fa2" prot="private">
+          <name>Ellipse</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25ace9291906a4c3b042650b70d7f3b152e" prot="private">
+          <name>Rectangle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a5e5500cb2b82eb72d550de644bd1b64b" prot="private">
+          <name>Triangle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25af2a6c498fb90ee345d997f888fce3b18" prot="private">
+          <name>Delete</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a6bc362dbf494c61ea117fe3c71ca48a5" prot="private">
+          <name>Move</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a9d723d04c40bfd81835c0766a698cf63" prot="private">
+          <name>Resize</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25a0c3cd33e7bf626da4897316a7158a7a4" prot="private">
+          <name>Selector</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25ab9987a246a537f4fe86f1f2e3d10dbdb" prot="private">
+          <name>Display</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="28" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="29" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a0437efc73a1a2060e1db11fa799ea6a5" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_broker" kindref="compound">Broker</ref></type>
+        <definition>readonly Broker PaintApp4Scrubs.MainWindow._broker</definition>
+        <argsstring></argsstring>
+        <name>_broker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="20" column="33" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1ad93ba4ca0a70e7fd42874d6b0d138947" prot="private" static="no" mutable="no">
+        <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+        <definition>GodShape PaintApp4Scrubs.MainWindow._selectedShape</definition>
+        <argsstring></argsstring>
+        <name>_selectedShape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="22" column="26" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a0900f12e26721deb6b400c3ddf3b3d1d" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref> &gt;</type>
+        <definition>readonly List&lt;IComponent&gt; PaintApp4Scrubs.MainWindow._boxList</definition>
+        <argsstring></argsstring>
+        <name>_boxList</name>
+        <initializer>= new List&lt;<ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="23" column="31" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a2a7f0bf368f45d0d9755b4e3e3d3bc74" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer" kindref="compound">Boxer</ref></type>
+        <definition>readonly Boxer PaintApp4Scrubs.MainWindow._box</definition>
+        <argsstring></argsstring>
+        <name>_box</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="24" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a7d3c351261d14a83dd51d05d0cf2d072" prot="private" static="no" mutable="no">
+        <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament" kindref="compound">Ornament</ref></type>
+        <definition>Ornament PaintApp4Scrubs.MainWindow.ornament</definition>
+        <argsstring></argsstring>
+        <name>ornament</name>
+        <initializer>= new <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament" kindref="compound">Ornament</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="26" column="18" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1af78220066fbe16ca04fd5d3c442fbcb7" prot="private" static="no" mutable="no">
+        <type>ModeSwitch</type>
+        <definition>ModeSwitch PaintApp4Scrubs.MainWindow._currentMode</definition>
+        <argsstring></argsstring>
+        <name>_currentMode</name>
+        <initializer>= ModeSwitch.Line</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="41" column="28" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a07e577074e8b48a09b15390aaa5e0835" prot="private" static="no" mutable="no">
+        <type>Point</type>
+        <definition>Point PaintApp4Scrubs.MainWindow._currentPoint</definition>
+        <argsstring></argsstring>
+        <name>_currentPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="122" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a8ddc8af4782326950ac7b4f6641f4171" prot="private" static="no" mutable="no">
+        <type>Point</type>
+        <definition>Point PaintApp4Scrubs.MainWindow._startPoint</definition>
+        <argsstring></argsstring>
+        <name>_startPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="123" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a6232e1b77a5c25651c5a45fdccf940c2" prot="private" static="no" mutable="no">
+        <type>Point</type>
+        <definition>Point PaintApp4Scrubs.MainWindow._endPoint</definition>
+        <argsstring></argsstring>
+        <name>_endPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="124" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a7a0a4d3af00c0f3954d2061b9ade78dd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PaintApp4Scrubs.MainWindow::_contentLoaded</definition>
+        <argsstring></argsstring>
+        <name>_contentLoaded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="175" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a5d22098e76f1e2fc1f42ab4479cd888f" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_paint_app4_scrubs_1_1_main_window" kindref="compound">MainWindow</ref></type>
+        <definition>MainWindow PaintApp4Scrubs.MainWindow.AppWindow</definition>
+        <argsstring></argsstring>
+        <name>AppWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="21" column="34" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a9b664613f1348751f8f504884d011af8" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.ToolBar</type>
+        <definition>System Windows Controls ToolBar PaintApp4Scrubs.MainWindow::ToolBar</definition>
+        <argsstring></argsstring>
+        <name>ToolBar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="47" column="47" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a1449b76029813d393de80c211831a448" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button PaintApp4Scrubs.MainWindow::UndoButton</definition>
+        <argsstring></argsstring>
+        <name>UndoButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="55" column="46" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1ab4ae421cea0bf1cd7f89baca10a9fca2" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button PaintApp4Scrubs.MainWindow::RedoButton</definition>
+        <argsstring></argsstring>
+        <name>RedoButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="63" column="46" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1ade806610b05f41aac18d7cd538a88799" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::LineButton</definition>
+        <argsstring></argsstring>
+        <name>LineButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="71" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a341c4cb6aeccec2d2e7c3cab7e64e1b7" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::EllipseButton</definition>
+        <argsstring></argsstring>
+        <name>EllipseButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="79" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a1db032b3a20f7a40f80c678c5b7f4bd6" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::RectangleButton</definition>
+        <argsstring></argsstring>
+        <name>RectangleButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="87" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1ab25164a544e19600528039931698c6a2" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::TriangleButton</definition>
+        <argsstring></argsstring>
+        <name>TriangleButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="95" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a73b2e55ecc9086a2ff5ffeffe7149915" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::DeleteButton</definition>
+        <argsstring></argsstring>
+        <name>DeleteButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="103" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a1e9d011c97c691de908ec55c48a46f3d" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::ResizeButton</definition>
+        <argsstring></argsstring>
+        <name>ResizeButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="111" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a278bf403cdac4821568181eaf05c6f86" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::MoveButton</definition>
+        <argsstring></argsstring>
+        <name>MoveButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="119" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a9ca76185d11b9f1daf67306142f82fdb" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::SelectorButton</definition>
+        <argsstring></argsstring>
+        <name>SelectorButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="127" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a7137ab7026e466c3c76832c63d8e6020" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.RadioButton</type>
+        <definition>System Windows Controls RadioButton PaintApp4Scrubs.MainWindow::DisplayButton</definition>
+        <argsstring></argsstring>
+        <name>DisplayButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="135" column="51" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a782c7ee6eda34e86d715d65533263832" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button PaintApp4Scrubs.MainWindow::GroupButton</definition>
+        <argsstring></argsstring>
+        <name>GroupButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="143" column="46" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a50bd0e1eb27ab0adb87537a8f4016481" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Button</type>
+        <definition>System Windows Controls Button PaintApp4Scrubs.MainWindow::Save</definition>
+        <argsstring></argsstring>
+        <name>Save</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="151" column="46" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1aac384831a661f66bb99f155b255fce26" prot="package" static="no" mutable="no">
+        <type>System.Windows.Controls.Label</type>
+        <definition>System Windows Controls Label PaintApp4Scrubs.MainWindow::LabelCoords</definition>
+        <argsstring></argsstring>
+        <name>LabelCoords</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="159" column="45" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_main_window_1a036fba7bcf9602003f257da56051f4cf" prot="public" static="no" mutable="no">
+        <type>System.Windows.Controls.Canvas</type>
+        <definition>System Windows Controls Canvas PaintApp4Scrubs.MainWindow::Canvas</definition>
+        <argsstring></argsstring>
+        <name>Canvas</name>
+        <briefdescription>
+<para>Canvas Name Field </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="170" column="44" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a3010a69b843f6ae0d3f90f232bad1ea8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PaintApp4Scrubs.MainWindow.MainWindow</definition>
+        <argsstring>()</argsstring>
+        <name>MainWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="43" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ad08f8833cfce6670773453e5891a48a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+        <definition>IComponent PaintApp4Scrubs.MainWindow.BoxFinder</definition>
+        <argsstring>(IComponent shape)</argsstring>
+        <name>BoxFinder</name>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="355" column="27" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="355" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1adf9cb5a7fbeae64d55a6ba7a03f7ca15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.MoveShape</definition>
+        <argsstring>(GodShape selectedShape)</argsstring>
+        <name>MoveShape</name>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+          <declname>selectedShape</declname>
+        </param>
+        <briefdescription>
+<para>picks the selected shape and uses the command pattern to call the Move command </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>selectedShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>selected shape </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="377" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="377" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a26f3df0af923c19c2e9413a39f0320aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.PutOnScreen</definition>
+        <argsstring>(GodShape shape)</argsstring>
+        <name>PutOnScreen</name>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+<para>puts the shape on the canvas </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the selected </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="392" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="392" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a816741bd40d3d811cd5e201f30c092b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.PutOnScreen</definition>
+        <argsstring>(TextBlock decorator)</argsstring>
+        <name>PutOnScreen</name>
+        <param>
+          <type>TextBlock</type>
+          <declname>decorator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="396" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="396" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a13ab0f02566d8e3d4bc198489c9c0760" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.DeleteShape</definition>
+        <argsstring>(IComponent selectedShape)</argsstring>
+        <name>DeleteShape</name>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <declname>selectedShape</declname>
+        </param>
+        <briefdescription>
+<para>creates the command to delete the selected shape </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>selectedShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The selected shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="405" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="405" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1aef4a595cc2bf613a8badd3d79d9ef4d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.RemoveShape</definition>
+        <argsstring>(GodShape shape)</argsstring>
+        <name>RemoveShape</name>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+<para>Removes the shape of the canvas given by the delete command </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the shape from the delete command </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="419" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="419" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a88a3d3d8a4b5e31177e8479904396649" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.ResizeShape</definition>
+        <argsstring>(IComponent selectedShape)</argsstring>
+        <name>ResizeShape</name>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <declname>selectedShape</declname>
+        </param>
+        <briefdescription>
+<para>picks the selected and creates an resize command to resize the selected shape </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>selectedShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The selected shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="428" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="428" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a5cf3f4f51302915c6cb6cddac25df248" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.AddToBoxList</definition>
+        <argsstring>(IComponent selectedComponent)</argsstring>
+        <name>AddToBoxList</name>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <declname>selectedComponent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="438" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="438" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a1094456dc2f923d5c418459d9c9c659e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.AddToGroup</definition>
+        <argsstring>(List&lt; IComponent &gt; components)</argsstring>
+        <name>AddToGroup</name>
+        <param>
+          <type>List&lt; <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref> &gt;</type>
+          <declname>components</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="457" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="457" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a3c750654f2556dae0a99fdad52036582" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.DisplayGroup</definition>
+        <argsstring>(IComponent shape)</argsstring>
+        <name>DisplayGroup</name>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="464" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="464" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="182" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="182" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs" line="182" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs" bodystart="182" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1/MainWindow.g.cs" line="91" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1/MainWindow.g.cs" bodystart="91" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>InitializeComponent </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1/MainWindow.g.i.cs" line="91" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1/MainWindow.g.i.cs" bodystart="91" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1af19356750fe0dbc4b49c268c1a4b8eb8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.UndoButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>UndoButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="53" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ac285b17899e00bba6526e9b90b9fb6f8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.RedoButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>RedoButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="58" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1af821f9bdb9949f3336e493e8372d9cfc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.LineButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>LineButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="63" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ae019a6cc2578d30863be334842c3f3cc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.EllipseButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>EllipseButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="68" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a4f0e201b719c5e57d8983065a0949652" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.RectangleButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>RectangleButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="73" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a6c70631591993bd70d5a5b32a97f6ed6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.TriangleButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>TriangleButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="78" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a56e3f7cbb4983c9ba51dec035b8167e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.Delete_Click</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Delete_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="83" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ae3938320bbb8d2df6527a9e908944560" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.ResizeButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>ResizeButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="88" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a26cbfb90ce65c45ef8b0c1558a2253c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.MoveButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>MoveButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="93" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a64358a0151b0b627b66682ea84e4716c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.SelectorButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>SelectorButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="98" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1af351b2e5c702c4bae0b73ee68d9490b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.GroupButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>GroupButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="103" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a115d5802d6a0aab57e7b6720bb287a5e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.DisplayButton_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>DisplayButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="108" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1aaec499b6c4c6e18919b97ed078b28a8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.Save_OnClick</definition>
+        <argsstring>(object sender, RoutedEventArgs e)</argsstring>
+        <name>Save_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>RoutedEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="113" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="113" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a5c65d607979486bbbb8f67ec15b856fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.Canvas_OnMouseDown</definition>
+        <argsstring>(object sender, MouseButtonEventArgs e)</argsstring>
+        <name>Canvas_OnMouseDown</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>MouseButtonEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="126" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="126" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1af8d4b06035c4ebfb38e178264d7b6e68" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.Canvas_OnMouseUp</definition>
+        <argsstring>(object sender, MouseButtonEventArgs e)</argsstring>
+        <name>Canvas_OnMouseUp</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>MouseButtonEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>this function ditermens witch method to call based on te mode witch the user has selected </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the mouse</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the date for the selected mouse events</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="139" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="139" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1aae06655e51b9d1d82d411578e4db37ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.Canvas_OnMouseMove</definition>
+        <argsstring>(object sender, MouseEventArgs e)</argsstring>
+        <name>Canvas_OnMouseMove</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>MouseEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="191" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="191" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ade4f5efb5f46c5cae27da80117c952c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.DrawLine</definition>
+        <argsstring>()</argsstring>
+        <name>DrawLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="206" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="206" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a1fbe23d709085ec7e2f9c145bfb852cc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.DrawEllipse</definition>
+        <argsstring>()</argsstring>
+        <name>DrawEllipse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="217" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="217" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1af1225fe2a819602ab6321d3df83e8124" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.DrawRectangle</definition>
+        <argsstring>()</argsstring>
+        <name>DrawRectangle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="263" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="263" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a95f62291f5974521dbb19834cdb166ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.DrawTriangle</definition>
+        <argsstring>()</argsstring>
+        <name>DrawTriangle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="308" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="308" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1a84725682a8a34c8250ee406d1b87149f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.MainWindow.DrawShape</definition>
+        <argsstring>(GodShape shape)</argsstring>
+        <name>DrawShape</name>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+          <declname>shape</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="365" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="365" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. PaintApp4Scrubs.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" line="202" column="52" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.cs" bodystart="202" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. PaintApp4Scrubs.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs" line="202" column="52" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Debug/netcoreapp3.1/MainWindow.g.i.cs" bodystart="202" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. PaintApp4Scrubs.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1/MainWindow.g.cs" line="111" column="52" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1/MainWindow.g.cs" bodystart="111" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void System.Windows.Markup.IComponentConnector.</type>
+        <definition>void System.Windows.Markup.IComponentConnector. PaintApp4Scrubs.MainWindow.Connect</definition>
+        <argsstring>(int connectionId, object target)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>int</type>
+          <declname>connectionId</declname>
+        </param>
+        <param>
+          <type>object</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1/MainWindow.g.i.cs" line="111" column="52" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj/Release/netcoreapp3.1/MainWindow.g.i.cs" bodystart="111" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interaction logic for MainWindow.xaml </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_paint_app4_scrubs_1_1_main_window" kindref="compound">MainWindow</ref></para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Window</label>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.MainWindow</label>
+        <link refid="class_paint_app4_scrubs_1_1_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Window</label>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.MainWindow</label>
+        <link refid="class_paint_app4_scrubs_1_1_main_window"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>AppWindow</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>EllipseButton</edgelabel>
+          <edgelabel>RedoButton</edgelabel>
+          <edgelabel>SelectorButton</edgelabel>
+          <edgelabel>Canvas</edgelabel>
+          <edgelabel>DisplayButton</edgelabel>
+          <edgelabel>LabelCoords</edgelabel>
+          <edgelabel>DeleteButton</edgelabel>
+          <edgelabel>TriangleButton</edgelabel>
+          <edgelabel>LineButton</edgelabel>
+          <edgelabel>ToolBar</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>System</label>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" line="18" column="19" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/MainWindow.xaml.cs" bodystart="19" bodyend="472"/>
+    <listofallmembers>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a2a7f0bf368f45d0d9755b4e3e3d3bc74" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_box</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a0900f12e26721deb6b400c3ddf3b3d1d" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_boxList</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a0437efc73a1a2060e1db11fa799ea6a5" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_broker</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a7a0a4d3af00c0f3954d2061b9ade78dd" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_contentLoaded</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1af78220066fbe16ca04fd5d3c442fbcb7" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_currentMode</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a07e577074e8b48a09b15390aaa5e0835" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_currentPoint</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a6232e1b77a5c25651c5a45fdccf940c2" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_endPoint</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ad93ba4ca0a70e7fd42874d6b0d138947" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_selectedShape</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a8ddc8af4782326950ac7b4f6641f4171" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>_startPoint</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a5cf3f4f51302915c6cb6cddac25df248" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>AddToBoxList</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a1094456dc2f923d5c418459d9c9c659e" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>AddToGroup</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a5d22098e76f1e2fc1f42ab4479cd888f" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>AppWindow</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ad08f8833cfce6670773453e5891a48a7" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>BoxFinder</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a036fba7bcf9602003f257da56051f4cf" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Canvas</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a5c65d607979486bbbb8f67ec15b856fe" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Canvas_OnMouseDown</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1aae06655e51b9d1d82d411578e4db37ba" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Canvas_OnMouseMove</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1af8d4b06035c4ebfb38e178264d7b6e68" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Canvas_OnMouseUp</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ae1b740357fc2f9e2e490713a0e982d3d" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Connect</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a56e3f7cbb4983c9ba51dec035b8167e5" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Delete_Click</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a73b2e55ecc9086a2ff5ffeffe7149915" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DeleteButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a13ab0f02566d8e3d4bc198489c9c0760" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DeleteShape</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a7137ab7026e466c3c76832c63d8e6020" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DisplayButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a115d5802d6a0aab57e7b6720bb287a5e" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DisplayButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a3c750654f2556dae0a99fdad52036582" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DisplayGroup</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a1fbe23d709085ec7e2f9c145bfb852cc" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DrawEllipse</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ade4f5efb5f46c5cae27da80117c952c8" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DrawLine</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1af1225fe2a819602ab6321d3df83e8124" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DrawRectangle</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a84725682a8a34c8250ee406d1b87149f" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DrawShape</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a95f62291f5974521dbb19834cdb166ca" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>DrawTriangle</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a341c4cb6aeccec2d2e7c3cab7e64e1b7" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>EllipseButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ae019a6cc2578d30863be334842c3f3cc" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>EllipseButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a782c7ee6eda34e86d715d65533263832" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>GroupButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1af351b2e5c702c4bae0b73ee68d9490b0" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>GroupButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ac1f30f1452be530e0eaea95bad8fb150" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>InitializeComponent</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1aac384831a661f66bb99f155b255fce26" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>LabelCoords</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ade806610b05f41aac18d7cd538a88799" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>LineButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1af821f9bdb9949f3336e493e8372d9cfc" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>LineButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a3010a69b843f6ae0d3f90f232bad1ea8" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>MainWindow</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a859ca08562b8e9eb43764be34f19ea25" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>ModeSwitch</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a278bf403cdac4821568181eaf05c6f86" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>MoveButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a26cbfb90ce65c45ef8b0c1558a2253c8" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>MoveButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1adf9cb5a7fbeae64d55a6ba7a03f7ca15" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>MoveShape</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a7d3c351261d14a83dd51d05d0cf2d072" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>ornament</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a26f3df0af923c19c2e9413a39f0320aa" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>PutOnScreen</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a816741bd40d3d811cd5e201f30c092b1" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>PutOnScreen</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a1db032b3a20f7a40f80c678c5b7f4bd6" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>RectangleButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a4f0e201b719c5e57d8983065a0949652" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>RectangleButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ab4ae421cea0bf1cd7f89baca10a9fca2" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>RedoButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ac285b17899e00bba6526e9b90b9fb6f8" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>RedoButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1aef4a595cc2bf613a8badd3d79d9ef4d1" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>RemoveShape</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a1e9d011c97c691de908ec55c48a46f3d" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>ResizeButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ae3938320bbb8d2df6527a9e908944560" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>ResizeButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a88a3d3d8a4b5e31177e8479904396649" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>ResizeShape</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a50bd0e1eb27ab0adb87537a8f4016481" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Save</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1aaec499b6c4c6e18919b97ed078b28a8e" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>Save_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a9ca76185d11b9f1daf67306142f82fdb" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>SelectorButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a64358a0151b0b627b66682ea84e4716c" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>SelectorButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a9b664613f1348751f8f504884d011af8" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>ToolBar</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1ab25164a544e19600528039931698c6a2" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>TriangleButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a6c70631591993bd70d5a5b32a97f6ed6" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>TriangleButton_OnClick</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1a1449b76029813d393de80c211831a448" prot="package" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>UndoButton</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_main_window_1af19356750fe0dbc4b49c268c1a4b8eb8" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::MainWindow</scope><name>UndoButton_OnClick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

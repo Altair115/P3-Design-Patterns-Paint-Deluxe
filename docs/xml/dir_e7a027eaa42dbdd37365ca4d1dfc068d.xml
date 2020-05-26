@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_e7a027eaa42dbdd37365ca4d1dfc068d" kind="dir">
+    <compoundname>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes</compoundname>
+    <innerdir refid="dir_c8d0c4902dd407af0acc31e3a3fed626">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands</innerdir>
+    <innerdir refid="dir_1850e3f9036472d64b7ff0c8d5a13037">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes</innerdir>
+    <innerdir refid="dir_1f8de7a75ea8a9a9b38f7fd10273a3ba">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies</innerdir>
+    <innerdir refid="dir_62b09fc93c07e3d670bf8b1e19c4a092">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands</innerdir>
+    <innerfile refid="_boxer_8cs">Boxer.cs</innerfile>
+    <innerfile refid="_broker_8cs">Broker.cs</innerfile>
+    <innerfile refid="_converter_8cs">Converter.cs</innerfile>
+    <innerfile refid="_decorator_8cs">Decorator.cs</innerfile>
+    <innerfile refid="_ornament_8cs">Ornament.cs</innerfile>
+    <innerfile refid="_the_printer_8cs">ThePrinter.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/"/>
+  </compounddef>
+</doxygen>

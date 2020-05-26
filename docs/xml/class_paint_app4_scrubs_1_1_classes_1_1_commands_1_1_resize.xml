@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize" kind="class" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Classes::Commands::Resize</compoundname>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.ICommand</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8268744fa412499796c9febc0122b9b7" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+        <definition>readonly IComponent PaintApp4Scrubs.Classes.Commands.Resize._component</definition>
+        <argsstring></argsstring>
+        <name>_component</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="17" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1aa6c709964c8db9bd54b3a90dacf17a2c" prot="private" static="no" mutable="no">
+        <type>readonly Vector</type>
+        <definition>readonly Vector PaintApp4Scrubs.Classes.Commands.Resize._distance</definition>
+        <argsstring></argsstring>
+        <name>_distance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="18" column="33" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8a0572db2920fbc69c5674fa17277079" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PaintApp4Scrubs.Classes.Commands.Resize.Resize</definition>
+        <argsstring>(IComponent component, Vector distance)</argsstring>
+        <name>Resize</name>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>Vector</type>
+          <declname>distance</declname>
+        </param>
+        <briefdescription>
+<para>the constructor of the <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize" kindref="compound">Resize</ref> class </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the component that has to be resized</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the distance of the old component and the new component</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="24" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a4e2e56e627f7b15d53abbfe20c3ced3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.Commands.Resize.Execute</definition>
+        <argsstring>()</argsstring>
+        <name>Execute</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a068677c28a0f3d0525bc3815c5d0f2c9">Execute</reimplements>
+        <briefdescription>
+<para>executes the resize command </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="32" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a989a9659b7b9fb4965c75297722a2026" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.Commands.Resize.UnExecute</definition>
+        <argsstring>()</argsstring>
+        <name>UnExecute</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a9d1284a24e06a39beaa21cad8d10ea08">UnExecute</reimplements>
+        <briefdescription>
+<para>executes the undo version of the resize command </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="39" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class creates a command to resize the component on the canvas </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ICommand</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command"/>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.Commands.Resize</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ICommand</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command"/>
+      </node>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.Commands.Resize</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="15" column="5" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="16" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8268744fa412499796c9febc0122b9b7" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>_component</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1aa6c709964c8db9bd54b3a90dacf17a2c" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>_distance</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a4e2e56e627f7b15d53abbfe20c3ced3a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>Execute</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8a0572db2920fbc69c5674fa17277079" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>Resize</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a989a9659b7b9fb4965c75297722a2026" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>UnExecute</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
