@@ -12,19 +12,11 @@ namespace PaintApp4Scrubs.Classes.Commands
     {
         private readonly GodShape _component;
 
-<<<<<<< HEAD
-        /// <param name="component">the selected component</param>
-        /// </summary>
-        /// the constructor of DisplayGroup
         /// <summary>
+        /// the constructor of DisplayGroup
+        /// </summary>
+        /// <param name="component">the selected component</param>
         public DisplayGroup(GodShape component)
-=======
-        /// <summary>
-        /// the constructor of DisplayGroup
-        /// </summary>
-        /// <param name="component">the selected component</param>
-        public DisplayGroup(IComponent component)
->>>>>>> master
         {
             _component = component;
         }
