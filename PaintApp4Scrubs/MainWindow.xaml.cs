@@ -481,6 +481,7 @@ namespace PaintApp4Scrubs
         {
             if (boxer == null)
                 boxer = _box;
+
             foreach (var decorator in boxer.GetChildren())
             {
                 if (decorator is Decorator deco && selectedShape == deco.GetBaseShape())

@@ -10,11 +10,6 @@ namespace PaintApp4Scrubs.Interfaces
     public interface IVisitor
     {
         /// <summary>
-        /// Visitor Function for godShape
-        /// </summary>
-        /// <param name="godShape">Selected Shape</param>
-        public void Visit(GodShape godShape);
-        /// <summary>
         /// Visitor Function for boxer
         /// </summary>
         /// <param name="boxer">Selected Box</param>

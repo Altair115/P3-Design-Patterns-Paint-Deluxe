@@ -20,16 +20,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         }
 
         /// <summary>
-        /// Visitor Function for godShape
-        /// </summary>
-        /// <param name="godShape">Selected Shape</param>
-        public void Visit(GodShape godShape)
-        {
-            var x = godShape as BaseShape;
-            x.Accept(this);
-        }
-
-        /// <summary>
         /// Visitor Function for boxer
         /// </summary>
         /// <param name="boxer">Selected Box</param>

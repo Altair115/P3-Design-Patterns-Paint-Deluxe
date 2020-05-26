@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
 
@@ -23,14 +24,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         }
 
         /// <summary>
-        /// Visitor Function for godShape
-        /// </summary>
-        /// <param name="godShape">Selected Shape</param>
-        public void Visit(GodShape godShape)
-        {
-            _printer.PrintToFile($"{godShape.Depth}{godShape.ToString()}");
-        }
-        /// <summary>
         /// Visitor Function for boxer
         /// </summary>
         /// <param name="boxer">Selected Box</param>
@@ -43,21 +36,16 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
                     _printer.PrintToFile($"{boxer.Depth}Group {boxer.GetChildren().Count}");
                 _isHead = false;
             }
+            else
+            {
+                if (boxer.GetChildren().Count != 1)
+                {
+                    _printer.PrintToFile($"{boxer.Depth}Group {boxer.GetChildren().Count}");
+                }
+            }
             foreach (var x in boxer.GetChildren())
             {
-                switch (x)
-                {
-                    case Boxer b:
-                        if (b.GetChildren().Count != 1)
-                        {
-                            _printer.PrintToFile($"{b.Depth}Group {b.GetChildren().Count}");
-                        }
-                        Visit(b);
-                        break;
-                    case GodShape g:
-                        Visit(g);
-                        break;
-                }
+                x.Accept(this);
             }
         }
 
@@ -98,7 +86,9 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void VisitOrnament(Ornament ornament)
         {
-            throw new NotImplementedException();
+            ornament.GetComponent().Accept(this);
+            _printer.PrintToFile($"{ornament.Depth}{ornament.ToString()}");
+
         }
     }
 }

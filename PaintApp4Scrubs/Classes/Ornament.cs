@@ -95,5 +95,10 @@ namespace PaintApp4Scrubs.Classes
             get { return base.StrategyWidth; }
             set { }
         }
+
+        public override string ToString()
+        {
+            return $"ornament {Position} {Name}";
+        }
     }
 }
