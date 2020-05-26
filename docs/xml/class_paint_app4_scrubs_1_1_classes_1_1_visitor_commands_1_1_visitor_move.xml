@@ -29,30 +29,23 @@
           <declname>translationToNewPosition</declname>
         </param>
         <briefdescription>
+<para><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move" kindref="compound">VisitorMove</ref> Constructor </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>translationToNewPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The translation vector to the new position</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="11" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="11" bodyend="14"/>
-      </memberdef>
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a94347807e8b28bf1e642e9136a33f819" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorMove.Visit</definition>
-        <argsstring>(GodShape godShape)</argsstring>
-        <name>Visit</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a98cb19fc821c47e3c54053085a3bb53b">Visit</reimplements>
-        <param>
-          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
-          <declname>godShape</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="16" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="16" bodyend="20"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="16" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="16" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a39f448b5ab0eb778bc28ba318b6daedf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -65,12 +58,23 @@
           <declname>boxer</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for boxer </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>boxer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Box</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="21" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="21" bodyend="27"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="25" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="25" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1ae5eb107e115f85a1dafd803aff94e6cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -83,12 +87,23 @@
           <declname>line</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for line </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="29" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="29" bodyend="44"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="37" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="37" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a7f19f2bbc4a13b70b8f3090e67839b9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -101,12 +116,23 @@
           <declname>square</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for square </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>square</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="46" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="46" bodyend="54"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="58" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="58" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1add340b3bb653526403a37182e6e534c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -119,22 +145,62 @@
           <declname>triangle</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for triangle </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>triangle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="56" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="56" bodyend="64"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="72" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="72" bodyend="80"/>
       </memberdef>
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a2f1cf928ab643aaf319a34f549d4fb2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1abd2730e7ade8192bde79622d11fd00b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorMove.VisitEllipse</definition>
-        <argsstring>(BaseShape ellipseBaseShape)</argsstring>
+        <argsstring>(BaseShape ellipse)</argsstring>
         <name>VisitEllipse</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1ab9c2a0c9281920608e197af27352c720">VisitEllipse</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a3d2190540140e452a5ec3361465149ab">VisitEllipse</reimplements>
         <param>
           <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
-          <declname>ellipseBaseShape</declname>
+          <declname>ellipse</declname>
+        </param>
+        <briefdescription>
+<para>Visitor Function for ellipse </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ellipse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="86" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="86" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1aa36c29679de59653b722dac38fa02fea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.VisitorCommands.VisitorMove.VisitOrnament</definition>
+        <argsstring>(Ornament ornament)</argsstring>
+        <name>VisitOrnament</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a4efe0973110259b035e0a7bf1455831a">VisitOrnament</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament" kindref="compound">Ornament</ref></type>
+          <declname>ornament</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -142,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="66" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="66" bodyend="72"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="94" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="94" bodyend="100"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -173,14 +239,14 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="8" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="9" bodyend="73"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" line="8" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorMove.cs" bodystart="9" bodyend="101"/>
     <listofallmembers>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a89bc725ad2297ffbcce6aa02a1337534" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>TranslationToNewPosition</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a94347807e8b28bf1e642e9136a33f819" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>Visit</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a39f448b5ab0eb778bc28ba318b6daedf" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>Visit</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a2f1cf928ab643aaf319a34f549d4fb2a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>VisitEllipse</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1abd2730e7ade8192bde79622d11fd00b8" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>VisitEllipse</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1ae5eb107e115f85a1dafd803aff94e6cf" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>VisitLine</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a184c2aac8b78cf6bd9ed8d35d3dc0ae5" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>VisitorMove</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1aa36c29679de59653b722dac38fa02fea" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>VisitOrnament</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a7f19f2bbc4a13b70b8f3090e67839b9b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>VisitSquare</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1add340b3bb653526403a37182e6e534c0" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorMove</scope><name>VisitTriangle</name></member>
     </listofallmembers>

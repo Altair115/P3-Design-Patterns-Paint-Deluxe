@@ -80,12 +80,13 @@
         <argsstring></argsstring>
         <name>StartPoint</name>
         <briefdescription>
+<para>gets and sets the StartPoint of the line and the LineGeometry </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="24" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="25" bodyend="32"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="26" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="27" bodyend="34"/>
       </memberdef>
       <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ac4d10607a8872c13895d78e89180bb95" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>Point</type>
@@ -93,12 +94,13 @@
         <argsstring></argsstring>
         <name>EndPoint</name>
         <briefdescription>
+<para>gets and sets the EndPoint of the line and the lineGeometry </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="34" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="35" bodyend="42"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="38" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="39" bodyend="46"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -134,12 +136,25 @@
           <declname>baseShape</declname>
         </param>
         <briefdescription>
+<para>Gets the Center of the line </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the base shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the center vector </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="44" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="44" bodyend="48"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="53" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="53" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1a69df1767e804fd569b8989bac852dec6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Geometry</type>
@@ -148,12 +163,16 @@
         <name>GetGeometry</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a087f15dc085efb17a47a2a2e29402f75">GetGeometry</reimplements>
         <briefdescription>
+<para>gets the lineGeometry </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>line geometry </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="50" column="25" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="50" bodyend="53"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="62" column="25" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="62" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ae333c8327ae50c5144f0e5851363aa43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -166,12 +185,24 @@
           <declname>baseShape</declname>
         </param>
         <briefdescription>
+<para>gets the string of the Line </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the line his string</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="55" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="55" bodyend="58"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="71" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="71" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ab76286a40d75460ebc108d7ef54b03c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -188,12 +219,31 @@
           <declname>baseShape</declname>
         </param>
         <briefdescription>
+<para>this interacts with the visitor for the given strategy </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given visitor</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the base shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="60" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="60" bodyend="63"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="76" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="76" bodyend="79"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -224,7 +274,7 @@
         <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy"/>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="9" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="10" bodyend="64"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" line="9" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/LineStrategies.cs" bodystart="10" bodyend="80"/>
     <listofallmembers>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ada7df00c2610de173ad8de784a02418f" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::LineStrategies</scope><name>_end</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1a470ae79c36db109548a3264798230dd3" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::LineStrategies</scope><name>_lineGeometry</name></member>

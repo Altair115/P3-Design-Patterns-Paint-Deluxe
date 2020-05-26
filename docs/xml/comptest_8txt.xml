@@ -8,12 +8,8 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal">canvas</highlight></codeline>
-<codeline lineno="2"><highlight class="normal">Group<sp/>5</highlight></codeline>
-<codeline lineno="3"><highlight class="normal">-Rectangle<sp/>266<sp/>79<sp/>340<sp/>109</highlight></codeline>
-<codeline lineno="4"><highlight class="normal">-Rectangle<sp/>533<sp/>119<sp/>340<sp/>109</highlight></codeline>
-<codeline lineno="5"><highlight class="normal">-Rectangle<sp/>798<sp/>112<sp/>340<sp/>109</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">-Rectangle<sp/>1059<sp/>122<sp/>340<sp/>109</highlight></codeline>
-<codeline lineno="7"><highlight class="normal">-Rectangle<sp/>364<sp/>363<sp/>340<sp/>109</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">-ornament<sp/>top<sp/>NAME<sp/>ME<sp/>Mortal</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">-<sp/>Rectangle<sp/>443<sp/>346<sp/>377<sp/>289</highlight></codeline>
     </programlisting>
     <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/comptest.txt"/>
   </compounddef>

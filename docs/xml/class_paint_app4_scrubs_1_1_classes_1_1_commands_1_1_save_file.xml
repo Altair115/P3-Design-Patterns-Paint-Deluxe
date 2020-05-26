@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="11" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="11" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="14" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="14" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -29,12 +29,23 @@
           <declname>box</declname>
         </param>
         <briefdescription>
+<para>Constructor of <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file" kindref="compound">SaveFile</ref> </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>box</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the box where all objects are located in </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="12" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="12" bodyend="15"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="19" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file_1a2760399b222b931021994afcf74a7556" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -43,12 +54,13 @@
         <name>Execute</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a068677c28a0f3d0525bc3815c5d0f2c9">Execute</reimplements>
         <briefdescription>
+<para>executes the Display visitor </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="16" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="16" bodyend="19"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="26" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="26" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file_1a3b9f8f0ebed4c4623948980c67785c0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -57,15 +69,17 @@
         <name>UnExecute</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a9d1284a24e06a39beaa21cad8d10ea08">UnExecute</reimplements>
         <briefdescription>
+<para>you cant undo a save file </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="21" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="21" bodyend="24"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="34" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="34" bodyend="37"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>print the total hierarchy to a file </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -93,7 +107,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="9" column="5" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="10" bodyend="25"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" line="12" column="5" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/SaveFile.cs" bodystart="13" bodyend="38"/>
     <listofallmembers>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file_1a64b8e7ff58d5f4407c80ad88d34033c4" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::SaveFile</scope><name>_boxer</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file_1a2760399b222b931021994afcf74a7556" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::SaveFile</scope><name>Execute</name></member>

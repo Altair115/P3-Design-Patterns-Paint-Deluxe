@@ -4,9 +4,9 @@
     <compoundname>PaintApp4Scrubs::Classes::Commands::Move</compoundname>
     <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.ICommand</basecompoundref>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1af577aba0c4ec36505c789083e37a6f91" prot="private" static="no" mutable="no">
-        <type>readonly <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
-        <definition>readonly IComponent PaintApp4Scrubs.Classes.Commands.Move._component</definition>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1ab1b3bc3b5438b8823f9910a681c45ac8" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+        <definition>readonly GodShape PaintApp4Scrubs.Classes.Commands.Move._component</definition>
         <argsstring></argsstring>
         <name>_component</name>
         <briefdescription>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Move.cs" line="14" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Move.cs" bodystart="14" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Move.cs" line="14" column="35" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Move.cs" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1ab8a472cf6896e6373655f3b75b1b779d" prot="private" static="no" mutable="no">
         <type>readonly Vector</type>
@@ -58,13 +58,13 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1aedbd17c26c02aebb51b34e34b7d11b24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a0a827c1fb1490f71bf3491b8be4361ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>PaintApp4Scrubs.Classes.Commands.Move.Move</definition>
-        <argsstring>(IComponent component, Vector newPosition, Vector oldPosition)</argsstring>
+        <argsstring>(GodShape component, Vector newPosition, Vector oldPosition)</argsstring>
         <name>Move</name>
         <param>
-          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
           <declname>component</declname>
         </param>
         <param>
@@ -117,7 +117,7 @@
         <name>Execute</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a068677c28a0f3d0525bc3815c5d0f2c9">Execute</reimplements>
         <briefdescription>
-<para>executes the move command </para>
+<para>executes the move Visitor </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -132,7 +132,7 @@
         <name>UnExecute</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a9d1284a24e06a39beaa21cad8d10ea08">UnExecute</reimplements>
         <briefdescription>
-<para>executes the undo version of the command </para>
+<para>executes the undo variant of the Visitor </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -172,12 +172,12 @@
     </collaborationgraph>
     <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Move.cs" line="12" column="5" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Move.cs" bodystart="13" bodyend="47"/>
     <listofallmembers>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1af577aba0c4ec36505c789083e37a6f91" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>_component</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1ab1b3bc3b5438b8823f9910a681c45ac8" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>_component</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1ab8a472cf6896e6373655f3b75b1b779d" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>_newPosition</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1af6d97916ce1290ddb5edb878e3246e25" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>_oldPosition</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a4a6b0309a21fca8b3c87a3005d78fc30" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>_positionResult</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a7eac86b11773a5af2d7ea3cfbc96cfbe" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>Execute</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1aedbd17c26c02aebb51b34e34b7d11b24" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>Move</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a0a827c1fb1490f71bf3491b8be4361ed" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>Move</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a36ab6f2faef31dff32196fb47c9aa237" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Move</scope><name>UnExecute</name></member>
     </listofallmembers>
   </compounddef>

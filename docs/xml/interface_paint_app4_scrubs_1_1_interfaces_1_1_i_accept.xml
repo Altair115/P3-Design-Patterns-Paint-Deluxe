@@ -2,28 +2,40 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept" kind="interface" language="C#" prot="public">
     <compoundname>PaintApp4Scrubs::Interfaces::IAccept</compoundname>
-    <derivedcompoundref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.IComponent</derivedcompoundref>
     <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Shapes.BaseShape</derivedcompoundref>
+    <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Shapes.GodShape</derivedcompoundref>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept_1ac80a5a798a95cc4ac75f720736cf8c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PaintApp4Scrubs.Interfaces.IAccept.Accept</definition>
         <argsstring>(IVisitor visitor)</argsstring>
         <name>Accept</name>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a96bd81ff40ec7c5a5704dfcd93545d46">Accept</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1af24a166857bde24c7326b2250b676ad5">Accept</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a74217e9364d23595b6efed9e95175e55">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a7d61af285beed44caec2ad199c69aff1">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a8df837560a907f61cea82320cb3af25e">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a25fc81baae005579a7cfa9ee53a27c0e">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a6cba1074a477226c481a855bca2584b0">Accept</reimplementedby>
         <param>
           <type><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" kindref="compound">IVisitor</ref></type>
           <declname>visitor</declname>
         </param>
         <briefdescription>
+<para>Accepts a visitor </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Visitor in question</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IAccept.cs" line="7" column="21"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IAccept.cs" line="11" column="21"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -34,25 +46,19 @@
       <node id="5">
         <label>PaintApp4Scrubs.Classes.Decorator</label>
         <link refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator"/>
-        <childnode refid="4" relation="public-inheritance">
+        <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2">
-        <label>PaintApp4Scrubs.Classes.IComponent</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
+      <node id="3">
+        <label>PaintApp4Scrubs.Classes.Shapes.GodShape</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4">
-        <label>PaintApp4Scrubs.Classes.Shapes.GodShape</label>
-        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape"/>
-        <childnode refid="2" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="3">
         <label>PaintApp4Scrubs.Classes.Boxer</label>
         <link refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer"/>
-        <childnode refid="2" relation="public-inheritance">
+        <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6">
@@ -61,12 +67,12 @@
         <childnode refid="5" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="2">
         <label>PaintApp4Scrubs.Classes.Shapes.BaseShape</label>
         <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
         <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
       <node id="1">
@@ -74,7 +80,7 @@
         <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
       </node>
     </inheritancegraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IAccept.cs" line="5" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IAccept.cs" bodystart="6" bodyend="8"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IAccept.cs" line="5" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IAccept.cs" bodystart="6" bodyend="12"/>
     <listofallmembers>
       <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept_1ac80a5a798a95cc4ac75f720736cf8c57" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IAccept</scope><name>Accept</name></member>
     </listofallmembers>

@@ -8,6 +8,7 @@
     <innerdir refid="dir_62b09fc93c07e3d670bf8b1e19c4a092">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands</innerdir>
     <innerfile refid="_boxer_8cs">Boxer.cs</innerfile>
     <innerfile refid="_broker_8cs">Broker.cs</innerfile>
+    <innerfile refid="_combo_box_linker_8cs">ComboBoxLinker.cs</innerfile>
     <innerfile refid="_converter_8cs">Converter.cs</innerfile>
     <innerfile refid="_decorator_8cs">Decorator.cs</innerfile>
     <innerfile refid="_ornament_8cs">Ornament.cs</innerfile>

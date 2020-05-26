@@ -8,28 +8,6 @@
     <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.VisitorCommands.VisitorMove</derivedcompoundref>
     <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.VisitorCommands.VisitorResize</derivedcompoundref>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a98cb19fc821c47e3c54053085a3bb53b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void PaintApp4Scrubs.Interfaces.IVisitor.Visit</definition>
-        <argsstring>(GodShape godShape)</argsstring>
-        <name>Visit</name>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a5a30e18dbd73d4a692d25ceeb199d508">Visit</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a67803b43d41c7f90dec6fc4c2b664f2f">Visit</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1ab3674a36ae0d5f5cf97c6d27ef933dbb">Visit</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a94347807e8b28bf1e642e9136a33f819">Visit</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a8f8a1090a65a1d4706cf3ff011d11390">Visit</reimplementedby>
-        <param>
-          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
-          <declname>godShape</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="12" column="21"/>
-      </memberdef>
       <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a003561f3f8e98802014fcb471e5f34a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PaintApp4Scrubs.Interfaces.IVisitor.Visit</definition>
@@ -37,20 +15,31 @@
         <name>Visit</name>
         <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a5c40c9441e6bc5e063643a3bb16c58bc">Visit</reimplementedby>
         <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1ab5288976f59dbe78ef1cf1d9629457f9">Visit</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a086656b2033a11bd351fd718f90da692">Visit</reimplementedby>
         <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a39f448b5ab0eb778bc28ba318b6daedf">Visit</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a086656b2033a11bd351fd718f90da692">Visit</reimplementedby>
         <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a3819ae8b96ddf1218344310abe894bd8">Visit</reimplementedby>
         <param>
           <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer" kindref="compound">Boxer</ref></type>
           <declname>boxer</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for boxer </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>boxer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Box</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="13" column="21"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="16" column="21"/>
       </memberdef>
       <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a5c70711fbc87116f772d51869051b558" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -67,12 +56,23 @@
           <declname>square</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for square </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>square</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="18" column="21"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="21" column="21"/>
       </memberdef>
       <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1addea923062df9ec56aab71ea5f9eade6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -81,20 +81,31 @@
         <name>VisitLine</name>
         <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a3fc75e9c07836998178731a0b3211c5f">VisitLine</reimplementedby>
         <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a74659922f1e3ee86b1a4d53330ccdeb3">VisitLine</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a5110fb10e9b8e5cc82ce8393ba75aa12">VisitLine</reimplementedby>
         <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1ae5eb107e115f85a1dafd803aff94e6cf">VisitLine</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a5110fb10e9b8e5cc82ce8393ba75aa12">VisitLine</reimplementedby>
         <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a24edfd7a004b1b7abb9a851bbf1eb96a">VisitLine</reimplementedby>
         <param>
           <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
           <declname>line</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for line </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="19" column="21"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="26" column="21"/>
       </memberdef>
       <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a2da5671a6211c2fc907bd32c023de8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -111,26 +122,70 @@
           <declname>triangle</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for triangle </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>triangle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="20" column="21"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="31" column="21"/>
       </memberdef>
-      <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1ab9c2a0c9281920608e197af27352c720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a3d2190540140e452a5ec3361465149ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void PaintApp4Scrubs.Interfaces.IVisitor.VisitEllipse</definition>
-        <argsstring>(BaseShape ellipseBaseShape)</argsstring>
+        <argsstring>(BaseShape ellipse)</argsstring>
         <name>VisitEllipse</name>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a8f0cfc11ac36d3d98166f4edad449e13">VisitEllipse</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1aa8c115b3bb44d27f4de3998c6ee1b10d">VisitEllipse</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a7ed36af64b2c2fe869e1ee2bf4e1031c">VisitEllipse</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1a2f1cf928ab643aaf319a34f549d4fb2a">VisitEllipse</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a82a4a7a46efb3369f34f3068555f754b">VisitEllipse</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1af4eeb118dddbe5de8c3a68601d2b3a73">VisitEllipse</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1a1770eca6986e99cdee533dd6866dd814">VisitEllipse</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1ae2c9ddc0252ed37903f82845c0de1c1b">VisitEllipse</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1a4fc1ff02f51ba45df1508228b79ab860">VisitEllipse</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1abd2730e7ade8192bde79622d11fd00b8">VisitEllipse</reimplementedby>
         <param>
           <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
-          <declname>ellipseBaseShape</declname>
+          <declname>ellipse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ellipse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selected Shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+<para>Visitor Function for ellipse</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="36" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a4efe0973110259b035e0a7bf1455831a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Interfaces.IVisitor.VisitOrnament</definition>
+        <argsstring>(Ornament ornament)</argsstring>
+        <name>VisitOrnament</name>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a445342687349cc1168af4ed205a9ec88">VisitOrnament</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_delete_1aecdefcf276c640a50afe9b1ae1a4bdfd">VisitOrnament</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_resize_1a99812c2f00987a5b8cb1f3f14bbade56">VisitOrnament</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_display_1afe204ff71ca5771ec60200e87e2b338c">VisitOrnament</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move_1aa36c29679de59653b722dac38fa02fea">VisitOrnament</reimplementedby>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament" kindref="compound">Ornament</ref></type>
+          <declname>ornament</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -138,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="21" column="21"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="37" column="21"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -181,12 +236,12 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="10" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" bodystart="11" bodyend="22"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" line="10" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IVisitor.cs" bodystart="11" bodyend="38"/>
     <listofallmembers>
-      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a98cb19fc821c47e3c54053085a3bb53b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IVisitor</scope><name>Visit</name></member>
       <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a003561f3f8e98802014fcb471e5f34a8" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IVisitor</scope><name>Visit</name></member>
-      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1ab9c2a0c9281920608e197af27352c720" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IVisitor</scope><name>VisitEllipse</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a3d2190540140e452a5ec3361465149ab" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IVisitor</scope><name>VisitEllipse</name></member>
       <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1addea923062df9ec56aab71ea5f9eade6" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IVisitor</scope><name>VisitLine</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a4efe0973110259b035e0a7bf1455831a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IVisitor</scope><name>VisitOrnament</name></member>
       <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a5c70711fbc87116f772d51869051b558" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IVisitor</scope><name>VisitSquare</name></member>
       <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor_1a2da5671a6211c2fc907bd32c023de8a8" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IVisitor</scope><name>VisitTriangle</name></member>
     </listofallmembers>

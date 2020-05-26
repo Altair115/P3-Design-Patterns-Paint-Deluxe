@@ -4,9 +4,9 @@
     <compoundname>PaintApp4Scrubs::Classes::Commands::Draw</compoundname>
     <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.ICommand</basecompoundref>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a45fdb69f3fec57886c55a2abe39b31dd" prot="private" static="no" mutable="no">
-        <type>readonly <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
-        <definition>readonly IComponent PaintApp4Scrubs.Classes.Commands.Draw._component</definition>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a505aaa54713f0a92a7776b2f7ee9ebc9" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+        <definition>readonly GodShape PaintApp4Scrubs.Classes.Commands.Draw._component</definition>
         <argsstring></argsstring>
         <name>_component</name>
         <briefdescription>
@@ -15,17 +15,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Draw.cs" line="12" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Draw.cs" bodystart="12" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Draw.cs" line="12" column="35" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Draw.cs" bodystart="12" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a5775be7f25df9d61f1eeddf7558fb829" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1ab830f84c67cf073816f1ed3de14293d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>PaintApp4Scrubs.Classes.Commands.Draw.Draw</definition>
-        <argsstring>(IComponent component)</argsstring>
+        <argsstring>(GodShape component)</argsstring>
         <name>Draw</name>
         <param>
-          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
           <declname>component</declname>
         </param>
         <briefdescription>
@@ -53,7 +53,7 @@
         <name>Execute</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a068677c28a0f3d0525bc3815c5d0f2c9">Execute</reimplements>
         <briefdescription>
-<para>execute the draw command </para>
+<para>execute the Visitor with the VistorDraw(); </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -68,7 +68,7 @@
         <name>UnExecute</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a9d1284a24e06a39beaa21cad8d10ea08">UnExecute</reimplements>
         <briefdescription>
-<para>executes the undo version of the command </para>
+<para>executes the undo variant of visitor </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -108,8 +108,8 @@
     </collaborationgraph>
     <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Draw.cs" line="10" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Draw.cs" bodystart="11" bodyend="36"/>
     <listofallmembers>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a45fdb69f3fec57886c55a2abe39b31dd" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Draw</scope><name>_component</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a5775be7f25df9d61f1eeddf7558fb829" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Draw</scope><name>Draw</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a505aaa54713f0a92a7776b2f7ee9ebc9" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Draw</scope><name>_component</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1ab830f84c67cf073816f1ed3de14293d9" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Draw</scope><name>Draw</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a5e495f4ae223bfaa54692e1b501a222f" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Draw</scope><name>Execute</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw_1a38aaae53ea0086f9ff317f2c55270c9f" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Draw</scope><name>UnExecute</name></member>
     </listofallmembers>

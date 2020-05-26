@@ -4,7 +4,7 @@
     <compoundname>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces</compoundname>
     <innerfile refid="_i_accept_8cs">IAccept.cs</innerfile>
     <innerfile refid="_i_command_8cs">ICommand.cs</innerfile>
-    <innerfile refid="_i_component_8cs">IComponent.cs</innerfile>
+    <innerfile refid="_i_strategy_8cs">IStrategy.cs</innerfile>
     <innerfile refid="_i_visitor_8cs">IVisitor.cs</innerfile>
     <briefdescription>
     </briefdescription>

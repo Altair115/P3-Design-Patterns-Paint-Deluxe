@@ -3,7 +3,8 @@
   <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kind="class" language="C#" prot="public" abstract="yes">
     <compoundname>PaintApp4Scrubs::Classes::Shapes::GodShape</compoundname>
     <basecompoundref prot="public" virt="non-virtual">Shape</basecompoundref>
-    <basecompoundref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.IComponent</basecompoundref>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.IAccept</basecompoundref>
+    <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Boxer</derivedcompoundref>
     <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Decorator</derivedcompoundref>
     <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Shapes.BaseShape</derivedcompoundref>
       <sectiondef kind="public-attrib">
@@ -22,9 +23,35 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
-      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a84d06da39cc4ef99bf9d0979e4a7c994" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type>string</type>
-        <definition>string PaintApp4Scrubs.Classes.Shapes.GodShape.Depth</definition>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1ae3521c3a9244720009a447aca1c172f9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>abstract double</type>
+        <definition>abstract double PaintApp4Scrubs.Classes.Shapes.GodShape.StrategyHeight</definition>
+        <argsstring></argsstring>
+        <name>StrategyHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="16" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a8de716f5d7a9fbad2b803ed02aba8a13" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>abstract double</type>
+        <definition>abstract double PaintApp4Scrubs.Classes.Shapes.GodShape.StrategyWidth</definition>
+        <argsstring></argsstring>
+        <name>StrategyWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="17" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a6c0e4786d0d7dabf310d104ad5c0329e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>abstract string</type>
+        <definition>abstract string PaintApp4Scrubs.Classes.Shapes.GodShape.Depth</definition>
         <argsstring></argsstring>
         <name>Depth</name>
         <briefdescription>
@@ -33,43 +60,73 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="22" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" bodystart="22" bodyend="22"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="21" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" bodystart="21" bodyend="21"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1abcf5212e58b5f7660bbaaa59ec8abf1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a7d61af285beed44caec2ad199c69aff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>abstract void</type>
-        <definition>abstract void PaintApp4Scrubs.Classes.Shapes.GodShape.Decorate</definition>
-        <argsstring>()</argsstring>
-        <name>Decorate</name>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a2c20d28308f6299534817de4f031cdfd">Decorate</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1ab73595c2ab30efa54a06ce380911bdf7">Decorate</reimplementedby>
-        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a42ca5dd574f6606a55db6893acb704a0">Decorate</reimplementedby>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="16" column="30"/>
-      </memberdef>
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a96bd81ff40ec7c5a5704dfcd93545d46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void PaintApp4Scrubs.Classes.Shapes.GodShape.Accept</definition>
+        <definition>abstract void PaintApp4Scrubs.Classes.Shapes.GodShape.Accept</definition>
         <argsstring>(IVisitor visitor)</argsstring>
         <name>Accept</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept_1ac80a5a798a95cc4ac75f720736cf8c57">Accept</reimplements>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a8df837560a907f61cea82320cb3af25e">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a25fc81baae005579a7cfa9ee53a27c0e">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a6cba1074a477226c481a855bca2584b0">Accept</reimplementedby>
         <param>
           <type><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" kindref="compound">IVisitor</ref></type>
           <declname>visitor</declname>
         </param>
         <briefdescription>
+<para>Accepts a visitor </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Visitor in question</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="18" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a0cda97da5e024f0613f77879e0207d23" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+        <definition>abstract GodShape PaintApp4Scrubs.Classes.Shapes.GodShape.GetBaseShape</definition>
+        <argsstring>()</argsstring>
+        <name>GetBaseShape</name>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1a018c13759d84f8ca8d6602c6f0d2572e">GetBaseShape</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a8bfc8863ccd1364bc1696e924cd0a51d">GetBaseShape</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a15aacd460194ba8b9b850409a49e4cf8">GetBaseShape</reimplementedby>
+        <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="17" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" bodystart="17" bodyend="20"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="19" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1ac7ab340b0ea5f691c599bb4d4e0e7f46" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract Vector</type>
+        <definition>abstract Vector PaintApp4Scrubs.Classes.Shapes.GodShape.GetCenter</definition>
+        <argsstring>()</argsstring>
+        <name>GetCenter</name>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator_1aa68ed033495342e1a77bd1814d94ba50">GetCenter</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape_1a6450ced5d76d15b59e4f25984e08d8d7">GetCenter</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a89f75b231a69d0c63fd805404a1e8881">GetCenter</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="20" column="32"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -78,7 +135,7 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4">
+      <node id="3">
         <label>IAccept</label>
         <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
       </node>
@@ -96,6 +153,12 @@
         <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="4">
+        <label>PaintApp4Scrubs.Classes.Boxer</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="6">
         <label>PaintApp4Scrubs.Classes.Ornament</label>
         <link refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament"/>
@@ -111,15 +174,9 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3">
-        <label>IComponent</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
-      </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4">
+      <node id="3">
         <label>IAccept</label>
         <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
       </node>
@@ -134,19 +191,16 @@
       <node id="2">
         <label>Shape</label>
       </node>
-      <node id="3">
-        <label>IComponent</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
-      </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="13" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" bodystart="14" bodyend="23"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" line="13" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/GodShape.cs" bodystart="14" bodyend="22"/>
     <listofallmembers>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a96bd81ff40ec7c5a5704dfcd93545d46" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>Accept</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1abcf5212e58b5f7660bbaaa59ec8abf1d" prot="public" virt="pure-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>Decorate</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a84d06da39cc4ef99bf9d0979e4a7c994" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>Depth</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a7d61af285beed44caec2ad199c69aff1" prot="public" virt="pure-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>Accept</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a6c0e4786d0d7dabf310d104ad5c0329e" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>Depth</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a0cda97da5e024f0613f77879e0207d23" prot="public" virt="pure-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>GetBaseShape</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1ac7ab340b0ea5f691c599bb4d4e0e7f46" prot="public" virt="pure-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>GetCenter</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a7738dcb9d428d2f033cf79730dea4695" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>OriginPos</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1ae3521c3a9244720009a447aca1c172f9" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>StrategyHeight</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a8de716f5d7a9fbad2b803ed02aba8a13" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Shapes::GodShape</scope><name>StrategyWidth</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

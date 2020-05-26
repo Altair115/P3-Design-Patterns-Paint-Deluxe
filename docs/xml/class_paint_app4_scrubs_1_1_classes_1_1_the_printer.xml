@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="5" column="34" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="5" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="8" column="34" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="8" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="7" column="17" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="7" bodyend="7"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="10" column="17" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="10" bodyend="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="9" column="34" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="9" bodyend="12"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="12" column="34" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="12" bodyend="15"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -59,12 +59,23 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Print the String to File </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the String to be printed</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="14" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="14" bodyend="19"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="21" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="21" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_the_printer_1a6828d9868e885c08169d7e05638ef135" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -72,15 +83,17 @@
         <argsstring>()</argsstring>
         <name>ClearFile</name>
         <briefdescription>
+<para>Clear the File </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="20" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="20" bodyend="23"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="30" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="30" bodyend="33"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>A Simple Printer Singleton </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -93,7 +106,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="3" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="4" bodyend="24"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" line="6" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ThePrinter.cs" bodystart="7" bodyend="34"/>
     <listofallmembers>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer_1a6828d9868e885c08169d7e05638ef135" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::ThePrinter</scope><name>ClearFile</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_the_printer_1ab2593400943b12db3ea3291b5fa002ef" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::ThePrinter</scope><name>GetInstance</name></member>

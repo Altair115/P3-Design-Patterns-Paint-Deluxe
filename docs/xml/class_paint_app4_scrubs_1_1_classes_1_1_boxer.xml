@@ -2,55 +2,106 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_boxer" kind="class" language="C#" prot="public">
     <compoundname>PaintApp4Scrubs::Classes::Boxer</compoundname>
-    <basecompoundref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.IComponent</basecompoundref>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a45a2c9485256af85814aee7322855760" prot="private" static="no" mutable="no">
-        <type>readonly List&lt; <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref> &gt;</type>
-        <definition>readonly List&lt;IComponent&gt; PaintApp4Scrubs.Classes.Boxer._components</definition>
+    <basecompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Shapes.GodShape</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1ab577400fc6b231b6bbf4d89764424f21" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>override double</type>
+        <definition>override double PaintApp4Scrubs.Classes.Boxer.StrategyHeight</definition>
         <argsstring></argsstring>
-        <name>_components</name>
-        <initializer>= new List&lt;<ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref>&gt;()</initializer>
+        <name>StrategyHeight</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="14" column="31" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="14" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="15" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="15" bodyend="15"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="property">
-      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a9d1954fd11641f840011c1b925954339" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
-        <type>string</type>
-        <definition>string PaintApp4Scrubs.Classes.Boxer.Depth</definition>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a78120394258bc95a5ae3b692331686de" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>override string</type>
+        <definition>override string PaintApp4Scrubs.Classes.Boxer.Depth</definition>
         <argsstring></argsstring>
         <name>Depth</name>
         <briefdescription>
+<para>Gets &amp; Sets the depth needed for printing </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="15" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="15" bodyend="15"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="21" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="21" bodyend="21"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a2ee50a5cc46f330f5dd8e5d81094fac0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void PaintApp4Scrubs.Classes.Boxer.Add</definition>
-        <argsstring>(IComponent component)</argsstring>
-        <name>Add</name>
-        <param>
-          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
-          <declname>component</declname>
-        </param>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a245cb5d957064cb8964d408ff029c20d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>override double</type>
+        <definition>override double PaintApp4Scrubs.Classes.Boxer.StrategyWidth</definition>
+        <argsstring></argsstring>
+        <name>StrategyWidth</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="16" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="16" bodyend="33"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="131" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a4ffb57175bc4ecadb2760e7f44e77ff1" prot="protected" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override Geometry</type>
+        <definition>override Geometry PaintApp4Scrubs.Classes.Boxer.DefiningGeometry</definition>
+        <argsstring></argsstring>
+        <name>DefiningGeometry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="133" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="133" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a9d70a466694d4e53a2f549441feedfeb" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref> &gt;</type>
+        <definition>readonly List&lt;GodShape&gt; PaintApp4Scrubs.Classes.Boxer._components</definition>
+        <argsstring></argsstring>
+        <name>_components</name>
+        <initializer>= new List&lt;<ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="16" column="31" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1ab2c3dfb7f48edb847e9df1236115022a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.Boxer.Add</definition>
+        <argsstring>(GodShape component)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Adds the component to a box </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the component to be added</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="27" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="27" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1af4bd95c13fee623d6d388fe014ee77d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -58,20 +109,21 @@
         <argsstring>()</argsstring>
         <name>Indentation</name>
         <briefdescription>
+<para>the indentation needed for printing of the hierarchy </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="35" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="35" bodyend="47"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="49" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="49" bodyend="60"/>
       </memberdef>
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1abc9c28e408af47720c09cf1add4b56d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a72030715d5de8f9d7756000b4c3f7dee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void PaintApp4Scrubs.Classes.Boxer.Add</definition>
-        <argsstring>(IComponent component, string depth)</argsstring>
+        <argsstring>(GodShape component, string depth)</argsstring>
         <name>Add</name>
         <param>
-          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
           <declname>component</declname>
         </param>
         <param>
@@ -79,29 +131,59 @@
           <declname>depth</declname>
         </param>
         <briefdescription>
+<para>Adds the component to a box </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the component to be added</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the depth if nested deeper in the hierarchy</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="48" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="48" bodyend="52"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="67" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="67" bodyend="71"/>
       </memberdef>
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a78ddafb8bf02226e0e28ae490e65ac7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a0ec60ca8bfb7d213c2e58af21f6fc37b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void PaintApp4Scrubs.Classes.Boxer.Detach</definition>
-        <argsstring>(IComponent component)</argsstring>
+        <argsstring>(GodShape component)</argsstring>
         <name>Detach</name>
         <param>
-          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
           <declname>component</declname>
         </param>
         <briefdescription>
+<para>detaches the component from its box </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the component to be detached</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="54" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="54" bodyend="57"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="77" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="77" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1af2bdd25590c19f6dff094e021abdf883" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer" kindref="compound">Boxer</ref></type>
@@ -123,38 +205,81 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="58" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="58" bodyend="79"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="81" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="81" bodyend="102"/>
       </memberdef>
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a54f16fc06389e22cf2ddd5937ddc7f76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>List&lt; <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref> &gt;</type>
-        <definition>List&lt;IComponent&gt; PaintApp4Scrubs.Classes.Boxer.GetChildren</definition>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a7178adf5cc92fd24c754e605262db8c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref> &gt;</type>
+        <definition>List&lt;GodShape&gt; PaintApp4Scrubs.Classes.Boxer.GetChildren</definition>
         <argsstring>()</argsstring>
         <name>GetChildren</name>
+        <briefdescription>
+<para>Gets the children of the box </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A list of children</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="108" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a89f75b231a69d0c63fd805404a1e8881" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override Vector</type>
+        <definition>override Vector PaintApp4Scrubs.Classes.Boxer.GetCenter</definition>
+        <argsstring>()</argsstring>
+        <name>GetCenter</name>
+        <reimplements refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1ac7ab340b0ea5f691c599bb4d4e0e7f46">GetCenter</reimplements>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="80" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="80" bodyend="83"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="113" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="113" bodyend="116"/>
       </memberdef>
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a74217e9364d23595b6efed9e95175e55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void PaintApp4Scrubs.Classes.Boxer.Accept</definition>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a15aacd460194ba8b9b850409a49e4cf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+        <definition>override GodShape PaintApp4Scrubs.Classes.Boxer.GetBaseShape</definition>
+        <argsstring>()</argsstring>
+        <name>GetBaseShape</name>
+        <reimplements refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a0cda97da5e024f0613f77879e0207d23">GetBaseShape</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="118" column="34" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a6cba1074a477226c481a855bca2584b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void PaintApp4Scrubs.Classes.Boxer.Accept</definition>
         <argsstring>(IVisitor visitor)</argsstring>
         <name>Accept</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept_1ac80a5a798a95cc4ac75f720736cf8c57">Accept</reimplements>
+        <reimplements refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a7d61af285beed44caec2ad199c69aff1">Accept</reimplements>
         <param>
           <type><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" kindref="compound">IVisitor</ref></type>
           <declname>visitor</declname>
         </param>
         <briefdescription>
+<para>Accept a visitor </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the visitor in question</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="85" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="85" bodyend="88"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="126" column="30" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="126" bodyend="129"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -162,9 +287,17 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="3">
+      <node id="4">
         <label>IAccept</label>
         <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
+      </node>
+      <node id="2">
+        <label>GodShape</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="1">
         <label>PaintApp4Scrubs.Classes.Boxer</label>
@@ -172,17 +305,22 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2">
-        <label>IComponent</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
+      <node id="3">
+        <label>Shape</label>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="3">
+      <node id="4">
         <label>IAccept</label>
         <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept"/>
+      </node>
+      <node id="2">
+        <label>GodShape</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="1">
         <label>PaintApp4Scrubs.Classes.Boxer</label>
@@ -190,24 +328,27 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="2">
-        <label>IComponent</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component"/>
-        <childnode refid="3" relation="public-inheritance">
-        </childnode>
+      <node id="3">
+        <label>Shape</label>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="12" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="13" bodyend="89"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" line="13" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Boxer.cs" bodystart="14" bodyend="134"/>
     <listofallmembers>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a45a2c9485256af85814aee7322855760" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>_components</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a74217e9364d23595b6efed9e95175e55" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Accept</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a2ee50a5cc46f330f5dd8e5d81094fac0" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Add</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1abc9c28e408af47720c09cf1add4b56d5" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Add</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a9d1954fd11641f840011c1b925954339" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Depth</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a78ddafb8bf02226e0e28ae490e65ac7b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Detach</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a9d70a466694d4e53a2f549441feedfeb" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>_components</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a6cba1074a477226c481a855bca2584b0" prot="public" virt="virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Accept</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1ab2c3dfb7f48edb847e9df1236115022a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Add</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a72030715d5de8f9d7756000b4c3f7dee" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Add</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a4ffb57175bc4ecadb2760e7f44e77ff1" prot="protected" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>DefiningGeometry</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a78120394258bc95a5ae3b692331686de" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Depth</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a0ec60ca8bfb7d213c2e58af21f6fc37b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Detach</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1af2bdd25590c19f6dff094e021abdf883" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>FindBox</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a54f16fc06389e22cf2ddd5937ddc7f76" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>GetChildren</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a15aacd460194ba8b9b850409a49e4cf8" prot="public" virt="virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>GetBaseShape</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a89f75b231a69d0c63fd805404a1e8881" prot="public" virt="virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>GetCenter</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a7178adf5cc92fd24c754e605262db8c0" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>GetChildren</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1af4bd95c13fee623d6d388fe014ee77d3" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>Indentation</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape_1a7738dcb9d428d2f033cf79730dea4695" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>OriginPos</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1ab577400fc6b231b6bbf4d89764424f21" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>StrategyHeight</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_boxer_1a245cb5d957064cb8964d408ff029c20d" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Boxer</scope><name>StrategyWidth</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

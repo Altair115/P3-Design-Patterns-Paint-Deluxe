@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['undocommand_46',['UndoCommand',['../class_paint_app4_scrubs_1_1_classes_1_1_broker.html#a6273ca788a5718d80d241beb2aecc5d3',1,'PaintApp4Scrubs::Classes::Broker']]],
-  ['unexecute_47',['UnExecute',['../class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete.html#ab8854f14dc8109979e50f56a4f96509a',1,'PaintApp4Scrubs.Classes.Commands.Delete.UnExecute()'],['../class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw.html#a38aaae53ea0086f9ff317f2c55270c9f',1,'PaintApp4Scrubs.Classes.Commands.Draw.UnExecute()'],['../class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move.html#a36ab6f2faef31dff32196fb47c9aa237',1,'PaintApp4Scrubs.Classes.Commands.Move.UnExecute()'],['../class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize.html#a989a9659b7b9fb4965c75297722a2026',1,'PaintApp4Scrubs.Classes.Commands.Resize.UnExecute()']]]
+  ['theprinter_58',['ThePrinter',['../class_paint_app4_scrubs_1_1_classes_1_1_the_printer.html',1,'PaintApp4Scrubs::Classes']]],
+  ['topoint_59',['ToPoint',['../class_paint_app4_scrubs_1_1_classes_1_1_converter.html#a15759705cb5eb3822a6edbd5bad363d4',1,'PaintApp4Scrubs::Classes::Converter']]],
+  ['tostring_60',['ToString',['../class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape.html#a4c95803fc7b484ca83b7079a88752556',1,'PaintApp4Scrubs::Classes::Shapes::BaseShape']]],
+  ['tovector_61',['ToVector',['../class_paint_app4_scrubs_1_1_classes_1_1_converter.html#a0589ea3a6f759eae1f1462e284642781',1,'PaintApp4Scrubs::Classes::Converter']]],
+  ['trianglestrategies_62',['TriangleStrategies',['../class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies.html',1,'PaintApp4Scrubs.Classes.Strategies.TriangleStrategies'],['../class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies.html#a8b7add5e07b4a0c4d03c1b3e083f9cc4',1,'PaintApp4Scrubs.Classes.Strategies.TriangleStrategies.TriangleStrategies()']]]
 ];

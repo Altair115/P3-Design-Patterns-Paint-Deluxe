@@ -4,9 +4,9 @@
     <compoundname>PaintApp4Scrubs::Classes::Commands::Resize</compoundname>
     <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.ICommand</basecompoundref>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8268744fa412499796c9febc0122b9b7" prot="private" static="no" mutable="no">
-        <type>readonly <ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
-        <definition>readonly IComponent PaintApp4Scrubs.Classes.Commands.Resize._component</definition>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a7c3575889f2d4633a798f0f0b0133c65" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
+        <definition>readonly GodShape PaintApp4Scrubs.Classes.Commands.Resize._component</definition>
         <argsstring></argsstring>
         <name>_component</name>
         <briefdescription>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="17" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="17" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="17" column="35" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1aa6c709964c8db9bd54b3a90dacf17a2c" prot="private" static="no" mutable="no">
         <type>readonly Vector</type>
@@ -32,13 +32,13 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8a0572db2920fbc69c5674fa17277079" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1aeae6b643130c24407667a9d47e79509f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>PaintApp4Scrubs.Classes.Commands.Resize.Resize</definition>
-        <argsstring>(IComponent component, Vector distance)</argsstring>
+        <argsstring>(GodShape component, Vector distance)</argsstring>
         <name>Resize</name>
         <param>
-          <type><ref refid="interface_paint_app4_scrubs_1_1_classes_1_1_i_component" kindref="compound">IComponent</ref></type>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref></type>
           <declname>component</declname>
         </param>
         <param>
@@ -79,7 +79,7 @@
         <name>Execute</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a068677c28a0f3d0525bc3815c5d0f2c9">Execute</reimplements>
         <briefdescription>
-<para>executes the resize command </para>
+<para>executes the resize Visitor </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -94,7 +94,7 @@
         <name>UnExecute</name>
         <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command_1a9d1284a24e06a39beaa21cad8d10ea08">UnExecute</reimplements>
         <briefdescription>
-<para>executes the undo version of the resize command </para>
+<para>executes the undo variant of the resize Visitor </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -134,10 +134,10 @@
     </collaborationgraph>
     <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" line="15" column="5" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Resize.cs" bodystart="16" bodyend="43"/>
     <listofallmembers>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8268744fa412499796c9febc0122b9b7" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>_component</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a7c3575889f2d4633a798f0f0b0133c65" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>_component</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1aa6c709964c8db9bd54b3a90dacf17a2c" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>_distance</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a4e2e56e627f7b15d53abbfe20c3ced3a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>Execute</name></member>
-      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a8a0572db2920fbc69c5674fa17277079" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>Resize</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1aeae6b643130c24407667a9d47e79509f" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>Resize</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize_1a989a9659b7b9fb4965c75297722a2026" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Commands::Resize</scope><name>UnExecute</name></member>
     </listofallmembers>
   </compounddef>

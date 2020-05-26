@@ -3,7 +3,6 @@
   <compounddef id="dir_1f8de7a75ea8a9a9b38f7fd10273a3ba" kind="dir">
     <compoundname>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies</compoundname>
     <innerfile refid="_ellipse_strategies_8cs">EllipseStrategies.cs</innerfile>
-    <innerfile refid="_i_strategy_8cs">IStrategy.cs</innerfile>
     <innerfile refid="_line_strategies_8cs">LineStrategies.cs</innerfile>
     <innerfile refid="_square_strategies_8cs">SquareStrategies.cs</innerfile>
     <innerfile refid="_triangle_strategies_8cs">TriangleStrategies.cs</innerfile>
