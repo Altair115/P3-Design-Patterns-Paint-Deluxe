@@ -73,11 +73,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
         /// <summary>
         /// defines the geometry of the shape with the strategy 
         /// </summary>
-        protected override Geometry DefiningGeometry
-        {
-            get { return Strategy.GetGeometry(); }
+        protected override Geometry DefiningGeometry => Strategy.GetGeometry();
 
-        }
         /// <summary>
         /// the string of the strategy 
         /// </summary>
@@ -94,8 +91,8 @@ namespace PaintApp4Scrubs.Classes.Shapes
 
         public override string Depth
         {
-            get { return _depth;}
-            set { _depth = value + " ";}
+            get => _depth;
+            set => _depth = value + " ";
         }
     }
 }

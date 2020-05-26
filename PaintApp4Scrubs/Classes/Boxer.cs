@@ -50,11 +50,10 @@ namespace PaintApp4Scrubs.Classes
         {
             foreach (var comp in this.GetChildren())
             {
-                if (comp is Boxer)
+                if (comp is Boxer x1)
                 {
-                    var x = (Boxer)comp;
-                    x.Depth += "-";
-                    x.Indentation();
+                    x1.Depth += "-";
+                    x1.Indentation();
                 }
                 comp.Depth += "-";
             }
@@ -116,15 +115,14 @@ namespace PaintApp4Scrubs.Classes
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Accept a visitor
-        /// </summary>
-        /// <param name="visitor">the visitor in question</param>
         public override GodShape GetBaseShape()
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Accept a visitor
+        /// </summary>
+        /// <param name="visitor">the visitor in question</param>
         public override void Accept(IVisitor visitor)
         {
             visitor.Visit(this);

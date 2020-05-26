@@ -95,8 +95,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             ornament.GetComponent().Accept(this);
             Vector x = ornament.GetVector(ornament.Position);
-            Canvas.SetTop(ornament.textBlock, x.Y);
-            Canvas.SetLeft(ornament.textBlock, x.X);
+            Canvas.SetTop(ornament.TextBlock, x.Y);
+            Canvas.SetLeft(ornament.TextBlock, x.X);
         }
     }
 }

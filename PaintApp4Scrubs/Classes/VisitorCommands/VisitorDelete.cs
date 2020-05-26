@@ -59,7 +59,7 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         public void VisitOrnament(Ornament ornament)
         {
             ornament.GetComponent().Accept(this);
-            MainWindow.AppWindow.RemoveShape(ornament.textBlock);
+            MainWindow.AppWindow.RemoveShape(ornament.TextBlock);
         }
     }
 }

@@ -9,7 +9,8 @@ namespace PaintApp4Scrubs.Classes
         protected GodShape _component;
         protected double width;
         protected double height;
-        public Decorator(GodShape p)
+
+        protected Decorator(GodShape p)
         {
             _component = p;
         }
@@ -34,19 +35,13 @@ namespace PaintApp4Scrubs.Classes
         {
             return _component.GetCenter();
         }
-        public override double StrategyWidth
-        {
-            get { return _component.StrategyWidth; }
-        }
-        public override double StrategyHeight
-        {
-            get { return _component.StrategyHeight; }
-        }
+        public override double StrategyWidth => _component.StrategyWidth;
+        public override double StrategyHeight => _component.StrategyHeight;
 
         public override string Depth
         {
-            get { return _component.Depth; }
-            set { _component.Depth = value; }
+            get => _component.Depth;
+            set => _component.Depth = value;
         }
     }
 }
