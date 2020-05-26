@@ -313,7 +313,7 @@ namespace PaintApp4Scrubs
                 newEllipse.SetValue(Canvas.TopProperty, _endPoint.Y - 50);
                 newEllipse.StrategyWidth = _startPoint.Y - _endPoint.Y;
             }
-            
+
             DrawShape(MakeOrnaments(newEllipse));
         }
 
@@ -418,7 +418,7 @@ namespace PaintApp4Scrubs
         /// <summary>
         public GodShape BoxFinder(GodShape shape)
         {
-            GodShape component = _box.FindBox(shape as GodShape);
+            GodShape component = _box.FindBox(shape);
             if (component != null)
                 shape = component;
             return shape;
@@ -447,7 +447,7 @@ namespace PaintApp4Scrubs
             Vector startPoint = (Vector)_startPoint;
             endPoint.Y -= distanceFix;
             startPoint.Y -= distanceFix;
-            
+
             Move move = new Move(BoxFinder(FindDecorator(selectedShape)), endPoint, startPoint);
             _broker.DoCommand(move);
         }
@@ -477,14 +477,20 @@ namespace PaintApp4Scrubs
             _broker.DoCommand(delete);
             _box.Detach(selectedShape);
         }
-
-        public GodShape FindDecorator(GodShape selectedShape)
+        public GodShape FindDecorator(GodShape selectedShape, Boxer boxer = null )
         {
-            foreach (var decorator in _box.GetChildren())
+            if (boxer == null)
+                boxer = _box;
+            foreach (var decorator in boxer.GetChildren())
             {
                 if (decorator is Decorator deco && selectedShape == deco.GetBaseShape())
                 {
                     return deco;
+                }
+
+                if (decorator is Boxer box)
+                {
+                    selectedShape = FindDecorator(selectedShape, box);
                 }
             }
             return selectedShape;
@@ -516,19 +522,20 @@ namespace PaintApp4Scrubs
             Resize resize = new Resize(BoxFinder(FindDecorator(selectedShape)), distance);
             _broker.DoCommand(resize);
         }
-        /// <param name="selectedComponent">the selected shape or box</param>
-        /// </summary>
-        /// adds a box or a shape to the main list(box) of the canvas
+
         /// <summary>
+        /// adds a box or a shape to the main list(box) of the canvas
+        /// </summary>
+        /// <param name="selectedComponent">the selected shape or box</param>
         public void AddToBoxList(GodShape selectedComponent)
         {
             if (selectedComponent == null)
                 return;
-
-            GodShape component = _box.FindBox(selectedComponent as GodShape);
+            var x = FindDecorator(selectedComponent);
+            GodShape component = _box.FindBox(x);
             if (component == null)
             {
-                _boxList.Add(selectedComponent);
+                _boxList.Add(x);
             }
             else
             {
@@ -538,20 +545,21 @@ namespace PaintApp4Scrubs
                 }
             }
         }
-        /// <param name="components">a list of boxes or shapes </param>
-        /// </summary>
-        /// makes a command call to make a group of objects
+
         /// <summary>
+        /// makes a command call to make a group of objects
+        /// </summary>
+        /// <param name="components">a list of boxes or shapes </param>
         public void AddToGroup(List<GodShape> components)
         {
             MakeGroup makeGroup = new MakeGroup(components, _box);
             _broker.DoCommand(makeGroup);
             _boxList.Clear();
         }
-        /// <param name="shape">the selected shape</param>
+        /// <summary>
         /// makes a command call to print the hierarchy on the selected shape
         /// </summary>
-        /// <summary>
+        /// <param name="shape">the selected shape</param>
         public void DisplayGroup(GodShape shape)
         {
             if (shape == null)

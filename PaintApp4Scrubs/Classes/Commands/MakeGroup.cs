@@ -12,11 +12,12 @@ namespace PaintApp4Scrubs.Classes.Commands
         private readonly List<GodShape> _components;
         private readonly Boxer _parentBox;
         private readonly Boxer _newBox;
-        /// <param name="parentBox">the parent box</param>
-        /// <param name="components">the selected shapes/boxes </param>
-        /// </summary>
-        /// this is the constructor of MakeGroup
+
         /// <summary>
+        /// this is the constructor of MakeGroup
+        /// </summary>
+        /// <param name="components">the selected shapes/boxes </param>
+        /// <param name="parentBox">the parent box</param>
         public MakeGroup(List<GodShape> components, Boxer parentBox)
         {
             _components = components;
