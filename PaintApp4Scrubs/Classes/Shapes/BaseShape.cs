@@ -39,6 +39,11 @@ namespace PaintApp4Scrubs.Classes.Shapes
             //else just ask W. Brinksma
         }
 
+        public override GodShape GetBaseShape()
+        {
+            return this;
+        }
+
         public override void Accept(IVisitor visitor)
         {
             Strategy.Accept(visitor,this);

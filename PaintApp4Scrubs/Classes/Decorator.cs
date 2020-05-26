@@ -20,7 +20,7 @@ namespace PaintApp4Scrubs.Classes
             height = component.Height;
         }
 
-        public GodShape GetComponent()
+        public  GodShape GetComponent()
         {
             return _component;
         }
@@ -30,6 +30,11 @@ namespace PaintApp4Scrubs.Classes
             {
                 _component.Decorate();
             }
+        }
+
+        public override GodShape GetBaseShape()
+        {
+            return _component.GetBaseShape();
         }
 
         public override Vector GetCenter()

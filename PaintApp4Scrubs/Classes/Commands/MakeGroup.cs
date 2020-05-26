@@ -6,11 +6,11 @@ namespace PaintApp4Scrubs.Classes.Commands
 {
     public class MakeGroup : ICommand
     {
-        private readonly List<IComponent> _components;
+        private readonly List<GodShape> _components;
         private readonly Boxer _parentBox;
         private readonly Boxer _newBox;
 
-        public MakeGroup(List<IComponent> components, Boxer parentBox)
+        public MakeGroup(List<GodShape> components, Boxer parentBox)
         {
             _components = components;
             _parentBox = parentBox;

@@ -1,6 +1,7 @@
 ﻿using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
 using System.Windows;
+using System.Windows.Controls;
 using PaintApp4Scrubs.Classes.Strategies;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
@@ -58,7 +59,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void VisitOrnament(Ornament ornament)
         {
-            throw new System.NotImplementedException();
+            ornament.GetComponent().Accept(this);
+            Vector x = ornament.GetVector(ornament.Position);
+            Canvas.SetTop(ornament.textBlock, x.Y);
+            Canvas.SetLeft(ornament.textBlock, x.X);
         }
     }
 }

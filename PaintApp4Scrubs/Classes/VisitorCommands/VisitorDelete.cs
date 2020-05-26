@@ -1,4 +1,6 @@
-﻿using PaintApp4Scrubs.Classes.Shapes;
+﻿using System.Windows;
+using System.Windows.Controls;
+using PaintApp4Scrubs.Classes.Shapes;
 using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
@@ -39,7 +41,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void VisitOrnament(Ornament ornament)
         {
-            throw new System.NotImplementedException();
+            ornament.GetComponent().Accept(this);
+            MainWindow.AppWindow.RemoveShape(ornament.textBlock);
         }
     }
 }

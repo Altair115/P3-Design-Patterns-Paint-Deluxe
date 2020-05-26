@@ -431,7 +431,8 @@ namespace PaintApp4Scrubs
             Vector startPoint = (Vector)_startPoint;
             endPoint.Y -= distanceFix;
             startPoint.Y -= distanceFix;
-            Move move = new Move(BoxFinder(selectedShape), endPoint, startPoint);
+            
+            Move move = new Move(BoxFinder(FindDecorator(selectedShape)), endPoint, startPoint);
             _broker.DoCommand(move);
         }
 
@@ -452,14 +453,25 @@ namespace PaintApp4Scrubs
         /// creates the command to delete the selected shape
         /// </summary>
         /// <param name="selectedShape">The selected shape</param>
-        public void DeleteShape(IComponent selectedShape)
+        public void DeleteShape(GodShape selectedShape)
         {
             if (selectedShape == null)
                 return;
-
-            Delete delete = new Delete(BoxFinder(selectedShape));
+            Delete delete = new Delete(BoxFinder(FindDecorator(selectedShape)));
             _broker.DoCommand(delete);
             _box.Detach(selectedShape);
+        }
+
+        public GodShape FindDecorator(GodShape selectedShape)
+        {
+            foreach (var decorator in _box.GetChildren())
+            {
+                if (decorator is Decorator deco && selectedShape == deco.GetBaseShape())
+                {
+                    return deco;
+                }
+            }
+            return selectedShape;
         }
 
         /// <summary>
@@ -470,18 +482,22 @@ namespace PaintApp4Scrubs
         {
             Canvas.Children.Remove(shape);
         }
+        public void RemoveShape(TextBlock shape)
+        {
+            Canvas.Children.Remove(shape);
+        }
 
         /// <summary>
         /// picks the selected and creates an resize command to resize the selected shape 
         /// </summary>
         /// <param name="selectedShape">The selected shape</param>
-        public void ResizeShape(IComponent selectedShape)
+        public void ResizeShape(GodShape selectedShape)
         {
             if (selectedShape == null)
                 return;
 
             Vector distance = _startPoint - _endPoint;
-            Resize resize = new Resize(BoxFinder(selectedShape), distance);
+            Resize resize = new Resize(BoxFinder(FindDecorator(selectedShape)), distance);
             _broker.DoCommand(resize);
         }
 
