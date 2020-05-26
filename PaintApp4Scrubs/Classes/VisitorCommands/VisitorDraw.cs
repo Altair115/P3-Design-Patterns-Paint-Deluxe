@@ -7,14 +7,6 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
     public class VisitorDraw : IVisitor
     {
         /// <summary>
-        /// Visitor Function for godShape
-        /// </summary>
-        /// <param name="godShape">Selected Shape</param>
-        public void Visit(GodShape godShape)
-        {
-            MainWindow.AppWindow.PutOnScreen(godShape);
-        }
-        /// <summary>
         /// Visitor Function for boxer
         /// </summary>
         /// <param name="boxer">Selected Box</param>
