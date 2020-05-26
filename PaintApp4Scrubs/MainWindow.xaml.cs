@@ -127,7 +127,7 @@ namespace PaintApp4Scrubs
         {
             if (OrnamentBox != null && OrnamentName != null)
             {
-                fixi();
+                AddToExists();
             }
         }
 
@@ -139,10 +139,9 @@ namespace PaintApp4Scrubs
 
         private void OrnamentBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             if (OrnamentBox != null && OrnamentName != null)
             {
-                fixi();
+                AddToExists();
                 foreach (var itemBoxLinker in _comboBoxLinkers)
                 {
                     if (OrnamentBox.Items[OrnamentBox.SelectedIndex].ToString().Split(" ")[1] == itemBoxLinker.PositionString)
@@ -154,7 +153,7 @@ namespace PaintApp4Scrubs
             }
         }
 
-        private void fixi()
+        private void AddToExists()
         {
             ComboBoxLinker comboBoxLinker = new ComboBoxLinker {TextBoxName = OrnamentName.Text, PositionString = OrnamentBox.SelectionBoxItem.ToString() };
             foreach (var item in _comboBoxLinkers)

@@ -86,9 +86,8 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
 
         public void VisitOrnament(Ornament ornament)
         {
-            ornament.GetComponent().Accept(this);
             _printer.PrintToFile($"{ornament.Depth}{ornament.ToString()}");
-
+            ornament.GetComponent().Accept(this);
         }
     }
 }

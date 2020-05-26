@@ -18,7 +18,7 @@ namespace PaintApp4Scrubs.Classes
         /// <summary>
         /// Gets & Sets the depth needed for printing
         /// </summary>
-        public string Depth { get; set; }
+        public override string Depth { get; set; }
         
         /// <summary>
         /// Adds the component to a box

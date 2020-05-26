@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Media;
+using Microsoft.VisualBasic.CompilerServices;
 using PaintApp4Scrubs.Classes.Strategies;
 using PaintApp4Scrubs.Interfaces;
 
@@ -10,6 +11,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
     /// </summary>
     public class BaseShape : GodShape, IAccept
     {
+        private string _depth;
         public IStrategy Strategy;
         /// <summary>
         /// set and gets the Strategy related Width
@@ -88,6 +90,12 @@ namespace PaintApp4Scrubs.Classes.Shapes
         public override Vector GetCenter()
         {
             return Strategy.GetCenter(this);
+        }
+
+        public override string Depth
+        {
+            get { return _depth;}
+            set { _depth = value + " ";}
         }
     }
 }

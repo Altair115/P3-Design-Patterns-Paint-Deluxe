@@ -14,6 +14,7 @@ namespace PaintApp4Scrubs.Classes
         public string Position = "";
         private Size sizeofTexBlock;
         public TextBlock textBlock = new TextBlock();
+        private string _depth;
 
         protected override Geometry DefiningGeometry
         {
@@ -83,7 +84,17 @@ namespace PaintApp4Scrubs.Classes
         {
             visitor.VisitOrnament(this);
         }
-        
+
+        public override string Depth
+        {
+            get { return _depth;}
+            set
+            {
+                _depth = value;
+                base.Depth = value;
+            }
+        }
+
         public override double StrategyHeight
         {
             get { return base.StrategyHeight; }

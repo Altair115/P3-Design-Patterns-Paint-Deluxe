@@ -42,5 +42,11 @@ namespace PaintApp4Scrubs.Classes
         {
             get { return _component.StrategyHeight; }
         }
+
+        public override string Depth
+        {
+            get { return _component.Depth; }
+            set { _component.Depth = value; }
+        }
     }
 }
