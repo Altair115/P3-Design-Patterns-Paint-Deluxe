@@ -125,9 +125,9 @@ namespace PaintApp4Scrubs
 
         private void SetNames_OnClick(object sender, RoutedEventArgs e)
         {
-            if (ornamentBox != null && OrnementName != null)
+            if (OrnamentBox != null && OrnamentName != null)
             {
-                _comboBoxLinkers[ornamentBox.SelectedIndex].TextBoxName = OrnementName.Text;
+                fixi();
             }
         }
 
@@ -140,41 +140,23 @@ namespace PaintApp4Scrubs
         private void OrnamentBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            if (ornamentBox != null && OrnementName != null)
+            if (OrnamentBox != null && OrnamentName != null)
             {
-                
-                //_comboBoxLinkers[_comboBoxIndex].TextBoxName = OrnementName.Text;
-                //_comboBoxLinkers[_comboBoxIndex].PositionString = ornamentBox.SelectionBoxItem.ToString();
-                
-                //OrnementName.Text = _comboBoxLinkers[ornamentBox.SelectedIndex].TextBoxName;
-               // OrnementName.Text = _comboBoxLinkers[0].TextBoxName;
-               fixi();
-                var x = ornamentBox.SelectedIndex;
-               var d=  ornamentBox.Items[x];
-               var p = d.ToString().Split(" ");
-               var kl = p[1];
-               foreach (var itemBoxLinker in _comboBoxLinkers)
-               {
-                   if (kl == itemBoxLinker.PositionString)
-                   {
-                       OrnementName.Text = itemBoxLinker.TextBoxName;
-                   }
-               }
-
+                fixi();
+                foreach (var itemBoxLinker in _comboBoxLinkers)
+                {
+                    if (OrnamentBox.Items[OrnamentBox.SelectedIndex].ToString().Split(" ")[1] == itemBoxLinker.PositionString)
+                    {
+                        OrnamentName.Text = itemBoxLinker.TextBoxName;
+                    }
+                }
+                _comboBoxIndex = OrnamentBox.SelectedIndex;
             }
-            _comboBoxIndex = ornamentBox.SelectedIndex;
         }
 
         private void fixi()
         {
-            ComboBoxLinker comboBoxLinker = new ComboBoxLinker
-            {
-                TextBoxName = OrnementName.Text,
-                PositionString = ornamentBox.SelectionBoxItem.ToString()
-            };
-
-            //OrnementName.Text = _comboBoxLinkers[ornamentBox.SelectedIndex].TextBoxName;
-
+            ComboBoxLinker comboBoxLinker = new ComboBoxLinker {TextBoxName = OrnamentName.Text, PositionString = OrnamentBox.SelectionBoxItem.ToString() };
             foreach (var item in _comboBoxLinkers)
             {
                 if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName != comboBoxLinker.TextBoxName)
@@ -185,9 +167,7 @@ namespace PaintApp4Scrubs
                 }
 
                 if (item.PositionString == comboBoxLinker.PositionString && item.TextBoxName == comboBoxLinker.TextBoxName)
-                {
                     return;
-                }
             }
             _comboBoxLinkers.Add(comboBoxLinker);
         }
