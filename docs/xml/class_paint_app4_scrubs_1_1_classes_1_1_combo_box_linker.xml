@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_combo_box_linker" kind="class" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Classes::ComboBoxLinker</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_combo_box_linker_1a9130053cae14726d4f3bdcfbf9ae68c3" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string PaintApp4Scrubs.Classes.ComboBoxLinker.PositionString</definition>
+        <argsstring></argsstring>
+        <name>PositionString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ComboBoxLinker.cs" line="5" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ComboBoxLinker.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_combo_box_linker_1a284c93087baa57407472894e36766ce2" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string PaintApp4Scrubs.Classes.ComboBoxLinker.TextBoxName</definition>
+        <argsstring></argsstring>
+        <name>TextBoxName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ComboBoxLinker.cs" line="6" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ComboBoxLinker.cs" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ComboBoxLinker.cs" line="3" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/ComboBoxLinker.cs" bodystart="4" bodyend="7"/>
+    <listofallmembers>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_combo_box_linker_1a9130053cae14726d4f3bdcfbf9ae68c3" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::ComboBoxLinker</scope><name>PositionString</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_combo_box_linker_1a284c93087baa57407472894e36766ce2" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::ComboBoxLinker</scope><name>TextBoxName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

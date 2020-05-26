@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="namespace_microsoft_1_1_visual_basic_1_1_compiler_services" kind="namespace" language="C#">
+    <compoundname>Microsoft::VisualBasic::CompilerServices</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Shapes/BaseShape.cs" line="3" column="45"/>
+  </compounddef>
+</doxygen>
