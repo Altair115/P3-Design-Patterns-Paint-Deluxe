@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_1371adf68d4eb1c400e912dcc30ddfc5" kind="dir">
+    <compoundname>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces</compoundname>
+    <innerfile refid="_i_accept_8cs">IAccept.cs</innerfile>
+    <innerfile refid="_i_command_8cs">ICommand.cs</innerfile>
+    <innerfile refid="_i_strategy_8cs">IStrategy.cs</innerfile>
+    <innerfile refid="_i_visitor_8cs">IVisitor.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/"/>
+  </compounddef>
+</doxygen>

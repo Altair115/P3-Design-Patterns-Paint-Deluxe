@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy" kind="interface" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Interfaces::IStrategy</compoundname>
+    <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Strategies.EllipseStrategies</derivedcompoundref>
+    <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Strategies.LineStrategies</derivedcompoundref>
+    <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Strategies.SquareStrategies</derivedcompoundref>
+    <derivedcompoundref refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Strategies.TriangleStrategies</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a8a982c5c9f232d78dcdbcc80fe74d4ca" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double PaintApp4Scrubs.Interfaces.IStrategy.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <briefdescription>
+<para>gets and sets the Height </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="20" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1ac87e600059d21effb709cf948e4cfb75" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double PaintApp4Scrubs.Interfaces.IStrategy.Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <briefdescription>
+<para>gets and sets the Width </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="24" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1ab16b797d649aa9301fbcebbc79f801db" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Point</type>
+        <definition>Point PaintApp4Scrubs.Interfaces.IStrategy.StartPoint</definition>
+        <argsstring></argsstring>
+        <name>StartPoint</name>
+        <briefdescription>
+<para>gets and sets the StartPoint </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="40" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1af504acf93d74961c7ee0a0db51d5e925" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Point</type>
+        <definition>Point PaintApp4Scrubs.Interfaces.IStrategy.EndPoint</definition>
+        <argsstring></argsstring>
+        <name>EndPoint</name>
+        <briefdescription>
+<para>gets and sets the Endpoint </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="44" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a9d302680be6ac1b5a8a389f3062f231b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Geometry</type>
+        <definition>Geometry PaintApp4Scrubs.Interfaces.IStrategy.GetGeometry</definition>
+        <argsstring>()</argsstring>
+        <name>GetGeometry</name>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1acdd2c8afa223434b2982ab770b033307">GetGeometry</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a31bc50c66b8111bbdbeddf522784041d">GetGeometry</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1ae11848146b29a08d5c005b6446bac4a0">GetGeometry</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1a69df1767e804fd569b8989bac852dec6">GetGeometry</reimplementedby>
+        <briefdescription>
+<para>gets the Geometry </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Geometry</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="16" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a6d4ebcfad3ac72930a96f2ee06c507c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string PaintApp4Scrubs.Interfaces.IStrategy.GetString</definition>
+        <argsstring>(BaseShape baseShape)</argsstring>
+        <name>GetString</name>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a765e2219c38a7fc242384353cf6d56cb">GetString</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a8644c03e4f8aac7c8517ccb6afe0637f">GetString</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a752e5a35647a55e4881961aa202f113a">GetString</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ae333c8327ae50c5144f0e5851363aa43">GetString</reimplementedby>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>baseShape</declname>
+        </param>
+        <briefdescription>
+<para>gets the string from the strategy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the base shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the string of the strategy </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="30" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a5ef7c98c704d6cd3ccf5c5bed18d8ba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Interfaces.IStrategy.Accept</definition>
+        <argsstring>(IVisitor visitor, BaseShape baseShape)</argsstring>
+        <name>Accept</name>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a1cea0412291a206ce95b673ec2063ef8">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a53ec3a24eb2b6bd3ee87038c3cebf70b">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a8f874d473b880fe07519b28d9c98e33a">Accept</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1ab76286a40d75460ebc108d7ef54b03c9">Accept</reimplementedby>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" kindref="compound">IVisitor</ref></type>
+          <declname>visitor</declname>
+        </param>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>baseShape</declname>
+        </param>
+        <briefdescription>
+<para>this interacts with the visitor for the given strategy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given visitor</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the base shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="36" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a12fed5266eafd6e116da60de11783e5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Vector</type>
+        <definition>Vector PaintApp4Scrubs.Interfaces.IStrategy.GetCenter</definition>
+        <argsstring>(BaseShape baseShape)</argsstring>
+        <name>GetCenter</name>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies_1aab853fc54ace303c7215cc1860716666">GetCenter</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1ad997c7545c162f6445ce324c43d6dd9b">GetCenter</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a8bcdcc08f7ed2349c514c69e1395f5ca">GetCenter</reimplementedby>
+        <reimplementedby refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1a4a05e3b4ba5fbc2d341ee600bfa533e7">GetCenter</reimplementedby>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>baseShape</declname>
+        </param>
+        <briefdescription>
+<para>gets the Vector of the center of the Strategy </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base shape </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the center vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="50" column="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>the strategy interface /summary&gt; </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PaintApp4Scrubs.Interfaces.IStrategy</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy"/>
+      </node>
+      <node id="2">
+        <label>PaintApp4Scrubs.Classes.Strategies.EllipseStrategies</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PaintApp4Scrubs.Classes.Strategies.TriangleStrategies</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PaintApp4Scrubs.Classes.Strategies.SquareStrategies</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PaintApp4Scrubs.Classes.Strategies.LineStrategies</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" line="10" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces/IStrategy.cs" bodystart="11" bodyend="51"/>
+    <listofallmembers>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a5ef7c98c704d6cd3ccf5c5bed18d8ba6" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IStrategy</scope><name>Accept</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1af504acf93d74961c7ee0a0db51d5e925" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IStrategy</scope><name>EndPoint</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a12fed5266eafd6e116da60de11783e5b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IStrategy</scope><name>GetCenter</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a9d302680be6ac1b5a8a389f3062f231b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IStrategy</scope><name>GetGeometry</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a6d4ebcfad3ac72930a96f2ee06c507c5" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IStrategy</scope><name>GetString</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a8a982c5c9f232d78dcdbcc80fe74d4ca" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IStrategy</scope><name>Height</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1ab16b797d649aa9301fbcebbc79f801db" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IStrategy</scope><name>StartPoint</name></member>
+      <member refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1ac87e600059d21effb709cf948e4cfb75" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Interfaces::IStrategy</scope><name>Width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

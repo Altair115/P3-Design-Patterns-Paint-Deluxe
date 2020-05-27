@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_2e6c0aca76d29e6b0da8ba7bf9225a23" kind="dir">
+    <compoundname>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands</compoundname>
+    <innerfile refid="_delete_8cs">Delete.cs</innerfile>
+    <innerfile refid="_display_group_8cs">DisplayGroup.cs</innerfile>
+    <innerfile refid="_draw_8cs">Draw.cs</innerfile>
+    <innerfile refid="_make_group_8cs">MakeGroup.cs</innerfile>
+    <innerfile refid="_move_8cs">Move.cs</innerfile>
+    <innerfile refid="_resize_8cs">Resize.cs</innerfile>
+    <innerfile refid="_save_file_8cs">SaveFile.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/"/>
+  </compounddef>
+</doxygen>

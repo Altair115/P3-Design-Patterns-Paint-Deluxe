@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_b48caa4a53dec52797671f21ddac77d5" kind="dir">
+    <compoundname>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs</compoundname>
+    <innerdir refid="dir_77266d9e0910e9f1dc775447c6588cde">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes</innerdir>
+    <innerdir refid="dir_1371adf68d4eb1c400e912dcc30ddfc5">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Interfaces</innerdir>
+    <innerdir refid="dir_61a3640b7e0978a197b7dc4e89df5760">D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/obj</innerdir>
+    <innerfile refid="_app_8xaml_8cs">App.xaml.cs</innerfile>
+    <innerfile refid="_assembly_info_8cs">AssemblyInfo.cs</innerfile>
+    <innerfile refid="_main_window_8xaml_8cs">MainWindow.xaml.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/"/>
+  </compounddef>
+</doxygen>

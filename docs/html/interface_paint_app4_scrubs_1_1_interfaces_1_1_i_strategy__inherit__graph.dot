@@ -1,0 +1,16 @@
+digraph "PaintApp4Scrubs.Interfaces.IStrategy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PaintApp4Scrubs.Interfaces.\lIStrategy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="the strategy interface /summary>"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PaintApp4Scrubs.Classes.\lStrategies.EllipseStrategies",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies.html",tooltip="the strategy of The Ellipse Shape"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PaintApp4Scrubs.Classes.\lStrategies.LineStrategies",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies.html",tooltip="the strategy for the line"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PaintApp4Scrubs.Classes.\lStrategies.SquareStrategies",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies.html",tooltip="the square strategies"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PaintApp4Scrubs.Classes.\lStrategies.TriangleStrategies",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies.html",tooltip="triangle strategies"];
+}

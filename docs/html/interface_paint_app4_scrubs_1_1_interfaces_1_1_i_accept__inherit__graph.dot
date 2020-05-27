@@ -1,0 +1,18 @@
+digraph "PaintApp4Scrubs.Interfaces.IAccept"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="PaintApp4Scrubs.Interfaces.\lIAccept",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="the interface for the visitor"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PaintApp4Scrubs.Classes.\lShapes.BaseShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape.html",tooltip="The Base Shape where all shapes are equal (\"hail communism\" ) https://www.youtube...."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PaintApp4Scrubs.Classes.\lShapes.GodShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape.html",tooltip="an abstract class to add extra functionality to the Shape class"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PaintApp4Scrubs.Classes.\lBoxer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_boxer.html",tooltip="a compositer class for BaseShape"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PaintApp4Scrubs.Classes.\lDecorator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_decorator.html",tooltip="The decorator BaseClass"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PaintApp4Scrubs.Classes.\lOrnament",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_ornament.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

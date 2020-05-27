@@ -1,0 +1,19 @@
+digraph "PaintApp4Scrubs.Classes.Ornament"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="PaintApp4Scrubs.Classes.\lOrnament",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Decorator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_decorator.html",tooltip="The decorator BaseClass"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GodShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape.html",tooltip="an abstract class to add extra functionality to the Shape class"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Shape",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="IAccept",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_paint_app4_scrubs_1_1_interfaces_1_1_i_accept.html",tooltip="the interface for the visitor"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Component" ,fontname="Helvetica"];
+  Node6 [label="PaintApp4Scrubs.Classes.\lShapes.GodShape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape.html",tooltip="an abstract class to add extra functionality to the Shape class"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

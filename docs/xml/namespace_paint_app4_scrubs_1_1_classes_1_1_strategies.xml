@@ -3,8 +3,8 @@
   <compounddef id="namespace_paint_app4_scrubs_1_1_classes_1_1_strategies" kind="namespace" language="C#">
     <compoundname>PaintApp4Scrubs::Classes::Strategies</compoundname>
     <innerclass refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies" prot="public">PaintApp4Scrubs::Classes::Strategies::EllipseStrategies</innerclass>
-    <innerclass refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy" prot="public">PaintApp4Scrubs::Classes::Strategies::IStrategy</innerclass>
     <innerclass refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_line_strategies" prot="public">PaintApp4Scrubs::Classes::Strategies::LineStrategies</innerclass>
+    <innerclass refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies" prot="public">PaintApp4Scrubs::Classes::Strategies::SquareStrategies</innerclass>
     <innerclass refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies" prot="public">PaintApp4Scrubs::Classes::Strategies::TriangleStrategies</innerclass>
     <briefdescription>
     </briefdescription>

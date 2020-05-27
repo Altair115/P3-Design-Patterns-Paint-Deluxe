@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies" kind="class" language="C#" prot="public">
+    <compoundname>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</compoundname>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.IStrategy</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1ab8f57b1246419d9253bce2287090e98c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double PaintApp4Scrubs.Classes.Strategies.SquareStrategies.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <briefdescription>
+<para>gets and sets the height of the square </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="18" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a2f9aefc22e505d3b34b69a51ac539473" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double PaintApp4Scrubs.Classes.Strategies.SquareStrategies.Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <briefdescription>
+<para>gets and sets the Width of the square </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="22" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1aca8269f547f6249b9ec94f7a17ada1a8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Point</type>
+        <definition>Point PaintApp4Scrubs.Classes.Strategies.SquareStrategies.StartPoint</definition>
+        <argsstring></argsstring>
+        <name>StartPoint</name>
+        <briefdescription>
+<para>gets and sets the StartPoint of the square </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="26" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a348a1c4e24a404f350138dca3fabb01a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Point</type>
+        <definition>Point PaintApp4Scrubs.Classes.Strategies.SquareStrategies.EndPoint</definition>
+        <argsstring></argsstring>
+        <name>EndPoint</name>
+        <briefdescription>
+<para>gets and sets the EndPoint of the square </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="30" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1adfb1df8095e4c17f08c079f0887d782b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PaintApp4Scrubs.Classes.Strategies.SquareStrategies.SquareStrategies</definition>
+        <argsstring>(double width, double height)</argsstring>
+        <name>SquareStrategies</name>
+        <param>
+          <type>double</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>the constructor of <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies" kindref="compound">SquareStrategies</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="36" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="36" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1ae11848146b29a08d5c005b6446bac4a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Geometry</type>
+        <definition>Geometry PaintApp4Scrubs.Classes.Strategies.SquareStrategies.GetGeometry</definition>
+        <argsstring>()</argsstring>
+        <name>GetGeometry</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a9d302680be6ac1b5a8a389f3062f231b">GetGeometry</reimplements>
+        <briefdescription>
+<para>gets the square Geometry </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the square geometry</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="45" column="25" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="45" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a752e5a35647a55e4881961aa202f113a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string PaintApp4Scrubs.Classes.Strategies.SquareStrategies.GetString</definition>
+        <argsstring>(BaseShape baseShape)</argsstring>
+        <name>GetString</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a6d4ebcfad3ac72930a96f2ee06c507c5">GetString</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>baseShape</declname>
+        </param>
+        <briefdescription>
+<para>gets the string of the square </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the string of square</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="70" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a8f874d473b880fe07519b28d9c98e33a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PaintApp4Scrubs.Classes.Strategies.SquareStrategies.Accept</definition>
+        <argsstring>(IVisitor visitor, BaseShape baseShape)</argsstring>
+        <name>Accept</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a5ef7c98c704d6cd3ccf5c5bed18d8ba6">Accept</reimplements>
+        <param>
+          <type><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" kindref="compound">IVisitor</ref></type>
+          <declname>visitor</declname>
+        </param>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>baseShape</declname>
+        </param>
+        <briefdescription>
+<para>visit the vistor with square </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visitor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the past visitor </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="79" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a8bcdcc08f7ed2349c514c69e1395f5ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector</type>
+        <definition>Vector PaintApp4Scrubs.Classes.Strategies.SquareStrategies.GetCenter</definition>
+        <argsstring>(BaseShape baseShape)</argsstring>
+        <name>GetCenter</name>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a12fed5266eafd6e116da60de11783e5b">GetCenter</reimplements>
+        <param>
+          <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
+          <declname>baseShape</declname>
+        </param>
+        <briefdescription>
+<para>gets the center of the square </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baseShape</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>base shape</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector of square</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="88" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="88" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>the square strategies </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.Strategies.SquareStrategies</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IStrategy</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PaintApp4Scrubs.Classes.Strategies.SquareStrategies</label>
+        <link refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IStrategy</label>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" line="13" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/SquareStrategies.cs" bodystart="14" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a8f874d473b880fe07519b28d9c98e33a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>Accept</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a348a1c4e24a404f350138dca3fabb01a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>EndPoint</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a8bcdcc08f7ed2349c514c69e1395f5ca" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>GetCenter</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1ae11848146b29a08d5c005b6446bac4a0" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>GetGeometry</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a752e5a35647a55e4881961aa202f113a" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>GetString</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1ab8f57b1246419d9253bce2287090e98c" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>Height</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1adfb1df8095e4c17f08c079f0887d782b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>SquareStrategies</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1aca8269f547f6249b9ec94f7a17ada1a8" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>StartPoint</name></member>
+      <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_square_strategies_1a2f9aefc22e505d3b34b69a51ac539473" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::SquareStrategies</scope><name>Width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

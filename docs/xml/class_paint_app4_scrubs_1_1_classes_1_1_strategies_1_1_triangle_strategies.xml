@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies" kind="class" language="C#" prot="public">
     <compoundname>PaintApp4Scrubs::Classes::Strategies::TriangleStrategies</compoundname>
-    <basecompoundref refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Strategies.IStrategy</basecompoundref>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.IStrategy</basecompoundref>
       <sectiondef kind="property">
       <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a5bc7aedc359a164fd10a8e9beb23a906" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>double</type>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="15" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="15" bodyend="15"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="18" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="18" bodyend="18"/>
       </memberdef>
       <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a62847faaecf2cafa6005734edf52e31d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>double</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="19" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="19" bodyend="19"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="22" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="22" bodyend="22"/>
       </memberdef>
       <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1aa6078482704f7155a78a13296c8b920b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>Point</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="23" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="23" bodyend="23"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="26" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="26" bodyend="26"/>
       </memberdef>
       <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a6da895cc3703ee1d50e418f358f89f06" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>Point</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="27" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="27" bodyend="27"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="30" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="30" bodyend="30"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -100,14 +100,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="33" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="33" bodyend="37"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="36" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="36" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a31bc50c66b8111bbdbeddf522784041d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Geometry</type>
         <definition>Geometry PaintApp4Scrubs.Classes.Strategies.TriangleStrategies.GetGeometry</definition>
         <argsstring>()</argsstring>
         <name>GetGeometry</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a087f15dc085efb17a47a2a2e29402f75">GetGeometry</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a9d302680be6ac1b5a8a389f3062f231b">GetGeometry</reimplements>
         <briefdescription>
 <para>gets the Geometry of a triangle </para>
         </briefdescription>
@@ -118,14 +118,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="42" column="25" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="42" bodyend="61"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="45" column="25" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="45" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a8644c03e4f8aac7c8517ccb6afe0637f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
         <definition>string PaintApp4Scrubs.Classes.Strategies.TriangleStrategies.GetString</definition>
         <argsstring>(BaseShape baseShape)</argsstring>
         <name>GetString</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a13f552368f4f72803da46dc972009e0e">GetString</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a6d4ebcfad3ac72930a96f2ee06c507c5">GetString</reimplements>
         <param>
           <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
           <declname>baseShape</declname>
@@ -149,14 +149,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="67" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="67" bodyend="70"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="70" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="70" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a53ec3a24eb2b6bd3ee87038c3cebf70b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void PaintApp4Scrubs.Classes.Strategies.TriangleStrategies.Accept</definition>
         <argsstring>(IVisitor visitor, BaseShape baseShape)</argsstring>
         <name>Accept</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a898a539e45d903c6925123b83d1a58d5">Accept</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a5ef7c98c704d6cd3ccf5c5bed18d8ba6">Accept</reimplements>
         <param>
           <type><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" kindref="compound">IVisitor</ref></type>
           <declname>visitor</declname>
@@ -190,14 +190,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="76" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="76" bodyend="79"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="79" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="79" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1ad997c7545c162f6445ce324c43d6dd9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Vector</type>
         <definition>Vector PaintApp4Scrubs.Classes.Strategies.TriangleStrategies.GetCenter</definition>
         <argsstring>(BaseShape baseShape)</argsstring>
         <name>GetCenter</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a40b366886c7d1daaf414ccf18a21dfe8">GetCenter</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a12fed5266eafd6e116da60de11783e5b">GetCenter</reimplements>
         <param>
           <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
           <declname>baseShape</declname>
@@ -221,10 +221,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="85" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="85" bodyend="89"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="88" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="88" bodyend="92"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>triangle strategies </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -237,7 +238,7 @@
       </node>
       <node id="2">
         <label>IStrategy</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy"/>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
@@ -249,10 +250,10 @@
       </node>
       <node id="2">
         <label>IStrategy</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy"/>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy"/>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="10" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="11" bodyend="90"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" line="13" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/TriangleStrategies.cs" bodystart="14" bodyend="93"/>
     <listofallmembers>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a53ec3a24eb2b6bd3ee87038c3cebf70b" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::TriangleStrategies</scope><name>Accept</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_triangle_strategies_1a6da895cc3703ee1d50e418f358f89f06" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Strategies::TriangleStrategies</scope><name>EndPoint</name></member>

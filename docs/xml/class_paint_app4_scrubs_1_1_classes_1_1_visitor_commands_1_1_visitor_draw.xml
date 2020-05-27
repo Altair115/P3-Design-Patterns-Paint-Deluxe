@@ -160,8 +160,19 @@
           <declname>ornament</declname>
         </param>
         <briefdescription>
+<para>Visitor Function for the <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament" kindref="compound">Ornament</ref> </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ornament</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the given ornament</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

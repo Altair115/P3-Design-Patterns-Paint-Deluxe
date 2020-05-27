@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="dir_848c08f4415c37c28046b173ac2da33a" kind="dir">
+    <compoundname>D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies</compoundname>
+    <innerfile refid="_ellipse_strategies_8cs">EllipseStrategies.cs</innerfile>
+    <innerfile refid="_line_strategies_8cs">LineStrategies.cs</innerfile>
+    <innerfile refid="_square_strategies_8cs">SquareStrategies.cs</innerfile>
+    <innerfile refid="_triangle_strategies_8cs">TriangleStrategies.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/"/>
+  </compounddef>
+</doxygen>

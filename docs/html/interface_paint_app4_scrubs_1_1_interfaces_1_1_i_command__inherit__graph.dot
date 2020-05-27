@@ -1,0 +1,22 @@
+digraph "PaintApp4Scrubs.Interfaces.ICommand"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PaintApp4Scrubs.Interfaces.\lICommand",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="the command interface"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PaintApp4Scrubs.Classes.\lCommands.Delete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_delete.html",tooltip="This class creates a command to delete the component from the canvas"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PaintApp4Scrubs.Classes.\lCommands.DisplayGroup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_display_group.html",tooltip="Displays the hierarchy of the selected component"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="PaintApp4Scrubs.Classes.\lCommands.Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_draw.html",tooltip="This class creates a command to draw an shape on the canvas"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="PaintApp4Scrubs.Classes.\lCommands.MakeGroup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_make_group.html",tooltip="Makes a group of multiple selected objects"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PaintApp4Scrubs.Classes.\lCommands.Move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move.html",tooltip="This class creates a command to move the component on the canvas"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PaintApp4Scrubs.Classes.\lCommands.Resize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_resize.html",tooltip="This class creates a command to resize the component on the canvas"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PaintApp4Scrubs.Classes.\lCommands.SaveFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_save_file.html",tooltip="print the total hierarchy to a file"];
+}

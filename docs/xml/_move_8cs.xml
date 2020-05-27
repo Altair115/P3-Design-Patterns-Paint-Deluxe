@@ -22,29 +22,25 @@
 <codeline lineno="12" refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move" kindref="compound">Move</ref><sp/>:<sp/><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_command" kindref="compound">ICommand</ref></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>readonly<sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref><sp/>_component;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>readonly<sp/>Vector<sp/>_newPosition;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>readonly<sp/>Vector<sp/>_oldPosition;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>readonly<sp/>Vector<sp/>_positionResult;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a0a827c1fb1490f71bf3491b8be4361ed" kindref="member">Move</ref>(<ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref><sp/>component,<sp/>Vector<sp/>newPosition,<sp/>Vector<sp/>oldPosition)</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component<sp/>=<sp/>component;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_newPosition<sp/>=<sp/>newPosition;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_oldPosition<sp/>=<sp/>oldPosition;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_positionResult<sp/>=<sp/>_oldPosition<sp/>+<sp/>-1<sp/>*<sp/>_newPosition;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a7eac86b11773a5af2d7ea3cfbc96cfbe" kindref="member">Execute</ref>()</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component.Accept(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move" kindref="compound">VisitorMove</ref>(_positionResult));</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a36ab6f2faef31dff32196fb47c9aa237" kindref="member">UnExecute</ref>()</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component.Accept(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move" kindref="compound">VisitorMove</ref>(-1<sp/>*_positionResult));</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>readonly<sp/>Vector<sp/>_positionResult;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a0a827c1fb1490f71bf3491b8be4361ed" kindref="member">Move</ref>(<ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_god_shape" kindref="compound">GodShape</ref><sp/>component,<sp/>Vector<sp/>newPosition,<sp/>Vector<sp/>oldPosition)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component<sp/>=<sp/>component;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_positionResult<sp/>=<sp/>oldPosition<sp/>+<sp/>-1<sp/>*<sp/>newPosition;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a7eac86b11773a5af2d7ea3cfbc96cfbe" kindref="member">Execute</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component.Accept(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move" kindref="compound">VisitorMove</ref>(_positionResult));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_commands_1_1_move_1a36ab6f2faef31dff32196fb47c9aa237" kindref="member">UnExecute</ref>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_component.Accept(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_move" kindref="compound">VisitorMove</ref>(-1<sp/>*_positionResult));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Commands/Move.cs"/>
   </compounddef>

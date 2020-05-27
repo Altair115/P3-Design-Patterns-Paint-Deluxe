@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
   <compounddef id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies" kind="class" language="C#" prot="public">
     <compoundname>PaintApp4Scrubs::Classes::Strategies::EllipseStrategies</compoundname>
-    <basecompoundref refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy" prot="public" virt="non-virtual">PaintApp4Scrubs.Classes.Strategies.IStrategy</basecompoundref>
+    <basecompoundref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy" prot="public" virt="non-virtual">PaintApp4Scrubs.Interfaces.IStrategy</basecompoundref>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_ellipse_strategies_1ad6746bb9d5dabd526d197b6559411372" prot="public" static="no" mutable="no">
         <type>EllipseGeometry</type>
@@ -151,7 +151,7 @@
         <definition>Geometry PaintApp4Scrubs.Classes.Strategies.EllipseStrategies.GetGeometry</definition>
         <argsstring>()</argsstring>
         <name>GetGeometry</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a087f15dc085efb17a47a2a2e29402f75">GetGeometry</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a9d302680be6ac1b5a8a389f3062f231b">GetGeometry</reimplements>
         <briefdescription>
 <para>set the geometry for an Ellipse Shape </para>
         </briefdescription>
@@ -169,7 +169,7 @@
         <definition>string PaintApp4Scrubs.Classes.Strategies.EllipseStrategies.GetString</definition>
         <argsstring>(BaseShape baseShape)</argsstring>
         <name>GetString</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a13f552368f4f72803da46dc972009e0e">GetString</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a6d4ebcfad3ac72930a96f2ee06c507c5">GetString</reimplements>
         <param>
           <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
           <declname>baseShape</declname>
@@ -200,7 +200,7 @@
         <definition>void PaintApp4Scrubs.Classes.Strategies.EllipseStrategies.Accept</definition>
         <argsstring>(IVisitor visitor, BaseShape baseShape)</argsstring>
         <name>Accept</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a898a539e45d903c6925123b83d1a58d5">Accept</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a5ef7c98c704d6cd3ccf5c5bed18d8ba6">Accept</reimplements>
         <param>
           <type><ref refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_visitor" kindref="compound">IVisitor</ref></type>
           <declname>visitor</declname>
@@ -241,7 +241,7 @@
         <definition>Vector PaintApp4Scrubs.Classes.Strategies.EllipseStrategies.GetCenter</definition>
         <argsstring>(BaseShape baseShape)</argsstring>
         <name>GetCenter</name>
-        <reimplements refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy_1a40b366886c7d1daaf414ccf18a21dfe8">GetCenter</reimplements>
+        <reimplements refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy_1a12fed5266eafd6e116da60de11783e5b">GetCenter</reimplements>
         <param>
           <type><ref refid="class_paint_app4_scrubs_1_1_classes_1_1_shapes_1_1_base_shape" kindref="compound">BaseShape</ref></type>
           <declname>baseShape</declname>
@@ -282,7 +282,7 @@
       </node>
       <node id="2">
         <label>IStrategy</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy"/>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
@@ -294,7 +294,7 @@
       </node>
       <node id="2">
         <label>IStrategy</label>
-        <link refid="interface_paint_app4_scrubs_1_1_classes_1_1_strategies_1_1_i_strategy"/>
+        <link refid="interface_paint_app4_scrubs_1_1_interfaces_1_1_i_strategy"/>
       </node>
     </collaborationgraph>
     <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/EllipseStrategies.cs" line="12" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Strategies/EllipseStrategies.cs" bodystart="13" bodyend="95"/>
