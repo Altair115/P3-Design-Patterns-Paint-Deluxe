@@ -13,7 +13,7 @@ namespace PaintApp4Scrubs.Classes
     /// </summary>
     public class Ornament : Decorator
     {
-        public string OrnamentName = "";
+        public string Name = "";
         public string Position = "";
         private Size _sizeofTexBlock;
         public TextBlock TextBlock = new TextBlock();
@@ -48,7 +48,7 @@ namespace PaintApp4Scrubs.Classes
         public Vector GetVector(string position)
         {
             Vector center = GetCenter();
-            _sizeofTexBlock = MeasureString(OrnamentName);
+            _sizeofTexBlock = MeasureString(Name);
             switch (position)
             {
                 case "left":
@@ -109,7 +109,7 @@ namespace PaintApp4Scrubs.Classes
 
         public override string ToString()
         {
-            return $"ornament {Position} {OrnamentName}";
+            return $"ornament {Position} {Name}";
         }
     }
 }
