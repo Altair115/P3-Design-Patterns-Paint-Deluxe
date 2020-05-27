@@ -5,7 +5,7 @@
     /// </summary>
     public class ThePrinter
     {
-        public static ThePrinter InstancePrinter = new ThePrinter();
+        private static ThePrinter InstancePrinter = new ThePrinter();
 
         private ThePrinter(){}
 
