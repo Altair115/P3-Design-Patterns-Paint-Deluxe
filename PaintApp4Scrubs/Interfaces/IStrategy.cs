@@ -1,10 +1,12 @@
 ﻿using System.Windows;
 using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
-using PaintApp4Scrubs.Interfaces;
 
-namespace PaintApp4Scrubs.Classes.Strategies
+namespace PaintApp4Scrubs.Interfaces
 {
+    /// <summary>
+    /// the strategy interface 
+    ///</summary>
     public interface IStrategy
     {
         /// <summary>

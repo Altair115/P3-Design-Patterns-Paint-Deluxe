@@ -4,44 +4,47 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
+    /// <summary>
+    /// The decorator BaseClass
+    /// </summary>
     public abstract class Decorator : GodShape
     {
-        protected GodShape _component;
-        protected double width;
-        protected double height;
+        protected GodShape Component;
+        protected double Width;
+        protected double Height;
 
         protected Decorator(GodShape p)
         {
-            _component = p;
+            Component = p;
         }
         public void SetComponent(GodShape component)
         {
-            _component = component;
-            width = component.Width;
-            height = component.Height;
+            Component = component;
+            Width = component.Width;
+            Height = component.Height;
         }
 
         public  GodShape GetComponent()
         {
-            return _component;
+            return Component;
         }
 
         public override GodShape GetBaseShape()
         {
-            return _component.GetBaseShape();
+            return Component.GetBaseShape();
         }
 
         public override Vector GetCenter()
         {
-            return _component.GetCenter();
+            return Component.GetCenter();
         }
-        public override double StrategyWidth => _component.StrategyWidth;
-        public override double StrategyHeight => _component.StrategyHeight;
+        public override double StrategyWidth => Component.StrategyWidth;
+        public override double StrategyHeight => Component.StrategyHeight;
 
         public override string Depth
         {
-            get => _component.Depth;
-            set => _component.Depth = value;
+            get => Component.Depth;
+            set => Component.Depth = value;
         }
     }
 }

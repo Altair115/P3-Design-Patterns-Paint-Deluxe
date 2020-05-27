@@ -5,6 +5,9 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
+    /// <summary>
+    /// Visitor to delete the objects
+    /// </summary>
     public class VisitorDelete : IVisitor
     {
 
@@ -55,7 +58,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
         {
             MainWindow.AppWindow.RemoveShape(ellipse);
         }
-
+        /// <summary>
+        /// puts the ornament on the main window and calls the next ornament and at last the shape (go's from bottom to top so shape first)
+        /// </summary>
+        /// <param name="ornament">the given ornament</param>
         public void VisitOrnament(Ornament ornament)
         {
             ornament.GetComponent().Accept(this);

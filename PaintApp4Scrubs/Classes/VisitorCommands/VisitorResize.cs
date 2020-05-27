@@ -6,6 +6,9 @@ using PaintApp4Scrubs.Classes.Strategies;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
+    /// <summary>
+    /// the Visitor to Move the objects
+    /// </summary>
     class VisitorResize : IVisitor
     {
         private Vector _distance;
@@ -77,6 +80,10 @@ namespace PaintApp4Scrubs.Classes.VisitorCommands
             ellipse.StrategyHeight -= _distance.Y;
         }
 
+        /// <summary>
+        /// moves the ornaments 
+        /// </summary>
+        /// <param name="ornament">the given ornament</param>
         public void VisitOrnament(Ornament ornament)
         {
             ornament.GetComponent().Accept(this);
