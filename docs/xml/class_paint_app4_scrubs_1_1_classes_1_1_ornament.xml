@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="13" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="13" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="16" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1affcdbc8037a77f38310870f2fd2f53bd" prot="public" static="no" mutable="no">
         <type>string</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="14" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="14" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="17" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a213ca278b9cad86109cd1d931c0f066d" prot="public" static="no" mutable="no">
         <type>TextBlock</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="16" column="26" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="16" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="19" column="26" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="15" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="15" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="18" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a1e5c452f2c172586a06e09e55beecabe" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="17" column="24" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="17" bodyend="-1"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="20" column="24" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="20" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="19" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="20" bodyend="41"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="22" column="37" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="23" bodyend="44"/>
       </memberdef>
       <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a52b397a9b60e7e588f6417fa53866534" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>override string</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="85" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="86" bodyend="93"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="88" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="89" bodyend="96"/>
       </memberdef>
       <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a22723fab8b4d8ac26693e57dd2f76ad1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>override double</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="95" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="96" bodyend="99"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="98" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="99" bodyend="102"/>
       </memberdef>
       <memberdef kind="property" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1ab20dc4d53e9913038d910d9a53380e6f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>override double</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="101" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="102" bodyend="105"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="104" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="105" bodyend="108"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="43" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="43" bodyend="43"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="46" column="16" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="46" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a9da9ba94558904664ea6c92dd280409b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Vector</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="45" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="45" bodyend="62"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="48" column="23" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="48" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a25fc81baae005579a7cfa9ee53a27c0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="80" column="30" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="80" bodyend="83"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="83" column="30" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="83" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a8770a09ffdac920b6fa013ca99eac5d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override string</type>
@@ -204,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="107" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="107" bodyend="110"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="110" column="32" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="110" bodyend="113"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -223,10 +223,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="64" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="64" bodyend="78"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="67" column="22" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="67" bodyend="81"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>A Concrete <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_decorator" kindref="compound">Decorator</ref> called <ref refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament" kindref="compound">Ornament</ref> for Adding text next to a Shape </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -299,7 +300,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="11" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="12" bodyend="111"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" line="14" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/Ornament.cs" bodystart="15" bodyend="114"/>
     <listofallmembers>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a1e5c452f2c172586a06e09e55beecabe" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>_depth</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_ornament_1a25f8d5062f3896d201842cd6d79a5617" prot="private" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::Ornament</scope><name>_sizeofTexBlock</name></member>

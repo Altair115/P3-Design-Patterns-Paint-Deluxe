@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="13" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="13" bodyend="19"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="16" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="16" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a3fc75e9c07836998178731a0b3211c5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="25" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="25" bodyend="28"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="28" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="28" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a46a06a2351089052106cb0817f3e6993" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="34" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="34" bodyend="37"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="37" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="37" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1af70b3fee9471447f3ed63d54e1ee26e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="43" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="43" bodyend="46"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="46" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="46" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1af4eeb118dddbe5de8c3a68601d2b3a73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="52" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="52" bodyend="55"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="55" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="55" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a445342687349cc1168af4ed205a9ec88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -176,10 +176,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="57" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="57" bodyend="65"/>
+        <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="60" column="21" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="60" bodyend="68"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Visitor for Drawing <ref refid="namespace_paint_app4_scrubs_1_1_classes_1_1_shapes" kindref="compound">Shapes</ref> </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -207,7 +208,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="7" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="8" bodyend="66"/>
+    <location file="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" line="10" column="11" bodyfile="D:/GitHub/P3-Design-Patterns-Paint-Deluxe/PaintApp4Scrubs/Classes/VisitorCommands/VisitorDraw.cs" bodystart="11" bodyend="69"/>
     <listofallmembers>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1a5c40c9441e6bc5e063643a3bb16c58bc" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDraw</scope><name>Visit</name></member>
       <member refid="class_paint_app4_scrubs_1_1_classes_1_1_visitor_commands_1_1_visitor_draw_1af4eeb118dddbe5de8c3a68601d2b3a73" prot="public" virt="non-virtual"><scope>PaintApp4Scrubs::Classes::VisitorCommands::VisitorDraw</scope><name>VisitEllipse</name></member>

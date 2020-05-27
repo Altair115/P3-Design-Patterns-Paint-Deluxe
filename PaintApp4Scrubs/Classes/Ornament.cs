@@ -8,6 +8,9 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
+    /// <summary>
+    /// A Concrete Decorator called Ornament for Adding text next to a Shape
+    /// </summary>
     public class Ornament : Decorator
     {
         public string OrnamentName = "";

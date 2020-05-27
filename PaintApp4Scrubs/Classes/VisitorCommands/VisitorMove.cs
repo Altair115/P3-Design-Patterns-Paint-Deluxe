@@ -5,6 +5,9 @@ using System.Windows.Controls;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
+    /// <summary>
+    /// Visitor for moving shapes
+    /// </summary>
     public class VisitorMove : IVisitor
     {
         public Vector TranslationToNewPosition { get; set; }

@@ -4,6 +4,9 @@ using PaintApp4Scrubs.Interfaces;
 using System.Windows;
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
+    /// <summary>
+    /// Visitor for Drawing Shapes
+    /// </summary>
     public class VisitorDraw : IVisitor
     {
         /// <summary>
