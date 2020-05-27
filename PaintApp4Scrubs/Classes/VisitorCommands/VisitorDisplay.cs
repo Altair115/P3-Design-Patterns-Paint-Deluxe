@@ -8,6 +8,9 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.VisitorCommands
 {
+    /// <summary>
+    /// the vistor to draw 
+    /// </summary>
     class VisitorDisplay : IVisitor
     {
         private bool _isHead = false;

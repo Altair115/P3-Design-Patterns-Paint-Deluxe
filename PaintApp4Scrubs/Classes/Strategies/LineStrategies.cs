@@ -6,9 +6,13 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Strategies
 {
+
+    /// <summary>
+    /// the strategy for the line
+    /// </summary>
     public class LineStrategies : IStrategy
     {
-        private LineGeometry _lineGeometry = new LineGeometry();
+        private readonly LineGeometry _lineGeometry = new LineGeometry();
         private Point _start = new Point(0, 0);
         private Point _end = new Point(0, 0);
         public double Height { get; set; }
@@ -25,7 +29,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         /// </summary>
         public Point StartPoint
         {
-            get { return _start; }
+            get => _start;
             set
             {
                 _start = value;
@@ -37,7 +41,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         /// </summary>
         public Point EndPoint
         {
-            get { return _end; }
+            get => _end;
             set
             {
                 _end = value;
@@ -73,6 +77,11 @@ namespace PaintApp4Scrubs.Classes.Strategies
             return $"Line {GetCenter(baseShape)} {StartPoint} {EndPoint}";
         }
 
+        /// <summary>
+        /// The accept method for the line 
+        /// </summary>
+        /// <param name="visitor">the type of visitor given</param>
+        /// <param name="baseShape">the base shape</param>
         public void Accept(IVisitor visitor, BaseShape baseShape)
         {
             visitor.VisitLine(baseShape);

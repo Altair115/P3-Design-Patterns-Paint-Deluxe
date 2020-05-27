@@ -40,7 +40,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         /// </summary>
         public double Height
         {
-            get { return _yRadius;}
+            get => _yRadius;
             set { EllipseGeometry.RadiusY = value;
                 _yRadius = value;
             }
@@ -50,7 +50,7 @@ namespace PaintApp4Scrubs.Classes.Strategies
         /// </summary>
         public double Width
         {
-            get { return _xRadius;}
+            get => _xRadius;
             set { EllipseGeometry.RadiusX = value; _xRadius = value;
             }
         }

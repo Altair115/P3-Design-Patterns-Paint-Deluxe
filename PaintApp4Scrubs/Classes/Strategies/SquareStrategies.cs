@@ -3,11 +3,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using PaintApp4Scrubs.Classes.Shapes;
-using PaintApp4Scrubs.Classes.Strategies;
 using PaintApp4Scrubs.Interfaces;
 
-namespace PaintApp4Scrubs.Classes.Stratagies
+namespace PaintApp4Scrubs.Classes.Strategies
 {
+    /// <summary>
+    /// the square strategies
+    /// </summary>
     public class SquareStrategies : IStrategy
     {
         /// <summary>

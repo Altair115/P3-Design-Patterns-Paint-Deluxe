@@ -12,8 +12,6 @@ namespace PaintApp4Scrubs.Classes.Commands
     class Move : ICommand
     {
         private readonly GodShape _component;
-        private readonly Vector _newPosition;
-        private readonly Vector _oldPosition;
         private readonly Vector _positionResult;
 
         /// <summary>
@@ -25,9 +23,7 @@ namespace PaintApp4Scrubs.Classes.Commands
         public Move(GodShape component, Vector newPosition, Vector oldPosition)
         {
             _component = component;
-            _newPosition = newPosition;
-            _oldPosition = oldPosition;
-            _positionResult = _oldPosition + -1 * _newPosition;
+            _positionResult = oldPosition + -1 * newPosition;
         }
 
         /// <summary>

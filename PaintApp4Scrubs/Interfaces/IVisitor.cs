@@ -7,6 +7,9 @@ using PaintApp4Scrubs.Classes.Shapes;
 
 namespace PaintApp4Scrubs.Interfaces
 {
+    /// <summary>
+    /// the visitor interface 
+    /// </summary>
     public interface IVisitor
     {
         /// <summary>
@@ -14,26 +17,35 @@ namespace PaintApp4Scrubs.Interfaces
         /// </summary>
         /// <param name="boxer">Selected Box</param>
         public void Visit(Boxer boxer);
+
         /// <summary>
         /// Visitor Function for square
         /// </summary>
         /// <param name="square">Selected Shape</param>
         public void VisitSquare(BaseShape square);
+
         /// <summary>
         /// Visitor Function for line
         /// </summary>
         /// <param name="line">Selected Shape</param>
         public void VisitLine(BaseShape line);
+
         /// <summary>
         /// Visitor Function for triangle
         /// </summary>
         /// <param name="triangle">Selected Shape</param>
         public void VisitTriangle(BaseShape triangle);
-        /// <param name="ellipse">Selected Shape</param>
-        /// </summary>
-        /// Visitor Function for ellipse
+
         /// <summary>
+        /// Visitor Function for ellipse
+        /// </summary>
+        /// <param name="ellipse">Selected Shape</param>
         public void VisitEllipse(BaseShape ellipse);
+
+        /// <summary>
+        /// Visitor Function for the Ornament
+        /// </summary>
+        /// <param name="ornament">the given ornament</param>
         public void VisitOrnament(Ornament ornament);
     }
 }

@@ -7,6 +7,9 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes.Strategies
 {
+    /// <summary>
+    /// triangle strategies
+    /// </summary>
     public class TriangleStrategies : IStrategy
     {
         /// <summary>

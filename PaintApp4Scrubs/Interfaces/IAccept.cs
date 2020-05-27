@@ -2,6 +2,9 @@
 
 namespace PaintApp4Scrubs.Interfaces
 {
+    /// <summary>
+    /// the interface for the visitor
+    /// </summary>
     public interface IAccept
     {
         /// <summary>

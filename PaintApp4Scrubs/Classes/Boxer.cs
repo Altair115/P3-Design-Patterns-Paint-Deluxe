@@ -10,6 +10,9 @@ using PaintApp4Scrubs.Interfaces;
 
 namespace PaintApp4Scrubs.Classes
 {
+    /// <summary>
+    /// a compositer class for BaseShape
+    /// </summary>
     public class Boxer : GodShape
     {
         public override double StrategyHeight { get; set; }
@@ -78,6 +81,13 @@ namespace PaintApp4Scrubs.Classes
         {
             _components.Remove(component);
         }
+
+        /// <summary>
+        /// finds the box where the shape is located
+        /// </summary>
+        /// <param name="shape">the given shape</param>
+        /// <param name="head">checks if the shape is not located in the main box</param>
+        /// <returns>returns the box if a shape is locted in one (witch is not the main box) or null when the shape is not found in a box</returns>
         public Boxer FindBox(GodShape shape, bool head = true)
         {
             foreach (var component in _components)
@@ -90,12 +100,11 @@ namespace PaintApp4Scrubs.Classes
                     return null;
                 } 
                 
-                if(component is Boxer)
-                {
-                    Boxer x = (Boxer) component;
-                    var y = x.FindBox(shape, false);
-                    if (y != null)
-                        return y;
+                if(component is Boxer box)
+                { 
+                    var result = box.FindBox(shape, false);
+                    if (result != null)
+                        return result;
                 }
             }
             return null;
@@ -109,16 +118,7 @@ namespace PaintApp4Scrubs.Classes
         {
             return _components;
         }
-        
-        public override Vector GetCenter()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override GodShape GetBaseShape()
-        {
-            throw new NotImplementedException();
-        }
+     
         /// <summary>
         /// Accept a visitor
         /// </summary>
@@ -131,5 +131,15 @@ namespace PaintApp4Scrubs.Classes
         public override double StrategyWidth { get; set; }
 
         protected override Geometry DefiningGeometry { get; }
+
+        public override Vector GetCenter()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override GodShape GetBaseShape()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

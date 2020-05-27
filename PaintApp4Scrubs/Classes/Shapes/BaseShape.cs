@@ -12,7 +12,7 @@ namespace PaintApp4Scrubs.Classes.Shapes
     public class BaseShape : GodShape, IAccept
     {
         private string _depth;
-        public bool hasDeco = false;
+        public bool HasDeco = false;
         public IStrategy Strategy;
         /// <summary>
         /// set and gets the Strategy related Width
@@ -85,17 +85,23 @@ namespace PaintApp4Scrubs.Classes.Shapes
             return Strategy.GetString(this);
         }
 
+        /// <summary>
+        /// get the center of the given shape by the strategy 
+        /// </summary>
+        /// <returns>the center vector</returns>
         public override Vector GetCenter()
         {
             return Strategy.GetCenter(this);
         }
-
+        /// <summary>
+        /// gets and sets the Depth of the object
+        /// </summary>
         public override string Depth
         {
             get => _depth;
             set
             {
-                if (hasDeco)
+                if (HasDeco)
                     _depth = value + "-";
                 else 
                     _depth = value;

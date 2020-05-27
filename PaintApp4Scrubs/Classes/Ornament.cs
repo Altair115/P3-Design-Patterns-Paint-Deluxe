@@ -10,7 +10,7 @@ namespace PaintApp4Scrubs.Classes
 {
     public class Ornament : Decorator
     {
-        public string Name = "";
+        public string OrnamentName = "";
         public string Position = "";
         private Size _sizeofTexBlock;
         public TextBlock TextBlock = new TextBlock();
@@ -40,18 +40,15 @@ namespace PaintApp4Scrubs.Classes
             }
         }
 
-        public Ornament(GodShape godShape) : base(godShape)
-        {
-        }
+        public Ornament(GodShape godShape) : base(godShape) { }
 
         public Vector GetVector(string position)
         {
             Vector center = GetCenter();
-            _sizeofTexBlock = MeasureString(Name);
+            _sizeofTexBlock = MeasureString(OrnamentName);
             switch (position)
             {
                 case "left":
-                    //TextBlock.FlowDirection = FlowDirection.RightToLeft;
                     return new Vector(center.X - (StrategyWidth / 2) - _sizeofTexBlock.Width - 20, center.Y - (_sizeofTexBlock.Height / 2));
                 case "right":
                     return new Vector(center.X + (StrategyWidth / 2) + 20, center.Y - (_sizeofTexBlock.Height / 2));
@@ -109,7 +106,7 @@ namespace PaintApp4Scrubs.Classes
 
         public override string ToString()
         {
-            return $"ornament {Position} {Name}";
+            return $"ornament {Position} {OrnamentName}";
         }
     }
 }
